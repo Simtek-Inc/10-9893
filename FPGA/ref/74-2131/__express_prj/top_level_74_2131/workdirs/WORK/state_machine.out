@@ -1,0 +1,57 @@
+
+ Statistics for MUX_OPs
+=========================================================================
+|     block name/line      |  Inputs   |  Outputs   | # sel inputs | MB |
+=========================================================================
+|  combination_process/45  |     4     |     1      |      2       | N  |
+|  combination_process/45  |     4     |     2      |      2       | N  |
+|  combination_process/45  |     4     |     1      |      2       | N  |
+=========================================================================
+
+
+Inferred memory devices in process 'syn_process'
+	in routine state_machine
+         line 23 in file
+         'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/state_machine.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cs_reg        | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+cs_reg (width 2)
+----------------
+    set/reset/toggle: none
+
+
+
+Inferred memory devices in process 'combination_process'
+	in routine
+         state_machine line 43 in file
+         'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/state_machine.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     change_reg      |   Latch   |   1   |  -  | -  | N  | N  | -  | -  | -  |
+|       dir_reg       |   Latch   |   1   |  -  | -  | N  | N  | -  | -  | -  |
+|       ns_reg        |   Latch   |   2   |  Y  | N  | N  | N  | -  | -  | -  |
+===============================================================================
+
+change_reg
+----------
+    reset/set: none
+
+
+dir_reg
+-------
+    reset/set: none
+
+
+ns_reg (width 2)
+----------------
+    reset/set: none
+
+
+Warning: Latch inferred in design 'state_machine' read with
+	'hdlin_check_no_latch'. (HDL-307)
+Writing to hnl file 'g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\__express_prj/top_level_74_2131/workdirs/WORK/state_machine.hnl'

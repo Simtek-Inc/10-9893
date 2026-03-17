@@ -1,0 +1,88 @@
+NET 	"master_clock" 		LOC = "P2";
+NET 	"master_clock_out" 		LOC = "P73";
+
+NET 	"add_data<0>"		LOC = "P10";
+NET 	"add_data<1>" 		LOC = "P9";
+NET 	"add_data<2>" 		LOC = "P8";
+NET 	"add_data<3>" 		LOC = "P7";
+NET 	"add_data<4>" 		LOC = "P6";
+NET 	"add_data<5>" 		LOC = "P5";
+NET 	"add_data<6>" 		LOC = "P4";
+NET 	"add_data<7>" 		LOC = "P3";
+
+NET	"write"			LOC = "P86";
+NET	"read"			LOC = "P87";
+
+NET	"logic_reset"		LOC = "P98";
+
+NET	"ale"			LOC = "P99";
+
+NET	"hb"			LOC = "P21";
+
+NET 	"Ain1"			LOC = "P13";
+NET 	"Bin1" 			LOC = "P14";
+NET 	"Ain2"			LOC = "P15";
+NET 	"Bin2" 			LOC = "P16";
+NET 	"Ain3"			LOC = "P17";
+NET 	"Bin3"  			LOC = "P18";
+NET 	"Ain4"			LOC = "P19";
+NET 	"Bin4" 			LOC = "P20";
+
+NET 	"i_odim1"			LOC = "P97";
+NET 	"i_odim2" 		LOC = "P94";
+NET 	"i_odim3"			LOC = "P96";
+NET 	"i_odim4" 		LOC = "P95";
+
+NET 	"solenoid_1"		LOC = "P92";
+NET 	"solenoid_2"  		LOC = "P93";
+
+NET	"switch_data1<0>"		LOC = "P27";
+NET	"switch_data1<1>"		LOC = "P29";
+NET	"switch_data1<2>"		LOC = "P31";
+NET	"switch_data1<3>"		LOC = "P32";
+NET	"switch_data1<4>"		LOC = "P33";
+NET	"switch_data1<5>"		LOC = "P34";
+NET	"switch_data1<6>"		LOC = "P35";
+NET	"switch_data1<7>"		LOC = "P39";
+
+NET	"switch_data2<0>"		LOC = "P40";
+NET	"switch_data2<1>"		LOC = "P41";
+NET	"switch_data2<2>"		LOC = "P42";
+NET	"switch_data2<3>"		LOC = "P43";
+NET	"switch_data2<4>"		LOC = "P44";
+NET	"switch_data2<5>"		LOC = "P45";
+NET	"switch_data2<6>"		LOC = "P46";
+NET	"switch_data2<7>"		LOC = "P47";
+
+NET	"switch_data3<0>"		LOC = "P53";
+NET	"switch_data3<1>"		LOC = "P54";
+NET	"switch_data3<2>"		LOC = "P55";
+NET	"switch_data3<3>"		LOC = "P56";
+NET	"switch_data3<4>"		LOC = "P57";
+NET	"switch_data3<5>"		LOC = "P58";
+NET	"switch_data3<6>"		LOC = "P59";
+NET	"switch_data3<7>"		LOC = "P60";
+
+NET	"switch_data4<0>"		LOC = "P61";
+NET	"switch_data4<1>"		LOC = "P62";
+NET	"switch_data4<2>"		LOC = "P65";
+NET	"switch_data4<3>"		LOC = "P66";
+NET	"switch_data4<4>"		LOC = "P67";
+NET	"switch_data4<5>"		LOC = "P68";
+NET	"switch_data4<6>"		LOC = "P69";
+NET	"switch_data4<7>"		LOC = "P70";
+
+NET 	"add_data<0>"		PULLUP;
+NET 	"add_data<1>" 		PULLUP;
+NET 	"add_data<2>" 		PULLUP;
+NET 	"add_data<3>" 		PULLUP;
+NET 	"add_data<4>" 		PULLUP;
+NET 	"add_data<5>" 		PULLUP;
+NET 	"add_data<6>" 		PULLUP;
+NET 	"add_data<7>" 		PULLUP;
+
+NET	"write"			PULLUP;
+NET	"read"			PULLUP;
+
+NET	"logic_reset"		PULLUP;
+

@@ -1,0 +1,12 @@
+@W: CG296 :"W:\W218000\W218234\INSTRUMENTS\8669\Electrical\Engineering\Source_Code\FPGA\i75_5026\hdl\Pwm.vhd":29:0:29:6|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"W:\W218000\W218234\INSTRUMENTS\8669\Electrical\Engineering\Source_Code\FPGA\i75_5026\hdl\Pwm.vhd":31:5:31:7|Referenced variable rst is not in sensitivity list.
+@W: CG296 :"W:\W218000\W218234\INSTRUMENTS\8669\Electrical\Engineering\Source_Code\FPGA\i75_5026\hdl\Pwm.vhd":43:0:43:6|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"W:\W218000\W218234\INSTRUMENTS\8669\Electrical\Engineering\Source_Code\FPGA\i75_5026\hdl\Pwm.vhd":45:5:45:7|Referenced variable rst is not in sensitivity list.
+@W: CL169 :"W:\W218000\W218234\INSTRUMENTS\8669\Electrical\Engineering\Source_Code\FPGA\i75_5026\hdl\RamMem.vhd":87:2:87:3|Pruning unused register AddrData_cl_12(2). Make sure that there are no unused intermediate registers.
+@W: CL169 :"W:\W218000\W218234\INSTRUMENTS\8669\Electrical\Engineering\Source_Code\FPGA\i75_5026\hdl\RamMem.vhd":87:2:87:3|Pruning unused register AddrData_cl_12(1). Make sure that there are no unused intermediate registers.
+@W: CL169 :"W:\W218000\W218234\INSTRUMENTS\8669\Electrical\Engineering\Source_Code\FPGA\i75_5026\hdl\RamMem.vhd":87:2:87:3|Pruning unused register AddrData_cl_12(0). Make sure that there are no unused intermediate registers.
+@W: CL177 :"W:\W218000\W218234\INSTRUMENTS\8669\Electrical\Engineering\Source_Code\FPGA\i75_5026\hdl\RamMem.vhd":88:8:88:15|Sharing sequential element AddrData_tri_enable. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL177 :"W:\W218000\W218234\INSTRUMENTS\8669\Electrical\Engineering\Source_Code\FPGA\i75_5026\hdl\RamMem.vhd":88:8:88:15|Sharing sequential element AddrData_tri_enable. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL260 :"W:\W218000\W218234\INSTRUMENTS\8669\Electrical\Engineering\Source_Code\FPGA\i75_5026\hdl\RamMem.vhd":43:2:43:3|Pruning register bit 2 of iAnnDrive(2 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"W:\W218000\W218234\INSTRUMENTS\8669\Electrical\Engineering\Source_Code\FPGA\i75_5026\hdl\RamMem.vhd":68:2:68:3|Pruning register bit 2 of AnnDrive(2 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+

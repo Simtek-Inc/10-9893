@@ -1,0 +1,112 @@
+*****************************************************************
+Pin Report - Date: Fri Apr 05 08:44:24 2019 Pinchecksum: NOT-AVAILABLE
+Product: Designer
+Release: v11.9 SP1
+Version: 11.9.1.0
+Design Name: tl755129
+Family: ProASIC3
+Die: A3PN250
+Package: 100 VQFP
+*****************************************************************
+Number |Port            |Function      |State       |I/O Std  |Output Drive (mA) |Slew |Resistor Pull |Output Load (pF) |Use I/O Reg |Hot Swappable |Schmitt Trigger |
+-------|----------------|--------------|------------|---------|------------------|-----|--------------|-----------------|------------|--------------|----------------|
+1                        GND            Reserved
+2                        GAA2/IO67RSB3  Special
+3       IO_Reset         IO66RSB3       Fixed        LVCMOS33  8                  High  Up             35                No           No             ---
+4       IO_MISO          GAB2/IO65RSB3  Special      LVCMOS33  ---                ---   Up             ---               No           No             No
+5       IO_MOSI          IO64RSB3       Fixed        LVCMOS33  8                  High  Up             35                No           No             ---
+6       IO_Clk           GAC2/IO63RSB3  Special      LVCMOS33  8                  High  Up             35                No           No             ---
+7       IO_CS1           IO62RSB3       Fixed        LVCMOS33  8                  High  Up             35                No           No             ---
+8       IO_CS0           IO61RSB3       Fixed        LVCMOS33  8                  High  Up             35                No           No             ---
+9                        GND            Reserved
+10                       GFB1/IO60RSB3  Special
+11      PanelDrive       GFB0/IO59RSB3  Special      LVCMOS33  8                  High  Up             35                No           No             ---
+12                       VCOMPLF        Reserved
+13                       GFA0/IO57RSB3  Special
+14                       VCCPLF         Reserved
+15                       GFA1/IO58RSB3  Special
+16                       GFA2/IO56RSB3  Special
+17                       VCC            Reserved
+18                       VCCIB3         Reserved
+19                       GFC2/IO55RSB3  Special
+20                       GEC1/IO54RSB3  Special
+21                       GEC0/IO53RSB3  Special
+22                       GEA1/IO52RSB3  Special
+23                       GEA0/IO51RSB3  Special
+24                       VMV3           Reserved
+25                       GNDQ           Reserved
+26      MClk             GEA2/IO50RSB2  Special      LVCMOS33  ---                ---   None           ---               No           No             No
+27      Rst              GEB2/IO49RSB2  Special      LVCMOS33  ---                ---   Up             ---               No           No             Yes
+28      AddrData[7]      GEC2/IO48RSB2  Special      LVCMOS33  8                  High  Up             35                No           No             Yes
+29      AddrData[6]      IO47RSB2       Fixed        LVCMOS33  8                  High  Up             35                No           No             Yes
+30      AddrData[5]      IO46RSB2       Fixed        LVCMOS33  8                  High  Up             35                No           No             Yes
+31      AddrData[4]      IO45RSB2       Fixed        LVCMOS33  8                  High  Up             35                No           No             Yes
+32      AddrData[3]      IO44RSB2       Fixed        LVCMOS33  8                  High  Up             35                No           No             Yes
+33      AddrData[2]      IO43RSB2       Fixed        LVCMOS33  8                  High  Up             35                No           No             Yes
+34      AddrData[1]      IO42RSB2       Fixed        LVCMOS33  8                  High  Up             35                No           No             Yes
+35      AddrData[0]      IO41RSB2       Fixed        LVCMOS33  8                  High  Up             35                No           No             Yes
+36      Ale              IO40RSB2       Fixed        LVCMOS33  ---                ---   Up             ---               No           No             Yes
+37                       VCC            Reserved
+38                       GND            Reserved
+39                       VCCIB2         Reserved
+40      Wr               IO39RSB2       Fixed        LVCMOS33  ---                ---   Up             ---               No           No             Yes
+41      Rd               IO38RSB2       Fixed        LVCMOS33  ---                ---   Up             ---               No           No             Yes
+42                       IO37RSB2       Unassigned
+43                       GDC2/IO36RSB2  Special
+44                       GDB2/IO35RSB2  Special
+45      UcClk            GDA2/IO34RSB2  Special      LVCMOS33  8                  High  None           35                No           No             ---
+46                       GNDQ           Reserved
+47                       TCK            Reserved
+48                       TDI            Reserved
+49                       TMS            Reserved
+50                       VMV2           Reserved
+51                       GND            Reserved
+52                       VPUMP          Reserved
+53                       Not Bonded     Unconnected
+54                       TDO            Reserved
+55                       TRST           Reserved
+56                       VJTAG          Reserved
+57      Max_DE           GDA1/IO33RSB1  Special      LVCMOS33  8                  High  Down           35                No           No             ---
+58      Max_422_232_Sel  GDC0/IO32RSB1  Special      LVCMOS33  8                  High  Down           35                No           No             ---
+59                       GDC1/IO31RSB1  Special
+60                       IO30RSB1       Unassigned
+61                       GCB2/IO29RSB1  Special
+62                       GCA1/IO27RSB1  Special
+63                       GCA0/IO28RSB1  Special
+64                       GCC0/IO26RSB1  Special
+65                       GCC1/IO25RSB1  Special
+66                       VCCIB1         Reserved
+67                       GND            Reserved
+68                       VCC            Reserved
+69                       IO24RSB1       Unassigned
+70      Encoder_VDC      GBC2/IO23RSB1  Special      LVCMOS33  8                  High  None           35                No           No             ---
+71      A1               GBB2/IO22RSB1  Special      LVCMOS33  ---                ---   Up             ---               No           No             Yes
+72      B1               IO21RSB1       Fixed        LVCMOS33  ---                ---   Up             ---               No           No             Yes
+73      Encoder_PB_in    GBA2/IO20RSB1  Special      LVCMOS33  ---                ---   Up             ---               No           No             No
+74                       VMV1           Reserved
+75                       GNDQ           Reserved
+76      Encoder_PB_rtn   GBA1/IO19RSB0  Special      LVCMOS33  8                  High  None           35                No           No             ---
+77      Encoder_VDC_rtn  GBA0/IO18RSB0  Special      LVCMOS33  8                  High  None           35                No           No             ---
+78                       GBB1/IO17RSB0  Special
+79                       GBB0/IO16RSB0  Special
+80      OE_6212          GBC1/IO15RSB0  Special      LVCMOS33  8                  High  Up             35                No           No             ---
+81      Din_6212         GBC0/IO14RSB0  Special      LVCMOS33  8                  High  Up             35                No           No             ---
+82      Load_6212        IO13RSB0       Fixed        LVCMOS33  8                  High  Up             35                No           No             ---
+83      Clk_6212         IO12RSB0       Fixed        LVCMOS33  8                  High  Up             35                No           No             ---
+84                       IO11RSB0       Unassigned
+85                       IO10RSB0       Unassigned
+86                       IO09RSB0       Unassigned
+87                       VCCIB0         Reserved
+88                       GND            Reserved
+89                       VCC            Reserved
+90                       IO08RSB0       Unassigned
+91                       IO07RSB0       Unassigned
+92                       IO06RSB0       Unassigned
+93                       GAC1/IO05RSB0  Special
+94                       GAC0/IO04RSB0  Special
+95      OE_6211          GAB1/IO03RSB0  Special      LVCMOS33  8                  High  Up             35                No           No             ---
+96      Din_6211         GAB0/IO02RSB0  Special      LVCMOS33  8                  High  Up             35                No           No             ---
+97      Load_6211        GAA1/IO01RSB0  Special      LVCMOS33  8                  High  Up             35                No           No             ---
+98      Clk_6211         GAA0/IO00RSB0  Special      LVCMOS33  8                  High  Up             35                No           No             ---
+99                       GNDQ           Reserved
+100                      VMV0           Reserved

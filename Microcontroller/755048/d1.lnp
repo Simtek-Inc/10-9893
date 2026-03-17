@@ -1,0 +1,37 @@
+"interrupt.obj",
+"START390.obj",
+"ax11000.obj",
+"stoe.obj",
+"mac.obj",
+"phy.obj",
+"busreq.obj",
+"dma.obj",
+"mstimer.obj",
+"delay.obj",
+"uart.obj",
+"main.obj",
+"CIRCUIT.obj",
+"fpga.obj",
+".\src\tcpip\tcpip.LIB",
+"uip_arp.obj",
+"uip_arch.obj",
+"uip.obj",
+"gconfig.obj",
+"gs2e.obj",
+"gudpbc.obj",
+"gudpdat.obj",
+"gudpuc.obj",
+"printd.obj",
+"dhcpc.obj",
+"adapter.obj",
+"eeprom.obj",
+"si2c.obj",
+"util_menus.obj" 
+TO "d1" 
+
+IXREF 
+DISABLEWARNING (30) 
+NOOVERLAY 
+ASSIGN (?C_XBP(0x000D))
+CLASSES (XDATA (X:0x0-X:0xFFFF), HDATA (X:0x0-X:0x1FFFF), CODE (C:0x6020-C:0xFFFF), CONST (C:0x6020-C:0xFFFF), 
+ECODE (C:0x6020-C:0x8601F), HCONST (C:0x6020-C:0x8601F)) 

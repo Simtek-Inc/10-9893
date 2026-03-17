@@ -1,0 +1,133 @@
+----------------------------------------------------------------------
+Report for cell tl755026.behavioral
+                                          Cell usage:
+                               cell       count     area    count*area
+                              BIBUF         8       0.0        0.0
+                             CLKBUF         1       0.0        0.0
+                             CLKINT         1       0.0        0.0
+                       ClockDivider         1      30.0       30.0
+                                GND         1       0.0        0.0
+                              INBUF         4       0.0        0.0
+                              NOR2B         1       1.0        1.0
+                             OUTBUF        10       0.0        0.0
+                              Pwm_1         1      63.0       63.0
+                            Pwm_1_0         1      63.0       63.0
+                             RamMem         1     147.0      147.0
+                                VCC         1       0.0        0.0
+                      address_latch         1       8.0        8.0
+                            
+                         TOTAL             32                312.0
+----------------------------------------------------------------------
+Report for cell address_latch.netlist
+     Instance path:  Inst_address_latch
+                                          Cell usage:
+                               cell       count     area    count*area
+                           DFN1E1C1         8       1.0        8.0
+                                GND         1       0.0        0.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL             10                  8.0
+----------------------------------------------------------------------
+Report for cell ClockDivider.netlist
+     Instance path:  Inst_ClockDivider_2
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AO1B         1       1.0        1.0
+                               AX1C         4       1.0        4.0
+                               DFN1        11       1.0       11.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                               NOR2         2       1.0        2.0
+                              NOR2B         1       1.0        1.0
+                              NOR3C         3       1.0        3.0
+                               OA1A         1       1.0        1.0
+                               OR3B         1       1.0        1.0
+                                VCC         1       0.0        0.0
+                               XOR2         5       1.0        5.0
+                            
+                         TOTAL             32                 30.0
+----------------------------------------------------------------------
+Report for cell Pwm_1_0.netlist
+  Original Cell name Pwm_1
+     Instance path:  Inst_Pwm_2
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         2       1.0        2.0
+                              AND2A         1       1.0        1.0
+                               AND3         8       1.0        8.0
+                                AO1         1       1.0        1.0
+                               AO1C         3       1.0        3.0
+                               AOI1         1       1.0        1.0
+                              AOI1A         2       1.0        2.0
+                              AOI1B         4       1.0        4.0
+                             DFN1C1        10       1.0       10.0
+                                GND         1       0.0        0.0
+                              NOR2A         5       1.0        5.0
+                              NOR2B         3       1.0        3.0
+                              NOR3A         1       1.0        1.0
+                              NOR3B         1       1.0        1.0
+                                OA1         1       1.0        1.0
+                               OA1A         2       1.0        2.0
+                                OR2         1       1.0        1.0
+                               OR2A         6       1.0        6.0
+                                VCC         1       0.0        0.0
+                              XNOR2         3       1.0        3.0
+                               XOR2         8       1.0        8.0
+                            
+                         TOTAL             65                 63.0
+----------------------------------------------------------------------
+Report for cell Pwm_1.netlist
+  Original Cell name Pwm
+     Instance path:  Inst_Pwm_1
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2         2       1.0        2.0
+                              AND2A         1       1.0        1.0
+                               AND3         8       1.0        8.0
+                                AO1         1       1.0        1.0
+                               AO1C         3       1.0        3.0
+                               AOI1         1       1.0        1.0
+                              AOI1A         2       1.0        2.0
+                              AOI1B         4       1.0        4.0
+                             DFN1C1        10       1.0       10.0
+                                GND         1       0.0        0.0
+                              NOR2A         5       1.0        5.0
+                              NOR2B         3       1.0        3.0
+                              NOR3A         1       1.0        1.0
+                              NOR3B         1       1.0        1.0
+                                OA1         1       1.0        1.0
+                               OA1A         2       1.0        2.0
+                                OR2         1       1.0        1.0
+                               OR2A         6       1.0        6.0
+                                VCC         1       0.0        0.0
+                              XNOR2         3       1.0        3.0
+                               XOR2         8       1.0        8.0
+                            
+                         TOTAL             65                 63.0
+----------------------------------------------------------------------
+Report for cell RamMem.netlist
+     Instance path:  Inst_RamMem
+                                          Cell usage:
+                               cell       count     area    count*area
+                                AO1        12       1.0       12.0
+                               AO1A         1       1.0        1.0
+                               AOI1         1       1.0        1.0
+                               DFN1        23       1.0       23.0
+                             DFN1E0         5       1.0        5.0
+                             DFN1E1         3       1.0        3.0
+                           DFN1E1C1        20       1.0       20.0
+                           DFN1E1P1         6       1.0        6.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                               NOR2         5       1.0        5.0
+                              NOR2A        23       1.0       23.0
+                              NOR2B        15       1.0       15.0
+                              NOR3A         2       1.0        2.0
+                              NOR3B        12       1.0       12.0
+                              NOR3C         9       1.0        9.0
+                                OR2         2       1.0        2.0
+                               OR2A         1       1.0        1.0
+                                OR3         6       1.0        6.0
+                                VCC         1       0.0        0.0
+                            
+                         TOTAL            149                147.0

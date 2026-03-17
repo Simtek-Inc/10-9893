@@ -1,0 +1,9 @@
+MODULE top_level_74_2131
+   SUBMODULE address_latch
+   SUBMODULE backlight_pwm
+   SUBMODULE clock_divide
+   SUBMODULE filter
+   SUBMODULE get_data
+   SUBMODULE state_machine
+   SUBMODULE talk_to_micro
+   SUBMODULE ucounter

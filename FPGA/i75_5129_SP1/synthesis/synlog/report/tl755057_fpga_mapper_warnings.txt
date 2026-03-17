@@ -1,0 +1,2 @@
+@W: MT420 |Found inferred clock tl755057|MClk with period 10.00ns. Please declare a user-defined clock on object "p:MClk"
+@W: MT420 |Found inferred clock ClockDivider|iPwmClk_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:Inst_ClockDivider_2.iPwmClk"

@@ -1,0 +1,61 @@
+Target Part: A3PN250_VQFP100_STD
+Report for cell tl755026.behavioral
+  Core Cell usage:
+              cell count     area count*area
+              AND2     4      1.0        4.0
+             AND2A     2      1.0        2.0
+              AND3    16      1.0       16.0
+               AO1    14      1.0       14.0
+              AO1A     1      1.0        1.0
+              AO1B     1      1.0        1.0
+              AO1C     6      1.0        6.0
+              AOI1     3      1.0        3.0
+             AOI1A     4      1.0        4.0
+             AOI1B     8      1.0        8.0
+              AX1C     4      1.0        4.0
+            CLKINT     1      0.0        0.0
+               GND     6      0.0        0.0
+               INV     2      1.0        2.0
+              NOR2     7      1.0        7.0
+             NOR2A    33      1.0       33.0
+             NOR2B    23      1.0       23.0
+             NOR3A     4      1.0        4.0
+             NOR3B    14      1.0       14.0
+             NOR3C    12      1.0       12.0
+               OA1     2      1.0        2.0
+              OA1A     5      1.0        5.0
+               OR2     4      1.0        4.0
+              OR2A    13      1.0       13.0
+               OR3     6      1.0        6.0
+              OR3B     1      1.0        1.0
+               VCC     6      0.0        0.0
+             XNOR2     6      1.0        6.0
+              XOR2    21      1.0       21.0
+
+
+              DFN1    34      1.0       34.0
+            DFN1C1    20      1.0       20.0
+            DFN1E0     5      1.0        5.0
+            DFN1E1     3      1.0        3.0
+          DFN1E1C1    28      1.0       28.0
+          DFN1E1P1     6      1.0        6.0
+                   -----          ----------
+             TOTAL   325               312.0
+
+
+  IO Cell usage:
+              cell count
+             BIBUF     8
+            CLKBUF     1
+             INBUF     4
+            OUTBUF    10
+                   -----
+             TOTAL    23
+
+
+Core Cells         : 312 of 6144 (5%)
+IO Cells           : 23
+
+  RAM/ROM Usage Summary
+Block Rams : 0 of 8 (0%)
+

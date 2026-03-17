@@ -1,0 +1,16 @@
+Project Name: i75_5026
+Location: G:\Instruments\8xxx\8600-8699\8669\i75_5026
+Description: 
+Preferred HDL Type: VHDL
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : A3PN250-VQ100
+Family         : ProASIC3
+Die            : A3PN250
+Package        : 100 VQFP
+Speed          : STD
+Core Voltage   : 1.5
+Range          : COM

@@ -1,0 +1,22 @@
+-g M0Pin:Pullnone
+-g M1Pin:Pullup
+-g PowerDown:Pullup
+-g ExpressMode:Disable
+-g 5V_Tolerant_IO:On
+-g BSCAN_Config:Enable
+-g BSCAN_Status:Disable
+-w
+-g StartupClk:Cclk
+-g Cclk_Nosync
+-g SyncToDone:No
+-g DoneActive:C1
+-g OutputsActive:C2
+-g GSRInactive:C3
+-g ReadCapture:Disable
+-g ReadAbort:Disable
+-g ReadClk:Cclk
+-g CRC:Enable
+-g LC_Alignment:Length
+-g ConfigRate:Slow
+-g DonePin:PullUp
+-g TdoPin:PullNone

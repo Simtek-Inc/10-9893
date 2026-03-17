@@ -1,0 +1,108 @@
+
+Starting:    C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin64\mbin\synbatch.exe
+Install:     C:\Microsemi\Libero_SoC_v11.9\SynplifyPro
+Hostname:    DBRADSHAW10
+Date:        Fri Apr 05 08:41:22 2019
+Version:     L-2016.09M-SP1-5
+
+Arguments:   -product synplify_pro -licensetype synplifypro_actel -batch -log synplify.log tl755129_syn.tcl
+ProductType: synplify_pro
+
+License checkout: synplifypro_actel
+License: synplifypro_actel node-locked 
+Licensed Vendor: actel
+License Option: actel_oem
+
+Running in Vendor Mode
+
+
+auto_infer_blackbox is not supported in current product.
+
+log file: "W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\synthesis\tl755129.srr"
+
+Running: synthesis in foreground
+
+
+
+Running tl755129_syn|synthesis
+
+
+Running: compile (Compile) on tl755129_syn|synthesis
+# Fri Apr 05 08:41:24 2019
+
+
+Running: compile_flow (Compile Process) on tl755129_syn|synthesis
+# Fri Apr 05 08:41:24 2019
+
+
+Running: compiler (Compile Input) on tl755129_syn|synthesis
+# Fri Apr 05 08:41:24 2019
+
+Copied W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\synthesis\synwork\tl755129_comp.srs to W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\synthesis\tl755129.srs
+
+
+compiler completed
+# Fri Apr 05 08:41:28 2019
+
+Return Code: 0
+Run Time:00h:00m:04s
+
+
+Running: multi_srs_gen (Multi-srs Generator) on tl755129_syn|synthesis
+# Fri Apr 05 08:41:28 2019
+
+
+multi_srs_gen completed
+# Fri Apr 05 08:41:29 2019
+
+Return Code: 0
+Run Time:00h:00m:01s
+
+Copied W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\synthesis\synwork\tl755129_mult.srs to W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\synthesis\tl755129.srs
+
+Complete: Compile Process on tl755129_syn|synthesis
+
+
+Running: premap (Pre-mapping) on tl755129_syn|synthesis
+# Fri Apr 05 08:41:29 2019
+
+
+premap completed with warnings
+# Fri Apr 05 08:41:31 2019
+
+Return Code: 1
+Run Time:00h:00m:02s
+
+Complete: Compile on tl755129_syn|synthesis
+
+
+Running: map (Map) on tl755129_syn|synthesis
+# Fri Apr 05 08:41:31 2019
+
+License granted for 4 parallel jobs
+
+
+Running: fpga_mapper (Map & Optimize) on tl755129_syn|synthesis
+# Fri Apr 05 08:41:31 2019
+
+Copied W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\synthesis\synwork\tl755129_m.srm to W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\synthesis\tl755129.srm
+
+
+fpga_mapper completed with warnings
+# Fri Apr 05 08:41:36 2019
+
+Return Code: 1
+Run Time:00h:00m:05s
+
+Complete: Map on tl755129_syn|synthesis
+
+Complete: Logic Synthesis on tl755129_syn|synthesis
+
+TCL script complete: "tl755129_syn.tcl"
+
+exit status=0
+
+exit status=0
+
+License checkin: synplifypro_actel
+

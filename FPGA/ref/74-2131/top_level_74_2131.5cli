@@ -1,0 +1,4 @@
+<PROJECT> g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\__express_prj\top_level_74_2131
+<FILES> g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/address_latch.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/backlight_pwm.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/clock_divide.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/filter.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/get_data.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/state_machine.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/talk_to_micro.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/ucounter.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/top_level_74_2131.vhd 
+<OPTIMIZE> top_level_74_2131
+<NETLIST> top_level_74_2131 top_level_74_2131

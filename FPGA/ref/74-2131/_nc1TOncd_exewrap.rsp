@@ -1,0 +1,1 @@
+-tapkeep -mode pipe -tcl -command C:/Xilinx/data/projnav/_par.tcl _par.rsp top_level_74_2131 _par.log _prepar.rsp _postpar.rsp

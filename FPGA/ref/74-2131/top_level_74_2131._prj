@@ -1,0 +1,22 @@
+backslash
+insert <PROJECT> g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/__express_prj/top_level_74_2131
+insert <LIBRARY>
+insert unisim C:/Xilinx/vhdl/src/unisims/unisim_vcomp.vhd
+insert <LIBRARY>
+plslib 
+insert <V_LIBRARY>
+insert 
+insert <FILES> g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/address_latch.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/backlight_pwm.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/clock_divide.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/filter.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/get_data.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/state_machine.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/talk_to_micro.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/ucounter.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/top_level_74_2131.vhd 
+insert <SYNTAX> g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/address_latch.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/backlight_pwm.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/clock_divide.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/filter.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/get_data.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/state_machine.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/talk_to_micro.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/ucounter.vhd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/top_level_74_2131.vhd 
+insert <TOP> ~top_level_74_2131~
+insert <TARGET> ~SpartanXL~ ~S30XLVQ100~ ~-4~ 50
+insert <IMPLEMENT> ~top_level_74_2131~
+insert QUIK
+insert HIER
+insert X_NO
+insert OHOT
+insert O_NO
+insert V_NO
+insert HDLC
+insert <TOUCH_FILE> top_level_74_2131.impl
+create top_level_74_2131.epf TOepf -- generated only for ProjNav status tracking

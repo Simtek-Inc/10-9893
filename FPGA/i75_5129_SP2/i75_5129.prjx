@@ -1,0 +1,376 @@
+KEY LIBERO "11.9"
+KEY CAPTURE "11.9.2.1"
+KEY DEFAULT_IMPORT_LOC "G:\Datasheets\IGLOO_NANO\Led_PatternProj\Led_PatternProj\hdl"
+KEY DEFAULT_OPEN_LOC ""
+KEY ProjectID "0"
+KEY HDLTechnology "VHDL"
+KEY VERILOGMODE "VERILOG2001"
+KEY VHDLMODE "VHDL2008"
+KEY UseConstraintFlowTechnology "FALSE"
+KEY VendorTechnology_Family "ProASIC3"
+KEY VendorTechnology_Die "UM4X4M1N"
+KEY VendorTechnology_Package "vq100"
+KEY VendorTechnology_Speed "STD"
+KEY VendorTechnology_DieVoltage "1.5"
+KEY VendorTechnology_PART_RANGE "COM"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE ""
+KEY VendorTechnology_IO_DEFT_STD "LVCMOS33"
+KEY VendorTechnology_OPCONR ""
+KEY VendorTechnology_PLL_SUPPLY ""
+KEY VendorTechnology_RAD_EXPOSURE ""
+KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
+KEY VendorTechnology_RESTRICTPROBEPINS "1"
+KEY VendorTechnology_RESTRICTSPIPINS "0"
+KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE ""
+KEY VendorTechnology_TARGETDEVICESFORMIGRATION "UM4X4M1N"
+KEY VendorTechnology_TEMPR "COM"
+KEY VendorTechnology_UNUSED_MSS_IO_RESISTOR_PULL "None"
+KEY VendorTechnology_VCCI_1.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
+KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
+KEY VendorTechnology_VOLTR "COM"
+KEY ProjectLocation "W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129_SP2"
+KEY ProjectDescription ""
+KEY Pa4PeripheralNewSeq "GOOD"
+KEY SimulationType "VHDL"
+KEY Vendor "Actel"
+KEY ActiveRoot "tl755129::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST FileManager
+VALUE "<project>\designer\impl1\address_latch.ide_des,ide_des"
+STATE="utd"
+TIME="1552304933"
+SIZE="208"
+ENDFILE
+VALUE "<project>\designer\impl1\tl755129.adb,adb"
+STATE="utd"
+TIME="1554471861"
+SIZE="426496"
+ENDFILE
+VALUE "<project>\designer\impl1\tl755129.ide_des,ide_des"
+STATE="utd"
+TIME="1554471861"
+SIZE="1062"
+ENDFILE
+VALUE "<project>\designer\impl1\tl755129.pdb,pdb"
+STATE="utd"
+TIME="1554471853"
+SIZE="51394"
+ENDFILE
+VALUE "<project>\designer\impl1\tl755129_compile_log.rpt,log"
+STATE="utd"
+TIME="1554471707"
+SIZE="8232"
+ENDFILE
+VALUE "<project>\designer\impl1\tl755129_fp\tl755129.pro,pro"
+STATE="utd"
+TIME="1556029792"
+SIZE="2321"
+ENDFILE
+VALUE "<project>\hdl\address_latch.vhd,hdl"
+STATE="utd"
+TIME="1552304933"
+SIZE="668"
+ENDFILE
+VALUE "<project>\hdl\ClockDivider.vhd,hdl"
+STATE="utd"
+TIME="1552304933"
+SIZE="1417"
+ENDFILE
+VALUE "<project>\hdl\Display_Pwm.vhd,hdl"
+STATE="utd"
+TIME="1554393376"
+SIZE="1238"
+ENDFILE
+VALUE "<project>\hdl\filter.vhd,hdl"
+STATE="utd"
+TIME="1554408384"
+SIZE="2198"
+ENDFILE
+VALUE "<project>\hdl\Pwm.vhd,hdl"
+STATE="utd"
+TIME="1552304933"
+SIZE="1206"
+ENDFILE
+VALUE "<project>\hdl\RamMem.vhd,hdl"
+STATE="utd"
+TIME="1554471611"
+SIZE="4013"
+ENDFILE
+VALUE "<project>\hdl\state_machine.vhd,hdl"
+STATE="utd"
+TIME="1554408384"
+SIZE="3011"
+ENDFILE
+VALUE "<project>\hdl\tl755129.vhd,hdl"
+STATE="utd"
+TIME="1554470423"
+SIZE="6751"
+ENDFILE
+VALUE "<project>\hdl\ucounter.vhd,hdl"
+STATE="utd"
+TIME="1554408410"
+SIZE="854"
+ENDFILE
+VALUE "<project>\synthesis\synwork\layer0.so,so"
+STATE="utd"
+TIME="1554409677"
+SIZE="159"
+ENDFILE
+VALUE "<project>\synthesis\tl755026.edn,syn_edn"
+STATE="ood"
+TIME="1552308189"
+SIZE="183039"
+ENDFILE
+VALUE "<project>\synthesis\tl755026.so,so"
+STATE="utd"
+TIME="1552308189"
+SIZE="270"
+ENDFILE
+VALUE "<project>\synthesis\tl755026_sdc.sdc,syn_sdc"
+STATE="ood"
+TIME="1552308189"
+SIZE="399"
+ENDFILE
+VALUE "<project>\synthesis\tl755026_syn.prj,prj"
+STATE="utd"
+TIME="1556029791"
+SIZE="0"
+ENDFILE
+VALUE "<project>\synthesis\tl755057.so,so"
+STATE="utd"
+TIME="1553172135"
+SIZE="270"
+ENDFILE
+VALUE "<project>\synthesis\tl755057_syn.prj,prj"
+STATE="utd"
+TIME="1556029791"
+SIZE="2371"
+ENDFILE
+VALUE "<project>\synthesis\tl755129.edn,syn_edn"
+STATE="utd"
+TIME="1554471695"
+SIZE="245893"
+ENDFILE
+VALUE "<project>\synthesis\tl755129.so,so"
+STATE="utd"
+TIME="1554471695"
+SIZE="270"
+ENDFILE
+VALUE "<project>\synthesis\tl755129_sdc.sdc,syn_sdc"
+STATE="utd"
+TIME="1554471694"
+SIZE="399"
+ENDFILE
+VALUE "<project>\synthesis\tl755129_syn.prj,prj"
+STATE="utd"
+TIME="1556029791"
+SIZE="0"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "tl755129::work"
+FILE "<project>\hdl\tl755129.vhd,hdl"
+LIST ProjectState5.1
+LIST Impl1
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\tl755129.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\tl755129.adb,adb)=StateSuccess
+ideSYNTHESIS(W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\synthesis\tl755129.edn,syn_edn)=StateFailure
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST PinReports
+VALUE "<project>\designer\impl1\tl755129_report_pin_byname.txt,log"
+VALUE "<project>\designer\impl1\tl755129_report_pin_bynumber.txt,log"
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+ENDLIST
+LIST Other_Association
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1ps
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DisablePulseFiltering=false
+DumpVCD=false
+VCDFileName=power.vcd
+VHDL2008=false
+Verilog2001=false
+SystemVerilog=false
+TimeUnit=1
+TimeUnitBase=ns
+Precision=100
+PrecisionBase=ps
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=FALSE
+AutoCheckConstraints=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+PeriInitStandalone=FALSE
+EnableViewDraw=FALSE
+UpdateViewDrawIni=TRUE
+GenerateHDLFromSchematic=TRUE
+VmNetlistFlowOn=FALSE
+EnableDesignSeparationOn=FALSE
+EnableSETMitigationOn=FALSE
+DisplayFanoutLimit=10
+AbortFlowOnPDCErrorsOn=TRUE
+AbortFlowOnSDCErrorsOn=TRUE
+InstantiateInSmartDesign=TRUE
+FlashProInputFile=pdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="SoftConsole"
+FUNCTION="SoftwareIDE"
+TOOL="SoftConsole"
+LOCATION="eclipse.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Synplify Pro ME"
+FUNCTION="Synthesis"
+TOOL="Synplify Pro ME"
+LOCATION="C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\bin\synplify_pro.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="ModelSim ME"
+FUNCTION="Simulation"
+TOOL="ModelSim"
+LOCATION="C:\Microsemi\Libero_SoC_v11.9\Modelsim\win32acoem\modelsim.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="FPExpress"
+FUNCTION="Program"
+TOOL="FlashPro"
+LOCATION="C:\Microsemi\Libero_SoC_v11.9\Designer\bin\FPExpress.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Identify Debugger"
+FUNCTION="IdentifyDebugger"
+TOOL="Identify Debugger"
+LOCATION="C:\Microsemi\Libero_SoC_v11.9\Identify\bin\identify_debugger.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+LIST "tl755129::work"
+LIST Impl1
+LiberoState=Post_Layout
+ideSYNTHESIS(<project>\synthesis\tl755129.edn,syn_edn)=StateSuccess
+ideDESIGNER(<project>\designer\impl1\tl755129.adb,adb)=StateSuccess
+ideSYNTHESIS(W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\synthesis\tl755129.edn,syn_edn)=StateFailure
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+StartPage;StartPage;0
+HDL;hdl\Pwm.vhd;0
+HDL;hdl\tl755129.vhd;0
+HDL;hdl\ClockDivider.vhd;0
+ACTIVEVIEW;hdl\ClockDivider.vhd
+ENDLIST
+LIST ModuleSubBlockList
+LIST "address_latch::work","hdl\address_latch.vhd","FALSE","FALSE"
+ENDLIST
+LIST "ClockDivider::work","hdl\ClockDivider.vhd","FALSE","FALSE"
+ENDLIST
+LIST "Display_Pwm::work","hdl\Display_Pwm.vhd","FALSE","FALSE"
+ENDLIST
+LIST "filter::work","hdl\filter.vhd","FALSE","FALSE"
+ENDLIST
+LIST "Pwm::work","hdl\Pwm.vhd","FALSE","FALSE"
+ENDLIST
+LIST "RamMem::work","hdl\RamMem.vhd","FALSE","FALSE"
+ENDLIST
+LIST "state_machine::work","hdl\state_machine.vhd","FALSE","FALSE"
+ENDLIST
+LIST "tl755129::work","hdl\tl755129.vhd","FALSE","FALSE"
+SUBBLOCK "ClockDivider::work","hdl\ClockDivider.vhd","FALSE","FALSE"
+SUBBLOCK "Display_Pwm::work","hdl\Display_Pwm.vhd","FALSE","FALSE"
+SUBBLOCK "Pwm::work","hdl\Pwm.vhd","FALSE","FALSE"
+SUBBLOCK "RamMem::work","hdl\RamMem.vhd","FALSE","FALSE"
+SUBBLOCK "address_latch::work","hdl\address_latch.vhd","FALSE","FALSE"
+SUBBLOCK "filter::work","hdl\filter.vhd","FALSE","FALSE"
+SUBBLOCK "state_machine::work","hdl\state_machine.vhd","FALSE","FALSE"
+SUBBLOCK "ucounter::work","hdl\ucounter.vhd","FALSE","FALSE"
+ENDLIST
+LIST "ucounter::work","hdl\ucounter.vhd","FALSE","FALSE"
+ENDLIST
+ENDLIST
+LIST ActiveTestBenchList
+ENDLIST
+LIST IOTabList
+ENDLIST
+LIST FPTabList
+ENDLIST
+LIST TimingTabList
+ENDLIST
+LIST FDCTabList
+ENDLIST

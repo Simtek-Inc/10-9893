@@ -1,0 +1,9 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: MF179 :"w:\w218000\w218234\instruments\8668\electrical\engineering\source_code\fpga\i75_5057\hdl\pwm.vhd":48:4:48:5|Found 9 by 9 bit less-than operator ('<') PwmControlProcess\.iPwmCtrl_3 (in view: work.Pwm(behavioral))
+@N: MF238 :"w:\w218000\w218234\instruments\8668\electrical\engineering\source_code\fpga\i75_5057\hdl\pwm.vhd":37:18:37:29|Found 9-bit incrementor, 'un7_pwmcount_1[8:0]'
+@N: MO231 :"w:\w218000\w218234\instruments\8668\electrical\engineering\source_code\fpga\i75_5057\hdl\clockdivider.vhd":27:2:27:3|Found counter in view:work.ClockDivider(behavioral) instance div20Count[9:0] 
+@N: FP130 |Promoting Net Rst_c on CLKBUF  Rst_pad 
+@N: FP130 |Promoting Net MClk_c on CLKBUF  MClk_pad 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

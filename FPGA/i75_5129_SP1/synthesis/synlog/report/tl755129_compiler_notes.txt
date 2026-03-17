@@ -1,0 +1,18 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CD720 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\vhd2008\std.vhd":146:18:146:21|Setting time resolution to ps
+@N:"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\tl755129.vhd":18:7:18:14|Top entity is set to tl755129.
+@N: CD231 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\vhd2008\std1164.vhd":890:16:890:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\tl755129.vhd":18:7:18:14|Synthesizing work.tl755129.behavioral.
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\filter.vhd":6:7:6:12|Synthesizing work.filter.behavioral.
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\ucounter.vhd":6:7:6:14|Synthesizing work.ucounter.behavioral.
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\state_machine.vhd":6:7:6:19|Synthesizing work.state_machine.behavioral.
+@N: CD604 :"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\state_machine.vhd":105:1:105:14|OTHERS clause is not synthesized.
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\address_latch.vhd":6:7:6:19|Synthesizing work.address_latch.behavioral.
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\Display_Pwm.vhd":6:7:6:17|Synthesizing work.display_pwm.behavioral.
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\ClockDivider.vhd":6:7:6:18|Synthesizing work.clockdivider.behavioral.
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\Pwm.vhd":6:7:6:9|Synthesizing work.pwm.behavioral.
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\RamMem.vhd":6:7:6:12|Synthesizing work.rammem.behavioral.
+@N: CL159 :"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\filter.vhd":8:11:8:21|Input logic_reset is unused.
+@N|Running in 64-bit mode
+

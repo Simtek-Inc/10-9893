@@ -1,0 +1,44 @@
+
+Inferred memory devices in process 'compare_counter'
+	in routine backlight_pwm
+         line 21 in file
+         'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/backlight_pwm.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   comparator_reg    | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+comparator_reg (width 9)
+------------------------
+    Async-reset: logic_reset
+
+
+
+Inferred memory devices in process 'signal_generation'
+	in routine
+         backlight_pwm line 35 in file
+         'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/backlight_pwm.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       dim_reg       | Flip-flop |   1   |  -  | -  | N  | N  | Y  | N  | N  |
+===============================================================================
+
+Inferred THREE-STATE control devices in process 'signal_generation'
+	in
+         routine backlight_pwm line 35 in file
+         'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/backlight_pwm.vhd'.
+============================================================================
+|     Three-state Device Name      |               Type               | MB |
+============================================================================
+|             dim_tri              |        Three-state Buffer        | N  |
+|        dim_tri_enable_reg        |       Flip-flop (width 1)        | N  |
+============================================================================
+
+dim_reg
+-------
+    Sync-reset: true
+
+
+Writing to hnl file 'g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\__express_prj/top_level_74_2131/workdirs/WORK/backlight_pwm.hnl'

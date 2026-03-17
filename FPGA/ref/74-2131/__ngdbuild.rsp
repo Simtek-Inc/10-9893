@@ -1,0 +1,6 @@
+-dd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/_ngo
+-nt timestamp
+
+-p xcs30xl-VQ100-4
+top_level_74_2131.edf
+top_level_74_2131.ngd

@@ -1,0 +1,659 @@
+# Fri Apr 05 08:41:31 2019
+
+Synopsys Microsemi Technology Mapper, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-SP1-5
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@W: BN132 :"w:\w218000\w218234\instruments\8665\electrical\engineering\source_code\fpga\i75_5129\hdl\rammem.vhd":107:2:107:3|Removing sequential instance Inst_RamMem.AddrData_cl_6[7] because it is equivalent to instance Inst_RamMem.AddrData_cl_5[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"w:\w218000\w218234\instruments\8665\electrical\engineering\source_code\fpga\i75_5129\hdl\rammem.vhd":107:2:107:3|Removing sequential instance Inst_RamMem.AddrData_cl_5[7] because it is equivalent to instance Inst_RamMem.AddrData_cl_3[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"w:\w218000\w218234\instruments\8665\electrical\engineering\source_code\fpga\i75_5129\hdl\rammem.vhd":107:2:107:3|Removing sequential instance Inst_RamMem.AddrData_cl_4[7] because it is equivalent to instance Inst_RamMem.AddrData_cl_2[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"w:\w218000\w218234\instruments\8665\electrical\engineering\source_code\fpga\i75_5129\hdl\rammem.vhd":107:2:107:3|Removing sequential instance Inst_RamMem.AddrData_cl_3[7] because it is equivalent to instance Inst_RamMem.AddrData_cl_1[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"w:\w218000\w218234\instruments\8665\electrical\engineering\source_code\fpga\i75_5129\hdl\rammem.vhd":107:2:107:3|Removing sequential instance Inst_RamMem.AddrData_cl_2[7] because it is equivalent to instance Inst_RamMem.AddrData_cl[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"w:\w218000\w218234\instruments\8665\electrical\engineering\source_code\fpga\i75_5129\hdl\rammem.vhd":107:2:107:3|Removing sequential instance Inst_RamMem.AddrData_cl_1[7] because it is equivalent to instance Inst_RamMem.AddrData_cl[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+@N: MF179 :"w:\w218000\w218234\instruments\8665\electrical\engineering\source_code\fpga\i75_5129\hdl\pwm.vhd":48:4:48:5|Found 9 by 9 bit less-than operator ('<') PwmControlProcess\.iPwmCtrl_3 (in view: work.Pwm(behavioral))
+@N: MF238 :"w:\w218000\w218234\instruments\8665\electrical\engineering\source_code\fpga\i75_5129\hdl\pwm.vhd":37:18:37:29|Found 9-bit incrementor, 'un7_pwmcount_1[8:0]'
+@N: MO231 :"w:\w218000\w218234\instruments\8665\electrical\engineering\source_code\fpga\i75_5129\hdl\clockdivider.vhd":27:2:27:3|Found counter in view:work.ClockDivider(behavioral) instance div20Count[9:0] 
+@N: MF179 :"w:\w218000\w218234\instruments\8665\electrical\engineering\source_code\fpga\i75_5129\hdl\display_pwm.vhd":48:7:48:26|Found 9 by 9 bit less-than operator ('<') PwmControlProcess\.un1_PwmCount (in view: work.Display_Pwm(behavioral))
+@N: MF238 :"w:\w218000\w218234\instruments\8665\electrical\engineering\source_code\fpga\i75_5129\hdl\display_pwm.vhd":37:18:37:29|Found 9-bit incrementor, 'un7_pwmcount_1[8:0]'
+@N: MO230 :"w:\w218000\w218234\instruments\8665\electrical\engineering\source_code\fpga\i75_5129\hdl\ucounter.vhd":21:4:21:5|Found up-down counter in view:work.ucounter(behavioral) instance count[7:0]  
+
+Starting factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 109MB peak: 110MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 111MB peak: 111MB)
+
+
+Starting gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 110MB peak: 111MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 110MB peak: 111MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 111MB peak: 112MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 112MB peak: 112MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:01s; Memory used current: 112MB peak: 112MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:01s; Memory used current: 112MB peak: 112MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:01s; Memory used current: 112MB peak: 112MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:01s; Memory used current: 114MB peak: 115MB)
+
+
+High Fanout Net Report
+**********************
+
+Driver Instance / Pin Name     Fanout, notes                 
+-------------------------------------------------------------
+Rst_pad / Y                    84 : 65 asynchronous set/reset
+=============================================================
+
+@N: FP130 |Promoting Net Rst_c on CLKBUF  Rst_pad 
+@N: FP130 |Promoting Net MClk_c on CLKBUF  MClk_pad 
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:01s; Memory used current: 114MB peak: 115MB)
+
+
+Added 0 Buffers
+Added 0 Cells via replication
+	Added 0 Sequential Cells via replication
+	Added 0 Combinational Cells via replication
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:01s; Memory used current: 114MB peak: 115MB)
+
+
+
+@S |Clock Optimization Summary
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+Clock optimization not enabled
+1 non-gated/non-generated clock tree(s) driving 102 clock pin(s) of sequential element(s)
+1 gated/generated clock tree(s) driving 18 clock pin(s) of sequential element(s)
+0 instances converted, 18 sequential instances remain driven by gated/generated clocks
+
+============================== Non-Gated/Non-Generated Clocks ==============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance     
+--------------------------------------------------------------------------------------------
+@K:CKID0002       MClk                port                   102        Inst_filter_1.qbv[3]
+============================================================================================
+=================================================================================== Gated/Generated Clocks ====================================================================================
+Clock Tree ID     Driving Element                 Drive Element Type     Fanout     Sample Instance                    Explanation                                                             
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       Inst_ClockDivider_1.iPwmClk     DFN1                   18         Inst_Display_Pwm_1.PwmCount[8]     No generated or derived clock directive on output of sequential instance
+===============================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:01s; Memory used current: 114MB peak: 115MB)
+
+Writing Analyst data base W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\synthesis\synwork\tl755129_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 114MB peak: 115MB)
+
+Writing EDIF Netlist and constraint files
+L-2016.09M-SP1-5
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:02s; Memory used current: 114MB peak: 116MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:02s; Memory used current: 114MB peak: 116MB)
+
+@W: MT420 |Found inferred clock tl755129|MClk with period 10.00ns. Please declare a user-defined clock on object "p:MClk"
+@W: MT420 |Found inferred clock ClockDivider|iPwmClk_inferred_clock with period 10.00ns. Please declare a user-defined clock on object "n:Inst_ClockDivider_1.iPwmClk"
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Fri Apr 05 08:41:36 2019
+#
+
+
+Top view:               tl755129
+Library name:           PA3
+Operating conditions:   COMWCSTD ( T = 70.0, V = 1.42, P = 1.74, tree_type = balanced_tree )
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Wire load model:        proasic3
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -1.274
+
+                                        Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock                          Frequency     Frequency     Period        Period        Slack      Type         Group              
+-------------------------------------------------------------------------------------------------------------------------------------------
+ClockDivider|iPwmClk_inferred_clock     100.0 MHz     142.1 MHz     10.000        7.039         2.961      inferred     Inferred_clkgroup_1
+tl755129|MClk                           100.0 MHz     88.7 MHz      10.000        11.274        -1.274     inferred     Inferred_clkgroup_0
+===========================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                    |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                             Ending                               |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+tl755129|MClk                        tl755129|MClk                        |  10.000      -1.274  |  No paths    -      |  No paths    -      |  No paths    -    
+ClockDivider|iPwmClk_inferred_clock  tl755129|MClk                        |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+ClockDivider|iPwmClk_inferred_clock  ClockDivider|iPwmClk_inferred_clock  |  10.000      2.961   |  No paths    -      |  No paths    -      |  No paths    -    
+=================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: ClockDivider|iPwmClk_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                   Starting                                                                   Arrival          
+Instance                           Reference                               Type       Pin     Net             Time        Slack
+                                   Clock                                                                                       
+-------------------------------------------------------------------------------------------------------------------------------
+Inst_Pwm_1.PwmCount[3]             ClockDivider|iPwmClk_inferred_clock     DFN1C1     Q       PwmCount[3]     0.737       2.961
+Inst_Display_Pwm_1.PwmCount[3]     ClockDivider|iPwmClk_inferred_clock     DFN1C1     Q       PwmCount[3]     0.737       2.961
+Inst_Display_Pwm_1.PwmCount[1]     ClockDivider|iPwmClk_inferred_clock     DFN1C1     Q       PwmCount[1]     0.737       2.998
+Inst_Pwm_1.PwmCount[1]             ClockDivider|iPwmClk_inferred_clock     DFN1C1     Q       PwmCount[1]     0.737       2.998
+Inst_Display_Pwm_1.PwmCount[2]     ClockDivider|iPwmClk_inferred_clock     DFN1C1     Q       PwmCount[2]     0.737       3.066
+Inst_Pwm_1.PwmCount[2]             ClockDivider|iPwmClk_inferred_clock     DFN1C1     Q       PwmCount[2]     0.737       3.066
+Inst_Display_Pwm_1.PwmCount[5]     ClockDivider|iPwmClk_inferred_clock     DFN1C1     Q       PwmCount[5]     0.737       3.179
+Inst_Pwm_1.PwmCount[5]             ClockDivider|iPwmClk_inferred_clock     DFN1C1     Q       PwmCount[5]     0.737       3.179
+Inst_Display_Pwm_1.PwmCount[0]     ClockDivider|iPwmClk_inferred_clock     DFN1C1     Q       PwmCount[0]     0.737       3.243
+Inst_Pwm_1.PwmCount[0]             ClockDivider|iPwmClk_inferred_clock     DFN1C1     Q       PwmCount[0]     0.737       3.243
+===============================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                   Starting                                                                     Required          
+Instance                           Reference                               Type       Pin     Net               Time         Slack
+                                   Clock                                                                                          
+----------------------------------------------------------------------------------------------------------------------------------
+Inst_Display_Pwm_1.PwmCount[2]     ClockDivider|iPwmClk_inferred_clock     DFN1C1     D       PwmCount_4[2]     9.461        2.961
+Inst_Pwm_1.PwmCount[2]             ClockDivider|iPwmClk_inferred_clock     DFN1C1     D       PwmCount_4[2]     9.461        2.961
+Inst_Pwm_1.PwmCount[3]             ClockDivider|iPwmClk_inferred_clock     DFN1C1     D       PwmCount_4[3]     9.461        2.961
+Inst_Display_Pwm_1.PwmCount[3]     ClockDivider|iPwmClk_inferred_clock     DFN1C1     D       PwmCount_4[3]     9.461        2.961
+Inst_Display_Pwm_1.PwmCount[5]     ClockDivider|iPwmClk_inferred_clock     DFN1C1     D       PwmCount_4[5]     9.461        2.961
+Inst_Pwm_1.PwmCount[5]             ClockDivider|iPwmClk_inferred_clock     DFN1C1     D       PwmCount_4[5]     9.461        2.961
+Inst_Display_Pwm_1.PwmCount[8]     ClockDivider|iPwmClk_inferred_clock     DFN1C1     D       PwmCount_4[8]     9.461        2.961
+Inst_Pwm_1.PwmCount[8]             ClockDivider|iPwmClk_inferred_clock     DFN1C1     D       PwmCount_4[8]     9.461        2.961
+Inst_Display_Pwm_1.PwmCount[0]     ClockDivider|iPwmClk_inferred_clock     DFN1C1     D       PwmCount_4[0]     9.461        2.984
+Inst_Pwm_1.PwmCount[0]             ClockDivider|iPwmClk_inferred_clock     DFN1C1     D       PwmCount_4[0]     9.461        2.984
+==================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.461
+
+    - Propagation time:                      6.500
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 2.961
+
+    Number of logic level(s):                3
+    Starting point:                          Inst_Pwm_1.PwmCount[3] / Q
+    Ending point:                            Inst_Pwm_1.PwmCount[2] / D
+    The start point is clocked by            ClockDivider|iPwmClk_inferred_clock [rising] on pin CLK
+    The end   point is clocked by            ClockDivider|iPwmClk_inferred_clock [rising] on pin CLK
+
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                                Type       Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+Inst_Pwm_1.PwmCount[3]              DFN1C1     Q        Out     0.737     0.737       -         
+PwmCount[3]                         Net        -        -       1.639     -           8         
+Inst_Pwm_1.PwmCount_RNICHSO[1]      NOR2A      A        In      -         2.376       -         
+Inst_Pwm_1.PwmCount_RNICHSO[1]      NOR2A      Y        Out     0.627     3.003       -         
+un4_pwmcount_3                      Net        -        -       0.322     -           1         
+Inst_Pwm_1.PwmCount_RNIU8PH1[4]     NOR3A      A        In      -         3.325       -         
+Inst_Pwm_1.PwmCount_RNIU8PH1[4]     NOR3A      Y        Out     0.641     3.966       -         
+un4_pwmcount_5                      Net        -        -       1.279     -           5         
+Inst_Pwm_1.PwmCount_RNO[2]          AOI1B      A        In      -         5.245       -         
+Inst_Pwm_1.PwmCount_RNO[2]          AOI1B      Y        Out     0.933     6.178       -         
+PwmCount_4[2]                       Net        -        -       0.322     -           1         
+Inst_Pwm_1.PwmCount[2]              DFN1C1     D        In      -         6.500       -         
+================================================================================================
+Total path delay (propagation time + setup) of 7.039 is 3.478(49.4%) logic and 3.561(50.6%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+
+====================================
+Detailed Report for Clock: tl755129|MClk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                      Starting                                                 Arrival           
+Instance                              Reference         Type         Pin     Net               Time        Slack 
+                                      Clock                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Inst_address_latch.Address[2]         tl755129|MClk     DFN1E1C1     Q       Address[2]        0.737       -1.274
+Inst_address_latch.Address[7]         tl755129|MClk     DFN1E1C1     Q       Address[7]        0.737       -1.079
+Inst_address_latch.Address[3]         tl755129|MClk     DFN1E1C1     Q       Address[3]        0.737       -0.940
+Inst_address_latch.Address[4]         tl755129|MClk     DFN1E1C1     Q       Address[4]        0.737       -0.582
+Inst_address_latch.Address[0]         tl755129|MClk     DFN1E1C1     Q       Address[0]        0.737       -0.249
+Inst_address_latch.Address[6]         tl755129|MClk     DFN1E1C1     Q       Address[6]        0.737       0.042 
+Inst_address_latch.Address[5]         tl755129|MClk     DFN1E1C1     Q       Address[5]        0.737       0.363 
+Inst_address_latch.Address[1]         tl755129|MClk     DFN1E1C1     Q       Address[1]        0.737       0.442 
+Inst_ClockDivider_1.div20Count[0]     tl755129|MClk     DFN1         Q       UcClk_c           0.737       1.436 
+Inst_ClockDivider_1.div20Count[1]     tl755129|MClk     DFN1         Q       div20Count[1]     0.737       1.674 
+=================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                              Starting                                                   Required           
+Instance                      Reference         Type       Pin     Net                   Time         Slack 
+                              Clock                                                                         
+------------------------------------------------------------------------------------------------------------
+Inst_RamMem.AddrData_1[0]     tl755129|MClk     DFN1       D       AddrData_1_RNO[0]     9.461        -1.274
+Inst_RamMem.AddrData_1[7]     tl755129|MClk     DFN1E0     D       AddrData_12[7]        9.427        -0.518
+Inst_RamMem.AddrData_1[1]     tl755129|MClk     DFN1E0     E       AddrData_8_sqmuxa     9.392        -0.357
+Inst_RamMem.AddrData_1[2]     tl755129|MClk     DFN1E0     E       AddrData_8_sqmuxa     9.392        -0.357
+Inst_RamMem.AddrData_1[3]     tl755129|MClk     DFN1E0     E       AddrData_8_sqmuxa     9.392        -0.357
+Inst_RamMem.AddrData_1[4]     tl755129|MClk     DFN1E0     E       AddrData_8_sqmuxa     9.392        -0.357
+Inst_RamMem.AddrData_1[5]     tl755129|MClk     DFN1E0     E       AddrData_8_sqmuxa     9.392        -0.357
+Inst_RamMem.AddrData_1[6]     tl755129|MClk     DFN1E0     E       AddrData_8_sqmuxa     9.392        -0.357
+Inst_RamMem.AddrData_1[7]     tl755129|MClk     DFN1E0     E       AddrData_8_sqmuxa     9.392        -0.357
+Inst_RamMem.AddrData_1[1]     tl755129|MClk     DFN1E0     D       AddrData_12[1]        9.461        -0.297
+============================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.461
+
+    - Propagation time:                      10.735
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.274
+
+    Number of logic level(s):                6
+    Starting point:                          Inst_address_latch.Address[2] / Q
+    Ending point:                            Inst_RamMem.AddrData_1[0] / D
+    The start point is clocked by            tl755129|MClk [rising] on pin CLK
+    The end   point is clocked by            tl755129|MClk [rising] on pin CLK
+
+Instance / Net                                           Pin      Pin               Arrival     No. of    
+Name                                        Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------
+Inst_address_latch.Address[2]               DFN1E1C1     Q        Out     0.737     0.737       -         
+Address[2]                                  Net          -        -       1.708     -           10        
+Inst_RamMem.AddrData_m1_e_1_1               NOR3         C        In      -         2.445       -         
+Inst_RamMem.AddrData_m1_e_1_1               NOR3         Y        Out     0.751     3.196       -         
+AddrData_m1_e_1_1                           Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_m1_e_1                 NOR2B        A        In      -         3.518       -         
+Inst_RamMem.AddrData_m1_e_1                 NOR2B        Y        Out     0.488     4.006       -         
+N_183                                       Net          -        -       1.994     -           12        
+Inst_RamMem.AddrData_8_sqmuxa_0_a2_0_a3     NOR2B        A        In      -         6.000       -         
+Inst_RamMem.AddrData_8_sqmuxa_0_a2_0_a3     NOR2B        Y        Out     0.488     6.488       -         
+N_185                                       Net          -        -       1.279     -           5         
+Inst_RamMem.AddrData_1_RNO_7[0]             NOR3C        C        In      -         7.767       -         
+Inst_RamMem.AddrData_1_RNO_7[0]             NOR3C        Y        Out     0.666     8.433       -         
+N_122                                       Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1_RNO_2[0]             AO1          C        In      -         8.754       -         
+Inst_RamMem.AddrData_1_RNO_2[0]             AO1          Y        Out     0.655     9.409       -         
+un1_testbyte_iv_0_0_4[7]                    Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1_RNO[0]               OR3          C        In      -         9.731       -         
+Inst_RamMem.AddrData_1_RNO[0]               OR3          Y        Out     0.683     10.414      -         
+AddrData_1_RNO[0]                           Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1[0]                   DFN1         D        In      -         10.735      -         
+==========================================================================================================
+Total path delay (propagation time + setup) of 11.274 is 5.007(44.4%) logic and 6.267(55.6%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      10.000
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.461
+
+    - Propagation time:                      10.541
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.079
+
+    Number of logic level(s):                6
+    Starting point:                          Inst_address_latch.Address[7] / Q
+    Ending point:                            Inst_RamMem.AddrData_1[0] / D
+    The start point is clocked by            tl755129|MClk [rising] on pin CLK
+    The end   point is clocked by            tl755129|MClk [rising] on pin CLK
+
+Instance / Net                                                 Pin      Pin               Arrival     No. of    
+Name                                              Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------
+Inst_address_latch.Address[7]                     DFN1E1C1     Q        Out     0.737     0.737       -         
+Address[7]                                        Net          -        -       0.386     -           2         
+Inst_RamMem.iD6211DimValue_1_sqmuxa_0_a2_4_a3     NOR2         B        In      -         1.123       -         
+Inst_RamMem.iD6211DimValue_1_sqmuxa_0_a2_4_a3     NOR2         Y        Out     0.646     1.769       -         
+N_180                                             Net          -        -       1.526     -           7         
+Inst_RamMem.AddrData_m1_e_1                       NOR2B        B        In      -         3.295       -         
+Inst_RamMem.AddrData_m1_e_1                       NOR2B        Y        Out     0.516     3.811       -         
+N_183                                             Net          -        -       1.994     -           12        
+Inst_RamMem.AddrData_8_sqmuxa_0_a2_0_a3           NOR2B        A        In      -         5.805       -         
+Inst_RamMem.AddrData_8_sqmuxa_0_a2_0_a3           NOR2B        Y        Out     0.488     6.293       -         
+N_185                                             Net          -        -       1.279     -           5         
+Inst_RamMem.AddrData_1_RNO_7[0]                   NOR3C        C        In      -         7.572       -         
+Inst_RamMem.AddrData_1_RNO_7[0]                   NOR3C        Y        Out     0.666     8.238       -         
+N_122                                             Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1_RNO_2[0]                   AO1          C        In      -         8.559       -         
+Inst_RamMem.AddrData_1_RNO_2[0]                   AO1          Y        Out     0.655     9.215       -         
+un1_testbyte_iv_0_0_4[7]                          Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1_RNO[0]                     OR3          C        In      -         9.536       -         
+Inst_RamMem.AddrData_1_RNO[0]                     OR3          Y        Out     0.683     10.219      -         
+AddrData_1_RNO[0]                                 Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1[0]                         DFN1         D        In      -         10.541      -         
+================================================================================================================
+Total path delay (propagation time + setup) of 11.079 is 4.930(44.5%) logic and 6.149(55.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      10.000
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.461
+
+    - Propagation time:                      10.402
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.940
+
+    Number of logic level(s):                6
+    Starting point:                          Inst_address_latch.Address[3] / Q
+    Ending point:                            Inst_RamMem.AddrData_1[0] / D
+    The start point is clocked by            tl755129|MClk [rising] on pin CLK
+    The end   point is clocked by            tl755129|MClk [rising] on pin CLK
+
+Instance / Net                                                 Pin      Pin               Arrival     No. of    
+Name                                              Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------
+Inst_address_latch.Address[3]                     DFN1E1C1     Q        Out     0.737     0.737       -         
+Address[3]                                        Net          -        -       0.386     -           2         
+Inst_RamMem.iD6211DimValue_1_sqmuxa_0_a2_4_a3     NOR2         A        In      -         1.123       -         
+Inst_RamMem.iD6211DimValue_1_sqmuxa_0_a2_4_a3     NOR2         Y        Out     0.507     1.630       -         
+N_180                                             Net          -        -       1.526     -           7         
+Inst_RamMem.AddrData_m1_e_1                       NOR2B        B        In      -         3.156       -         
+Inst_RamMem.AddrData_m1_e_1                       NOR2B        Y        Out     0.516     3.672       -         
+N_183                                             Net          -        -       1.994     -           12        
+Inst_RamMem.AddrData_8_sqmuxa_0_a2_0_a3           NOR2B        A        In      -         5.666       -         
+Inst_RamMem.AddrData_8_sqmuxa_0_a2_0_a3           NOR2B        Y        Out     0.488     6.154       -         
+N_185                                             Net          -        -       1.279     -           5         
+Inst_RamMem.AddrData_1_RNO_7[0]                   NOR3C        C        In      -         7.433       -         
+Inst_RamMem.AddrData_1_RNO_7[0]                   NOR3C        Y        Out     0.666     8.099       -         
+N_122                                             Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1_RNO_2[0]                   AO1          C        In      -         8.420       -         
+Inst_RamMem.AddrData_1_RNO_2[0]                   AO1          Y        Out     0.655     9.075       -         
+un1_testbyte_iv_0_0_4[7]                          Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1_RNO[0]                     OR3          C        In      -         9.397       -         
+Inst_RamMem.AddrData_1_RNO[0]                     OR3          Y        Out     0.683     10.080      -         
+AddrData_1_RNO[0]                                 Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1[0]                         DFN1         D        In      -         10.402      -         
+================================================================================================================
+Total path delay (propagation time + setup) of 10.940 is 4.791(43.8%) logic and 6.149(56.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      10.000
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.461
+
+    - Propagation time:                      10.044
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.582
+
+    Number of logic level(s):                6
+    Starting point:                          Inst_address_latch.Address[4] / Q
+    Ending point:                            Inst_RamMem.AddrData_1[0] / D
+    The start point is clocked by            tl755129|MClk [rising] on pin CLK
+    The end   point is clocked by            tl755129|MClk [rising] on pin CLK
+
+Instance / Net                                           Pin      Pin               Arrival     No. of    
+Name                                        Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------
+Inst_address_latch.Address[4]               DFN1E1C1     Q        Out     0.737     0.737       -         
+Address[4]                                  Net          -        -       1.279     -           5         
+Inst_RamMem.AddrData_m1_e_1_1               NOR3         A        In      -         2.016       -         
+Inst_RamMem.AddrData_m1_e_1_1               NOR3         Y        Out     0.488     2.504       -         
+AddrData_m1_e_1_1                           Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_m1_e_1                 NOR2B        A        In      -         2.826       -         
+Inst_RamMem.AddrData_m1_e_1                 NOR2B        Y        Out     0.488     3.314       -         
+N_183                                       Net          -        -       1.994     -           12        
+Inst_RamMem.AddrData_8_sqmuxa_0_a2_0_a3     NOR2B        A        In      -         5.308       -         
+Inst_RamMem.AddrData_8_sqmuxa_0_a2_0_a3     NOR2B        Y        Out     0.488     5.796       -         
+N_185                                       Net          -        -       1.279     -           5         
+Inst_RamMem.AddrData_1_RNO_7[0]             NOR3C        C        In      -         7.075       -         
+Inst_RamMem.AddrData_1_RNO_7[0]             NOR3C        Y        Out     0.666     7.741       -         
+N_122                                       Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1_RNO_2[0]             AO1          C        In      -         8.062       -         
+Inst_RamMem.AddrData_1_RNO_2[0]             AO1          Y        Out     0.655     8.717       -         
+un1_testbyte_iv_0_0_4[7]                    Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1_RNO[0]               OR3          C        In      -         9.039       -         
+Inst_RamMem.AddrData_1_RNO[0]               OR3          Y        Out     0.683     9.722       -         
+AddrData_1_RNO[0]                           Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1[0]                   DFN1         D        In      -         10.044      -         
+==========================================================================================================
+Total path delay (propagation time + setup) of 10.582 is 4.744(44.8%) logic and 5.838(55.2%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      10.000
+    - Setup time:                            0.539
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.461
+
+    - Propagation time:                      9.903
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.441
+
+    Number of logic level(s):                7
+    Starting point:                          Inst_address_latch.Address[4] / Q
+    Ending point:                            Inst_RamMem.AddrData_1[7] / D
+    The start point is clocked by            tl755129|MClk [rising] on pin CLK
+    The end   point is clocked by            tl755129|MClk [rising] on pin CLK
+
+Instance / Net                                   Pin      Pin               Arrival     No. of    
+Name                                Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------
+Inst_address_latch.Address[4]       DFN1E1C1     Q        Out     0.737     0.737       -         
+Address[4]                          Net          -        -       1.279     -           5         
+Inst_RamMem.AddrData_m1_e_1_0       NOR2         B        In      -         2.016       -         
+Inst_RamMem.AddrData_m1_e_1_0       NOR2         Y        Out     0.646     2.663       -         
+un1_m2_e_0                          Net          -        -       1.184     -           4         
+Inst_RamMem.AddrData_m2_e_0_s_2     NOR2B        B        In      -         3.846       -         
+Inst_RamMem.AddrData_m2_e_0_s_2     NOR2B        Y        Out     0.516     4.362       -         
+AddrData_m2_e_0_s_2                 Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_m2_e_0_s       NOR3C        C        In      -         4.684       -         
+Inst_RamMem.AddrData_m2_e_0_s       NOR3C        Y        Out     0.666     5.349       -         
+AddrData_m2_e_0_out                 Net          -        -       1.184     -           4         
+Inst_RamMem.AddrData_m2_e_0         NOR2B        A        In      -         6.533       -         
+Inst_RamMem.AddrData_m2_e_0         NOR2B        Y        Out     0.488     7.021       -         
+N_198                               Net          -        -       0.386     -           2         
+Inst_RamMem.AddrData_1_RNO_1[7]     NOR2B        B        In      -         7.407       -         
+Inst_RamMem.AddrData_1_RNO_1[7]     NOR2B        Y        Out     0.516     7.923       -         
+N_159                               Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1_RNO_0[7]     OR3          A        In      -         8.245       -         
+Inst_RamMem.AddrData_1_RNO_0[7]     OR3          Y        Out     0.360     8.604       -         
+AddrData_12_iv_0_1[7]               Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1_RNO[7]       AO1          C        In      -         8.926       -         
+Inst_RamMem.AddrData_1_RNO[7]       AO1          Y        Out     0.655     9.581       -         
+AddrData_12[7]                      Net          -        -       0.322     -           1         
+Inst_RamMem.AddrData_1[7]           DFN1E0       D        In      -         9.903       -         
+==================================================================================================
+Total path delay (propagation time + setup) of 10.441 is 5.123(49.1%) logic and 5.318(50.9%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:02s; Memory used current: 114MB peak: 116MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:02s; Memory used current: 114MB peak: 116MB)
+
+--------------------------------------------------------------------------------
+Target Part: A3PN250_VQFP100_STD
+Report for cell tl755129.behavioral
+  Core Cell usage:
+              cell count     area count*area
+              AND2     4      1.0        4.0
+             AND2A     2      1.0        2.0
+              AND3    16      1.0       16.0
+               AO1    11      1.0       11.0
+              AO1A     2      1.0        2.0
+              AO1B     1      1.0        1.0
+              AO1C     6      1.0        6.0
+              AOI1     5      1.0        5.0
+             AOI1A     4      1.0        4.0
+             AOI1B     8      1.0        8.0
+              AX1C     4      1.0        4.0
+               GND     9      0.0        0.0
+               INV     2      1.0        2.0
+              MAJ3     3      1.0        3.0
+               MX2     7      1.0        7.0
+              MX2A     2      1.0        2.0
+              NOR2    11      1.0       11.0
+             NOR2A    36      1.0       36.0
+             NOR2B    32      1.0       32.0
+              NOR3     3      1.0        3.0
+             NOR3A     6      1.0        6.0
+             NOR3B     8      1.0        8.0
+             NOR3C    45      1.0       45.0
+               OA1     3      1.0        3.0
+              OA1A     6      1.0        6.0
+              OA1B     2      1.0        2.0
+              OA1C     1      1.0        1.0
+               OR2     6      1.0        6.0
+              OR2A    14      1.0       14.0
+               OR3    10      1.0       10.0
+              OR3B     1      1.0        1.0
+               VCC     9      0.0        0.0
+               XA1     1      1.0        1.0
+              XA1A     1      1.0        1.0
+              XA1B     1      1.0        1.0
+              XA1C     1      1.0        1.0
+              XAI1     1      1.0        1.0
+             XNOR2     6      1.0        6.0
+             XNOR3     1      1.0        1.0
+              XO1A     1      1.0        1.0
+              XOR2    25      1.0       25.0
+              XOR3     6      1.0        6.0
+              ZOR3     2      1.0        2.0
+
+
+              DFN1    42      1.0       42.0
+            DFN1C1    21      1.0       21.0
+            DFN1E0     7      1.0        7.0
+            DFN1E1     6      1.0        6.0
+          DFN1E1C1    35      1.0       35.0
+          DFN1E1P1     9      1.0        9.0
+          DLN1P1C1     4      2.0        8.0
+                   -----          ----------
+             TOTAL   449               435.0
+
+
+  IO Cell usage:
+              cell count
+             BIBUF     8
+            CLKBUF     2
+             INBUF     7
+            OUTBUF    20
+                   -----
+             TOTAL    37
+
+
+Core Cells         : 435 of 6144 (7%)
+IO Cells           : 37
+
+  RAM/ROM Usage Summary
+Block Rams : 0 of 8 (0%)
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:02s; Memory used current: 26MB peak: 116MB)
+
+Process took 0h:00m:04s realtime, 0h:00m:02s cputime
+# Fri Apr 05 08:41:36 2019
+
+###########################################################]

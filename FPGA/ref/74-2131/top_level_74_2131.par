@@ -1,0 +1,222 @@
+Release 4.2i - Par E.35
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+
+
+Fri Oct 10 11:52:02 2008
+
+par -f _par.rsp
+
+
+Constraints file: top_level_74_2131.pcf
+
+Loading design for application par from file par_temp.ncd.
+   "top_level_74_2131" is an NCD, version 2.37, device xcs30xl, package vq100,
+speed -4
+Loading device for application par from file 's30xl.nph' in environment
+C:/Xilinx.
+Device speed data version:  FINAL 1.19 2001-12-19.
+
+
+Resolved that IOB <add_data<0>> must be placed at site P10.
+Resolved that IOB <add_data<1>> must be placed at site P9.
+Resolved that IOB <add_data<2>> must be placed at site P8.
+Resolved that IOB <add_data<3>> must be placed at site P7.
+Resolved that IOB <add_data<4>> must be placed at site P6.
+Resolved that IOB <add_data<5>> must be placed at site P5.
+Resolved that IOB <add_data<6>> must be placed at site P4.
+Resolved that IOB <add_data<7>> must be placed at site P3.
+Resolved that IOB <Ain1> must be placed at site P13.
+Resolved that IOB <Ain2> must be placed at site P15.
+Resolved that IOB <Ain3> must be placed at site P17.
+Resolved that IOB <Ain4> must be placed at site P19.
+Resolved that IOB <ale> must be placed at site P99.
+Resolved that IOB <Bin1> must be placed at site P14.
+Resolved that IOB <Bin2> must be placed at site P16.
+Resolved that IOB <Bin3> must be placed at site P18.
+Resolved that IOB <Bin4> must be placed at site P20.
+Resolved that IOB <hb> must be placed at site P21.
+Resolved that IOB <i_odim1> must be placed at site P97.
+Resolved that IOB <i_odim2> must be placed at site P94.
+Resolved that IOB <i_odim3> must be placed at site P96.
+Resolved that IOB <i_odim4> must be placed at site P95.
+Resolved that IOB <logic_reset> must be placed at site P98.
+Resolved that CLKIOB <master_clock> must be placed at site P2.
+Resolved that IOB <master_clock_out> must be placed at site P73.
+Resolved that IOB <read> must be placed at site P87.
+Resolved that IOB <solenoid_1> must be placed at site P92.
+Resolved that IOB <solenoid_2> must be placed at site P93.
+Resolved that IOB <switch_data1<0>> must be placed at site P27.
+Resolved that IOB <switch_data1<1>> must be placed at site P29.
+Resolved that IOB <switch_data1<2>> must be placed at site P31.
+Resolved that IOB <switch_data1<3>> must be placed at site P32.
+Resolved that IOB <switch_data1<4>> must be placed at site P33.
+Resolved that IOB <switch_data1<5>> must be placed at site P34.
+Resolved that IOB <switch_data1<6>> must be placed at site P35.
+Resolved that IOB <switch_data1<7>> must be placed at site P39.
+Resolved that IOB <switch_data2<0>> must be placed at site P40.
+Resolved that IOB <switch_data2<1>> must be placed at site P41.
+Resolved that IOB <switch_data2<2>> must be placed at site P42.
+Resolved that IOB <switch_data2<3>> must be placed at site P43.
+Resolved that IOB <switch_data2<4>> must be placed at site P44.
+Resolved that IOB <switch_data2<5>> must be placed at site P45.
+Resolved that IOB <switch_data2<6>> must be placed at site P46.
+Resolved that IOB <switch_data2<7>> must be placed at site P47.
+Resolved that IOB <switch_data3<0>> must be placed at site P53.
+Resolved that IOB <switch_data3<1>> must be placed at site P54.
+Resolved that IOB <switch_data3<2>> must be placed at site P55.
+Resolved that IOB <switch_data3<3>> must be placed at site P56.
+Resolved that IOB <switch_data3<4>> must be placed at site P57.
+Resolved that IOB <switch_data3<5>> must be placed at site P58.
+Resolved that IOB <switch_data3<6>> must be placed at site P59.
+Resolved that IOB <switch_data3<7>> must be placed at site P60.
+Resolved that IOB <switch_data4<0>> must be placed at site P61.
+Resolved that IOB <switch_data4<1>> must be placed at site P62.
+Resolved that IOB <switch_data4<2>> must be placed at site P65.
+Resolved that IOB <switch_data4<3>> must be placed at site P66.
+Resolved that IOB <switch_data4<4>> must be placed at site P67.
+Resolved that IOB <switch_data4<5>> must be placed at site P68.
+Resolved that IOB <switch_data4<6>> must be placed at site P69.
+Resolved that IOB <switch_data4<7>> must be placed at site P70.
+Resolved that IOB <write> must be placed at site P86.
+
+
+Device utilization summary:
+
+   Number of External IOBs            61 out of 192    79%
+      Flops:                          24
+      Latches:                         0
+   Number of IOBs driving Global Buffers    1 out of 8      12%
+
+   Number of CLBs                    305 out of 576    52%
+      Total Latches:                   0 out of 1152    0%
+      Total CLB Flops:               253 out of 1152   21%
+      4 input LUTs:                  429 out of 1152   37%
+      3 input LUTs:                   99 out of 576    17%
+
+   Number of BUFGLSs                   8 out of 8     100%
+   Number of TBUFs                     8 out of 1248    1%
+
+
+
+Overall effort level (-ol):   2 (set by user)
+Placer effort level (-pl):    2 (set by user)
+Placer cost table entry (-t): 1
+Router effort level (-rl):    2 (set by user)
+Extra effort level (-xe):     0 (set by user)
+
+Starting initial Placement phase.  REAL time: 3 secs 
+Finished initial Placement phase.  REAL time: 3 secs 
+
+Starting Constructive Placer.  REAL time: 4 secs 
+Placer score = 230732
+Placer score = 187232
+Placer score = 166666
+Placer score = 153328
+Placer score = 148418
+Placer score = 139830
+Placer score = 135152
+Placer score = 125786
+Placer score = 121624
+Placer score = 112486
+Placer score = 110760
+Placer score = 108340
+Placer score = 99318
+Placer score = 98526
+Placer score = 94310
+Placer score = 91420
+Placer score = 88138
+Placer score = 87806
+Placer score = 87178
+Placer score = 86452
+Placer score = 84944
+Placer score = 81720
+Placer score = 80258
+Placer score = 80052
+Placer score = 79818
+Placer score = 79600
+Placer score = 78860
+Placer score = 78776
+Placer score = 78296
+Placer score = 77918
+Placer score = 77632
+Placer score = 77046
+Placer score = 76956
+Finished Constructive Placer.  REAL time: 31 secs 
+
+Dumping design to file top_level_74_2131.ncd.
+
+Starting Optimizing Placer.  REAL time: 31 secs 
+Optimizing  
+Swapped 5 comps.
+Xilinx Placer [1]   76812   REAL time: 33 secs 
+
+Finished Optimizing Placer.  REAL time: 33 secs 
+
+Dumping design to file top_level_74_2131.ncd.
+
+Total REAL time to Placer completion: 34 secs 
+Total CPU time to Placer completion: 31 secs 
+
+0 connection(s) routed; 1871 unrouted active, 8 unrouted PWR/GND.
+Starting router resource preassignment
+Completed router resource preassignment. REAL time: 35 secs 
+Starting iterative routing. 
+Routing active signals.
+End of iteration 1 
+1871 successful; 0 unrouted active,
+   8 unrouted PWR/GND; (0) REAL time: 44 secs 
+Improving Timing.
+Timing score : 0 
+End of iteration 2 
+1871 successful; 0 unrouted active,
+   8 unrouted PWR/GND; (0) REAL time: 45 secs 
+Constraints are met. 
+Routing PWR/GND nets.
+Power and ground nets completely routed. 
+Total REAL time: 45 secs 
+Total CPU  time: 40 secs 
+End of route.  1879 routed (100.00%); 0 unrouted.
+No errors found. 
+Completely routed. 
+
+This design was run without timing constraints.  It is likely that much better
+circuit performance can be obtained by trying either or both of the following:
+
+  - Enabling the Delay Based Cleanup router pass, if not already enabled
+  - Supplying timing constraints in the input design
+
+
+Total REAL time to Router completion: 45 secs 
+Total CPU time to Router completion: 41 secs 
+
+Generating PAR statistics.
+
+   The Delay Summary Report
+
+   The Score for this design is: 739
+
+
+The Number of signals not completely routed for this design is: 0
+
+   The Average Connection Delay for this design is:        3.759 ns
+   The Maximum Pin Delay is:                              53.102 ns
+   The Average Connection Delay on the 10 Worst Nets is:  18.159 ns
+
+   Listing Pin Delays by value: (ns)
+
+    d < 10.00   < d < 20.00  < d < 30.00  < d < 40.00  < d < 50.00  d >= 50.00
+   ---------   ---------   ---------   ---------   ---------   ---------
+        1759          79          18           4          12          14
+
+Dumping design to file top_level_74_2131.ncd.
+
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 50 secs 
+Total CPU time to PAR completion: 43 secs 
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+PAR done.

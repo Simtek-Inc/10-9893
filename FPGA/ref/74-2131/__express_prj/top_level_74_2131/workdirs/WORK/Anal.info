@@ -1,0 +1,9 @@
+file {
+  .version = 1;
+  entity {
+    .name = "clock_divide";
+    .mra_file = "clock_divide.mra";
+    .arch = {"Behavioral"};
+    .syn_files = {"CLOCK_DIVIDE.syn", "CLOCK_DIVIDE__BEHAVIORAL.syn"};
+   }
+}

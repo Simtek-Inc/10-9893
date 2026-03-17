@@ -1,0 +1,70 @@
+
+Inferred memory devices in process 'latch'
+	in routine address_latch line 19
+         in file
+         'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/address_latch.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     address_reg     | Flip-flop |   8   |  N  | N  | ?  | ?  | ?  | ?  | ?  |
+===============================================================================
+
+Inferred THREE-STATE control devices in process 'latch'
+	in routine
+         address_latch line 19 in file
+         'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/address_latch.vhd'.
+============================================================================
+|     Three-state Device Name      |               Type               | MB |
+============================================================================
+|          address_tri<7>          |        Three-state Buffer        | N  |
+|          address_tri<3>          |        Three-state Buffer        | N  |
+|          address_tri<1>          |        Three-state Buffer        | N  |
+|          address_tri<5>          |        Three-state Buffer        | N  |
+|          address_tri<4>          |        Three-state Buffer        | N  |
+|          address_tri<0>          |        Three-state Buffer        | N  |
+|          address_tri<2>          |        Three-state Buffer        | N  |
+|          address_tri<6>          |        Three-state Buffer        | N  |
+|      address_tri_enable_reg      |       Flip-flop (width 8)        | N  |
+============================================================================
+
+address_reg<4>
+--------------
+    set/reset/toggle: none
+
+
+address_reg<0>
+--------------
+    set/reset/toggle: none
+
+
+address_reg<2>
+--------------
+    set/reset/toggle: none
+
+
+address_reg<6>
+--------------
+    set/reset/toggle: none
+
+
+address_reg<7>
+--------------
+    set/reset/toggle: none
+
+
+address_reg<3>
+--------------
+    set/reset/toggle: none
+
+
+address_reg<1>
+--------------
+    set/reset/toggle: none
+
+
+address_reg<5>
+--------------
+    set/reset/toggle: none
+
+
+Writing to hnl file 'g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\__express_prj/top_level_74_2131/workdirs/WORK/address_latch.hnl'

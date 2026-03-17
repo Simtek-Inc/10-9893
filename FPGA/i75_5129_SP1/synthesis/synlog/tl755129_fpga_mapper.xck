@@ -1,0 +1,2 @@
+CKID0001:@|S:Inst_ClockDivider_1.iPwmClk@|E:Inst_Display_Pwm_1.PwmCount[8]@|F:@syn_sample_clock_path==CKID0001@|M:ClockId0001 
+CKID0002:@|S:MClk@|E:Inst_filter_1.qbv[3]@|F:@syn_sample_clock_path==CKID0002@|M:ClockId0002 

@@ -1,0 +1,12 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CD720 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\vhd2008\std.vhd":146:18:146:21|Setting time resolution to ps
+@N:"W:\W218000\W218234\INSTRUMENTS\8668\Electrical\Engineering\Source_Code\FPGA\i75_5057\hdl\tl755057.vhd":18:7:18:14|Top entity is set to tl755057.
+@N: CD231 :"C:\Microsemi\Libero_SoC_v11.9\SynplifyPro\lib\vhd2008\std1164.vhd":890:16:890:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8668\Electrical\Engineering\Source_Code\FPGA\i75_5057\hdl\tl755057.vhd":18:7:18:14|Synthesizing work.tl755057.behavioral.
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8668\Electrical\Engineering\Source_Code\FPGA\i75_5057\hdl\address_latch.vhd":6:7:6:19|Synthesizing work.address_latch.behavioral.
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8668\Electrical\Engineering\Source_Code\FPGA\i75_5057\hdl\ClockDivider.vhd":6:7:6:18|Synthesizing work.clockdivider.behavioral.
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8668\Electrical\Engineering\Source_Code\FPGA\i75_5057\hdl\Pwm.vhd":6:7:6:9|Synthesizing work.pwm.behavioral.
+@N: CD630 :"W:\W218000\W218234\INSTRUMENTS\8668\Electrical\Engineering\Source_Code\FPGA\i75_5057\hdl\RamMem.vhd":6:7:6:12|Synthesizing work.rammem.behavioral.
+@N|Running in 64-bit mode
+

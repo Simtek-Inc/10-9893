@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator E.35
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+
+promgen -p mcs -x XC17256D -c 0xFF -w -o \\centosfs02\electrical\Instruments\6xxx\6800-6899\6856\Fpga\74-2131\top_level_74_2131.mcs -u 0 G:\Instruments\6xxx\6800-6899\6856\Fpga\74-2131\top_level_74_2131.bit 
+
+PROM \\centosfs02\electrical\Instruments\6xxx\6800-6899\6856\Fpga\74-2131\top_level_74_2131.prm map: Fri Oct 10 11:53:07 2008
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          32K
+PROM start    0000:0000
+PROM end      0000:7fff
+PROM checksum 007533a9
+
+        Addr1        Addr2 File(s)
+    0000:0000    0000:79a9 G:/Instruments/6xxx/6800-6899/6856/Fpga/74-2131/top_level_74_2131.bit

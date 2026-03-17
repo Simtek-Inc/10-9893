@@ -1,0 +1,216 @@
+C51 COMPILER V8.06   IO_EXPANDER_MCP23S17                                                  04/29/2019 07:29:50 PAGE 1   
+
+
+C51 COMPILER V8.06, COMPILATION OF MODULE IO_EXPANDER_MCP23S17
+OBJECT MODULE PLACED IN IO_Expander_mcp23s17.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE IO_Expander_mcp23s17.C BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          //;************************************************
+   2          //DESCRIPTION: Device Driver for IO Expander MCP23S17
+   3          //
+   4          //
+   5          //;************************************************
+   6          #include<aduc841.h>
+   7          #include<absacc.h>
+   8          
+   9          #define IO_BANK0 1
+  10          //;************************************************
+  11          // BANK = 1;
+  12          // Registers associated with the GPIO PORTS 
+  13          //#ifdef IO_BANK1
+  14          //
+  15          //#define IO_DIR_A     0x00
+  16          //#define I_POL_A      0x01
+  17          //#define GP_INT_EN_A  0x02
+  18          //#define DEF_VAL_A    0x03
+  19          //#define INT_CON_A    0x04
+  20          //#define IO_CON_A     0x05
+  21          //#define GP_PU_A      0x06
+  22          //#define INT_F_A      0x07
+  23          //#define INT_CAP_A    0x08
+  24          //#define GP_IO_A      0x09
+  25          //#define O_LAT_A      0x0A
+  26          //
+  27          //#define IO_DIR_B     0x10
+  28          //#define I_POL_B      0x11
+  29          //#define GP_INT_EN_B  0x12
+  30          //#define DEF_VAL_B    0x13
+  31          //#define INT_CON_B    0x14
+  32          //#define IO_CON_B     0x15
+  33          //#define GP_PU_B      0x16
+  34          //#define INT_F_B      0x17
+  35          //#define INT_CAP_B    0x18
+  36          //#define GP_IO_B      0x19
+  37          //#define O_LAT_B      0x1A
+  38          //#endif
+  39          
+  40          
+  41          //;************************************************
+  42          // BANK = 0;
+  43          // Registers associated with the GPIO PORTS 
+  44          #ifdef IO_BANK0
+  45          
+  46          #define IO_DIR_A     0x00
+  47          #define IO_DIR_B     0x01
+  48          
+  49          #define I_POL_A      0x02
+  50          #define I_POL_B      0x03
+  51          
+  52          #define GP_INT_EN_A  0x04
+  53          #define GP_INT_EN_B  0x05
+  54          
+  55          #define DEF_VAL_A    0x06
+C51 COMPILER V8.06   IO_EXPANDER_MCP23S17                                                  04/29/2019 07:29:50 PAGE 2   
+
+  56          #define DEF_VAL_B    0x07
+  57          
+  58          #define INT_CON_A    0x08
+  59          #define INT_CON_B    0x09
+  60          
+  61          #define IO_CON_A     0x0A
+  62          #define IO_CON_B     0x0B
+  63          
+  64          #define GP_PU_A      0x0C
+  65          #define GP_PU_B      0x0D
+  66          
+  67          #define INT_F_A      0x0E
+  68          #define INT_F_B      0x0F
+  69          
+  70          #define INT_CAP_A    0x10
+  71          #define INT_CAP_B    0x11
+  72          
+  73          #define GP_IO_A      0x12
+  74          #define GP_IO_B      0x13
+  75          
+  76          #define O_LAT_A      0x14
+  77          #define O_LAT_B      0x15
+  78          
+  79          #endif
+  80          
+  81          
+  82          
+  83          #define _IO_CS0(x) (PBYTE[0x0023] = x)
+  84          
+  85          #define _IO_CS1(x) (PBYTE[0x0024] = x)
+  86          
+  87          #define _IO_CLOCK(x) (PBYTE[0x0025] = x)
+  88          
+  89          #define _MOSI(x) (PBYTE[0x0026] = x)
+  90          
+  91          
+  92          #define _IO_RESET(x) (PBYTE[0x0027] = x)
+  93          
+  94          
+  95          #define _GET_MISO() (PBYTE[0x0028])
+  96          
+  97          #define CONTROL_WRITE 0x40
+  98          #define CONTROL_READ 0x41
+  99          
+ 100          
+ 101          extern char status[];
+ 102          extern bit send_status_bit;
+ 103          
+ 104          //;************************************************
+ 105          //;************************************************
+ 106          void initialize_mcp23s17(void);
+ 107          void write_mcp23s17(unsigned char dat);
+ 108          unsigned char read_mcp23s17(void);
+ 109          char* read_porta_portb(void);
+ 110          
+ 111          //;************************************************
+ 112          /* initialize mcp23s17 io expander */
+ 113          void initialize_mcp23s17(void)
+ 114          {  
+ 115   1      
+ 116   1         _IO_RESET(0);
+ 117   1         _IO_RESET(0);
+C51 COMPILER V8.06   IO_EXPANDER_MCP23S17                                                  04/29/2019 07:29:50 PAGE 3   
+
+ 118   1         _IO_CS0(1); // disable mcp23S17 device 0
+ 119   1         _IO_CLOCK(0);  // 
+ 120   1         _MOSI(0);
+ 121   1         _IO_RESET(1);
+ 122   1         _IO_CS0(0); // enable chip select 0
+ 123   1         write_mcp23s17(CONTROL_WRITE); // write command
+ 124   1         write_mcp23s17(GP_PU_A); // address GPIO A PULL UP REGISTER
+ 125   1         write_mcp23s17(0xFF); // enable gpio a pull up resistors
+ 126   1         write_mcp23s17(0xFF); // enable gpio b pull up resistors
+ 127   1         _IO_CS0(1); // disable chip select 0; 
+ 128   1         _IO_CS0(1); // disable chip select 0; 
+ 129   1         _IO_CS0(1); // disable chip select 0; 
+ 130   1         _IO_CS0(1); // disable chip select 0; 
+ 131   1      
+ 132   1      } // end initialize MCP23S17 IO expander function 
+ 133          
+ 134          
+ 135          
+ 136          //;************************************************
+ 137          /* read port a and port b mcp23s17 io expander */
+ 138          char* read_porta_portb(void)
+ 139          {
+ 140   1         unsigned char port[2];
+ 141   1         _IO_CS0(0); // enable chip select 0
+ 142   1         write_mcp23s17(CONTROL_READ); // write command
+ 143   1         write_mcp23s17(GP_IO_A); // address GPIO A input REGISTER
+ 144   1         port[0] = read_mcp23s17(); // get  gpio a input data
+ 145   1         port[1] = read_mcp23s17(); // get  gpio b input data
+ 146   1         _IO_CS0(1); // disable chip select 0; 
+ 147   1         _IO_CS0(1); // disable chip select 0; 
+ 148   1         _IO_CS0(1); // disable chip select 0; 
+ 149   1         _IO_CS0(1); // disable chip select 0; 
+ 150   1         return (&port[0]);
+ 151   1      }
+ 152          
+ 153          
+ 154          //;************************************************
+ 155          /* write to mcp23s17 io expander */
+ 156          void write_mcp23s17(unsigned char dat)
+ 157          {
+ 158   1      unsigned char i;
+ 159   1      
+ 160   1         for (i = 0x80; i > 0; i >>= 1) {
+ 161   2            _MOSI((dat & i) ? 1 : 0);
+ 162   2            _IO_CLOCK(0);
+ 163   2            _IO_CLOCK(0);
+ 164   2            _IO_CLOCK(1);
+ 165   2            _IO_CLOCK(1);
+ 166   2            _IO_CLOCK(0);
+ 167   2            }   
+ 168   1      }
+ 169          
+ 170          
+ 171          //;************************************************
+ 172          /* read from mcp23s17 io expander */
+ 173          unsigned char read_mcp23s17(void)
+ 174          {
+ 175   1      unsigned char i,input_data;
+ 176   1         input_data = 0;
+ 177   1         for (i = 0; i < 8; i++ ) {
+ 178   2            input_data <<= 1;  
+ 179   2            _IO_CLOCK(0);
+C51 COMPILER V8.06   IO_EXPANDER_MCP23S17                                                  04/29/2019 07:29:50 PAGE 4   
+
+ 180   2            _IO_CLOCK(1);
+ 181   2            input_data |= _GET_MISO();  
+ 182   2            _IO_CLOCK(1);
+ 183   2            _IO_CLOCK(0);
+ 184   2            }
+ 185   1      return (input_data);         
+ 186   1      }
+ 187          //;************************************************
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    158    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

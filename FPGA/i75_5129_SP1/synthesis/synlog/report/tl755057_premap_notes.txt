@@ -1,0 +1,4 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+@N: BN115 :"w:\w218000\w218234\instruments\8668\electrical\engineering\source_code\fpga\i75_5057\hdl\tl755057.vhd":131:0:131:18|Removing instance Inst_ClockDivider_1 (in view: work.tl755057(behavioral)) of type view:work.ClockDivider(behavioral) because it does not drive other instances.
+@N: BN225 |Writing default property annotation file W:\W218000\W218234\INSTRUMENTS\8668\Electrical\Engineering\Source_Code\FPGA\i75_5057\synthesis\tl755057.sap.

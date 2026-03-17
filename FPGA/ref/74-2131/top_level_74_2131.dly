@@ -1,0 +1,3851 @@
+Release 4.2i - Par E.35
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+
+Fri Oct 10 11:52:47 2008
+
+File: top_level_74_2131.dly
+
+ The 20 Worst Net Delays are:
+-------------------------------
+| Max Delay (ns)  | Netname   |
+-------------------------------
+  53.102            N_logic_reset
+  30.785            N_ale
+  15.336            address<3>
+  14.941            Inst_get_data/syn2921
+  12.276            outB2
+  12.203            N_add_data<0>
+  11.439            address<0>
+  11.182            N_add_data<1>
+  10.171            outA4
+  10.157            N26
+   9.649            outB4
+   9.343            N_switch_data3<1>
+   9.180            N_switch_data1<7>
+   8.910            outA3
+   8.907            N_add_data<6>
+   8.846            tclk4
+   8.768            N_add_data<5>
+   8.709            N_switch_data3<0>
+   8.589            Inst_get_data/syn2872
+   8.542            N_switch_data4<2>
+---------------------------------
+
+-------------------------------------------------------------------------------
+                               Net Delays
+-------------------------------------------------------------------------------
+
+GLOBAL_LOGIC0
+   Inst_autopilot_1_pwm/C6/C1/C0.Y
+         0.881  Inst_autopilot_1_pwm/C6/C0/C0.F3
+
+GLOBAL_LOGIC0_0
+   PWR_GND_11.X
+         0.606  Inst_autopilot_1_pwm/C6/C4/C0.G4
+
+GLOBAL_LOGIC0_1
+   Inst_autopilot_2_pwm/C6/C0/C0.X
+         0.752  Inst_autopilot_2_pwm/C6/C0/C0.F3
+
+GLOBAL_LOGIC0_2
+   Inst_autopilot_2_pwm/C6/C4/C0.X
+         1.070  Inst_autopilot_2_pwm/C6/C4/C0.G4
+
+GLOBAL_LOGIC0_3
+   Inst_pilot_id_pwm/C6/C0/C0.Y
+         0.600  Inst_pilot_id_pwm/C6/C0/C0.F3
+
+GLOBAL_LOGIC0_4
+   Inst_pilot_id_pwm/C6/C4/C0.Y
+         0.597  Inst_pilot_id_pwm/C6/C4/C0.G4
+
+GLOBAL_LOGIC0_5
+   PWR_GND_43.Y
+         0.793  Inst_copilot_id_pwm/C6/C0/C0.F3
+
+GLOBAL_LOGIC0_6
+   PWR_GND_45.X
+         1.149  Inst_copilot_id_pwm/C6/C4/C0.G4
+
+Inst_address_latch/address_Q36<0>
+   Inst_address_latch/address_Q36<0>.YQ
+         0.044  Inst_address_latch/C45.I
+
+Inst_address_latch/address_Q36<1>
+   Inst_address_latch/address_Q36<1>.YQ
+         0.044  Inst_address_latch/C42.I
+
+Inst_address_latch/address_Q36<2>
+   Inst_address_latch/address_Q36<2>.YQ
+         0.044  Inst_address_latch/C46.I
+
+Inst_address_latch/address_Q36<3>
+   Inst_address_latch/address_Q36<3>.YQ
+         0.044  Inst_address_latch/C41.I
+
+Inst_address_latch/address_Q36<4>
+   Inst_address_latch/address_Q36<4>.YQ
+         0.044  Inst_address_latch/C44.I
+
+Inst_address_latch/address_Q36<5>
+   Inst_address_latch/address_Q36<5>.YQ
+         0.044  Inst_address_latch/C43.I
+
+Inst_address_latch/address_Q36<6>
+   Inst_address_latch/address_Q36<6>.YQ
+         0.044  Inst_address_latch/C47.I
+
+Inst_address_latch/address_Q36<7>
+   Inst_address_latch/address_Q36<7>.YQ
+         0.044  Inst_address_latch/C40.I
+
+Inst_address_latch/address_tri_enable<0>
+   Inst_address_latch/address_tri_enable<0>.YQ
+         1.149  Inst_address_latch/C45.T
+         0.568  Inst_address_latch/address_tri_enable<0>.F3
+
+Inst_address_latch/address_tri_enable<1>
+   Inst_address_latch/address_tri_enable<1>.XQ
+         2.124  Inst_address_latch/C42.T
+         0.863  Inst_address_latch/address_tri_enable<1>.F2
+
+Inst_address_latch/address_tri_enable<2>
+   Inst_address_latch/address_tri_enable<2>.XQ
+         1.541  Inst_address_latch/C46.T
+         0.812  Inst_address_latch/address_tri_enable<2>.F2
+
+Inst_address_latch/address_tri_enable<3>
+   Inst_address_latch/address_tri_enable<3>.XQ
+         1.725  Inst_address_latch/C41.T
+         0.840  Inst_address_latch/address_tri_enable<3>.F2
+
+Inst_address_latch/address_tri_enable<4>
+   Inst_address_latch/address_tri_enable<4>.XQ
+         2.572  Inst_address_latch/C44.T
+         0.898  Inst_address_latch/address_tri_enable<4>.F2
+
+Inst_address_latch/address_tri_enable<5>
+   Inst_address_latch/address_tri_enable<5>.XQ
+         1.375  Inst_address_latch/C43.T
+         0.665  Inst_address_latch/address_tri_enable<5>.F2
+
+Inst_address_latch/address_tri_enable<6>
+   Inst_address_latch/address_tri_enable<6>.XQ
+         1.375  Inst_address_latch/C47.T
+         0.665  Inst_address_latch/address_tri_enable<6>.F2
+
+Inst_address_latch/address_tri_enable<7>
+   Inst_address_latch/address_tri_enable<7>.XQ
+         1.860  Inst_address_latch/C40.T
+         0.821  Inst_address_latch/address_tri_enable<7>.F2
+
+Inst_autopilot_1_pwm/C6/N13
+   Inst_autopilot_1_pwm/C6/C2/C0.COUT
+         0.140  Inst_autopilot_1_pwm/C6/C3/C0.CIN
+
+Inst_autopilot_1_pwm/C6/N18
+   Inst_autopilot_1_pwm/C6/C3/C0.COUT
+         0.140  Inst_autopilot_1_pwm/C6/C4/C0.CIN
+
+Inst_autopilot_1_pwm/C6/N23
+   Inst_autopilot_1_pwm/C6/C4/C0.COUT
+         0.140  N180.CIN
+
+Inst_autopilot_1_pwm/C6/N3
+   Inst_autopilot_1_pwm/C6/C0/C0.COUT
+         0.140  Inst_autopilot_1_pwm/C6/C1/C0.CIN
+
+Inst_autopilot_1_pwm/C6/N8
+   Inst_autopilot_1_pwm/C6/C1/C0.COUT
+         0.140  Inst_autopilot_1_pwm/C6/C2/C0.CIN
+
+Inst_autopilot_1_pwm/C7/N12
+   Inst_autopilot_1_pwm/comparator<3>.COUT
+         0.140  Inst_autopilot_1_pwm/comparator<5>.CIN
+
+Inst_autopilot_1_pwm/C7/N17
+   Inst_autopilot_1_pwm/comparator<5>.COUT
+         0.140  Inst_autopilot_1_pwm/comparator<7>.CIN
+
+Inst_autopilot_1_pwm/C7/N2
+   Inst_autopilot_1_pwm/comparator<0>.COUT
+         0.140  Inst_autopilot_1_pwm/comparator<1>.CIN
+
+Inst_autopilot_1_pwm/C7/N7
+   Inst_autopilot_1_pwm/comparator<1>.COUT
+         0.140  Inst_autopilot_1_pwm/comparator<3>.CIN
+
+Inst_autopilot_1_pwm/N99
+   Inst_autopilot_1_pwm/N99.Y
+         1.437  N180.G1
+
+Inst_autopilot_1_pwm/comparator<0>
+   Inst_autopilot_1_pwm/comparator<0>.YQ
+         2.088  Inst_autopilot_1_pwm/C6/C0/C0.G1
+         1.141  Inst_autopilot_1_pwm/comparator<0>.G4
+         2.786  Inst_autopilot_1_pwm/net6.F1
+
+Inst_autopilot_1_pwm/comparator<1>
+   Inst_autopilot_1_pwm/comparator<1>.XQ
+         0.819  Inst_autopilot_1_pwm/C6/C1/C0.F2
+         0.680  Inst_autopilot_1_pwm/comparator<1>.F1
+         2.640  Inst_autopilot_1_pwm/net6.F4
+
+Inst_autopilot_1_pwm/comparator<2>
+   Inst_autopilot_1_pwm/comparator<1>.YQ
+         1.495  Inst_autopilot_1_pwm/C6/C1/C0.G1
+         0.964  Inst_autopilot_1_pwm/comparator<1>.G4
+         1.626  Inst_autopilot_1_pwm/net6.F2
+
+Inst_autopilot_1_pwm/comparator<3>
+   Inst_autopilot_1_pwm/comparator<3>.XQ
+         1.030  Inst_autopilot_1_pwm/C6/C2/C0.F2
+         0.725  Inst_autopilot_1_pwm/comparator<3>.F1
+         1.149  Inst_autopilot_1_pwm/net6.F3
+
+Inst_autopilot_1_pwm/comparator<4>
+   Inst_autopilot_1_pwm/comparator<3>.YQ
+         1.171  Inst_autopilot_1_pwm/C6/C2/C0.G1
+         0.869  Inst_autopilot_1_pwm/comparator<3>.G4
+         1.199  Inst_autopilot_1_pwm/net6.G3
+
+Inst_autopilot_1_pwm/comparator<5>
+   Inst_autopilot_1_pwm/comparator<5>.XQ
+         1.261  Inst_autopilot_1_pwm/C6/C3/C0.F2
+         0.896  Inst_autopilot_1_pwm/comparator<5>.F1
+         1.579  Inst_autopilot_1_pwm/net6.G1
+
+Inst_autopilot_1_pwm/comparator<6>
+   Inst_autopilot_1_pwm/comparator<5>.YQ
+         1.495  Inst_autopilot_1_pwm/C6/C3/C0.G1
+         0.964  Inst_autopilot_1_pwm/comparator<5>.G4
+         1.663  Inst_autopilot_1_pwm/net6.G4
+
+Inst_autopilot_1_pwm/comparator<7>
+   Inst_autopilot_1_pwm/comparator<7>.XQ
+         1.396  Inst_autopilot_1_pwm/C6/C4/C0.F2
+         0.931  Inst_autopilot_1_pwm/comparator<7>.F1
+         2.069  Inst_autopilot_1_pwm/net6.G2
+
+Inst_autopilot_1_pwm/comparator<8>
+   Inst_autopilot_1_pwm/comparator<7>.YQ
+         2.574  Inst_autopilot_1_pwm/C6/C4/C0.G1
+         2.850  Inst_autopilot_1_pwm/net6.C3
+         1.062  Inst_autopilot_1_pwm/comparator<7>.G3
+         2.268  N180.G4
+
+Inst_autopilot_1_pwm/net6
+   Inst_autopilot_1_pwm/net6.Y
+         2.371  Inst_autopilot_1_pwm/comparator<0>.G1
+         2.279  Inst_autopilot_1_pwm/comparator<1>.F2
+         2.098  Inst_autopilot_1_pwm/comparator<1>.G1
+         3.614  Inst_autopilot_1_pwm/comparator<3>.F2
+         2.098  Inst_autopilot_1_pwm/comparator<3>.G1
+         1.855  Inst_autopilot_1_pwm/comparator<5>.F2
+         1.509  Inst_autopilot_1_pwm/comparator<5>.G1
+         3.369  Inst_autopilot_1_pwm/comparator<7>.F2
+         1.509  Inst_autopilot_1_pwm/comparator<7>.G1
+
+Inst_autopilot_2_pwm/C6/N13
+   Inst_autopilot_2_pwm/C6/C2/C0.COUT
+         0.140  Inst_autopilot_2_pwm/C6/C3/C0.CIN
+
+Inst_autopilot_2_pwm/C6/N18
+   Inst_autopilot_2_pwm/C6/C3/C0.COUT
+         0.140  Inst_autopilot_2_pwm/C6/C4/C0.CIN
+
+Inst_autopilot_2_pwm/C6/N23
+   Inst_autopilot_2_pwm/C6/C4/C0.COUT
+         0.140  N26.CIN
+
+Inst_autopilot_2_pwm/C6/N3
+   Inst_autopilot_2_pwm/C6/C0/C0.COUT
+         0.151  Inst_autopilot_2_pwm/C6/C1/C0.CIN
+
+Inst_autopilot_2_pwm/C6/N8
+   Inst_autopilot_2_pwm/C6/C1/C0.COUT
+         0.140  Inst_autopilot_2_pwm/C6/C2/C0.CIN
+
+Inst_autopilot_2_pwm/C7/N12
+   Inst_autopilot_2_pwm/comparator<3>.COUT
+         0.140  Inst_autopilot_2_pwm/comparator<5>.CIN
+
+Inst_autopilot_2_pwm/C7/N17
+   Inst_autopilot_2_pwm/comparator<5>.COUT
+         0.140  Inst_autopilot_2_pwm/comparator<7>.CIN
+
+Inst_autopilot_2_pwm/C7/N2
+   Inst_autopilot_2_pwm/comparator<0>.COUT
+         0.151  Inst_autopilot_2_pwm/comparator<1>.CIN
+
+Inst_autopilot_2_pwm/C7/N7
+   Inst_autopilot_2_pwm/comparator<1>.COUT
+         0.140  Inst_autopilot_2_pwm/comparator<3>.CIN
+
+Inst_autopilot_2_pwm/N99
+   Inst_autopilot_2_pwm/N99.Y
+         0.544  N26.G1
+
+Inst_autopilot_2_pwm/comparator<0>
+   Inst_autopilot_2_pwm/comparator<0>.YQ
+         1.724  Inst_autopilot_2_pwm/C6/C0/C0.G1
+         1.289  Inst_autopilot_2_pwm/comparator<0>.G4
+         2.088  Inst_autopilot_2_pwm/net6.F4
+
+Inst_autopilot_2_pwm/comparator<1>
+   Inst_autopilot_2_pwm/comparator<1>.XQ
+         1.313  Inst_autopilot_2_pwm/C6/C1/C0.F2
+         0.931  Inst_autopilot_2_pwm/comparator<1>.F1
+         1.437  Inst_autopilot_2_pwm/net6.F1
+
+Inst_autopilot_2_pwm/comparator<2>
+   Inst_autopilot_2_pwm/comparator<1>.YQ
+         1.708  Inst_autopilot_2_pwm/C6/C1/C0.G1
+         1.198  Inst_autopilot_2_pwm/comparator<1>.G4
+         1.656  Inst_autopilot_2_pwm/net6.F3
+
+Inst_autopilot_2_pwm/comparator<3>
+   Inst_autopilot_2_pwm/comparator<3>.XQ
+         1.343  Inst_autopilot_2_pwm/C6/C2/C0.F2
+         0.931  Inst_autopilot_2_pwm/comparator<3>.F1
+         1.750  Inst_autopilot_2_pwm/net6.F2
+
+Inst_autopilot_2_pwm/comparator<4>
+   Inst_autopilot_2_pwm/comparator<3>.YQ
+         1.311  Inst_autopilot_2_pwm/C6/C2/C0.G1
+         1.098  Inst_autopilot_2_pwm/comparator<3>.G4
+         0.767  Inst_autopilot_2_pwm/net6.G1
+
+Inst_autopilot_2_pwm/comparator<5>
+   Inst_autopilot_2_pwm/comparator<5>.XQ
+         1.117  Inst_autopilot_2_pwm/C6/C3/C0.F2
+         0.931  Inst_autopilot_2_pwm/comparator<5>.F1
+         1.342  Inst_autopilot_2_pwm/net6.G3
+
+Inst_autopilot_2_pwm/comparator<6>
+   Inst_autopilot_2_pwm/comparator<5>.YQ
+         1.528  Inst_autopilot_2_pwm/C6/C3/C0.G1
+         1.132  Inst_autopilot_2_pwm/comparator<5>.G4
+         1.574  Inst_autopilot_2_pwm/net6.G4
+
+Inst_autopilot_2_pwm/comparator<7>
+   Inst_autopilot_2_pwm/comparator<7>.XQ
+         1.099  Inst_autopilot_2_pwm/C6/C4/C0.F2
+         0.917  Inst_autopilot_2_pwm/comparator<7>.F1
+         1.264  Inst_autopilot_2_pwm/net6.G2
+
+Inst_autopilot_2_pwm/comparator<8>
+   Inst_autopilot_2_pwm/comparator<7>.YQ
+         2.352  Inst_autopilot_2_pwm/C6/C4/C0.G1
+         1.565  Inst_autopilot_2_pwm/net6.C4
+         1.062  Inst_autopilot_2_pwm/comparator<7>.G3
+         2.141  N26.G4
+
+Inst_autopilot_2_pwm/net6
+   Inst_autopilot_2_pwm/net6.X
+         1.598  Inst_autopilot_2_pwm/comparator<0>.G1
+         1.574  Inst_autopilot_2_pwm/comparator<1>.F2
+         1.598  Inst_autopilot_2_pwm/comparator<1>.G1
+         1.145  Inst_autopilot_2_pwm/comparator<3>.F2
+         1.461  Inst_autopilot_2_pwm/comparator<3>.G1
+         1.285  Inst_autopilot_2_pwm/comparator<5>.F2
+         1.461  Inst_autopilot_2_pwm/comparator<5>.G1
+         1.751  Inst_autopilot_2_pwm/comparator<7>.F2
+         1.639  Inst_autopilot_2_pwm/comparator<7>.G1
+
+Inst_clock_divide1/C6/N12
+   Inst_clock_divide1/pwm_count<3>.COUT
+         0.140  Inst_clock_divide1/pwm_count<5>.CIN
+
+Inst_clock_divide1/C6/N17
+   Inst_clock_divide1/pwm_count<5>.COUT
+         0.140  Inst_clock_divide1/pwm_count<7>.CIN
+
+Inst_clock_divide1/C6/N2
+   Inst_clock_divide1/pwm_count<0>.COUT
+         0.140  Inst_clock_divide1/pwm_count<1>.CIN
+
+Inst_clock_divide1/C6/N22
+   Inst_clock_divide1/pwm_count<7>.COUT
+         0.140  Inst_clock_divide1/pwm_count<9>.CIN
+
+Inst_clock_divide1/C6/N27
+   Inst_clock_divide1/pwm_count<9>.COUT
+         0.140  Inst_clock_divide1/pwm_count<11>.CIN
+
+Inst_clock_divide1/C6/N7
+   Inst_clock_divide1/pwm_count<1>.COUT
+         0.140  Inst_clock_divide1/pwm_count<3>.CIN
+
+Inst_clock_divide1/net7
+   Inst_clock_divide1/net7.X
+         2.382  Inst_clock_divide1/pwm_count<0>.G1
+         2.280  Inst_clock_divide1/pwm_count<1>.F2
+         2.085  Inst_clock_divide1/pwm_count<1>.G1
+         1.388  Inst_clock_divide1/pwm_count<3>.F2
+         2.085  Inst_clock_divide1/pwm_count<3>.G1
+         1.342  Inst_clock_divide1/pwm_count<5>.F2
+         1.809  Inst_clock_divide1/pwm_count<5>.G1
+         1.185  Inst_clock_divide1/pwm_count<7>.F2
+         1.809  Inst_clock_divide1/pwm_count<7>.G1
+         2.180  Inst_clock_divide1/pwm_count<9>.F2
+         2.036  Inst_clock_divide1/pwm_count<9>.G1
+         2.036  Inst_clock_divide1/pwm_count<11>.F1
+
+Inst_clock_divide1/pwm_count<0>
+   Inst_clock_divide1/pwm_count<0>.YQ
+         1.012  Inst_clock_divide1/pwm_count<0>.G4
+         2.188  Inst_clock_divide1/net7.G3
+
+Inst_clock_divide1/pwm_count<10>
+   Inst_clock_divide1/pwm_count<9>.YQ
+         1.132  Inst_clock_divide1/pwm_count<9>.G4
+         1.574  Inst_clock_divide1/syn218.F4
+         1.557  N201.G3
+
+Inst_clock_divide1/pwm_count<11>
+   Inst_clock_divide1/pwm_count<11>.XQ
+         2.539  Inst_clock_divide1/net7.G4
+         0.993  Inst_clock_divide1/pwm_count<11>.F2
+         1.914  N201.G4
+
+Inst_clock_divide1/pwm_count<1>
+   Inst_clock_divide1/pwm_count<1>.XQ
+         0.683  Inst_clock_divide1/pwm_count<1>.F1
+         0.841  Inst_clock_divide1/net7.G2
+
+Inst_clock_divide1/pwm_count<2>
+   Inst_clock_divide1/pwm_count<1>.YQ
+         0.841  Inst_clock_divide1/pwm_count<1>.G4
+         1.123  Inst_clock_divide1/net7.G1
+
+Inst_clock_divide1/pwm_count<3>
+   Inst_clock_divide1/pwm_count<3>.XQ
+         0.683  Inst_clock_divide1/pwm_count<3>.F1
+         0.878  Inst_clock_divide1/net7.F4
+
+Inst_clock_divide1/pwm_count<4>
+   Inst_clock_divide1/pwm_count<3>.YQ
+         0.869  Inst_clock_divide1/pwm_count<3>.G4
+         1.199  Inst_clock_divide1/net7.F3
+
+Inst_clock_divide1/pwm_count<5>
+   Inst_clock_divide1/pwm_count<5>.XQ
+         0.764  Inst_clock_divide1/pwm_count<5>.F1
+         1.098  Inst_clock_divide1/net7.F2
+
+Inst_clock_divide1/pwm_count<6>
+   Inst_clock_divide1/pwm_count<5>.YQ
+         0.762  Inst_clock_divide1/pwm_count<5>.G4
+         0.612  Inst_clock_divide1/net7.F1
+
+Inst_clock_divide1/pwm_count<7>
+   Inst_clock_divide1/pwm_count<7>.XQ
+         0.764  Inst_clock_divide1/pwm_count<7>.F1
+         1.098  Inst_clock_divide1/syn218.F2
+
+Inst_clock_divide1/pwm_count<8>
+   Inst_clock_divide1/pwm_count<7>.YQ
+         0.762  Inst_clock_divide1/pwm_count<7>.G4
+         0.612  Inst_clock_divide1/syn218.F1
+
+Inst_clock_divide1/pwm_count<9>
+   Inst_clock_divide1/pwm_count<9>.XQ
+         0.754  Inst_clock_divide1/pwm_count<9>.F1
+         1.159  Inst_clock_divide1/syn218.F3
+
+Inst_clock_divide1/syn218
+   Inst_clock_divide1/syn218.X
+         0.617  Inst_clock_divide1/net7.C4
+
+Inst_clock_divide2/C6/N12
+   Inst_clock_divide2/pwm_count<3>.COUT
+         0.140  Inst_clock_divide2/pwm_count<5>.CIN
+
+Inst_clock_divide2/C6/N17
+   Inst_clock_divide2/pwm_count<5>.COUT
+         0.140  Inst_clock_divide2/pwm_count<7>.CIN
+
+Inst_clock_divide2/C6/N2
+   Inst_clock_divide2/pwm_count<0>.COUT
+         0.140  Inst_clock_divide2/pwm_count<1>.CIN
+
+Inst_clock_divide2/C6/N22
+   Inst_clock_divide2/pwm_count<7>.COUT
+         0.140  Inst_clock_divide2/pwm_count<9>.CIN
+
+Inst_clock_divide2/C6/N27
+   Inst_clock_divide2/pwm_count<9>.COUT
+         0.140  Inst_clock_divide2/pwm_count<11>.CIN
+
+Inst_clock_divide2/C6/N7
+   Inst_clock_divide2/pwm_count<1>.COUT
+         0.140  Inst_clock_divide2/pwm_count<3>.CIN
+
+Inst_clock_divide2/net7
+   Inst_clock_divide2/net7.X
+         2.362  Inst_clock_divide2/pwm_count<0>.G1
+         2.263  Inst_clock_divide2/pwm_count<1>.F2
+         2.071  Inst_clock_divide2/pwm_count<1>.G1
+         1.388  Inst_clock_divide2/pwm_count<3>.F2
+         2.071  Inst_clock_divide2/pwm_count<3>.G1
+         1.337  Inst_clock_divide2/pwm_count<5>.F2
+         1.800  Inst_clock_divide2/pwm_count<5>.G1
+         1.185  Inst_clock_divide2/pwm_count<7>.F2
+         1.800  Inst_clock_divide2/pwm_count<7>.G1
+         2.168  Inst_clock_divide2/pwm_count<9>.F2
+         2.024  Inst_clock_divide2/pwm_count<9>.G1
+         2.024  Inst_clock_divide2/pwm_count<11>.F1
+
+Inst_clock_divide2/pwm_count<0>
+   Inst_clock_divide2/pwm_count<0>.YQ
+         0.745  Inst_clock_divide2/pwm_count<0>.G4
+         2.633  Inst_clock_divide2/net7.G3
+
+Inst_clock_divide2/pwm_count<10>
+   Inst_clock_divide2/pwm_count<9>.YQ
+         1.098  Inst_clock_divide2/pwm_count<9>.G4
+         0.767  Inst_clock_divide2/syn218.F1
+         1.311  N194.F1
+
+Inst_clock_divide2/pwm_count<11>
+   Inst_clock_divide2/pwm_count<11>.XQ
+         2.210  Inst_clock_divide2/net7.G1
+         0.999  Inst_clock_divide2/pwm_count<11>.F2
+         1.734  N194.F2
+
+Inst_clock_divide2/pwm_count<1>
+   Inst_clock_divide2/pwm_count<1>.XQ
+         0.812  Inst_clock_divide2/pwm_count<1>.F1
+         1.561  Inst_clock_divide2/net7.G2
+
+Inst_clock_divide2/pwm_count<2>
+   Inst_clock_divide2/pwm_count<1>.YQ
+         0.929  Inst_clock_divide2/pwm_count<1>.G4
+         1.581  Inst_clock_divide2/net7.G4
+
+Inst_clock_divide2/pwm_count<3>
+   Inst_clock_divide2/pwm_count<3>.XQ
+         0.683  Inst_clock_divide2/pwm_count<3>.F1
+         0.878  Inst_clock_divide2/net7.F4
+
+Inst_clock_divide2/pwm_count<4>
+   Inst_clock_divide2/pwm_count<3>.YQ
+         0.838  Inst_clock_divide2/pwm_count<3>.G4
+         1.257  Inst_clock_divide2/net7.F3
+
+Inst_clock_divide2/pwm_count<5>
+   Inst_clock_divide2/pwm_count<5>.XQ
+         0.683  Inst_clock_divide2/pwm_count<5>.F1
+         0.841  Inst_clock_divide2/net7.F2
+
+Inst_clock_divide2/pwm_count<6>
+   Inst_clock_divide2/pwm_count<5>.YQ
+         0.762  Inst_clock_divide2/pwm_count<5>.G4
+         0.612  Inst_clock_divide2/net7.F1
+
+Inst_clock_divide2/pwm_count<7>
+   Inst_clock_divide2/pwm_count<7>.XQ
+         0.509  Inst_clock_divide2/pwm_count<7>.F1
+         0.744  Inst_clock_divide2/syn218.F3
+
+Inst_clock_divide2/pwm_count<8>
+   Inst_clock_divide2/pwm_count<7>.YQ
+         0.745  Inst_clock_divide2/pwm_count<7>.G4
+         0.824  Inst_clock_divide2/syn218.F2
+
+Inst_clock_divide2/pwm_count<9>
+   Inst_clock_divide2/pwm_count<9>.XQ
+         0.823  Inst_clock_divide2/pwm_count<9>.F1
+         1.268  Inst_clock_divide2/syn218.F4
+
+Inst_clock_divide2/syn218
+   Inst_clock_divide2/syn218.X
+         0.779  Inst_clock_divide2/net7.C1
+
+Inst_clock_divide3/C6/N12
+   Inst_clock_divide3/pwm_count<3>.COUT
+         0.140  Inst_clock_divide3/pwm_count<5>.CIN
+
+Inst_clock_divide3/C6/N17
+   Inst_clock_divide3/pwm_count<5>.COUT
+         0.140  Inst_clock_divide3/pwm_count<7>.CIN
+
+Inst_clock_divide3/C6/N2
+   Inst_clock_divide3/pwm_count<0>.COUT
+         0.140  Inst_clock_divide3/pwm_count<1>.CIN
+
+Inst_clock_divide3/C6/N22
+   Inst_clock_divide3/pwm_count<7>.COUT
+         0.140  Inst_clock_divide3/pwm_count<9>.CIN
+
+Inst_clock_divide3/C6/N27
+   Inst_clock_divide3/pwm_count<9>.COUT
+         0.140  Inst_clock_divide3/pwm_count<11>.CIN
+
+Inst_clock_divide3/C6/N7
+   Inst_clock_divide3/pwm_count<1>.COUT
+         0.140  Inst_clock_divide3/pwm_count<3>.CIN
+
+Inst_clock_divide3/net7
+   Inst_clock_divide3/net7.X
+         2.194  Inst_clock_divide3/pwm_count<0>.G1
+         2.121  Inst_clock_divide3/pwm_count<1>.F2
+         1.960  Inst_clock_divide3/pwm_count<1>.G1
+         1.388  Inst_clock_divide3/pwm_count<3>.F2
+         1.960  Inst_clock_divide3/pwm_count<3>.G1
+         1.294  Inst_clock_divide3/pwm_count<5>.F2
+         1.721  Inst_clock_divide3/pwm_count<5>.G1
+         1.185  Inst_clock_divide3/pwm_count<7>.F2
+         1.721  Inst_clock_divide3/pwm_count<7>.G1
+         2.069  Inst_clock_divide3/pwm_count<9>.F2
+         1.934  Inst_clock_divide3/pwm_count<9>.G1
+         1.934  Inst_clock_divide3/pwm_count<11>.F1
+
+Inst_clock_divide3/pwm_count<0>
+   Inst_clock_divide3/pwm_count<0>.YQ
+         1.012  Inst_clock_divide3/pwm_count<0>.G4
+         2.188  Inst_clock_divide3/net7.G3
+
+Inst_clock_divide3/pwm_count<10>
+   Inst_clock_divide3/pwm_count<9>.YQ
+         0.899  Inst_clock_divide3/pwm_count<9>.G4
+         0.680  Inst_clock_divide3/syn218.F1
+         0.931  Inst_clock_divide3/pwm_count<11>.G1
+
+Inst_clock_divide3/pwm_count<11>
+   Inst_clock_divide3/pwm_count<11>.XQ
+         1.518  Inst_clock_divide3/net7.G4
+         0.841  Inst_clock_divide3/pwm_count<11>.F2
+         0.841  Inst_clock_divide3/pwm_count<11>.G2
+
+Inst_clock_divide3/pwm_count<1>
+   Inst_clock_divide3/pwm_count<1>.XQ
+         0.683  Inst_clock_divide3/pwm_count<1>.F1
+         0.841  Inst_clock_divide3/net7.G2
+
+Inst_clock_divide3/pwm_count<2>
+   Inst_clock_divide3/pwm_count<1>.YQ
+         0.841  Inst_clock_divide3/pwm_count<1>.G4
+         1.123  Inst_clock_divide3/net7.G1
+
+Inst_clock_divide3/pwm_count<3>
+   Inst_clock_divide3/pwm_count<3>.XQ
+         0.683  Inst_clock_divide3/pwm_count<3>.F1
+         0.878  Inst_clock_divide3/net7.F4
+
+Inst_clock_divide3/pwm_count<4>
+   Inst_clock_divide3/pwm_count<3>.YQ
+         0.869  Inst_clock_divide3/pwm_count<3>.G4
+         1.199  Inst_clock_divide3/net7.F3
+
+Inst_clock_divide3/pwm_count<5>
+   Inst_clock_divide3/pwm_count<5>.XQ
+         0.823  Inst_clock_divide3/pwm_count<5>.F1
+         1.231  Inst_clock_divide3/net7.F2
+
+Inst_clock_divide3/pwm_count<6>
+   Inst_clock_divide3/pwm_count<5>.YQ
+         0.762  Inst_clock_divide3/pwm_count<5>.G4
+         0.612  Inst_clock_divide3/net7.F1
+
+Inst_clock_divide3/pwm_count<7>
+   Inst_clock_divide3/pwm_count<7>.XQ
+         0.683  Inst_clock_divide3/pwm_count<7>.F1
+         0.878  Inst_clock_divide3/syn218.F4
+
+Inst_clock_divide3/pwm_count<8>
+   Inst_clock_divide3/pwm_count<7>.YQ
+         0.869  Inst_clock_divide3/pwm_count<7>.G4
+         1.199  Inst_clock_divide3/syn218.F3
+
+Inst_clock_divide3/pwm_count<9>
+   Inst_clock_divide3/pwm_count<9>.XQ
+         0.823  Inst_clock_divide3/pwm_count<9>.F1
+         1.231  Inst_clock_divide3/syn218.F2
+
+Inst_clock_divide3/syn218
+   Inst_clock_divide3/syn218.X
+         0.876  Inst_clock_divide3/net7.C4
+
+Inst_clock_divide4/C6/N12
+   Inst_clock_divide4/pwm_count<3>.COUT
+         0.140  Inst_clock_divide4/pwm_count<5>.CIN
+
+Inst_clock_divide4/C6/N17
+   Inst_clock_divide4/pwm_count<5>.COUT
+         0.140  Inst_clock_divide4/pwm_count<7>.CIN
+
+Inst_clock_divide4/C6/N2
+   Inst_clock_divide4/pwm_count<0>.COUT
+         0.140  Inst_clock_divide4/pwm_count<1>.CIN
+
+Inst_clock_divide4/C6/N22
+   Inst_clock_divide4/pwm_count<7>.COUT
+         0.140  Inst_clock_divide4/pwm_count<9>.CIN
+
+Inst_clock_divide4/C6/N27
+   Inst_clock_divide4/pwm_count<9>.COUT
+         0.140  Inst_clock_divide4/pwm_count<11>.CIN
+
+Inst_clock_divide4/C6/N7
+   Inst_clock_divide4/pwm_count<1>.COUT
+         0.140  Inst_clock_divide4/pwm_count<3>.CIN
+
+Inst_clock_divide4/net7
+   Inst_clock_divide4/net7.X
+         2.382  Inst_clock_divide4/pwm_count<0>.G1
+         2.280  Inst_clock_divide4/pwm_count<1>.F2
+         2.085  Inst_clock_divide4/pwm_count<1>.G1
+         1.388  Inst_clock_divide4/pwm_count<3>.F2
+         2.085  Inst_clock_divide4/pwm_count<3>.G1
+         1.342  Inst_clock_divide4/pwm_count<5>.F2
+         1.809  Inst_clock_divide4/pwm_count<5>.G1
+         1.185  Inst_clock_divide4/pwm_count<7>.F2
+         1.809  Inst_clock_divide4/pwm_count<7>.G1
+         2.180  Inst_clock_divide4/pwm_count<9>.F2
+         2.036  Inst_clock_divide4/pwm_count<9>.G1
+         2.036  Inst_clock_divide4/pwm_count<11>.F1
+
+Inst_clock_divide4/pwm_count<0>
+   Inst_clock_divide4/pwm_count<0>.YQ
+         0.839  Inst_clock_divide4/pwm_count<0>.G4
+         1.164  Inst_clock_divide4/net7.G2
+
+Inst_clock_divide4/pwm_count<10>
+   Inst_clock_divide4/pwm_count<9>.YQ
+         1.285  Inst_clock_divide4/pwm_count<9>.G4
+         0.973  Inst_clock_divide4/syn218.F1
+         2.152  N201.F4
+
+Inst_clock_divide4/pwm_count<11>
+   Inst_clock_divide4/pwm_count<11>.XQ
+         1.765  N201.F1
+         1.547  Inst_clock_divide4/net7.G3
+         0.866  Inst_clock_divide4/pwm_count<11>.F2
+
+Inst_clock_divide4/pwm_count<1>
+   Inst_clock_divide4/pwm_count<1>.XQ
+         0.931  Inst_clock_divide4/pwm_count<1>.F1
+         2.106  Inst_clock_divide4/net7.G4
+
+Inst_clock_divide4/pwm_count<2>
+   Inst_clock_divide4/pwm_count<1>.YQ
+         0.841  Inst_clock_divide4/pwm_count<1>.G4
+         1.123  Inst_clock_divide4/net7.G1
+
+Inst_clock_divide4/pwm_count<3>
+   Inst_clock_divide4/pwm_count<3>.XQ
+         0.683  Inst_clock_divide4/pwm_count<3>.F1
+         0.878  Inst_clock_divide4/net7.F4
+
+Inst_clock_divide4/pwm_count<4>
+   Inst_clock_divide4/pwm_count<3>.YQ
+         0.838  Inst_clock_divide4/pwm_count<3>.G4
+         1.257  Inst_clock_divide4/net7.F3
+
+Inst_clock_divide4/pwm_count<5>
+   Inst_clock_divide4/pwm_count<5>.XQ
+         0.823  Inst_clock_divide4/pwm_count<5>.F1
+         1.231  Inst_clock_divide4/net7.F2
+
+Inst_clock_divide4/pwm_count<6>
+   Inst_clock_divide4/pwm_count<5>.YQ
+         0.762  Inst_clock_divide4/pwm_count<5>.G4
+         0.612  Inst_clock_divide4/net7.F1
+
+Inst_clock_divide4/pwm_count<7>
+   Inst_clock_divide4/pwm_count<7>.XQ
+         0.754  Inst_clock_divide4/pwm_count<7>.F1
+         1.159  Inst_clock_divide4/syn218.F3
+
+Inst_clock_divide4/pwm_count<8>
+   Inst_clock_divide4/pwm_count<7>.YQ
+         0.772  Inst_clock_divide4/pwm_count<7>.G4
+         0.898  Inst_clock_divide4/syn218.F2
+
+Inst_clock_divide4/pwm_count<9>
+   Inst_clock_divide4/pwm_count<9>.XQ
+         0.823  Inst_clock_divide4/pwm_count<9>.F1
+         1.268  Inst_clock_divide4/syn218.F4
+
+Inst_clock_divide4/syn218
+   Inst_clock_divide4/syn218.X
+         0.818  Inst_clock_divide4/net7.C4
+
+Inst_copilot_id_pwm/C6/N13
+   Inst_copilot_id_pwm/C6/C2/C0.COUT
+         0.140  Inst_copilot_id_pwm/C6/C3/C0.CIN
+
+Inst_copilot_id_pwm/C6/N18
+   Inst_copilot_id_pwm/C6/C3/C0.COUT
+         0.140  Inst_copilot_id_pwm/C6/C4/C0.CIN
+
+Inst_copilot_id_pwm/C6/N23
+   Inst_copilot_id_pwm/C6/C4/C0.COUT
+         0.140  N187.CIN
+
+Inst_copilot_id_pwm/C6/N3
+   Inst_copilot_id_pwm/C6/C0/C0.COUT
+         0.140  Inst_copilot_id_pwm/C6/C1/C0.CIN
+
+Inst_copilot_id_pwm/C6/N8
+   Inst_copilot_id_pwm/C6/C1/C0.COUT
+         0.140  Inst_copilot_id_pwm/C6/C2/C0.CIN
+
+Inst_copilot_id_pwm/C7/N12
+   Inst_copilot_id_pwm/comparator<3>.COUT
+         0.140  Inst_copilot_id_pwm/comparator<5>.CIN
+
+Inst_copilot_id_pwm/C7/N17
+   Inst_copilot_id_pwm/comparator<5>.COUT
+         0.140  Inst_copilot_id_pwm/comparator<7>.CIN
+
+Inst_copilot_id_pwm/C7/N2
+   Inst_copilot_id_pwm/comparator<0>.COUT
+         0.140  Inst_copilot_id_pwm/comparator<1>.CIN
+
+Inst_copilot_id_pwm/C7/N7
+   Inst_copilot_id_pwm/comparator<1>.COUT
+         0.140  Inst_copilot_id_pwm/comparator<3>.CIN
+
+Inst_copilot_id_pwm/N99
+   Inst_copilot_id_pwm/N99.Y
+         0.544  N187.G1
+
+Inst_copilot_id_pwm/comparator<0>
+   Inst_copilot_id_pwm/comparator<0>.YQ
+         1.468  Inst_copilot_id_pwm/C6/C0/C0.G1
+         1.100  Inst_copilot_id_pwm/comparator<0>.G4
+         1.415  Inst_copilot_id_pwm/net6.F4
+
+Inst_copilot_id_pwm/comparator<1>
+   Inst_copilot_id_pwm/comparator<1>.XQ
+         1.141  Inst_copilot_id_pwm/C6/C1/C0.F2
+         0.950  Inst_copilot_id_pwm/comparator<1>.F1
+         1.662  Inst_copilot_id_pwm/net6.F1
+
+Inst_copilot_id_pwm/comparator<2>
+   Inst_copilot_id_pwm/comparator<1>.YQ
+         1.495  Inst_copilot_id_pwm/C6/C1/C0.G1
+         0.964  Inst_copilot_id_pwm/comparator<1>.G4
+         1.626  Inst_copilot_id_pwm/net6.F2
+
+Inst_copilot_id_pwm/comparator<3>
+   Inst_copilot_id_pwm/comparator<3>.XQ
+         1.002  Inst_copilot_id_pwm/C6/C2/C0.F2
+         0.776  Inst_copilot_id_pwm/comparator<3>.F1
+         1.121  Inst_copilot_id_pwm/net6.F3
+
+Inst_copilot_id_pwm/comparator<4>
+   Inst_copilot_id_pwm/comparator<3>.YQ
+         1.171  Inst_copilot_id_pwm/C6/C2/C0.G1
+         0.869  Inst_copilot_id_pwm/comparator<3>.G4
+         1.199  Inst_copilot_id_pwm/net6.G3
+
+Inst_copilot_id_pwm/comparator<5>
+   Inst_copilot_id_pwm/comparator<5>.XQ
+         1.261  Inst_copilot_id_pwm/C6/C3/C0.F2
+         0.896  Inst_copilot_id_pwm/comparator<5>.F1
+         1.579  Inst_copilot_id_pwm/net6.G1
+
+Inst_copilot_id_pwm/comparator<6>
+   Inst_copilot_id_pwm/comparator<5>.YQ
+         1.495  Inst_copilot_id_pwm/C6/C3/C0.G1
+         0.964  Inst_copilot_id_pwm/comparator<5>.G4
+         1.663  Inst_copilot_id_pwm/net6.G4
+
+Inst_copilot_id_pwm/comparator<7>
+   Inst_copilot_id_pwm/comparator<7>.XQ
+         0.819  Inst_copilot_id_pwm/C6/C4/C0.F2
+         0.680  Inst_copilot_id_pwm/comparator<7>.F1
+         2.664  Inst_copilot_id_pwm/net6.G2
+
+Inst_copilot_id_pwm/comparator<8>
+   Inst_copilot_id_pwm/comparator<7>.YQ
+         2.389  Inst_copilot_id_pwm/C6/C4/C0.G1
+         2.719  Inst_copilot_id_pwm/net6.C3
+         1.062  Inst_copilot_id_pwm/comparator<7>.G3
+         2.782  N187.G4
+
+Inst_copilot_id_pwm/net6
+   Inst_copilot_id_pwm/net6.Y
+         2.371  Inst_copilot_id_pwm/comparator<0>.G1
+         2.279  Inst_copilot_id_pwm/comparator<1>.F2
+         2.098  Inst_copilot_id_pwm/comparator<1>.G1
+         3.989  Inst_copilot_id_pwm/comparator<3>.F2
+         2.098  Inst_copilot_id_pwm/comparator<3>.G1
+         1.855  Inst_copilot_id_pwm/comparator<5>.F2
+         1.509  Inst_copilot_id_pwm/comparator<5>.G1
+         3.733  Inst_copilot_id_pwm/comparator<7>.F2
+         1.509  Inst_copilot_id_pwm/comparator<7>.G1
+
+Inst_filter_1/qav<1>
+   Inst_filter_1/qav<1>.XQ
+         1.259  outA1.F1
+         0.914  Inst_filter_1/qav<1>.C2
+
+Inst_filter_1/qav<2>
+   Inst_filter_1/qav<1>.YQ
+         1.123  Inst_filter_1/qav<3>.C1
+         1.040  outA1.F3
+
+Inst_filter_1/qav<3>
+   Inst_filter_1/qav<3>.XQ
+         0.801  outA1.F4
+
+Inst_filter_1/qbv<1>
+   Inst_filter_1/qbv<1>.XQ
+         0.571  outB1.F4
+         0.534  Inst_filter_1/qbv<1>.C2
+
+Inst_filter_1/qbv<2>
+   Inst_filter_1/qbv<1>.YQ
+         0.730  Inst_filter_1/qbv<3>.C3
+         0.654  outB1.F3
+
+Inst_filter_1/qbv<3>
+   Inst_filter_1/qbv<3>.YQ
+         0.788  outB1.F1
+
+Inst_filter_2/qav<1>
+   Inst_filter_2/qav<1>.YQ
+         0.709  Inst_filter_2/qav<1>.C3
+         0.931  outA1.G1
+
+Inst_filter_2/qav<2>
+   Inst_filter_2/qav<1>.XQ
+         0.794  Inst_filter_2/qav<3>.C4
+         0.692  outA1.G4
+
+Inst_filter_2/qav<3>
+   Inst_filter_2/qav<3>.XQ
+         0.764  outA1.G2
+
+Inst_filter_2/qbv<1>
+   Inst_filter_2/qbv<1>.YQ
+         0.512  Inst_filter_2/qbv<1>.C3
+         0.484  outB1.G1
+
+Inst_filter_2/qbv<2>
+   Inst_filter_2/qbv<1>.XQ
+         0.742  Inst_filter_2/qbv<3>.C2
+         0.657  outB1.G2
+
+Inst_filter_2/qbv<3>
+   Inst_filter_2/qbv<3>.XQ
+         0.801  outB1.G4
+
+Inst_filter_3/qav<1>
+   Inst_filter_3/qav<1>.YQ
+         0.638  outA3.F1
+         0.596  Inst_filter_3/qav<1>.C3
+
+Inst_filter_3/qav<2>
+   Inst_filter_3/qav<1>.XQ
+         1.156  Inst_filter_3/qav<3>.C1
+         1.505  outA3.F3
+
+Inst_filter_3/qav<3>
+   Inst_filter_3/qav<3>.YQ
+         0.946  outA3.F4
+
+Inst_filter_3/qbv<1>
+   Inst_filter_3/qbv<1>.YQ
+         0.724  outB3.F3
+         0.614  Inst_filter_3/qbv<1>.C3
+
+Inst_filter_3/qbv<2>
+   Inst_filter_3/qbv<1>.XQ
+         0.652  Inst_filter_3/qbv<3>.C3
+         0.714  outB3.F1
+
+Inst_filter_3/qbv<3>
+   Inst_filter_3/qbv<3>.YQ
+         0.946  outB3.F4
+
+Inst_filter_4/qav<1>
+   Inst_filter_4/qav<1>.XQ
+         0.845  Inst_filter_4/qav<1>.C2
+         1.495  outA3.G1
+
+Inst_filter_4/qav<2>
+   Inst_filter_4/qav<1>.YQ
+         0.702  Inst_filter_4/qav<3>.C1
+         2.357  outA3.G2
+
+Inst_filter_4/qav<3>
+   Inst_filter_4/qav<3>.XQ
+         0.801  outA3.G4
+
+Inst_filter_4/qbv<1>
+   Inst_filter_4/qbv<1>.YQ
+         0.512  Inst_filter_4/qbv<1>.C3
+         0.484  outB3.G1
+
+Inst_filter_4/qbv<2>
+   Inst_filter_4/qbv<1>.XQ
+         0.742  Inst_filter_4/qbv<3>.C2
+         0.657  outB3.G2
+
+Inst_filter_4/qbv<3>
+   Inst_filter_4/qbv<3>.YQ
+         0.579  outB3.G4
+
+Inst_get_data/C29/N5
+   Inst_get_data/syn2823.Y
+         5.798  ann2dimbyte<0>.C3
+         3.757  ann2dimbyte<2>.C3
+         5.261  ann2dimbyte<4>.C3
+         5.928  ann2dimbyte<6>.C3
+
+Inst_get_data/C30/N5
+   N135.Y
+         1.552  ann3dimbyte<0>.C3
+         2.046  ann3dimbyte<2>.C3
+         1.935  ann3dimbyte<4>.C2
+         1.801  ann3dimbyte<6>.C3
+
+Inst_get_data/C31/N5
+   Inst_get_data/C31/N5.X
+         3.460  ann4dimbyte<0>.C2
+         1.938  ann4dimbyte<2>.C2
+         1.663  ann4dimbyte<4>.C1
+         1.862  ann4dimbyte<6>.C3
+
+Inst_get_data/syn2740
+   Inst_get_data/syn2740.X
+         1.002  N17.F3
+
+Inst_get_data/syn2742
+   Inst_get_data/syn2742.X
+         0.817  N17.F2
+
+Inst_get_data/syn2748
+   Inst_get_data/syn2748.X
+         0.840  N17.F1
+
+Inst_get_data/syn2765
+   Inst_get_data/syn2748.Y
+         2.207  Inst_get_data/syn3040.G1
+
+Inst_get_data/syn2804
+   Inst_get_data/syn2921.Y
+         3.251  N26.F1
+
+Inst_get_data/syn2805
+   Inst_get_data/syn3040.Y
+         5.384  N26.F3
+
+Inst_get_data/syn2806
+   Inst_get_data/syn2806.X
+         4.180  N26.F2
+
+Inst_get_data/syn2811
+   Inst_get_data/syn2742.Y
+         1.609  N17.G1
+
+Inst_get_data/syn2813
+   Inst_get_data/syn2740.Y
+         0.951  N17.G3
+
+Inst_get_data/syn2817
+   Inst_get_data/syn2817.Y
+         0.596  N17.G2
+
+Inst_get_data/syn2823
+   Inst_get_data/syn2823.X
+         2.001  Inst_get_data/syn3062.C1
+         3.614  Inst_get_data/syn519.F3
+
+Inst_get_data/syn2828
+   Inst_get_data/syn2853.Y
+         2.516  Inst_get_data/syn716.F4
+         2.784  Inst_get_data/syn716.G3
+         2.976  Inst_get_data/syn3021.G4
+         1.300  Inst_get_data/syn3019.G2
+         3.256  Inst_get_data/syn3017.G4
+         2.479  Inst_get_data/syn691.F2
+
+Inst_get_data/syn2848
+   Inst_get_data/C31/N5.Y
+         2.785  Inst_get_data/syn3040.F3
+         3.395  Inst_get_data/syn3017.F1
+         5.220  Inst_get_data/syn2994.F2
+         5.357  Inst_get_data/syn2971.F3
+         5.329  Inst_get_data/syn2948.F1
+         5.220  Inst_get_data/syn2925.F2
+
+Inst_get_data/syn2853
+   Inst_get_data/syn2853.X
+         1.773  Inst_get_data/syn692.F2
+         1.773  Inst_get_data/syn692.G2
+         1.597  Inst_get_data/syn717.F1
+         1.597  Inst_get_data/syn717.G1
+         3.532  Inst_get_data/syn3020.G4
+         1.031  Inst_get_data/syn3018.G3
+
+Inst_get_data/syn2856
+   Inst_get_data/syn2904.Y
+         1.402  Inst_get_data/syn3040.F4
+         1.721  Inst_get_data/syn3017.F4
+         3.206  Inst_get_data/syn2994.F1
+         4.464  Inst_get_data/syn2971.F4
+         4.994  Inst_get_data/syn2948.F4
+         5.115  Inst_get_data/syn2925.F3
+
+Inst_get_data/syn2864
+   Inst_get_data/syn2806.Y
+         1.616  Inst_get_data/syn3018.F3
+         2.661  Inst_get_data/syn2995.F4
+         2.394  Inst_get_data/syn2972.F4
+         2.357  Inst_get_data/syn2949.F2
+         1.827  Inst_get_data/syn3041.F4
+         4.499  Inst_get_data/syn2926.G4
+
+Inst_get_data/syn2872
+   Inst_get_data/syn2920.Y
+         2.840  Inst_get_data/syn3018.F4
+         8.154  Inst_get_data/syn2995.F1
+         7.399  Inst_get_data/syn2972.F1
+         7.823  Inst_get_data/syn2949.F1
+         3.832  Inst_get_data/syn2806.F2
+         5.503  Inst_get_data/syn3041.F2
+         8.589  Inst_get_data/syn2926.G3
+
+Inst_get_data/syn2880
+   Inst_get_data/syn2912.Y
+         1.846  Inst_get_data/syn3019.F2
+         2.182  Inst_get_data/syn2996.F1
+         2.448  Inst_get_data/syn2973.F1
+         2.448  Inst_get_data/syn2950.F1
+         2.056  Inst_get_data/syn2806.F3
+         2.781  Inst_get_data/syn2927.G4
+         3.435  Inst_get_data/syn691.G1
+
+Inst_get_data/syn2888
+   Inst_get_data/syn2896.Y
+         1.417  Inst_get_data/syn3019.F4
+         3.976  Inst_get_data/syn2996.F2
+         4.937  Inst_get_data/syn2973.F3
+         5.305  Inst_get_data/syn2950.F3
+         1.202  Inst_get_data/syn2806.F1
+         5.876  Inst_get_data/syn2927.G3
+         1.675  Inst_get_data/syn691.G2
+
+Inst_get_data/syn2896
+   Inst_get_data/syn2896.X
+         2.015  Inst_get_data/syn2921.C1
+         1.665  Inst_get_data/syn3020.F1
+         1.933  Inst_get_data/syn2997.F3
+         1.933  Inst_get_data/syn2974.F3
+         1.720  Inst_get_data/syn2951.F3
+         3.736  Inst_get_data/syn2928.G4
+         3.944  Inst_get_data/syn3043.F4
+
+Inst_get_data/syn2901
+   Inst_get_data/syn2916.Y
+         2.121  Inst_get_data/syn716.F3
+         2.020  Inst_get_data/syn716.G4
+         2.093  Inst_get_data/syn3021.G1
+         1.744  Inst_get_data/syn3019.G4
+         1.809  Inst_get_data/syn3017.G3
+         1.851  Inst_get_data/syn691.F1
+
+Inst_get_data/syn2904
+   Inst_get_data/syn2904.X
+         2.153  Inst_get_data/syn3020.F2
+         2.484  Inst_get_data/syn2997.F1
+         2.190  Inst_get_data/syn2974.F4
+         1.698  Inst_get_data/syn2951.F1
+         1.726  Inst_get_data/syn2928.G3
+         3.025  Inst_get_data/syn3043.F2
+
+Inst_get_data/syn2912
+   Inst_get_data/syn2912.X
+         8.387  Inst_get_data/syn2921.C3
+         3.545  Inst_get_data/syn3021.F4
+         6.193  Inst_get_data/syn2998.F4
+         2.084  Inst_get_data/syn2975.F4
+         5.628  Inst_get_data/syn2952.F1
+         7.092  Inst_get_data/syn3044.F4
+         7.758  Inst_get_data/syn2929.G4
+
+Inst_get_data/syn2916
+   Inst_get_data/syn2916.X
+         3.259  Inst_get_data/syn692.F1
+         3.259  Inst_get_data/syn692.G1
+         4.504  Inst_get_data/syn717.F2
+         4.504  Inst_get_data/syn717.G2
+         3.983  Inst_get_data/syn3020.G2
+         1.497  Inst_get_data/syn3018.G4
+
+Inst_get_data/syn2918
+   Inst_get_data/syn2918.X
+         0.952  Inst_get_data/syn519.F4
+         0.792  Inst_get_data/syn522.G3
+
+Inst_get_data/syn2920
+   Inst_get_data/syn2920.X
+         3.669  Inst_get_data/syn3021.F3
+         4.283  Inst_get_data/syn2998.F2
+         3.122  Inst_get_data/syn2975.F3
+         1.665  Inst_get_data/syn2952.F4
+         5.218  Inst_get_data/syn3040.G2
+         4.707  Inst_get_data/syn3044.F2
+         3.999  Inst_get_data/syn2929.G1
+
+Inst_get_data/syn2921
+   Inst_get_data/syn2921.X
+         4.242  Inst_get_data/syn2806.C1
+         9.154  Inst_get_data/syn2925.C1
+         9.525  Inst_get_data/syn2948.C4
+         4.359  Inst_get_data/syn2949.C1
+         3.461  Inst_get_data/syn2950.C1
+         8.392  Inst_get_data/syn2951.C3
+        14.715  Inst_get_data/syn2952.C1
+         9.377  Inst_get_data/syn2971.C2
+         4.040  Inst_get_data/syn2972.C1
+         3.185  Inst_get_data/syn2973.C1
+         8.910  Inst_get_data/syn2974.C3
+        12.991  Inst_get_data/syn2975.C4
+         7.315  Inst_get_data/syn2994.C1
+         4.603  Inst_get_data/syn2995.C2
+         3.553  Inst_get_data/syn2996.C4
+         9.270  Inst_get_data/syn2997.C3
+        14.941  Inst_get_data/syn2998.C1
+         9.296  Inst_get_data/syn692.F4
+         9.296  Inst_get_data/syn692.G4
+         8.484  Inst_get_data/syn3017.G2
+         6.845  Inst_get_data/syn3017.C1
+         7.076  Inst_get_data/syn3018.G1
+         6.648  Inst_get_data/syn3018.C1
+         4.234  Inst_get_data/syn3019.G1
+         4.234  Inst_get_data/syn3019.C1
+         7.100  Inst_get_data/syn3020.G3
+         7.100  Inst_get_data/syn3020.C3
+        14.086  Inst_get_data/syn3021.G3
+        14.086  Inst_get_data/syn3021.C3
+        10.563  Inst_get_data/syn716.F1
+        10.563  Inst_get_data/syn716.G1
+        14.426  Inst_get_data/syn717.F3
+        14.426  Inst_get_data/syn717.G3
+         6.727  Inst_get_data/syn3040.G3
+         6.727  Inst_get_data/syn3040.C3
+         4.235  Inst_get_data/syn3041.C1
+        14.714  Inst_get_data/syn3044.C4
+         3.716  Inst_get_data/syn2929.C1
+         9.543  Inst_get_data/syn2928.C2
+         4.748  Inst_get_data/syn2927.C1
+         7.912  Inst_get_data/syn3043.C4
+         4.389  Inst_get_data/syn2926.C1
+         5.952  Inst_get_data/syn691.F4
+        11.456  Inst_get_data/syn691.C1
+
+Inst_get_data/syn2925
+   Inst_get_data/syn2925.Y
+         2.610  N38.G3
+
+Inst_get_data/syn2926
+   Inst_get_data/syn2926.X
+         1.729  N38.G1
+
+Inst_get_data/syn2927
+   Inst_get_data/syn2927.X
+         2.721  N38.F1
+
+Inst_get_data/syn2928
+   Inst_get_data/syn2928.Y
+         6.043  N38.F2
+
+Inst_get_data/syn2929
+   Inst_get_data/syn2929.X
+         1.199  N38.F3
+
+Inst_get_data/syn2948
+   Inst_get_data/syn2948.X
+         1.806  N49.G3
+
+Inst_get_data/syn2949
+   Inst_get_data/syn2949.X
+         4.493  N49.G4
+
+Inst_get_data/syn2950
+   Inst_get_data/syn2950.X
+         4.499  N49.F4
+
+Inst_get_data/syn2951
+   Inst_get_data/syn2951.Y
+         1.599  N49.F2
+
+Inst_get_data/syn2952
+   Inst_get_data/syn2952.X
+         1.102  N49.F3
+
+Inst_get_data/syn2971
+   Inst_get_data/syn2971.X
+         2.150  N60.G2
+
+Inst_get_data/syn2972
+   Inst_get_data/syn2972.X
+         3.903  N60.G4
+
+Inst_get_data/syn2973
+   Inst_get_data/syn2973.Y
+         1.972  N60.F4
+
+Inst_get_data/syn2974
+   Inst_get_data/syn2974.Y
+         2.796  N60.F1
+
+Inst_get_data/syn2975
+   Inst_get_data/syn2975.X
+         0.816  N60.F3
+
+Inst_get_data/syn2994
+   Inst_get_data/syn2994.X
+         2.081  N71.G3
+
+Inst_get_data/syn2995
+   Inst_get_data/syn2995.Y
+         2.980  N71.G4
+
+Inst_get_data/syn2996
+   Inst_get_data/syn2996.X
+         2.850  N71.F1
+
+Inst_get_data/syn2997
+   Inst_get_data/syn2997.Y
+         2.712  N71.F3
+
+Inst_get_data/syn2998
+   Inst_get_data/syn2998.X
+         1.721  N71.F4
+
+Inst_get_data/syn3017
+   Inst_get_data/syn3017.X
+         0.877  N82.G4
+
+Inst_get_data/syn3018
+   Inst_get_data/syn3018.X
+         0.999  N82.G1
+
+Inst_get_data/syn3019
+   Inst_get_data/syn3019.X
+         2.242  N82.F4
+
+Inst_get_data/syn3020
+   Inst_get_data/syn3020.X
+         1.143  N82.F1
+
+Inst_get_data/syn3021
+   Inst_get_data/syn3021.X
+         1.676  N82.F3
+
+Inst_get_data/syn3040
+   Inst_get_data/syn3040.X
+         0.584  N93.G4
+
+Inst_get_data/syn3041
+   Inst_get_data/syn3041.X
+         2.487  N93.G1
+
+Inst_get_data/syn3042
+   Inst_get_data/syn691.Y
+         2.316  N93.F4
+
+Inst_get_data/syn3043
+   Inst_get_data/syn3043.X
+         2.718  N93.F1
+
+Inst_get_data/syn3044
+   Inst_get_data/syn3044.X
+         3.308  N93.F3
+
+Inst_get_data/syn3062
+   Inst_get_data/syn3062.X
+         0.900  N135.G4
+
+Inst_get_data/syn3064
+   Inst_get_data/syn3064.X
+         0.779  Inst_get_data/C31/N5.F2
+
+Inst_get_data/syn519
+   Inst_get_data/syn519.X
+         1.929  N17.F4
+         1.929  N17.G4
+
+Inst_get_data/syn520
+   Inst_get_data/syn522.Y
+         0.885  Inst_get_data/syn3062.C3
+         3.087  Inst_get_data/C31/N5.F1
+         2.818  Inst_get_data/syn2823.C3
+         0.856  N135.F1
+         0.856  N135.G1
+
+Inst_get_data/syn521
+   Inst_get_data/syn3064.Y
+         0.931  N135.F4
+
+Inst_get_data/syn522
+   Inst_get_data/syn522.X
+         4.269  Inst_get_data/syn2817.C2
+         4.267  Inst_get_data/syn2748.C2
+         1.677  Inst_get_data/syn3040.G4
+
+Inst_get_data/syn591
+   Inst_get_data/syn716.Y
+         1.186  N38.G4
+
+Inst_get_data/syn592
+   Inst_get_data/syn717.Y
+         4.562  N38.G2
+
+Inst_get_data/syn616
+   Inst_get_data/syn3021.Y
+         0.801  N49.G2
+
+Inst_get_data/syn617
+   Inst_get_data/syn3020.Y
+         1.080  N49.G1
+
+Inst_get_data/syn641
+   Inst_get_data/syn3019.Y
+         1.367  N60.G3
+
+Inst_get_data/syn642
+   Inst_get_data/syn3018.Y
+         0.572  N60.G1
+
+Inst_get_data/syn666
+   Inst_get_data/syn3017.Y
+         0.572  N71.G1
+
+Inst_get_data/syn667
+   Inst_get_data/syn692.Y
+         0.560  N71.G2
+
+Inst_get_data/syn691
+   Inst_get_data/syn691.X
+         1.868  N82.G2
+
+Inst_get_data/syn692
+   Inst_get_data/syn692.X
+         0.580  N82.G3
+
+Inst_get_data/syn716
+   Inst_get_data/syn716.X
+         1.102  N93.G3
+
+Inst_get_data/syn717
+   Inst_get_data/syn717.X
+         1.590  N93.G2
+
+Inst_pilot_id_pwm/C6/N13
+   Inst_pilot_id_pwm/C6/C2/C0.COUT
+         0.140  Inst_pilot_id_pwm/C6/C3/C0.CIN
+
+Inst_pilot_id_pwm/C6/N18
+   Inst_pilot_id_pwm/C6/C3/C0.COUT
+         0.140  Inst_pilot_id_pwm/C6/C4/C0.CIN
+
+Inst_pilot_id_pwm/C6/N23
+   Inst_pilot_id_pwm/C6/C4/C0.COUT
+         0.140  N194.CIN
+
+Inst_pilot_id_pwm/C6/N3
+   Inst_pilot_id_pwm/C6/C0/C0.COUT
+         0.140  Inst_pilot_id_pwm/C6/C1/C0.CIN
+
+Inst_pilot_id_pwm/C6/N8
+   Inst_pilot_id_pwm/C6/C1/C0.COUT
+         0.140  Inst_pilot_id_pwm/C6/C2/C0.CIN
+
+Inst_pilot_id_pwm/C7/N12
+   Inst_pilot_id_pwm/comparator<3>.COUT
+         0.140  Inst_pilot_id_pwm/comparator<5>.CIN
+
+Inst_pilot_id_pwm/C7/N17
+   Inst_pilot_id_pwm/comparator<5>.COUT
+         0.140  Inst_pilot_id_pwm/comparator<7>.CIN
+
+Inst_pilot_id_pwm/C7/N2
+   Inst_pilot_id_pwm/comparator<0>.COUT
+         0.140  Inst_pilot_id_pwm/comparator<1>.CIN
+
+Inst_pilot_id_pwm/C7/N7
+   Inst_pilot_id_pwm/comparator<1>.COUT
+         0.140  Inst_pilot_id_pwm/comparator<3>.CIN
+
+Inst_pilot_id_pwm/N99
+   Inst_pilot_id_pwm/N99.Y
+         2.218  N194.G1
+
+Inst_pilot_id_pwm/comparator<0>
+   Inst_pilot_id_pwm/comparator<0>.YQ
+         1.171  Inst_pilot_id_pwm/C6/C0/C0.G1
+         0.869  Inst_pilot_id_pwm/comparator<0>.G4
+         3.266  Inst_pilot_id_pwm/net6.F4
+
+Inst_pilot_id_pwm/comparator<1>
+   Inst_pilot_id_pwm/comparator<1>.XQ
+         1.533  Inst_pilot_id_pwm/C6/C1/C0.F2
+         1.023  Inst_pilot_id_pwm/comparator<1>.F1
+         2.529  Inst_pilot_id_pwm/net6.F1
+
+Inst_pilot_id_pwm/comparator<2>
+   Inst_pilot_id_pwm/comparator<1>.YQ
+         1.171  Inst_pilot_id_pwm/C6/C1/C0.G1
+         0.869  Inst_pilot_id_pwm/comparator<1>.G4
+         2.682  Inst_pilot_id_pwm/net6.F2
+
+Inst_pilot_id_pwm/comparator<3>
+   Inst_pilot_id_pwm/comparator<3>.XQ
+         1.171  Inst_pilot_id_pwm/C6/C2/C0.F2
+         0.850  Inst_pilot_id_pwm/comparator<3>.F1
+         1.472  Inst_pilot_id_pwm/net6.F3
+
+Inst_pilot_id_pwm/comparator<4>
+   Inst_pilot_id_pwm/comparator<3>.YQ
+         1.802  Inst_pilot_id_pwm/C6/C2/C0.G1
+         1.024  Inst_pilot_id_pwm/comparator<3>.G4
+         2.156  Inst_pilot_id_pwm/net6.G1
+
+Inst_pilot_id_pwm/comparator<5>
+   Inst_pilot_id_pwm/comparator<5>.XQ
+         1.093  Inst_pilot_id_pwm/C6/C3/C0.F2
+         0.823  Inst_pilot_id_pwm/comparator<5>.F1
+         1.231  Inst_pilot_id_pwm/net6.G2
+
+Inst_pilot_id_pwm/comparator<6>
+   Inst_pilot_id_pwm/comparator<5>.YQ
+         1.171  Inst_pilot_id_pwm/C6/C3/C0.G1
+         0.869  Inst_pilot_id_pwm/comparator<5>.G4
+         1.199  Inst_pilot_id_pwm/net6.G3
+
+Inst_pilot_id_pwm/comparator<7>
+   Inst_pilot_id_pwm/comparator<7>.XQ
+         1.093  Inst_pilot_id_pwm/C6/C4/C0.F2
+         0.823  Inst_pilot_id_pwm/comparator<7>.F1
+         1.268  Inst_pilot_id_pwm/net6.G4
+
+Inst_pilot_id_pwm/comparator<8>
+   Inst_pilot_id_pwm/comparator<7>.YQ
+         2.284  Inst_pilot_id_pwm/C6/C4/C0.G1
+         2.408  Inst_pilot_id_pwm/net6.C3
+         0.995  Inst_pilot_id_pwm/comparator<7>.G3
+         2.084  N194.G4
+
+Inst_pilot_id_pwm/net6
+   Inst_pilot_id_pwm/net6.Y
+         2.528  Inst_pilot_id_pwm/comparator<0>.G1
+         4.659  Inst_pilot_id_pwm/comparator<1>.F2
+         2.528  Inst_pilot_id_pwm/comparator<1>.G1
+         2.431  Inst_pilot_id_pwm/comparator<3>.F2
+         2.234  Inst_pilot_id_pwm/comparator<3>.G1
+         4.366  Inst_pilot_id_pwm/comparator<5>.F2
+         2.234  Inst_pilot_id_pwm/comparator<5>.G1
+         1.971  Inst_pilot_id_pwm/comparator<7>.F2
+         1.590  Inst_pilot_id_pwm/comparator<7>.G1
+
+Inst_state_machine_1/C13/N14
+   Inst_state_machine_1/C13/N14.X
+         0.723  Inst_state_machine_1/N38.G1
+
+Inst_state_machine_1/C13/N8
+   Inst_state_machine_1/C13/N8.X
+         0.723  Inst_state_machine_1/N37.G1
+
+Inst_state_machine_1/C19/N15
+   Inst_state_machine_1/C19/N15.X
+         0.781  Inst_state_machine_1/N38.G2
+
+Inst_state_machine_1/C19/N9
+   Inst_state_machine_1/C19/N9.X
+         0.781  Inst_state_machine_1/N37.G2
+
+Inst_state_machine_1/C25/N15
+   Inst_state_machine_1/C19/N15.Y
+         1.209  Inst_state_machine_1/N38.F2
+
+Inst_state_machine_1/C25/N9
+   Inst_state_machine_1/C13/N8.Y
+         0.588  Inst_state_machine_1/N37.F4
+
+Inst_state_machine_1/C7/N14
+   Inst_state_machine_1/C7/N14.X
+         0.547  Inst_state_machine_1/N38.F1
+
+Inst_state_machine_1/C7/N8
+   Inst_state_machine_1/C19/N9.Y
+         1.966  Inst_state_machine_1/N37.F2
+
+Inst_state_machine_1/N144
+   Inst_state_machine_1/N144.X
+         0.807  Inst_state_machine_1/N40.F3
+         0.807  Inst_state_machine_1/N40.G3
+
+Inst_state_machine_1/N145
+   Inst_state_machine_1/N145.X
+         1.028  Inst_state_machine_1/N38.F4
+         1.073  Inst_state_machine_1/N34.F1
+
+Inst_state_machine_1/N34
+   Inst_state_machine_1/N34.X
+         0.617  dir1.F4
+
+Inst_state_machine_1/N37
+   Inst_state_machine_1/N37.Y
+         0.774  tclk1.G1
+
+Inst_state_machine_1/N38
+   Inst_state_machine_1/N38.Y
+         0.572  dir1.G1
+
+Inst_state_machine_1/N40
+   Inst_state_machine_1/N40.Y
+         0.802  tclk1.F3
+
+Inst_state_machine_1/N44
+   Inst_state_machine_1/C13/N14.Y
+         5.252  Inst_state_machine_1/C58.I
+
+Inst_state_machine_1/N44_BUFGed
+   Inst_state_machine_1/C58.O
+         2.428  dir1.F3
+         2.428  dir1.G3
+         2.383  tclk1.F1
+         2.377  tclk1.G3
+
+Inst_state_machine_1/N90
+   Inst_state_machine_1/N90.X
+         0.963  Inst_state_machine_1/N40.F1
+         0.963  Inst_state_machine_1/N40.G1
+
+Inst_state_machine_1/cs<0>
+   Inst_state_machine_1/cs<0>.XQ
+         4.075  Inst_state_machine_1/C7/N14.F2
+         4.604  Inst_state_machine_1/C19/N15.F1
+         4.604  Inst_state_machine_1/C19/N15.G1
+         4.742  Inst_state_machine_1/C13/N14.F1
+         4.742  Inst_state_machine_1/C13/N14.G1
+         3.685  Inst_state_machine_1/N38.F3
+         3.685  Inst_state_machine_1/N38.G3
+         1.340  Inst_state_machine_1/N40.F4
+         1.340  Inst_state_machine_1/N40.G4
+         2.527  Inst_state_machine_1/N34.F3
+         2.527  Inst_state_machine_1/N34.G3
+         1.818  Inst_state_machine_1/N37.F3
+         1.818  Inst_state_machine_1/N37.G3
+
+Inst_state_machine_1/cs<1>
+   Inst_state_machine_1/cs<0>.YQ
+         1.027  Inst_state_machine_1/N37.C4
+         2.824  Inst_state_machine_1/C19/N9.F1
+         2.824  Inst_state_machine_1/C19/N9.G1
+         3.198  Inst_state_machine_1/C13/N8.F2
+         3.198  Inst_state_machine_1/C13/N8.G2
+         1.037  Inst_state_machine_1/N34.C2
+         0.882  Inst_state_machine_1/N40.C3
+         1.146  Inst_state_machine_1/N38.C3
+         3.448  Inst_state_machine_1/C13/N14.G2
+
+Inst_state_machine_1/n_176
+   Inst_state_machine_1/N144.Y
+         1.917  Inst_state_machine_1/N34.F2
+         1.917  Inst_state_machine_1/N34.G2
+         1.954  Inst_state_machine_1/N38.G4
+         1.698  Inst_state_machine_1/N37.G4
+
+Inst_state_machine_1/n_179
+   Inst_state_machine_1/N90.Y
+         1.112  Inst_state_machine_1/N34.G4
+
+Inst_state_machine_1/n_92
+   Inst_state_machine_1/C7/N14.Y
+         0.852  Inst_state_machine_1/N37.F1
+         0.742  Inst_state_machine_1/N34.G1
+
+Inst_state_machine_1/ns<0>
+   dir1.Y
+         1.202  Inst_state_machine_1/cs<0>.F1
+         0.859  dir1.G4
+
+Inst_state_machine_1/ns<1>
+   tclk1.Y
+         1.092  Inst_state_machine_1/cs<0>.G1
+         0.845  tclk1.G4
+
+Inst_state_machine_2/C13/N14
+   Inst_state_machine_2/C13/N14.X
+         0.576  Inst_state_machine_2/N38.G3
+
+Inst_state_machine_2/C13/N8
+   Inst_state_machine_2/C13/N8.X
+         0.580  Inst_state_machine_2/N37.G3
+
+Inst_state_machine_2/C19/N15
+   Inst_state_machine_2/C19/N15.X
+         0.779  Inst_state_machine_2/N38.G2
+
+Inst_state_machine_2/C19/N9
+   Inst_state_machine_2/C19/N9.X
+         0.779  Inst_state_machine_2/N37.G2
+
+Inst_state_machine_2/C25/N15
+   Inst_state_machine_2/C19/N15.Y
+         0.845  Inst_state_machine_2/N38.F2
+
+Inst_state_machine_2/C25/N9
+   Inst_state_machine_2/C13/N8.Y
+         0.834  Inst_state_machine_2/N37.F3
+
+Inst_state_machine_2/C7/N14
+   Inst_state_machine_2/C7/N14.X
+         1.041  Inst_state_machine_2/N38.F3
+
+Inst_state_machine_2/C7/N8
+   Inst_state_machine_2/C19/N9.Y
+         0.588  Inst_state_machine_2/N37.F4
+
+Inst_state_machine_2/N144
+   Inst_state_machine_2/N144.X
+         0.576  Inst_state_machine_2/N40.F3
+         0.576  Inst_state_machine_2/N40.G3
+
+Inst_state_machine_2/N145
+   Inst_state_machine_2/N145.X
+         1.808  Inst_state_machine_2/N38.F4
+         2.107  Inst_state_machine_2/N34.F4
+
+Inst_state_machine_2/N34
+   Inst_state_machine_2/N34.X
+         0.807  dir2.F3
+
+Inst_state_machine_2/N37
+   Inst_state_machine_2/N37.X
+         1.693  tclk2.G4
+
+Inst_state_machine_2/N38
+   Inst_state_machine_2/N38.X
+         0.818  dir2.G4
+
+Inst_state_machine_2/N40
+   Inst_state_machine_2/N40.X
+         0.818  tclk2.F4
+
+Inst_state_machine_2/N44
+   Inst_state_machine_2/C13/N14.Y
+         3.558  Inst_state_machine_2/C58.I
+
+Inst_state_machine_2/N44_BUFGed
+   Inst_state_machine_2/C58.O
+         3.973  dir2.F1
+         3.995  dir2.G2
+         3.981  tclk2.F1
+         3.993  tclk2.G1
+
+Inst_state_machine_2/N90
+   Inst_state_machine_2/N90.X
+         0.617  Inst_state_machine_2/N40.F4
+         0.617  Inst_state_machine_2/N40.G4
+
+Inst_state_machine_2/cs<0>
+   Inst_state_machine_2/cs<0>.XQ
+         1.260  Inst_state_machine_2/C7/N14.F3
+         1.159  Inst_state_machine_2/C19/N15.F3
+         1.159  Inst_state_machine_2/C19/N15.G3
+         1.260  Inst_state_machine_2/C13/N14.F3
+         1.260  Inst_state_machine_2/C13/N14.G3
+         1.130  Inst_state_machine_2/N38.F1
+         1.130  Inst_state_machine_2/N38.G1
+         0.947  Inst_state_machine_2/N40.F2
+         0.947  Inst_state_machine_2/N40.G2
+         1.231  Inst_state_machine_2/N34.F1
+         1.231  Inst_state_machine_2/N34.G1
+         1.231  Inst_state_machine_2/N37.F1
+         1.231  Inst_state_machine_2/N37.G1
+
+Inst_state_machine_2/cs<1>
+   Inst_state_machine_2/cs<0>.YQ
+         2.119  Inst_state_machine_2/N37.C3
+         2.416  Inst_state_machine_2/C19/N9.F3
+         2.416  Inst_state_machine_2/C19/N9.G3
+         2.250  Inst_state_machine_2/C13/N8.F2
+         2.250  Inst_state_machine_2/C13/N8.G2
+         1.780  Inst_state_machine_2/N34.C3
+         0.930  Inst_state_machine_2/N40.C1
+         1.353  Inst_state_machine_2/N38.C3
+         2.287  Inst_state_machine_2/C13/N14.G4
+
+Inst_state_machine_2/n_176
+   Inst_state_machine_2/N144.Y
+         1.177  Inst_state_machine_2/N34.F2
+         1.177  Inst_state_machine_2/N34.G2
+         1.214  Inst_state_machine_2/N38.G4
+         1.473  Inst_state_machine_2/N37.G4
+
+Inst_state_machine_2/n_179
+   Inst_state_machine_2/N90.Y
+         0.834  Inst_state_machine_2/N34.G3
+
+Inst_state_machine_2/n_92
+   Inst_state_machine_2/C7/N14.Y
+         0.551  Inst_state_machine_2/N37.F2
+         0.588  Inst_state_machine_2/N34.G4
+
+Inst_state_machine_2/ns<0>
+   dir2.Y
+         0.671  Inst_state_machine_2/cs<0>.F1
+         0.707  dir2.G3
+
+Inst_state_machine_2/ns<1>
+   tclk2.Y
+         0.572  Inst_state_machine_2/cs<0>.G1
+         0.600  tclk2.G3
+
+Inst_state_machine_3/C13/N14
+   Inst_state_machine_3/C13/N14.X
+         1.257  Inst_state_machine_3/N38.G4
+
+Inst_state_machine_3/C13/N8
+   Inst_state_machine_3/C13/N8.X
+         0.617  Inst_state_machine_3/N37.G4
+
+Inst_state_machine_3/C19/N15
+   Inst_state_machine_3/C19/N15.X
+         0.831  Inst_state_machine_3/N38.G1
+
+Inst_state_machine_3/C19/N9
+   Inst_state_machine_3/C19/N9.X
+         0.723  Inst_state_machine_3/N37.G1
+
+Inst_state_machine_3/C2/N12
+   Inst_state_machine_3/C13/N14.Y
+         0.857  dir3.F2
+         0.857  dir3.G2
+         1.212  tclk3.F2
+         1.109  tclk3.G1
+
+Inst_state_machine_3/C25/N15
+   Inst_state_machine_3/C19/N15.Y
+         0.966  Inst_state_machine_3/N38.F1
+
+Inst_state_machine_3/C25/N9
+   Inst_state_machine_3/C13/N8.Y
+         0.881  Inst_state_machine_3/N37.F3
+
+Inst_state_machine_3/C7/N14
+   Inst_state_machine_3/C7/N14.X
+         1.896  Inst_state_machine_3/N38.F3
+
+Inst_state_machine_3/C7/N8
+   Inst_state_machine_3/C19/N9.Y
+         0.882  Inst_state_machine_3/N37.F4
+
+Inst_state_machine_3/N144
+   Inst_state_machine_3/N144.X
+         0.576  Inst_state_machine_3/N40.F3
+         0.576  Inst_state_machine_3/N40.G3
+
+Inst_state_machine_3/N145
+   Inst_state_machine_3/N145.X
+         0.859  Inst_state_machine_3/N38.F4
+         0.899  Inst_state_machine_3/N34.F1
+
+Inst_state_machine_3/N34
+   Inst_state_machine_3/N34.X
+         0.617  dir3.F4
+
+Inst_state_machine_3/N37
+   Inst_state_machine_3/N37.Y
+         1.112  tclk3.G4
+
+Inst_state_machine_3/N38
+   Inst_state_machine_3/N38.Y
+         0.610  dir3.G1
+
+Inst_state_machine_3/N40
+   Inst_state_machine_3/N40.X
+         0.816  tclk3.F4
+
+Inst_state_machine_3/N90
+   Inst_state_machine_3/N90.X
+         0.723  Inst_state_machine_3/N40.F1
+         0.723  Inst_state_machine_3/N40.G1
+
+Inst_state_machine_3/cs<0>
+   Inst_state_machine_3/cs<0>.YQ
+         1.472  Inst_state_machine_3/C7/N14.F1
+         1.421  Inst_state_machine_3/C19/N15.F4
+         1.421  Inst_state_machine_3/C19/N15.G4
+         1.421  Inst_state_machine_3/C13/N14.F4
+         1.421  Inst_state_machine_3/C13/N14.G4
+         1.384  Inst_state_machine_3/N38.F2
+         1.384  Inst_state_machine_3/N38.G2
+         0.962  Inst_state_machine_3/N40.F4
+         0.962  Inst_state_machine_3/N40.G4
+         1.219  Inst_state_machine_3/N34.F3
+         1.219  Inst_state_machine_3/N34.G3
+         0.925  Inst_state_machine_3/N37.F2
+         0.925  Inst_state_machine_3/N37.G2
+
+Inst_state_machine_3/cs<1>
+   Inst_state_machine_3/cs<0>.XQ
+         2.195  Inst_state_machine_3/N37.C3
+         3.340  Inst_state_machine_3/C19/N9.F4
+         3.340  Inst_state_machine_3/C19/N9.G4
+         2.741  Inst_state_machine_3/C13/N8.F3
+         2.741  Inst_state_machine_3/C13/N8.G3
+         3.455  Inst_state_machine_3/N34.C4
+         1.518  Inst_state_machine_3/N40.C3
+         4.158  Inst_state_machine_3/N38.C3
+         4.496  Inst_state_machine_3/C13/N14.G3
+
+Inst_state_machine_3/n_176
+   Inst_state_machine_3/N144.Y
+         2.433  Inst_state_machine_3/N34.F4
+         2.433  Inst_state_machine_3/N34.G4
+         2.742  Inst_state_machine_3/N38.G3
+         1.670  Inst_state_machine_3/N37.G3
+
+Inst_state_machine_3/n_179
+   Inst_state_machine_3/N90.Y
+         0.774  Inst_state_machine_3/N34.G1
+
+Inst_state_machine_3/n_92
+   Inst_state_machine_3/C7/N14.Y
+         1.537  Inst_state_machine_3/N37.F1
+         1.449  Inst_state_machine_3/N34.G2
+
+Inst_state_machine_3/ns<0>
+   dir3.Y
+         1.192  Inst_state_machine_3/cs<0>.F2
+         0.902  dir3.G3
+
+Inst_state_machine_3/ns<1>
+   tclk3.Y
+         0.881  Inst_state_machine_3/cs<0>.G3
+         0.771  tclk3.G3
+
+Inst_state_machine_4/C13/N14
+   Inst_state_machine_4/C13/N14.X
+         1.239  Inst_state_machine_4/N38.G4
+
+Inst_state_machine_4/C13/N8
+   Inst_state_machine_4/C13/N8.X
+         1.150  Inst_state_machine_4/N37.G2
+
+Inst_state_machine_4/C19/N15
+   Inst_state_machine_4/C19/N15.X
+         1.193  Inst_state_machine_4/N38.G1
+
+Inst_state_machine_4/C19/N9
+   Inst_state_machine_4/C19/N9.X
+         0.723  Inst_state_machine_4/N37.G1
+
+Inst_state_machine_4/C25/N15
+   Inst_state_machine_4/C19/N15.Y
+         0.838  Inst_state_machine_4/N38.F4
+
+Inst_state_machine_4/C25/N9
+   Inst_state_machine_4/C13/N8.Y
+         1.618  Inst_state_machine_4/N37.F2
+
+Inst_state_machine_4/C7/N14
+   Inst_state_machine_4/C7/N14.X
+         1.171  Inst_state_machine_4/N38.F3
+
+Inst_state_machine_4/C7/N8
+   Inst_state_machine_4/C19/N9.Y
+         0.882  Inst_state_machine_4/N37.F4
+
+Inst_state_machine_4/N144
+   Inst_state_machine_4/N144.X
+         0.787  Inst_state_machine_4/N40.F1
+         0.787  Inst_state_machine_4/N40.G1
+
+Inst_state_machine_4/N145
+   Inst_state_machine_4/N145.X
+         0.889  Inst_state_machine_4/N38.F1
+         0.963  Inst_state_machine_4/N34.F1
+
+Inst_state_machine_4/N34
+   Inst_state_machine_4/N34.X
+         1.167  dir4.F4
+
+Inst_state_machine_4/N37
+   Inst_state_machine_4/N37.X
+         1.073  tclk4.G2
+
+Inst_state_machine_4/N38
+   Inst_state_machine_4/N38.X
+         0.723  dir4.G1
+
+Inst_state_machine_4/N40
+   Inst_state_machine_4/N40.X
+         0.816  tclk4.F4
+
+Inst_state_machine_4/N44
+   Inst_state_machine_4/C13/N14.Y
+         5.443  Inst_state_machine_4/C58.I
+
+Inst_state_machine_4/N44_BUFGed
+   Inst_state_machine_4/C58.O
+         2.343  dir4.F3
+         2.343  dir4.G3
+         2.342  tclk4.F3
+         2.342  tclk4.G1
+
+Inst_state_machine_4/N90
+   Inst_state_machine_4/N90.X
+         0.617  Inst_state_machine_4/N40.F4
+         0.617  Inst_state_machine_4/N40.G4
+
+Inst_state_machine_4/cs<0>
+   Inst_state_machine_4/cs<0>.XQ
+         1.467  Inst_state_machine_4/C7/N14.F4
+         1.595  Inst_state_machine_4/C19/N15.F4
+         1.595  Inst_state_machine_4/C19/N15.G4
+         1.226  Inst_state_machine_4/C13/N14.F2
+         1.226  Inst_state_machine_4/C13/N14.G2
+         1.430  Inst_state_machine_4/N38.F2
+         1.430  Inst_state_machine_4/N38.G2
+         1.581  Inst_state_machine_4/N40.F3
+         1.581  Inst_state_machine_4/N40.G3
+         1.468  Inst_state_machine_4/N34.F4
+         1.468  Inst_state_machine_4/N34.G4
+         1.217  Inst_state_machine_4/N37.F3
+         1.217  Inst_state_machine_4/N37.G3
+
+Inst_state_machine_4/cs<1>
+   Inst_state_machine_4/cs<0>.YQ
+         1.036  Inst_state_machine_4/N37.C2
+         1.302  Inst_state_machine_4/C19/N9.F1
+         1.302  Inst_state_machine_4/C19/N9.G1
+         1.227  Inst_state_machine_4/C13/N8.F3
+         1.227  Inst_state_machine_4/C13/N8.G3
+         1.331  Inst_state_machine_4/N34.C3
+         1.584  Inst_state_machine_4/N40.C2
+         1.507  Inst_state_machine_4/N38.C3
+         1.227  Inst_state_machine_4/C13/N14.G3
+
+Inst_state_machine_4/n_176
+   Inst_state_machine_4/N144.Y
+         1.570  Inst_state_machine_4/N34.F3
+         1.570  Inst_state_machine_4/N34.G3
+         1.688  Inst_state_machine_4/N38.G3
+         1.373  Inst_state_machine_4/N37.G4
+
+Inst_state_machine_4/n_179
+   Inst_state_machine_4/N90.Y
+         0.852  Inst_state_machine_4/N34.G1
+
+Inst_state_machine_4/n_92
+   Inst_state_machine_4/C7/N14.Y
+         0.998  Inst_state_machine_4/N37.F1
+         1.094  Inst_state_machine_4/N34.G2
+
+Inst_state_machine_4/ns<0>
+   dir4.Y
+         1.121  Inst_state_machine_4/cs<0>.F3
+         0.845  dir4.G4
+
+Inst_state_machine_4/ns<1>
+   tclk4.Y
+         2.132  Inst_state_machine_4/cs<0>.G2
+         1.109  tclk4.G3
+
+Inst_talk_to_micro/C2/N12
+   Inst_talk_to_micro/master_count<3>.COUT
+         0.140  Inst_talk_to_micro/master_count<5>.CIN
+
+Inst_talk_to_micro/C2/N17
+   Inst_talk_to_micro/master_count<5>.COUT
+         0.140  Inst_talk_to_micro/master_count<7>.CIN
+
+Inst_talk_to_micro/C2/N2
+   Inst_talk_to_micro/N144.COUT
+         0.140  Inst_talk_to_micro/master_count<1>.CIN
+
+Inst_talk_to_micro/C2/N22
+   Inst_talk_to_micro/master_count<7>.COUT
+         0.140  Inst_talk_to_micro/master_count<9>.CIN
+
+Inst_talk_to_micro/C2/N27
+   Inst_talk_to_micro/master_count<9>.COUT
+         0.140  Inst_talk_to_micro/master_count<11>.CIN
+
+Inst_talk_to_micro/C2/N32
+   Inst_talk_to_micro/master_count<11>.COUT
+         0.140  Inst_talk_to_micro/master_count<13>.CIN
+
+Inst_talk_to_micro/C2/N37
+   Inst_talk_to_micro/master_count<13>.COUT
+         0.140  Inst_talk_to_micro/master_count<15>.CIN
+
+Inst_talk_to_micro/C2/N42
+   Inst_talk_to_micro/master_count<15>.COUT
+         0.140  Inst_talk_to_micro/master_count<17>.CIN
+
+Inst_talk_to_micro/C2/N47
+   Inst_talk_to_micro/master_count<17>.COUT
+         0.140  Inst_talk_to_micro/master_count<19>.CIN
+
+Inst_talk_to_micro/C2/N52
+   Inst_talk_to_micro/master_count<19>.COUT
+         0.140  Inst_talk_to_micro/master_count<21>.CIN
+
+Inst_talk_to_micro/C2/N7
+   Inst_talk_to_micro/master_count<1>.COUT
+         0.140  Inst_talk_to_micro/master_count<3>.CIN
+
+Inst_talk_to_micro/N144
+   Inst_talk_to_micro/N144.X
+         0.571  Inst_talk_to_micro/N144.C1
+
+Inst_talk_to_micro/master_count<0>
+   Inst_talk_to_micro/N144.YQ
+         1.168  Inst_talk_to_micro/N144.F1
+         1.024  Inst_talk_to_micro/N144.G4
+         1.374  Inst_talk_to_micro/syn666.G2
+
+Inst_talk_to_micro/master_count<10>
+   Inst_talk_to_micro/master_count<9>.YQ
+         0.869  Inst_talk_to_micro/master_count<9>.G4
+         1.052  Inst_talk_to_micro/syn667.F1
+         1.179  Inst_talk_to_micro/syn667.G2
+
+Inst_talk_to_micro/master_count<11>
+   Inst_talk_to_micro/master_count<11>.XQ
+         0.932  Inst_talk_to_micro/master_count<11>.F1
+         2.033  Inst_talk_to_micro/syn670.F1
+         1.709  Inst_talk_to_micro/syn667.G1
+
+Inst_talk_to_micro/master_count<12>
+   Inst_talk_to_micro/master_count<11>.YQ
+         0.869  Inst_talk_to_micro/master_count<11>.G4
+         1.171  Inst_talk_to_micro/syn670.G1
+
+Inst_talk_to_micro/master_count<13>
+   Inst_talk_to_micro/master_count<13>.XQ
+         0.931  Inst_talk_to_micro/master_count<13>.F1
+         1.787  Inst_talk_to_micro/syn670.F4
+         1.787  Inst_talk_to_micro/syn670.G4
+         1.645  Inst_talk_to_micro/syn667.G4
+
+Inst_talk_to_micro/master_count<14>
+   Inst_talk_to_micro/master_count<13>.YQ
+         0.964  Inst_talk_to_micro/master_count<13>.G4
+         1.646  Inst_talk_to_micro/syn674.F3
+         1.269  Inst_talk_to_micro/syn674.G1
+
+Inst_talk_to_micro/master_count<15>
+   Inst_talk_to_micro/master_count<15>.XQ
+         0.823  Inst_talk_to_micro/master_count<15>.F1
+         1.231  Inst_talk_to_micro/syn674.F2
+         1.231  Inst_talk_to_micro/syn674.G2
+
+Inst_talk_to_micro/master_count<16>
+   Inst_talk_to_micro/master_count<15>.YQ
+         0.889  Inst_talk_to_micro/master_count<15>.G4
+         0.722  Inst_talk_to_micro/syn674.F1
+         0.829  Inst_talk_to_micro/syn685.G2
+
+Inst_talk_to_micro/master_count<17>
+   Inst_talk_to_micro/master_count<17>.XQ
+         0.823  Inst_talk_to_micro/master_count<17>.F1
+         1.231  Inst_talk_to_micro/syn685.F2
+
+Inst_talk_to_micro/master_count<18>
+   Inst_talk_to_micro/master_count<17>.YQ
+         0.911  Inst_talk_to_micro/master_count<17>.G4
+         0.911  Inst_talk_to_micro/syn674.F4
+         0.737  Inst_talk_to_micro/syn685.F1
+         0.737  Inst_talk_to_micro/syn685.G1
+
+Inst_talk_to_micro/master_count<19>
+   Inst_talk_to_micro/master_count<19>.XQ
+         0.776  Inst_talk_to_micro/master_count<19>.F1
+         1.092  Inst_talk_to_micro/syn685.C1
+
+Inst_talk_to_micro/master_count<1>
+   Inst_talk_to_micro/master_count<1>.XQ
+         1.149  Inst_talk_to_micro/master_count<1>.F1
+         1.618  Inst_talk_to_micro/syn666.G1
+         1.782  Inst_talk_to_micro/N144.G2
+
+Inst_talk_to_micro/master_count<20>
+   Inst_talk_to_micro/master_count<19>.YQ
+         0.869  Inst_talk_to_micro/master_count<19>.G4
+         1.216  Inst_talk_to_micro/syn685.C4
+
+Inst_talk_to_micro/master_count<21>
+   Inst_talk_to_micro/master_count<21>.YQ
+         1.099  Inst_talk_to_micro/master_count<21>.F1
+         0.955  Inst_talk_to_micro/syn685.F4
+
+Inst_talk_to_micro/master_count<22>
+   Inst_talk_to_micro/master_count<21>.XQ
+         0.744  Inst_talk_to_micro/syn685.F3
+         0.509  Inst_talk_to_micro/master_count<21>.G1
+
+Inst_talk_to_micro/master_count<2>
+   Inst_talk_to_micro/master_count<1>.YQ
+         0.838  Inst_talk_to_micro/master_count<1>.G4
+         1.257  Inst_talk_to_micro/syn666.F3
+
+Inst_talk_to_micro/master_count<3>
+   Inst_talk_to_micro/master_count<3>.XQ
+         0.823  Inst_talk_to_micro/master_count<3>.F1
+         1.268  Inst_talk_to_micro/syn666.F4
+
+Inst_talk_to_micro/master_count<4>
+   Inst_talk_to_micro/master_count<3>.YQ
+         0.762  Inst_talk_to_micro/master_count<3>.G4
+         0.612  Inst_talk_to_micro/syn666.F1
+
+Inst_talk_to_micro/master_count<5>
+   Inst_talk_to_micro/master_count<5>.XQ
+         0.509  Inst_talk_to_micro/master_count<5>.F1
+         6.866  Inst_talk_to_micro/syn666.F2
+
+Inst_talk_to_micro/master_count<6>
+   Inst_talk_to_micro/master_count<5>.YQ
+         0.869  Inst_talk_to_micro/master_count<5>.G4
+         1.216  Inst_talk_to_micro/syn666.G4
+
+Inst_talk_to_micro/master_count<7>
+   Inst_talk_to_micro/master_count<7>.XQ
+         0.509  Inst_talk_to_micro/master_count<7>.F1
+         0.744  Inst_talk_to_micro/syn666.G3
+
+Inst_talk_to_micro/master_count<8>
+   Inst_talk_to_micro/master_count<7>.YQ
+         0.838  Inst_talk_to_micro/master_count<7>.G4
+         1.235  Inst_talk_to_micro/syn667.F2
+
+Inst_talk_to_micro/master_count<9>
+   Inst_talk_to_micro/master_count<9>.XQ
+         0.509  Inst_talk_to_micro/master_count<9>.F1
+         0.744  Inst_talk_to_micro/syn667.G3
+
+Inst_talk_to_micro/syn666
+   Inst_talk_to_micro/syn666.Y
+         1.075  N_hb.F1
+
+Inst_talk_to_micro/syn667
+   Inst_talk_to_micro/syn667.X
+         0.617  N_hb.F4
+
+Inst_talk_to_micro/syn670
+   Inst_talk_to_micro/syn670.X
+         0.580  Inst_talk_to_micro/syn667.F3
+
+Inst_talk_to_micro/syn673
+   Inst_talk_to_micro/syn667.Y
+         0.544  Inst_talk_to_micro/syn686.F1
+
+Inst_talk_to_micro/syn674
+   Inst_talk_to_micro/syn674.X
+         0.818  Inst_talk_to_micro/syn667.F4
+
+Inst_talk_to_micro/syn676
+   Inst_talk_to_micro/syn670.Y
+         0.560  Inst_talk_to_micro/syn686.F2
+
+Inst_talk_to_micro/syn677
+   Inst_talk_to_micro/syn674.Y
+         0.882  Inst_talk_to_micro/syn686.F4
+
+Inst_talk_to_micro/syn678
+   Inst_talk_to_micro/syn685.Y
+         1.104  Inst_talk_to_micro/syn686.F3
+
+Inst_talk_to_micro/syn685
+   Inst_talk_to_micro/syn685.X
+         2.707  N_hb.F2
+
+Inst_talk_to_micro/syn686
+   Inst_talk_to_micro/syn686.X
+         0.807  N_hb.F3
+
+Inst_ucounter_1/C5/N13
+   datacounter1<3>.COUT
+         0.140  datacounter1<5>.CIN
+
+Inst_ucounter_1/C5/N18
+   datacounter1<5>.COUT
+         0.140  datacounter1<7>.CIN
+
+Inst_ucounter_1/C5/N2
+   Inst_get_data/syn3043.COUT
+         0.140  datacounter1<1>.CIN
+
+Inst_ucounter_1/C5/N23
+   datacounter1<7>.COUT
+         0.140  datacounter1<9>.CIN
+
+Inst_ucounter_1/C5/N28
+   datacounter1<9>.COUT
+         0.140  Inst_get_data/syn2928.CIN
+
+Inst_ucounter_1/C5/N8
+   datacounter1<1>.COUT
+         0.140  datacounter1<3>.CIN
+
+Inst_ucounter_1/count68<0>
+   Inst_get_data/syn3043.Y
+         0.845  Inst_get_data/syn3043.C2
+
+Inst_ucounter_2/C5/N13
+   datacounter2<3>.COUT
+         0.140  datacounter2<5>.CIN
+
+Inst_ucounter_2/C5/N18
+   datacounter2<5>.COUT
+         0.140  datacounter2<7>.CIN
+
+Inst_ucounter_2/C5/N2
+   Inst_get_data/syn691.COUT
+         0.151  datacounter2<1>.CIN
+
+Inst_ucounter_2/C5/N23
+   datacounter2<7>.COUT
+         0.140  datacounter2<9>.CIN
+
+Inst_ucounter_2/C5/N28
+   datacounter2<9>.COUT
+         0.140  Inst_get_data/syn2927.CIN
+
+Inst_ucounter_2/C5/N8
+   datacounter2<1>.COUT
+         0.140  datacounter2<3>.CIN
+
+Inst_ucounter_2/count68<0>
+   Inst_ucounter_2/count68<0>.X
+         1.091  Inst_get_data/syn691.C2
+
+Inst_ucounter_3/C5/N13
+   datacounter3<3>.COUT
+         0.140  datacounter3<5>.CIN
+
+Inst_ucounter_3/C5/N18
+   datacounter3<5>.COUT
+         0.140  datacounter3<7>.CIN
+
+Inst_ucounter_3/C5/N2
+   Inst_get_data/syn3041.COUT
+         0.140  datacounter3<1>.CIN
+
+Inst_ucounter_3/C5/N23
+   datacounter3<7>.COUT
+         0.140  datacounter3<9>.CIN
+
+Inst_ucounter_3/C5/N28
+   datacounter3<9>.COUT
+         0.140  Inst_get_data/syn2926.CIN
+
+Inst_ucounter_3/C5/N8
+   datacounter3<1>.COUT
+         0.140  datacounter3<3>.CIN
+
+Inst_ucounter_3/count68<0>
+   Inst_get_data/syn3041.Y
+         0.845  Inst_get_data/syn3041.C2
+
+Inst_ucounter_4/C5/N13
+   datacounter4<3>.COUT
+         0.140  datacounter4<5>.CIN
+
+Inst_ucounter_4/C5/N18
+   datacounter4<5>.COUT
+         0.140  datacounter4<7>.CIN
+
+Inst_ucounter_4/C5/N2
+   Inst_get_data/syn3044.COUT
+         0.140  datacounter4<1>.CIN
+
+Inst_ucounter_4/C5/N23
+   datacounter4<7>.COUT
+         0.151  datacounter4<9>.CIN
+
+Inst_ucounter_4/C5/N28
+   datacounter4<9>.COUT
+         0.140  Inst_get_data/syn2929.CIN
+
+Inst_ucounter_4/C5/N8
+   datacounter4<1>.COUT
+         0.140  datacounter4<3>.CIN
+
+Inst_ucounter_4/count68<0>
+   Inst_get_data/syn3044.Y
+         0.600  Inst_get_data/syn3044.C3
+
+N135
+   N135.X
+         3.959  solenoid_1.EC
+         2.447  solenoid_2.EC
+
+N139
+   Ain1.I2
+         1.968  Inst_filter_1/qav<1>.C1
+
+N143
+   Bin1.I2
+         7.876  Inst_filter_1/qbv<1>.C4
+
+N147
+   Ain2.I2
+         3.557  Inst_filter_2/qav<1>.C1
+
+N15
+   N15.XQ
+         1.682  add_data<7>.T
+
+N151
+   Bin2.I2
+         1.292  Inst_filter_2/qbv<1>.C2
+
+N155
+   Ain3.I2
+         7.516  Inst_filter_3/qav<1>.C2
+
+N159
+   Bin3.I2
+         2.725  Inst_filter_3/qbv<1>.C2
+
+N163
+   Ain4.I2
+         3.499  Inst_filter_4/qav<1>.C4
+
+N167
+   Bin4.I2
+         3.198  Inst_filter_4/qbv<1>.C2
+
+N17
+   N17.X
+         4.395  add_data<7>.O
+
+N173
+   N26.YQ
+         2.941  i_odim1.T
+
+N180
+   N180.YQ
+         3.001  i_odim2.T
+
+N187
+   N187.XQ
+         4.992  i_odim3.T
+
+N194
+   N194.XQ
+         1.562  i_odim4.T
+
+N200
+   N194.YQ
+         4.008  C171.I
+
+N200_BUFGed
+   C171.O
+         2.154  Inst_autopilot_1_pwm/comparator<0>.K
+         2.162  Inst_autopilot_1_pwm/comparator<1>.K
+         2.169  Inst_autopilot_1_pwm/comparator<3>.K
+         2.174  Inst_autopilot_1_pwm/comparator<5>.K
+         2.178  Inst_autopilot_1_pwm/comparator<7>.K
+
+N201
+   N201.YQ
+         4.473  C172.I
+
+N201_BUFGed
+   C172.O
+         2.178  Inst_pilot_id_pwm/comparator<0>.K
+         2.184  Inst_pilot_id_pwm/comparator<1>.K
+         2.189  Inst_pilot_id_pwm/comparator<3>.K
+         2.192  Inst_pilot_id_pwm/comparator<5>.K
+         2.195  Inst_pilot_id_pwm/comparator<7>.K
+
+N202
+   N201.XQ
+         5.721  C173.I
+
+N202_BUFGed
+   C173.O
+         2.122  Inst_autopilot_2_pwm/comparator<0>.K
+         2.123  Inst_autopilot_2_pwm/comparator<1>.K
+         2.133  Inst_autopilot_2_pwm/comparator<3>.K
+         2.141  Inst_autopilot_2_pwm/comparator<5>.K
+         2.148  Inst_autopilot_2_pwm/comparator<7>.K
+
+N203
+   Inst_clock_divide3/pwm_count<11>.YQ
+         3.638  C174.I
+
+N203_BUFGed
+   C174.O
+         2.183  Inst_copilot_id_pwm/comparator<0>.K
+         2.180  Inst_copilot_id_pwm/comparator<1>.K
+         2.175  Inst_copilot_id_pwm/comparator<3>.K
+         2.169  Inst_copilot_id_pwm/comparator<5>.K
+         2.162  Inst_copilot_id_pwm/comparator<7>.K
+
+N23
+   N23.XQ
+         1.705  add_data<6>.T
+
+N25
+   N17.Y
+         4.394  add_data<6>.O
+
+N26
+   N26.X
+         3.561  N15.C4
+         3.577  N23.C2
+        10.157  add_data<6>.EC
+         5.492  add_data<7>.EC
+
+N31
+   N31.XQ
+         2.160  add_data<5>.T
+
+N32
+   add_data<5>.I2
+         5.181  Inst_autopilot_2_pwm/C6/C3/C0.F1
+         3.340  Inst_autopilot_2_pwm/N99.F1
+
+N33
+   Inst_get_data/syn3062.Y
+         3.485  ann1dimbyte<6>.C1
+         6.588  add_data<0>.EC
+         5.395  add_data<1>.EC
+         2.408  add_data<2>.EC
+         4.468  add_data<3>.EC
+         6.041  add_data<4>.EC
+         7.149  add_data<5>.EC
+
+N38
+   N38.X
+         4.299  add_data<5>.O
+
+N43
+   N43.XQ
+         1.705  add_data<4>.T
+
+N44
+   add_data<4>.I2
+         3.118  Inst_autopilot_2_pwm/C6/C2/C0.G4
+         1.431  Inst_autopilot_2_pwm/N99.F2
+
+N49
+   N49.X
+         6.979  add_data<4>.O
+
+N54
+   N54.XQ
+         1.682  add_data<3>.T
+
+N55
+   add_data<3>.I2
+         3.147  Inst_autopilot_2_pwm/C6/C2/C0.F1
+         1.781  Inst_autopilot_2_pwm/N99.G4
+
+N60
+   N60.X
+         6.119  add_data<3>.O
+
+N65
+   N65.XQ
+         1.767  add_data<2>.T
+
+N66
+   add_data<2>.I1
+         2.054  Inst_autopilot_2_pwm/C6/C1/C0.G4
+         3.857  Inst_autopilot_2_pwm/N99.G1
+
+N71
+   N71.X
+         5.292  add_data<2>.O
+
+N76
+   N76.XQ
+         2.192  add_data<1>.T
+
+N77
+   add_data<1>.I2
+         1.951  Inst_autopilot_2_pwm/C6/C1/C0.F1
+         2.634  Inst_autopilot_2_pwm/N99.G3
+
+N82
+   N82.X
+         5.033  add_data<1>.O
+
+N87
+   N26.XQ
+         3.697  add_data<0>.T
+
+N88
+   add_data<0>.I2
+         2.102  Inst_autopilot_2_pwm/C6/C0/C0.G4
+         3.834  Inst_autopilot_2_pwm/N99.G2
+
+N93
+   N93.X
+         3.780  add_data<0>.O
+
+N_add_data<0>
+   add_data<0>.I1
+         6.888  Inst_address_latch/address_Q36<0>.C3
+         9.978  ann4dimbyte<0>.C4
+         8.212  ann3dimbyte<0>.C1
+         6.030  ann2dimbyte<0>.C2
+        12.203  solenoid_1.O
+
+N_add_data<1>
+   add_data<1>.I1
+         3.678  Inst_address_latch/address_Q36<1>.C2
+        11.182  solenoid_2.O
+         7.139  ann2dimbyte<0>.C1
+         3.080  ann3dimbyte<0>.C4
+         8.977  ann4dimbyte<0>.C1
+
+N_add_data<2>
+   add_data<2>.I2
+         2.863  Inst_address_latch/address_Q36<2>.C4
+         5.522  ann4dimbyte<2>.C4
+         6.869  ann3dimbyte<2>.C2
+         5.007  ann2dimbyte<2>.C4
+
+N_add_data<3>
+   add_data<3>.I1
+         4.617  Inst_address_latch/address_Q36<3>.C3
+         3.132  ann2dimbyte<2>.C1
+         4.926  ann3dimbyte<2>.C4
+         5.264  ann4dimbyte<2>.C1
+
+N_add_data<4>
+   add_data<4>.I1
+         5.447  Inst_address_latch/address_Q36<4>.C1
+         5.391  ann4dimbyte<4>.C2
+         6.408  ann3dimbyte<4>.C4
+         3.098  ann2dimbyte<4>.C4
+
+N_add_data<5>
+   add_data<5>.I1
+         3.183  Inst_address_latch/address_Q36<5>.C3
+         3.081  ann2dimbyte<4>.C2
+         8.768  ann3dimbyte<4>.C1
+         6.741  ann4dimbyte<4>.C4
+
+N_add_data<6>
+   add_data<6>.I2
+         6.270  Inst_address_latch/address_Q36<6>.C3
+         4.912  ann4dimbyte<6>.C1
+         8.907  ann3dimbyte<6>.C4
+         2.448  ann2dimbyte<6>.C4
+         5.327  ann1dimbyte<6>.C2
+
+N_add_data<7>
+   add_data<7>.I1
+         7.853  Inst_address_latch/address_Q36<7>.C3
+         6.106  ann1dimbyte<6>.C4
+         3.836  ann2dimbyte<6>.C1
+         8.393  ann3dimbyte<6>.C1
+         6.661  ann4dimbyte<6>.C4
+
+N_ale
+   ale.I2
+        13.511  Inst_address_latch/address_Q36<4>.C3
+        25.609  Inst_address_latch/address_Q36<0>.C4
+        15.939  Inst_address_latch/address_Q36<2>.C3
+        30.156  Inst_address_latch/address_Q36<6>.C2
+        21.551  Inst_address_latch/address_Q36<7>.C2
+        21.579  Inst_address_latch/address_Q36<3>.C4
+        30.785  Inst_address_latch/address_Q36<1>.C1
+         9.758  Inst_address_latch/address_Q36<5>.C4
+        24.434  Inst_address_latch/address_tri_enable<0>.F4
+        28.303  Inst_address_latch/address_tri_enable<1>.F1
+        17.977  Inst_address_latch/address_tri_enable<2>.F3
+        23.034  Inst_address_latch/address_tri_enable<3>.F1
+         4.450  Inst_address_latch/address_tri_enable<4>.F1
+         8.200  Inst_address_latch/address_tri_enable<5>.F4
+        29.010  Inst_address_latch/address_tri_enable<6>.F1
+        23.657  Inst_address_latch/address_tri_enable<7>.F1
+
+N_hb
+   N_hb.X
+         2.352  hb.O
+
+N_logic_reset
+   logic_reset.I2
+         4.992  Inst_address_latch/address_tri_enable<0>.C3
+         3.841  Inst_address_latch/address_tri_enable<1>.C1
+         3.676  Inst_address_latch/address_tri_enable<2>.C3
+         4.795  Inst_address_latch/address_tri_enable<3>.C3
+         2.975  Inst_address_latch/address_tri_enable<4>.C1
+         3.649  Inst_address_latch/address_tri_enable<5>.C3
+         3.817  Inst_address_latch/address_tri_enable<6>.C1
+         4.741  Inst_address_latch/address_tri_enable<7>.C3
+         3.883  N76.C3
+         1.723  N31.C4
+         2.725  N15.C1
+         2.943  N54.C1
+         2.984  N65.C1
+         2.767  N23.C1
+         2.894  N43.C1
+        13.108  N201.C2
+         4.623  Inst_get_data/syn3064.F4
+         4.622  Inst_get_data/syn3064.G4
+         3.623  Inst_autopilot_1_pwm/comparator<0>.C3
+         3.591  Inst_autopilot_1_pwm/comparator<1>.C3
+         3.552  Inst_autopilot_1_pwm/comparator<3>.C3
+         3.506  Inst_autopilot_1_pwm/comparator<5>.C3
+         3.454  Inst_autopilot_1_pwm/comparator<7>.C3
+         6.614  Inst_autopilot_2_pwm/comparator<0>.C1
+         5.834  Inst_autopilot_2_pwm/comparator<1>.C4
+         5.797  Inst_autopilot_2_pwm/comparator<3>.C2
+         7.000  Inst_autopilot_2_pwm/comparator<5>.C1
+         7.225  Inst_autopilot_2_pwm/comparator<7>.C1
+        16.232  Inst_clock_divide1/pwm_count<0>.C1
+        15.706  Inst_clock_divide1/pwm_count<1>.C4
+        15.300  Inst_clock_divide1/pwm_count<3>.C1
+        14.440  Inst_clock_divide1/pwm_count<5>.C4
+        13.811  Inst_clock_divide1/pwm_count<7>.C1
+        14.350  Inst_clock_divide1/pwm_count<9>.C2
+         4.479  Inst_clock_divide2/pwm_count<0>.C3
+         4.402  Inst_clock_divide2/pwm_count<1>.C3
+         4.319  Inst_clock_divide2/pwm_count<3>.C3
+         4.228  Inst_clock_divide2/pwm_count<5>.C3
+         4.129  Inst_clock_divide2/pwm_count<7>.C3
+         4.024  Inst_clock_divide2/pwm_count<9>.C3
+         8.518  Inst_clock_divide3/pwm_count<0>.C1
+         9.023  Inst_clock_divide3/pwm_count<1>.C1
+         9.462  Inst_clock_divide3/pwm_count<3>.C1
+         9.848  Inst_clock_divide3/pwm_count<5>.C1
+        10.186  Inst_clock_divide3/pwm_count<7>.C1
+        10.480  Inst_clock_divide3/pwm_count<9>.C1
+        10.072  Inst_clock_divide4/pwm_count<0>.C3
+        11.196  Inst_clock_divide4/pwm_count<1>.C3
+        12.272  Inst_clock_divide4/pwm_count<3>.C3
+        13.708  Inst_clock_divide4/pwm_count<5>.C3
+        15.323  Inst_clock_divide4/pwm_count<7>.C3
+        16.760  Inst_clock_divide4/pwm_count<9>.C2
+        12.195  Inst_copilot_id_pwm/comparator<0>.C1
+        12.452  Inst_copilot_id_pwm/comparator<1>.C1
+        12.655  Inst_copilot_id_pwm/comparator<3>.C1
+        12.854  Inst_copilot_id_pwm/comparator<5>.C1
+        12.873  Inst_copilot_id_pwm/comparator<7>.C1
+         3.697  Inst_pilot_id_pwm/comparator<0>.C1
+         3.661  Inst_pilot_id_pwm/comparator<1>.C1
+         3.622  Inst_pilot_id_pwm/comparator<3>.C1
+         3.580  Inst_pilot_id_pwm/comparator<5>.C1
+         3.534  Inst_pilot_id_pwm/comparator<7>.C1
+        21.894  Inst_get_data/syn3043.C3
+        21.562  datacounter1<1>.C3
+        21.140  datacounter1<3>.C3
+        20.616  datacounter1<5>.C3
+        19.980  datacounter1<7>.C3
+        20.537  datacounter1<9>.C2
+        12.989  Inst_get_data/syn691.C3
+        38.075  datacounter2<1>.C3
+        40.862  datacounter2<3>.C3
+        43.487  datacounter2<5>.C2
+        47.844  datacounter2<7>.C3
+        48.868  datacounter2<9>.C3
+        48.687  Inst_get_data/syn3041.C4
+        47.872  datacounter3<1>.C3
+        48.946  datacounter3<3>.C3
+        49.897  datacounter3<5>.C3
+        50.738  datacounter3<7>.C3
+        51.478  datacounter3<9>.C3
+        15.680  Inst_get_data/syn3044.C2
+        20.045  datacounter4<1>.C3
+        22.114  datacounter4<3>.C2
+        26.177  datacounter4<5>.C3
+        28.525  datacounter4<7>.C3
+        31.944  datacounter4<9>.C2
+         5.244  Inst_state_machine_1/cs<0>.F3
+         5.244  Inst_state_machine_1/cs<0>.G3
+        51.770  Inst_state_machine_2/cs<0>.F2
+        51.770  Inst_state_machine_2/cs<0>.G2
+        53.102  Inst_state_machine_3/cs<0>.F1
+        53.102  Inst_state_machine_3/cs<0>.G1
+        49.944  Inst_state_machine_4/cs<0>.F1
+        49.944  Inst_state_machine_4/cs<0>.G1
+         3.862  Inst_get_data/syn3062.F1
+         4.360  Inst_get_data/syn2823.G3
+         1.106  N180.C1
+         7.420  N26.C3
+        17.878  Inst_clock_divide1/pwm_count<11>.C1
+         3.910  Inst_clock_divide2/pwm_count<11>.C3
+        10.731  Inst_clock_divide3/pwm_count<11>.C1
+        18.087  Inst_clock_divide4/pwm_count<11>.C3
+        12.961  N187.C3
+         3.563  N194.C3
+        21.363  Inst_get_data/syn2928.C1
+        49.770  Inst_get_data/syn2927.C3
+        52.106  Inst_get_data/syn2926.C2
+        46.625  Inst_get_data/syn2929.C4
+         2.461  Inst_talk_to_micro/N144.G3
+
+N_master_clock_out
+   Inst_talk_to_micro/N144.Y
+         5.532  master_clock_out.O
+
+N_read
+   read.I2
+         5.048  N76.C1
+         4.791  N31.C1
+         4.821  N15.C3
+         5.093  N54.C3
+         5.122  N65.C3
+         4.816  N23.C3
+         5.013  N43.C3
+         6.148  N26.F4
+         6.148  N26.C4
+
+N_switch_data1<0>
+   switch_data1<0>.I2
+         4.176  Inst_get_data/syn3040.F1
+
+N_switch_data1<1>
+   switch_data1<1>.I1
+         5.288  Inst_get_data/syn3017.F2
+
+N_switch_data1<2>
+   switch_data1<2>.I1
+         1.817  Inst_get_data/syn2994.F4
+
+N_switch_data1<3>
+   switch_data1<3>.I1
+         2.351  Inst_get_data/syn2971.F1
+
+N_switch_data1<4>
+   switch_data1<4>.I2
+         1.585  Inst_get_data/syn2948.F3
+
+N_switch_data1<5>
+   switch_data1<5>.I2
+         1.054  Inst_get_data/syn2925.F4
+
+N_switch_data1<6>
+   switch_data1<6>.I1
+         3.610  Inst_get_data/syn2817.F1
+
+N_switch_data1<7>
+   switch_data1<7>.I2
+         9.180  Inst_get_data/syn2748.F3
+
+N_switch_data2<0>
+   switch_data2<0>.I2
+         1.488  Inst_get_data/syn3040.F2
+
+N_switch_data2<1>
+   switch_data2<1>.I1
+         1.932  Inst_get_data/syn3017.F3
+
+N_switch_data2<2>
+   switch_data2<2>.I1
+         0.742  Inst_get_data/syn2994.F3
+
+N_switch_data2<3>
+   switch_data2<3>.I1
+         0.661  Inst_get_data/syn2971.F2
+
+N_switch_data2<4>
+   switch_data2<4>.I2
+         0.578  Inst_get_data/syn2948.F2
+
+N_switch_data2<5>
+   switch_data2<5>.I1
+         2.058  Inst_get_data/syn2925.F1
+
+N_switch_data2<6>
+   switch_data2<6>.I2
+         1.345  Inst_get_data/syn2740.G3
+
+N_switch_data2<7>
+   switch_data2<7>.I2
+         1.441  Inst_get_data/syn2742.F3
+
+N_switch_data3<0>
+   switch_data3<0>.I2
+         8.709  Inst_get_data/syn717.F4
+
+N_switch_data3<1>
+   switch_data3<1>.I1
+         9.343  Inst_get_data/syn692.F3
+
+N_switch_data3<2>
+   switch_data3<2>.I2
+         2.946  Inst_get_data/syn692.G3
+
+N_switch_data3<3>
+   switch_data3<3>.I2
+         3.221  Inst_get_data/syn3018.G2
+
+N_switch_data3<4>
+   switch_data3<4>.I2
+         1.574  Inst_get_data/syn3020.G1
+
+N_switch_data3<5>
+   switch_data3<5>.I1
+         2.124  Inst_get_data/syn717.G4
+
+N_switch_data3<6>
+   switch_data3<6>.I1
+         0.745  Inst_get_data/syn2742.G3
+
+N_switch_data3<7>
+   switch_data3<7>.I2
+         1.128  Inst_get_data/syn2740.F2
+
+N_switch_data4<0>
+   switch_data4<0>.I2
+         2.078  Inst_get_data/syn716.F2
+
+N_switch_data4<1>
+   switch_data4<1>.I2
+         1.673  Inst_get_data/syn691.F3
+
+N_switch_data4<2>
+   switch_data4<2>.I2
+         8.542  Inst_get_data/syn3017.G1
+
+N_switch_data4<3>
+   switch_data4<3>.I2
+         1.653  Inst_get_data/syn3019.G3
+
+N_switch_data4<4>
+   switch_data4<4>.I1
+         2.566  Inst_get_data/syn3021.G2
+
+N_switch_data4<5>
+   switch_data4<5>.I1
+         3.368  Inst_get_data/syn716.G2
+
+N_switch_data4<6>
+   switch_data4<6>.I2
+         2.040  Inst_get_data/syn2817.F3
+
+N_switch_data4<7>
+   switch_data4<7>.I1
+         3.380  Inst_get_data/syn2748.F1
+
+N_write
+   write.I2
+         5.128  Inst_get_data/syn3064.F1
+         5.128  Inst_get_data/syn3064.G1
+         4.551  Inst_get_data/syn3062.F4
+         5.318  Inst_get_data/syn2823.G2
+
+address<0>
+   Inst_address_latch/C45.O
+        10.215  Inst_get_data/syn2920.F4
+        10.215  Inst_get_data/syn2920.G4
+         6.397  Inst_get_data/syn2916.F4
+         2.108  Inst_get_data/syn2904.F2
+         2.108  Inst_get_data/syn2904.G2
+         0.896  Inst_get_data/syn3064.F2
+        11.259  Inst_get_data/syn2740.F4
+        11.259  Inst_get_data/syn2740.G4
+        11.439  Inst_get_data/syn2742.F4
+        11.439  Inst_get_data/syn2742.G4
+         5.171  Inst_get_data/syn2896.F4
+         5.171  Inst_get_data/syn2896.G4
+         9.045  Inst_get_data/syn2912.F4
+         9.044  Inst_get_data/syn2912.G4
+         4.891  Inst_get_data/syn3062.F3
+        10.999  Inst_get_data/syn2817.F4
+         5.842  Inst_get_data/syn2823.G4
+         6.364  Inst_get_data/syn2806.G2
+        10.653  Inst_get_data/syn2748.F4
+        10.652  Inst_get_data/syn2748.G4
+         4.138  N135.F2
+         0.895  Inst_get_data/C31/N5.G2
+         7.422  Inst_get_data/syn2853.G4
+
+address<1>
+   Inst_address_latch/C42.O
+         2.534  Inst_get_data/syn2920.F3
+         2.534  Inst_get_data/syn2920.G3
+         5.088  Inst_get_data/syn2916.F1
+         5.088  Inst_get_data/syn2916.G1
+         3.504  Inst_get_data/syn2904.F3
+         3.504  Inst_get_data/syn2904.G3
+         6.286  Inst_get_data/C31/N5.F3
+         6.674  Inst_get_data/C31/N5.G1
+         5.117  Inst_get_data/syn2896.F3
+         5.117  Inst_get_data/syn2896.G3
+         1.988  Inst_get_data/syn2912.F3
+         1.988  Inst_get_data/syn2912.G3
+         6.514  Inst_get_data/syn2823.F3
+         3.169  Inst_get_data/syn522.F3
+         5.761  Inst_get_data/syn2806.G4
+         2.645  N135.F3
+         2.645  N135.G3
+
+address<2>
+   Inst_address_latch/C46.O
+         7.129  Inst_get_data/syn2920.F2
+         7.129  Inst_get_data/syn2920.G2
+         7.254  Inst_get_data/syn2853.F2
+         7.254  Inst_get_data/syn2853.G2
+         4.192  Inst_get_data/syn2904.F1
+         4.192  Inst_get_data/syn2904.G1
+         0.948  N135.G2
+         4.718  N135.C1
+         5.386  Inst_get_data/C31/N5.F4
+         5.493  Inst_get_data/C31/N5.G3
+         7.277  Inst_get_data/syn2896.F2
+         7.277  Inst_get_data/syn2896.G2
+         7.205  Inst_get_data/syn2912.F2
+         7.205  Inst_get_data/syn2912.G2
+         0.945  Inst_get_data/syn2823.F2
+         7.179  Inst_get_data/syn2817.F2
+         4.698  Inst_get_data/syn2806.G1
+         7.159  Inst_get_data/syn2748.F2
+         7.159  Inst_get_data/syn2748.G2
+
+address<3>
+   Inst_address_latch/C41.O
+        14.877  Inst_get_data/syn2920.F1
+        14.877  Inst_get_data/syn2920.G1
+        10.052  Inst_get_data/syn2853.F1
+         1.005  Inst_get_data/syn2904.F4
+         1.005  Inst_get_data/syn2904.G4
+         6.365  Inst_get_data/syn2896.F1
+         6.365  Inst_get_data/syn2896.G1
+        13.487  Inst_get_data/syn2912.F1
+        13.487  Inst_get_data/syn2912.G1
+        11.155  Inst_get_data/syn2806.G3
+        15.336  Inst_get_data/syn2748.G1
+         4.431  Inst_get_data/syn522.G2
+         1.000  Inst_get_data/C31/N5.G4
+         8.839  Inst_get_data/syn2916.G2
+
+address<4>
+   Inst_address_latch/C44.O
+         4.350  Inst_get_data/syn2918.F2
+         5.020  Inst_get_data/syn2921.F3
+         3.302  Inst_get_data/syn522.F1
+
+address<5>
+   Inst_address_latch/C43.O
+         3.484  Inst_get_data/syn2918.F1
+         4.294  Inst_get_data/syn2921.F4
+         4.080  Inst_get_data/syn522.F2
+
+address<6>
+   Inst_address_latch/C47.O
+         3.357  Inst_get_data/syn519.F1
+         3.839  Inst_get_data/syn2921.F1
+         1.520  Inst_get_data/syn522.F4
+         1.520  Inst_get_data/syn522.G4
+
+address<7>
+   Inst_address_latch/C40.O
+         4.117  Inst_get_data/syn519.F2
+         2.891  Inst_get_data/syn522.G1
+         1.578  Inst_get_data/syn522.C2
+         4.881  Inst_get_data/syn2921.F2
+
+ann1dimbyte<6>
+   ann1dimbyte<6>.XQ
+         2.709  Inst_autopilot_2_pwm/C6/C3/C0.G4
+         1.074  Inst_autopilot_2_pwm/N99.F3
+
+ann1dimbyte<7>
+   ann1dimbyte<6>.YQ
+         2.156  Inst_autopilot_2_pwm/C6/C4/C0.F1
+         1.831  N26.G3
+
+ann2dimbyte<0>
+   ann2dimbyte<0>.XQ
+         1.994  Inst_autopilot_1_pwm/C6/C0/C0.G4
+         0.933  Inst_autopilot_1_pwm/N99.G4
+
+ann2dimbyte<1>
+   ann2dimbyte<0>.YQ
+         2.069  Inst_autopilot_1_pwm/C6/C1/C0.F1
+         0.874  Inst_autopilot_1_pwm/N99.G3
+
+ann2dimbyte<2>
+   ann2dimbyte<2>.YQ
+         2.064  Inst_autopilot_1_pwm/C6/C1/C0.G4
+         1.701  Inst_autopilot_1_pwm/N99.G2
+
+ann2dimbyte<3>
+   ann2dimbyte<2>.XQ
+         3.891  Inst_autopilot_1_pwm/C6/C2/C0.F1
+         3.236  Inst_autopilot_1_pwm/N99.G1
+
+ann2dimbyte<4>
+   ann2dimbyte<4>.YQ
+         2.775  Inst_autopilot_1_pwm/C6/C2/C0.G4
+         0.561  Inst_autopilot_1_pwm/N99.F2
+
+ann2dimbyte<5>
+   ann2dimbyte<4>.XQ
+         1.045  Inst_autopilot_1_pwm/C6/C3/C0.F1
+         0.786  Inst_autopilot_1_pwm/N99.F1
+
+ann2dimbyte<6>
+   ann2dimbyte<6>.XQ
+         1.065  Inst_autopilot_1_pwm/C6/C3/C0.G4
+         1.362  Inst_autopilot_1_pwm/N99.F4
+
+ann2dimbyte<7>
+   ann2dimbyte<6>.YQ
+         2.401  Inst_autopilot_1_pwm/C6/C4/C0.F1
+         0.788  N180.G3
+
+ann3dimbyte<0>
+   ann3dimbyte<0>.XQ
+         6.810  Inst_copilot_id_pwm/C6/C0/C0.G4
+         5.686  Inst_copilot_id_pwm/N99.G3
+
+ann3dimbyte<1>
+   ann3dimbyte<0>.YQ
+         3.526  Inst_copilot_id_pwm/C6/C1/C0.F1
+         1.600  Inst_copilot_id_pwm/N99.G1
+
+ann3dimbyte<2>
+   ann3dimbyte<2>.YQ
+         5.521  Inst_copilot_id_pwm/C6/C1/C0.G4
+         4.954  Inst_copilot_id_pwm/N99.G2
+
+ann3dimbyte<3>
+   ann3dimbyte<2>.XQ
+         5.155  Inst_copilot_id_pwm/C6/C2/C0.F1
+         3.375  Inst_copilot_id_pwm/N99.G4
+
+ann3dimbyte<4>
+   ann3dimbyte<4>.YQ
+         3.652  Inst_copilot_id_pwm/C6/C2/C0.G4
+         3.540  Inst_copilot_id_pwm/N99.F3
+
+ann3dimbyte<5>
+   ann3dimbyte<4>.XQ
+         4.897  Inst_copilot_id_pwm/C6/C3/C0.F1
+         4.539  Inst_copilot_id_pwm/N99.F1
+
+ann3dimbyte<6>
+   ann3dimbyte<6>.XQ
+         4.007  Inst_copilot_id_pwm/C6/C3/C0.G4
+         3.365  Inst_copilot_id_pwm/N99.F4
+
+ann3dimbyte<7>
+   ann3dimbyte<6>.YQ
+         2.855  Inst_copilot_id_pwm/C6/C4/C0.F1
+         2.743  N187.G3
+
+ann4dimbyte<0>
+   ann4dimbyte<0>.YQ
+         2.344  Inst_pilot_id_pwm/C6/C0/C0.G4
+         0.759  Inst_pilot_id_pwm/N99.G1
+
+ann4dimbyte<1>
+   ann4dimbyte<0>.XQ
+         2.691  Inst_pilot_id_pwm/C6/C1/C0.F1
+         1.128  Inst_pilot_id_pwm/N99.G2
+
+ann4dimbyte<2>
+   ann4dimbyte<2>.YQ
+         2.218  Inst_pilot_id_pwm/C6/C1/C0.G4
+         2.100  Inst_pilot_id_pwm/N99.G4
+
+ann4dimbyte<3>
+   ann4dimbyte<2>.XQ
+         1.275  Inst_pilot_id_pwm/C6/C2/C0.F1
+         1.222  Inst_pilot_id_pwm/N99.G3
+
+ann4dimbyte<4>
+   ann4dimbyte<4>.YQ
+         1.999  Inst_pilot_id_pwm/C6/C2/C0.G4
+         1.787  Inst_pilot_id_pwm/N99.F3
+
+ann4dimbyte<5>
+   ann4dimbyte<4>.XQ
+         3.530  Inst_pilot_id_pwm/C6/C3/C0.F1
+         2.973  Inst_pilot_id_pwm/N99.F2
+
+ann4dimbyte<6>
+   ann4dimbyte<6>.XQ
+         3.727  Inst_pilot_id_pwm/C6/C3/C0.G4
+         2.653  Inst_pilot_id_pwm/N99.F1
+
+ann4dimbyte<7>
+   ann4dimbyte<6>.YQ
+         1.786  Inst_pilot_id_pwm/C6/C4/C0.F1
+         2.506  N194.G3
+
+datacounter1<0>
+   Inst_get_data/syn3043.YQ
+         0.815  Inst_get_data/syn3043.F1
+         0.745  Inst_get_data/syn3043.G4
+
+datacounter1<10>
+   datacounter1<9>.YQ
+         0.846  datacounter1<9>.G4
+         0.997  Inst_get_data/syn2951.F2
+
+datacounter1<11>
+   Inst_get_data/syn2928.XQ
+         0.846  Inst_get_data/syn2928.F1
+         0.685  Inst_get_data/syn2928.G2
+
+datacounter1<1>
+   datacounter1<1>.XQ
+         0.938  datacounter1<1>.F1
+         2.014  Inst_get_data/syn3020.F4
+
+datacounter1<2>
+   datacounter1<1>.YQ
+         1.027  datacounter1<1>.G4
+         1.918  Inst_get_data/syn2997.F2
+
+datacounter1<3>
+   datacounter1<3>.XQ
+         0.898  datacounter1<3>.F1
+         1.864  Inst_get_data/syn2974.F1
+
+datacounter1<4>
+   datacounter1<3>.YQ
+         0.926  datacounter1<3>.G4
+         1.638  Inst_get_data/syn2951.F4
+
+datacounter1<5>
+   datacounter1<5>.XQ
+         0.686  datacounter1<5>.F1
+         0.839  Inst_get_data/syn2928.G1
+
+datacounter1<6>
+   datacounter1<5>.YQ
+         0.598  datacounter1<5>.G4
+         0.730  Inst_get_data/syn3043.F3
+
+datacounter1<7>
+   datacounter1<7>.XQ
+         0.509  datacounter1<7>.F1
+         2.750  Inst_get_data/syn3020.F3
+
+datacounter1<8>
+   datacounter1<7>.YQ
+         0.846  datacounter1<7>.G4
+         1.034  Inst_get_data/syn2997.F4
+
+datacounter1<9>
+   datacounter1<9>.XQ
+         0.928  datacounter1<9>.F1
+         1.526  Inst_get_data/syn2974.F2
+
+datacounter2<0>
+   Inst_get_data/syn691.YQ
+         0.840  Inst_get_data/syn691.G4
+         0.934  Inst_ucounter_2/count68<0>.F1
+
+datacounter2<10>
+   datacounter2<9>.YQ
+         0.869  datacounter2<9>.G4
+         1.216  Inst_get_data/syn2950.F4
+
+datacounter2<11>
+   Inst_get_data/syn2927.XQ
+         0.762  Inst_get_data/syn2927.F1
+         0.662  Inst_get_data/syn2927.G2
+
+datacounter2<1>
+   datacounter2<1>.XQ
+         0.589  datacounter2<1>.F1
+         0.618  Inst_get_data/syn3019.F3
+
+datacounter2<2>
+   datacounter2<1>.YQ
+         0.869  datacounter2<1>.G4
+         1.199  Inst_get_data/syn2996.F3
+
+datacounter2<3>
+   datacounter2<3>.XQ
+         0.764  datacounter2<3>.F1
+         1.098  Inst_get_data/syn2973.F2
+
+datacounter2<4>
+   datacounter2<3>.YQ
+         0.869  datacounter2<3>.G4
+         1.179  Inst_get_data/syn2950.F2
+
+datacounter2<5>
+   datacounter2<5>.XQ
+         0.686  datacounter2<5>.F1
+         0.839  Inst_get_data/syn2927.G1
+
+datacounter2<6>
+   datacounter2<5>.YQ
+         0.856  datacounter2<5>.G4
+         1.251  Inst_get_data/syn691.G3
+
+datacounter2<7>
+   datacounter2<7>.XQ
+         0.680  datacounter2<7>.F1
+         1.626  Inst_get_data/syn3019.F1
+
+datacounter2<8>
+   datacounter2<7>.YQ
+         0.598  datacounter2<7>.G4
+         0.766  Inst_get_data/syn2996.F4
+
+datacounter2<9>
+   datacounter2<9>.XQ
+         0.812  datacounter2<9>.F1
+         1.598  Inst_get_data/syn2973.F4
+
+datacounter3<0>
+   Inst_get_data/syn3041.YQ
+         0.815  Inst_get_data/syn3041.F1
+         0.745  Inst_get_data/syn3041.G4
+
+datacounter3<10>
+   datacounter3<9>.YQ
+         0.936  datacounter3<9>.G4
+         1.076  Inst_get_data/syn2949.F4
+
+datacounter3<11>
+   Inst_get_data/syn2926.XQ
+         0.762  Inst_get_data/syn2926.F1
+         0.662  Inst_get_data/syn2926.G2
+
+datacounter3<1>
+   datacounter3<1>.XQ
+         0.895  datacounter3<1>.F1
+         1.921  Inst_get_data/syn3018.F1
+
+datacounter3<2>
+   datacounter3<1>.YQ
+         0.985  datacounter3<1>.G4
+         2.076  Inst_get_data/syn2995.F3
+
+datacounter3<3>
+   datacounter3<3>.XQ
+         0.509  datacounter3<3>.F1
+         0.534  Inst_get_data/syn2972.F2
+
+datacounter3<4>
+   datacounter3<3>.YQ
+         0.869  datacounter3<3>.G4
+         1.199  Inst_get_data/syn2949.F3
+
+datacounter3<5>
+   datacounter3<5>.XQ
+         0.686  datacounter3<5>.F1
+         0.839  Inst_get_data/syn2926.G1
+
+datacounter3<6>
+   datacounter3<5>.YQ
+         0.585  datacounter3<5>.G4
+         0.730  Inst_get_data/syn3041.F3
+
+datacounter3<7>
+   datacounter3<7>.XQ
+         0.680  datacounter3<7>.F1
+         2.687  Inst_get_data/syn3018.F2
+
+datacounter3<8>
+   datacounter3<7>.YQ
+         0.869  datacounter3<7>.G4
+         1.179  Inst_get_data/syn2995.F2
+
+datacounter3<9>
+   datacounter3<9>.XQ
+         0.509  datacounter3<9>.F1
+         0.993  Inst_get_data/syn2972.F3
+
+datacounter4<0>
+   Inst_get_data/syn3044.YQ
+         0.815  Inst_get_data/syn3044.F1
+         0.745  Inst_get_data/syn3044.G4
+
+datacounter4<10>
+   datacounter4<9>.YQ
+         0.598  datacounter4<9>.G4
+         2.164  Inst_get_data/syn2952.F3
+
+datacounter4<11>
+   Inst_get_data/syn2929.XQ
+         0.762  Inst_get_data/syn2929.F1
+         0.662  Inst_get_data/syn2929.G2
+
+datacounter4<1>
+   datacounter4<1>.XQ
+         0.680  datacounter4<1>.F1
+         0.819  Inst_get_data/syn3021.F2
+
+datacounter4<2>
+   datacounter4<1>.YQ
+         0.745  datacounter4<1>.G4
+         0.815  Inst_get_data/syn2998.F1
+
+datacounter4<3>
+   datacounter4<3>.XQ
+         0.680  datacounter4<3>.F1
+         0.819  Inst_get_data/syn2975.F2
+
+datacounter4<4>
+   datacounter4<3>.YQ
+         0.745  datacounter4<3>.G4
+         0.824  Inst_get_data/syn2952.F2
+
+datacounter4<5>
+   datacounter4<5>.XQ
+         0.921  datacounter4<5>.F1
+         2.147  Inst_get_data/syn2929.G3
+
+datacounter4<6>
+   datacounter4<5>.YQ
+         0.598  datacounter4<5>.G4
+         0.730  Inst_get_data/syn3044.F3
+
+datacounter4<7>
+   datacounter4<7>.XQ
+         0.850  datacounter4<7>.F1
+         1.443  Inst_get_data/syn3021.F1
+
+datacounter4<8>
+   datacounter4<7>.YQ
+         0.797  datacounter4<7>.G4
+         2.583  Inst_get_data/syn2998.F3
+
+datacounter4<9>
+   datacounter4<9>.XQ
+         0.584  datacounter4<9>.F1
+         2.816  Inst_get_data/syn2975.F1
+
+dir1
+   dir1.X
+         3.165  datacounter1<1>.F3
+         3.165  datacounter1<1>.G3
+         3.683  datacounter1<3>.F3
+         3.683  datacounter1<3>.G3
+         4.086  datacounter1<5>.F3
+         4.086  datacounter1<5>.G3
+         4.389  datacounter1<7>.F3
+         4.389  datacounter1<7>.G3
+         4.601  datacounter1<9>.F3
+         4.601  datacounter1<9>.G3
+         0.552  dir1.F1
+         4.709  Inst_get_data/syn2928.F2
+
+dir2
+   dir2.X
+         2.035  datacounter2<1>.F3
+         2.035  datacounter2<1>.G3
+         1.899  datacounter2<3>.F3
+         1.899  datacounter2<3>.G3
+         1.899  datacounter2<5>.F3
+         1.899  datacounter2<5>.G3
+         1.693  datacounter2<7>.F3
+         1.693  datacounter2<7>.G3
+         1.961  datacounter2<9>.F3
+         1.961  datacounter2<9>.G3
+         1.366  dir2.F2
+         2.086  Inst_get_data/syn2927.F2
+
+dir3
+   dir3.X
+         4.170  datacounter3<1>.F3
+         4.170  datacounter3<1>.G3
+         4.034  datacounter3<3>.F3
+         4.034  datacounter3<3>.G3
+         3.811  datacounter3<5>.F3
+         3.811  datacounter3<5>.G3
+         3.492  datacounter3<7>.F3
+         3.492  datacounter3<7>.G3
+         3.069  datacounter3<9>.F3
+         3.069  datacounter3<9>.G3
+         1.311  dir3.F1
+         2.511  Inst_get_data/syn2926.F2
+
+dir4
+   dir4.X
+         4.876  datacounter4<1>.F3
+         4.876  datacounter4<1>.G3
+         4.729  datacounter4<3>.F3
+         4.729  datacounter4<3>.G3
+         4.491  datacounter4<5>.F3
+         4.491  datacounter4<5>.G3
+         4.150  datacounter4<7>.F3
+         4.150  datacounter4<7>.G3
+         3.690  datacounter4<9>.F3
+         3.690  datacounter4<9>.G3
+         1.497  dir4.F1
+         3.932  Inst_get_data/syn2929.F2
+
+master_clock
+   master_clock.CLKIN
+         0.009  C169.I
+
+master_clock_BUFGed
+   C169.O
+         2.141  Inst_address_latch/address_Q36<4>.K
+         2.153  Inst_address_latch/address_Q36<0>.K
+         2.129  Inst_address_latch/address_Q36<2>.K
+         2.125  Inst_address_latch/address_Q36<6>.K
+         2.128  Inst_address_latch/address_Q36<7>.K
+         2.129  Inst_address_latch/address_Q36<3>.K
+         2.096  Inst_address_latch/address_Q36<1>.K
+         2.151  Inst_address_latch/address_Q36<5>.K
+         2.285  Inst_address_latch/address_tri_enable<0>.K
+         2.273  Inst_address_latch/address_tri_enable<1>.K
+         2.201  Inst_address_latch/address_tri_enable<2>.K
+         2.287  Inst_address_latch/address_tri_enable<3>.K
+         2.224  Inst_address_latch/address_tri_enable<4>.K
+         2.225  Inst_address_latch/address_tri_enable<5>.K
+         2.287  Inst_address_latch/address_tri_enable<6>.K
+         2.306  Inst_address_latch/address_tri_enable<7>.K
+         2.301  Inst_state_machine_2/cs<0>.K
+         2.234  Inst_filter_2/qbv<1>.K
+         2.333  Inst_filter_2/qbv<3>.K
+         2.173  Inst_filter_2/qav<1>.K
+         2.255  Inst_filter_2/qav<3>.K
+         2.165  outA3.K
+         2.192  outB3.K
+         2.198  Inst_filter_3/qbv<1>.K
+         2.355  Inst_filter_3/qbv<3>.K
+         2.318  Inst_filter_3/qav<1>.K
+         2.176  Inst_filter_3/qav<3>.K
+         2.263  Inst_state_machine_4/cs<0>.K
+         2.345  Inst_filter_4/qbv<1>.K
+         2.287  Inst_filter_4/qbv<3>.K
+         2.184  Inst_filter_4/qav<1>.K
+         2.253  Inst_filter_4/qav<3>.K
+         2.119  N76.K
+         2.164  N31.K
+         2.282  N15.K
+         2.241  N54.K
+         2.214  N65.K
+         2.279  N23.K
+         2.258  N43.K
+         2.302  ann4dimbyte<0>.K
+         2.357  ann4dimbyte<2>.K
+         2.282  ann4dimbyte<4>.K
+         2.187  ann4dimbyte<6>.K
+         2.118  ann3dimbyte<0>.K
+         2.266  ann3dimbyte<2>.K
+         2.278  ann3dimbyte<4>.K
+         2.125  ann3dimbyte<6>.K
+         2.178  ann2dimbyte<0>.K
+         2.243  ann2dimbyte<2>.K
+         2.166  ann2dimbyte<4>.K
+         2.183  ann2dimbyte<6>.K
+         2.158  ann1dimbyte<6>.K
+         2.371  Inst_state_machine_1/cs<0>.K
+         2.163  outA1.K
+         2.155  outB1.K
+         2.148  Inst_filter_1/qbv<1>.K
+         2.161  Inst_filter_1/qbv<3>.K
+         2.152  Inst_filter_1/qav<1>.K
+         2.270  Inst_filter_1/qav<3>.K
+         2.141  Inst_state_machine_3/cs<0>.K
+         2.189  N201.K
+         2.191  add_data<0>.OK
+         2.191  add_data<0>.IK
+         2.165  add_data<1>.OK
+         2.165  add_data<1>.IK
+         2.196  add_data<2>.OK
+         2.196  add_data<2>.IK
+         2.239  add_data<3>.OK
+         2.239  add_data<3>.IK
+         2.227  add_data<4>.OK
+         2.227  add_data<4>.IK
+         2.281  add_data<5>.OK
+         2.281  add_data<5>.IK
+         2.268  add_data<6>.OK
+         2.290  add_data<7>.OK
+         2.164  Ain1.IK
+         2.182  Ain2.IK
+         2.234  Ain3.IK
+         2.274  Ain4.IK
+         2.177  Bin1.IK
+         2.222  Bin2.IK
+         2.261  Bin3.IK
+         2.270  Bin4.IK
+         2.348  solenoid_1.OK
+         2.336  solenoid_2.OK
+         2.346  Inst_clock_divide1/pwm_count<0>.K
+         2.342  Inst_clock_divide1/pwm_count<1>.K
+         2.336  Inst_clock_divide1/pwm_count<3>.K
+         2.330  Inst_clock_divide1/pwm_count<5>.K
+         2.322  Inst_clock_divide1/pwm_count<7>.K
+         2.312  Inst_clock_divide1/pwm_count<9>.K
+         2.371  Inst_clock_divide2/pwm_count<0>.K
+         2.382  Inst_clock_divide2/pwm_count<1>.K
+         2.392  Inst_clock_divide2/pwm_count<3>.K
+         2.400  Inst_clock_divide2/pwm_count<5>.K
+         2.407  Inst_clock_divide2/pwm_count<7>.K
+         2.412  Inst_clock_divide2/pwm_count<9>.K
+         2.352  Inst_clock_divide3/pwm_count<0>.K
+         2.349  Inst_clock_divide3/pwm_count<1>.K
+         2.344  Inst_clock_divide3/pwm_count<3>.K
+         2.339  Inst_clock_divide3/pwm_count<5>.K
+         2.331  Inst_clock_divide3/pwm_count<7>.K
+         2.323  Inst_clock_divide3/pwm_count<9>.K
+         2.262  Inst_clock_divide4/pwm_count<0>.K
+         2.259  Inst_clock_divide4/pwm_count<1>.K
+         2.255  Inst_clock_divide4/pwm_count<3>.K
+         2.249  Inst_clock_divide4/pwm_count<5>.K
+         2.242  Inst_clock_divide4/pwm_count<7>.K
+         2.234  Inst_clock_divide4/pwm_count<9>.K
+         2.304  Inst_talk_to_micro/N144.K
+         2.362  Inst_get_data/syn3043.K
+         2.357  datacounter1<1>.K
+         2.351  datacounter1<3>.K
+         2.343  datacounter1<5>.K
+         2.334  datacounter1<7>.K
+         2.323  datacounter1<9>.K
+         2.140  Inst_get_data/syn691.K
+         2.141  datacounter2<1>.K
+         2.153  datacounter2<3>.K
+         2.163  datacounter2<5>.K
+         2.172  datacounter2<7>.K
+         2.179  datacounter2<9>.K
+         2.189  Inst_get_data/syn3041.K
+         2.200  datacounter3<1>.K
+         2.211  datacounter3<3>.K
+         2.221  datacounter3<5>.K
+         2.229  datacounter3<7>.K
+         2.236  datacounter3<9>.K
+         2.179  Inst_get_data/syn3044.K
+         2.172  datacounter4<1>.K
+         2.163  datacounter4<3>.K
+         2.153  datacounter4<5>.K
+         2.141  datacounter4<7>.K
+         2.140  datacounter4<9>.K
+         2.301  Inst_talk_to_micro/master_count<1>.K
+         2.219  Inst_talk_to_micro/master_count<19>.K
+         2.205  Inst_talk_to_micro/master_count<21>.K
+         2.296  Inst_talk_to_micro/master_count<3>.K
+         2.291  Inst_talk_to_micro/master_count<5>.K
+         2.284  Inst_talk_to_micro/master_count<7>.K
+         2.276  Inst_talk_to_micro/master_count<9>.K
+         2.267  Inst_talk_to_micro/master_count<11>.K
+         2.256  Inst_talk_to_micro/master_count<13>.K
+         2.244  Inst_talk_to_micro/master_count<15>.K
+         2.231  Inst_talk_to_micro/master_count<17>.K
+         2.161  N180.K
+         2.124  N26.K
+         2.300  Inst_clock_divide1/pwm_count<11>.K
+         2.416  Inst_clock_divide2/pwm_count<11>.K
+         2.312  Inst_clock_divide3/pwm_count<11>.K
+         2.224  Inst_clock_divide4/pwm_count<11>.K
+         2.164  N187.K
+         2.333  N194.K
+         2.310  Inst_get_data/syn2928.K
+         2.185  Inst_get_data/syn2927.K
+         2.241  Inst_get_data/syn2926.K
+         2.149  Inst_get_data/syn2929.K
+
+outA1
+   outA1.XQ
+         6.911  Inst_state_machine_1/N145.F3
+         5.650  Inst_state_machine_1/N90.F3
+         5.650  Inst_state_machine_1/N90.G3
+         4.240  Inst_state_machine_1/N144.F3
+         4.240  Inst_state_machine_1/N144.G3
+         4.991  Inst_state_machine_1/C19/N9.F2
+         4.991  Inst_state_machine_1/C19/N9.G2
+         6.607  Inst_state_machine_1/C13/N8.F4
+         6.607  Inst_state_machine_1/C13/N8.G4
+         7.181  Inst_state_machine_1/C7/N14.F4
+         7.181  Inst_state_machine_1/C7/N14.G4
+         7.337  Inst_state_machine_1/C19/N15.F3
+         7.337  Inst_state_machine_1/C19/N15.G3
+         7.455  Inst_state_machine_1/C13/N14.F3
+         7.455  Inst_state_machine_1/C13/N14.G3
+         0.534  outA1.F2
+         5.028  Inst_state_machine_1/cs<0>.G4
+
+outA2
+   outA1.YQ
+         7.344  Inst_state_machine_2/N145.F3
+         7.472  Inst_state_machine_2/N90.F4
+         7.472  Inst_state_machine_2/N90.G4
+         7.472  Inst_state_machine_2/N144.F4
+         7.472  Inst_state_machine_2/N144.G4
+         7.315  Inst_state_machine_2/C19/N9.F1
+         7.315  Inst_state_machine_2/C19/N9.G1
+         7.718  Inst_state_machine_2/C13/N8.F4
+         7.718  Inst_state_machine_2/C13/N8.G4
+         7.040  Inst_state_machine_2/C7/N14.F2
+         7.040  Inst_state_machine_2/C7/N14.G2
+         6.573  Inst_state_machine_2/C19/N15.F1
+         6.573  Inst_state_machine_2/C19/N15.G1
+         7.435  Inst_state_machine_2/C13/N14.F2
+         7.435  Inst_state_machine_2/C13/N14.G2
+         7.293  Inst_state_machine_2/cs<0>.G3
+         1.577  outA1.G3
+
+outA3
+   outA3.XQ
+         8.234  Inst_state_machine_3/N145.F2
+         8.763  Inst_state_machine_3/N90.F4
+         8.763  Inst_state_machine_3/N90.G4
+         8.910  Inst_state_machine_3/N144.F4
+         8.910  Inst_state_machine_3/N144.G4
+         8.726  Inst_state_machine_3/C19/N9.F2
+         8.726  Inst_state_machine_3/C19/N9.G2
+         8.726  Inst_state_machine_3/C13/N8.F2
+         8.726  Inst_state_machine_3/C13/N8.G2
+         6.089  Inst_state_machine_3/C7/N14.F3
+         6.090  Inst_state_machine_3/C7/N14.G3
+         6.779  Inst_state_machine_3/C19/N15.F2
+         6.779  Inst_state_machine_3/C19/N15.G2
+         7.414  Inst_state_machine_3/C13/N14.F2
+         7.414  Inst_state_machine_3/C13/N14.G2
+         1.693  outA3.F2
+         7.917  Inst_state_machine_3/cs<0>.G2
+
+outA4
+   outA3.YQ
+        10.171  Inst_state_machine_4/N145.F4
+        10.015  Inst_state_machine_4/N90.F3
+        10.015  Inst_state_machine_4/N90.G3
+         9.825  Inst_state_machine_4/N144.F4
+         9.825  Inst_state_machine_4/N144.G4
+         9.176  Inst_state_machine_4/C19/N9.F3
+         9.176  Inst_state_machine_4/C19/N9.G3
+         9.548  Inst_state_machine_4/C13/N8.F4
+         9.548  Inst_state_machine_4/C13/N8.G4
+         8.098  Inst_state_machine_4/C7/N14.F2
+         8.098  Inst_state_machine_4/C7/N14.G2
+         7.439  Inst_state_machine_4/C19/N15.F2
+         7.439  Inst_state_machine_4/C19/N15.G2
+         9.148  Inst_state_machine_4/C13/N14.F1
+         9.148  Inst_state_machine_4/C13/N14.G1
+         9.393  Inst_state_machine_4/cs<0>.G4
+         0.512  outA3.G3
+
+outB1
+   outB1.XQ
+         7.975  Inst_state_machine_1/N145.F1
+         4.579  Inst_state_machine_1/N90.F1
+         4.579  Inst_state_machine_1/N90.G1
+         7.975  Inst_state_machine_1/N144.F1
+         7.975  Inst_state_machine_1/N144.G1
+         8.003  Inst_state_machine_1/C19/N9.F3
+         8.003  Inst_state_machine_1/C19/N9.G3
+         5.660  Inst_state_machine_1/C13/N8.F3
+         5.660  Inst_state_machine_1/C13/N8.G3
+         6.572  Inst_state_machine_1/C7/N14.F3
+         6.572  Inst_state_machine_1/C7/N14.G3
+         7.482  Inst_state_machine_1/C19/N15.F2
+         7.482  Inst_state_machine_1/C19/N15.G2
+         7.519  Inst_state_machine_1/C13/N14.F4
+         7.519  Inst_state_machine_1/C13/N14.G4
+         1.814  outB1.F2
+         7.482  Inst_state_machine_1/cs<0>.F2
+
+outB2
+   outB1.YQ
+        12.276  Inst_state_machine_2/N145.F4
+        11.543  Inst_state_machine_2/N90.F1
+        11.543  Inst_state_machine_2/N90.G1
+        11.801  Inst_state_machine_2/N144.F2
+        11.801  Inst_state_machine_2/N144.G2
+        12.076  Inst_state_machine_2/C19/N9.F2
+        12.076  Inst_state_machine_2/C19/N9.G2
+        11.839  Inst_state_machine_2/C13/N8.F1
+        11.839  Inst_state_machine_2/C13/N8.G1
+        12.113  Inst_state_machine_2/C7/N14.F4
+        12.113  Inst_state_machine_2/C7/N14.G4
+        11.980  Inst_state_machine_2/C19/N15.F2
+        11.980  Inst_state_machine_2/C19/N15.G2
+        11.543  Inst_state_machine_2/C13/N14.F1
+        11.543  Inst_state_machine_2/C13/N14.G1
+        11.104  Inst_state_machine_2/cs<0>.F3
+         1.877  outB1.G3
+
+outB3
+   outB3.XQ
+         6.462  Inst_state_machine_3/N145.F3
+         6.724  Inst_state_machine_3/N90.F1
+         6.724  Inst_state_machine_3/N90.G1
+         7.158  Inst_state_machine_3/N144.F1
+         7.158  Inst_state_machine_3/N144.G1
+         6.724  Inst_state_machine_3/C19/N9.F1
+         6.724  Inst_state_machine_3/C19/N9.G1
+         7.020  Inst_state_machine_3/C13/N8.F4
+         7.020  Inst_state_machine_3/C13/N8.G4
+         5.568  Inst_state_machine_3/C7/N14.F2
+         5.568  Inst_state_machine_3/C7/N14.G2
+         6.076  Inst_state_machine_3/C19/N15.F3
+         6.076  Inst_state_machine_3/C19/N15.G3
+         6.021  Inst_state_machine_3/C13/N14.F1
+         6.021  Inst_state_machine_3/C13/N14.G1
+         1.486  outB3.F2
+         7.329  Inst_state_machine_3/cs<0>.F4
+
+outB4
+   outB3.YQ
+         8.875  Inst_state_machine_4/N145.F3
+         9.401  Inst_state_machine_4/N90.F2
+         9.401  Inst_state_machine_4/N90.G2
+         9.216  Inst_state_machine_4/N144.F2
+         9.216  Inst_state_machine_4/N144.G2
+         9.216  Inst_state_machine_4/C19/N9.F2
+         9.216  Inst_state_machine_4/C19/N9.G2
+         9.439  Inst_state_machine_4/C13/N8.F1
+         9.439  Inst_state_machine_4/C13/N8.G1
+         8.306  Inst_state_machine_4/C7/N14.F1
+         8.306  Inst_state_machine_4/C7/N14.G1
+         8.335  Inst_state_machine_4/C19/N15.F3
+         8.335  Inst_state_machine_4/C19/N15.G3
+         9.649  Inst_state_machine_4/C13/N14.F4
+         9.649  Inst_state_machine_4/C13/N14.G4
+         9.302  Inst_state_machine_4/cs<0>.F2
+         1.734  outB3.G3
+
+tclk1
+   tclk1.X
+         1.539  tclk1.F2
+         3.669  Inst_get_data/syn3043.C1
+         3.309  datacounter1<1>.C4
+         2.887  datacounter1<3>.C1
+         3.346  datacounter1<5>.C1
+         3.697  datacounter1<7>.C1
+         3.965  datacounter1<9>.C1
+         4.350  Inst_get_data/syn2928.C4
+
+tclk2
+   tclk2.X
+         0.900  tclk2.F2
+         5.602  Inst_get_data/syn691.C4
+         5.445  datacounter2<1>.C1
+         3.672  datacounter2<3>.C1
+         3.632  datacounter2<5>.C4
+         3.428  datacounter2<7>.C1
+         3.239  datacounter2<9>.C4
+         1.266  Inst_get_data/syn2927.C4
+
+tclk3
+   tclk3.X
+         1.547  tclk3.F1
+         6.438  Inst_get_data/syn3041.C3
+         6.051  datacounter3<1>.C4
+         5.662  datacounter3<3>.C1
+         4.704  datacounter3<5>.C4
+         3.980  datacounter3<7>.C1
+         2.375  datacounter3<9>.C4
+         1.576  Inst_get_data/syn2926.C3
+
+tclk4
+   tclk4.X
+         2.072  tclk4.F1
+         8.846  Inst_get_data/syn3044.C1
+         8.480  datacounter4<1>.C4
+         7.723  datacounter4<3>.C4
+         6.571  datacounter4<5>.C4
+         4.962  datacounter4<7>.C4
+         3.819  datacounter4<9>.C1
+         3.985  Inst_get_data/syn2929.C3
+

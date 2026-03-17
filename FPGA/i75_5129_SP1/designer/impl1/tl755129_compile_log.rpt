@@ -1,0 +1,214 @@
+Microsemi Libero Software
+Version: 11.9.1.0
+Release: v11.9 SP1
+
+Info: The design tl755129.adb was last modified by software version 11.9.1.0.
+Opened an existing Libero design tl755129.adb.
+'BA_NAME' set to 'tl755129_ba'
+'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
+'IDE_DESIGNERVIEW_COUNT' set to '1'
+'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
+'IDE_DESIGNERVIEW_REVNUM0' set to '1'
+'IDE_DESIGNERVIEW_ROOTDIR' set to
+'W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\designer'
+'IDE_DESIGNERVIEW_LASTREV' set to '1'
+
+ Netlist Reading Time = 0.0 seconds
+Imported the file:
+
+W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\synthesis\\
+tl755129.edn
+
+The Import command succeeded ( 00:00:02 )
+=====================================================================
+Parameters used to run compile:
+===============================
+
+Family      : ProASIC3
+Device      : A3PN250
+Package     : 100 VQFP
+Source      :
+W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\synthesis\\
+tl755129.edn
+Format      : EDIF
+Topcell     : tl755129
+Speed grade : STD
+Temp        : 0:25:70
+Voltage     : 1.58:1.50:1.42
+
+Keep Existing Physical Constraints : Yes
+Keep Existing Timing Constraints   : Yes
+
+pdc_abort_on_error                 : Yes
+pdc_eco_display_unmatched_objects  : No
+pdc_eco_max_warnings               : 10000
+
+demote_globals                     : No
+promote_globals                    : No
+localclock_max_shared_instances    : 12
+localclock_buffer_tree_max_fanout  : 12
+
+combine_register                   : No
+delete_buffer_tree                 : No
+
+report_high_fanout_nets_limit      : 10
+
+=====================================================================
+Compile starts ...
+
+
+Netlist Optimization Report
+===========================
+
+Optimized macros:
+  - Dangling net drivers:   0
+  - Buffers:                0
+  - Inverters:              0
+  - Tieoff:                 0
+  - Logic combining:        8
+
+    Total macros optimized  8
+
+There were 0 error(s) and 0 warning(s) in this design.
+=====================================================================
+
+Reading previous post-compile physical placement constraints.
+
+
+There were 0 error(s) and 0 warning(s).
+
+=====================================================================
+Compile report:
+===============
+
+    CORE                       Used:    427  Total:   6144   (6.95%)
+    IO (W/ clocks)             Used:     37  Total:     68   (54.41%)
+    GLOBAL (Chip+Quadrant)     Used:      2  Total:     18   (11.11%)
+    PLL                        Used:      0  Total:      1   (0.00%)
+    RAM/FIFO                   Used:      0  Total:      8   (0.00%)
+    Low Static ICC             Used:      0  Total:      1   (0.00%)
+    FlashROM                   Used:      0  Total:      1   (0.00%)
+    User JTAG                  Used:      0  Total:      1   (0.00%)
+
+Global Information:
+
+    Type            | Used   | Total
+    ----------------|--------|--------------
+    Chip global     | 0      | 6  (0.00%)*
+    Quadrant global | 2      | 12 (16.67%)
+
+    (*) Chip globals may be assigned to Quadrant globals using the Multi-View Navigator (MVN)
+        or Physical Design Constraints (PDC).
+        They may also be assigned to Quadrant globals automatically during Layout.
+
+Core Information:
+
+    Type    | Instances    | Core tiles
+    --------|--------------|-----------
+    COMB    | 299          | 299
+    SEQ     | 124          | 128
+
+I/O Function:
+
+    Type                                  | w/o register  | w/ register  | w/ DDR register
+    --------------------------------------|---------------|--------------|----------------
+    Input I/O                             | 9             | 0            | 0
+    Output I/O                            | 20            | 0            | 0
+    Bidirectional I/O                     | 8             | 0            | 0
+    Differential Input I/O Pairs          | 0             | 0            | 0
+    Differential Output I/O Pairs         | 0             | 0            | 0
+
+I/O Technology:
+
+                                    |   Voltages    |             I/Os
+    --------------------------------|-------|-------|-------|--------|--------------
+    I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
+    --------------------------------|-------|-------|-------|--------|--------------
+    LVCMOS33                        | 3.30v | N/A   | 9     | 20     | 8
+
+I/O Placement:
+
+    Locked  :  36 ( 97.30% )
+    Placed  :   0
+    UnPlaced:   1 (  2.70% )
+
+Warning: Only some I/Os are locked
+
+Net information report:
+=======================
+
+The following nets have been assigned to a quadrant global resource:
+    Fanout  Type          Name
+    --------------------------
+    102     CLK_NET       Net   : MClk_c
+                          Driver: MClk_pad
+                          Region: quadrant_LL
+    84      SET/RESET_NET Net   : Rst_c
+                          Driver: Rst_pad
+                          Region: quadrant_LL
+
+High fanout nets in the post compile netlist:
+    Fanout  Type          Name
+    --------------------------
+    18      CLK_NET       Net   : iPwmClk
+                          Driver: Inst_ClockDivider_1/iPwmClk
+    15      INT_NET       Net   : outB1
+                          Driver: Inst_filter_1/qbint
+    15      INT_NET       Net   : AddrData_in[0]
+                          Driver: AddrData_pad[0]
+    14      INT_NET       Net   : dir1
+                          Driver: Inst_state_machine_1/dir
+    13      INT_NET       Net   : Inst_state_machine_1/cs[0]
+                          Driver: Inst_state_machine_1/cs[0]
+    13      INT_NET       Net   : Inst_state_machine_1/cs[1]
+                          Driver: Inst_state_machine_1/cs[1]
+    12      INT_NET       Net   : Address[5]
+                          Driver: Inst_address_latch/Address[5]
+    12      INT_NET       Net   : Inst_RamMem/N_183
+                          Driver: Inst_RamMem/AddrData_m1_e_1
+    11      INT_NET       Net   : Address[1]
+                          Driver: Inst_address_latch/Address[1]
+    10      INT_NET       Net   : Address[2]
+                          Driver: Inst_address_latch/Address[2]
+
+Nets that are candidates for clock assignment and the resulting fanout:
+    Fanout  Type          Name
+    --------------------------
+    18      CLK_NET       Net   : iPwmClk
+                          Driver: Inst_ClockDivider_1/iPwmClk
+    15      INT_NET       Net   : outB1
+                          Driver: Inst_filter_1/qbint
+    15      INT_NET       Net   : AddrData_in[0]
+                          Driver: AddrData_pad[0]
+    14      INT_NET       Net   : dir1
+                          Driver: Inst_state_machine_1/dir
+    13      INT_NET       Net   : Inst_state_machine_1/cs[0]
+                          Driver: Inst_state_machine_1/cs[0]
+    13      INT_NET       Net   : Inst_state_machine_1/cs[1]
+                          Driver: Inst_state_machine_1/cs[1]
+    12      INT_NET       Net   : Address[5]
+                          Driver: Inst_address_latch/Address[5]
+    12      INT_NET       Net   : Inst_RamMem/N_183
+                          Driver: Inst_RamMem/AddrData_m1_e_1
+    11      INT_NET       Net   : Address[1]
+                          Driver: Inst_address_latch/Address[1]
+    10      INT_NET       Net   : Address[2]
+                          Driver: Inst_address_latch/Address[2]
+
+The Compile command succeeded ( 00:00:01 )
+Wrote status report to file: tl755129_compile_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote pin report to file: tl755129_report_pin_byname.txt
+
+The Report command succeeded ( 00:00:01 )
+Wrote pin report to file: tl755129_report_pin_bynumber.txt
+
+The Report command succeeded ( 00:00:01 )
+Design saved to file
+W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\designer\i\
+mpl1\tl755129.adb.
+
+The Execute Script command succeeded ( 00:00:06 )
+Design closed.
+

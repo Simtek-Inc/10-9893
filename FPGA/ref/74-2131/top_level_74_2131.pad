@@ -1,0 +1,264 @@
+Release 4.2i - Par E.35
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+
+Fri Oct 10 11:52:52 2008
+
+Xilinx PAD Specification File
+*****************************
+
+Input file:       par_temp.ncd
+Output file:      top_level_74_2131.ncd
+Part type:        xcs30xl
+Speed grade:      -4
+Package:          vq100
+
+Pinout by Signal Name:
+-------------------------------|----------------------|--------|-----------|
+          Signal Name          |       Pin Name       | Pin    | Direction |
+                               |                      | Number |           |
+-------------------------------|----------------------|--------|-----------|
+ Ain1                          |                      | P13    | INPUT     |
+ Ain2                          |                      | P15    | INPUT     |
+ Ain3                          |                      | P17    | INPUT     |
+ Ain4                          |                      | P19    | INPUT     |
+ Bin1                          |                      | P14    | INPUT     |
+ Bin2                          |                      | P16    | INPUT     |
+ Bin3                          |                      | P18    | INPUT     |
+ Bin4                          |                      | P20    | INPUT     |
+ add_data<0>                   |                      | P10    | BIDIR     |
+ add_data<1>                   |                      | P9     | BIDIR     |
+ add_data<2>                   |                      | P8     | BIDIR     |
+ add_data<3>                   |                      | P7     | BIDIR     |
+ add_data<4>                   | TMS                  | P6     | BIDIR     |
+ add_data<5>                   | TCK                  | P5     | BIDIR     |
+ add_data<6>                   | TDI                  | P4     | BIDIR     |
+ add_data<7>                   |                      | P3     | BIDIR     |
+ ale                           |                      | P99    | INPUT     |
+ hb                            |                      | P21    | OUTPUT    |
+ i_odim1                       |                      | P97    | OUTPUT    |
+ i_odim2                       |                      | P94    | OUTPUT    |
+ i_odim3                       |                      | P96    | OUTPUT    |
+ i_odim4                       |                      | P95    | OUTPUT    |
+ logic_reset                   |                      | P98    | INPUT     |
+ master_clock                  |                      | P2     | INPUT     |
+ master_clock_out              |                      | P73    | OUTPUT    |
+ read                          |                      | P87    | INPUT     |
+ solenoid_1                    |                      | P92    | OUTPUT    |
+ solenoid_2                    |                      | P93    | OUTPUT    |
+ switch_data1<0>               |                      | P27    | INPUT     |
+ switch_data1<1>               |                      | P29    | INPUT     |
+ switch_data1<2>               |                      | P31    | INPUT     |
+ switch_data1<3>               |                      | P32    | INPUT     |
+ switch_data1<4>               |                      | P33    | INPUT     |
+ switch_data1<5>               |                      | P34    | INPUT     |
+ switch_data1<6>               |                      | P35    | INPUT     |
+ switch_data1<7>               |                      | P39    | INPUT     |
+ switch_data2<0>               |                      | P40    | INPUT     |
+ switch_data2<1>               |                      | P41    | INPUT     |
+ switch_data2<2>               |                      | P42    | INPUT     |
+ switch_data2<3>               |                      | P43    | INPUT     |
+ switch_data2<4>               |                      | P44    | INPUT     |
+ switch_data2<5>               |                      | P45    | INPUT     |
+ switch_data2<6>               |                      | P46    | INPUT     |
+ switch_data2<7>               |                      | P47    | INPUT     |
+ switch_data3<0>               |                      | P53    | INPUT     |
+ switch_data3<1>               |                      | P54    | INPUT     |
+ switch_data3<2>               |                      | P55    | INPUT     |
+ switch_data3<3>               |                      | P56    | INPUT     |
+ switch_data3<4>               |                      | P57    | INPUT     |
+ switch_data3<5>               |                      | P58    | INPUT     |
+ switch_data3<6>               |                      | P59    | INPUT     |
+ switch_data3<7>               |                      | P60    | INPUT     |
+ switch_data4<0>               |                      | P61    | INPUT     |
+ switch_data4<1>               |                      | P62    | INPUT     |
+ switch_data4<2>               |                      | P65    | INPUT     |
+ switch_data4<3>               |                      | P66    | INPUT     |
+ switch_data4<4>               |                      | P67    | INPUT     |
+ switch_data4<5>               |                      | P68    | INPUT     |
+ switch_data4<6>               |                      | P69    | INPUT     |
+ switch_data4<7>               |                      | P70    | INPUT     |
+ write                         |                      | P86    | INPUT     |
+-------------------------------|----------------------|--------|-----------|
+
+Pinout by Pin Number:
+--------|-------------------------------|----------------------|-----------|
+ Pin    |          Signal Name          |       Pin Name       | Direction |
+ Number |                               |                      |           |
+--------|-------------------------------|----------------------|-----------|
+ P1     |                               | GND                  |           |
+ P2     | master_clock                  |                      | INPUT     |
+ P3     | add_data<7>                   |                      | BIDIR     |
+ P4     | add_data<6>                   | TDI                  | BIDIR     |
+ P5     | add_data<5>                   | TCK                  | BIDIR     |
+ P6     | add_data<4>                   | TMS                  | BIDIR     |
+ P7     | add_data<3>                   |                      | BIDIR     |
+ P8     | add_data<2>                   |                      | BIDIR     |
+ P9     | add_data<1>                   |                      | BIDIR     |
+ P10    | add_data<0>                   |                      | BIDIR     |
+ P11    |                               | GND                  |           |
+ P12    |                               | VCC                  |           |
+ P13    | Ain1                          |                      | INPUT     |
+ P14    | Bin1                          |                      | INPUT     |
+ P15    | Ain2                          |                      | INPUT     |
+ P16    | Bin2                          |                      | INPUT     |
+ P17    | Ain3                          |                      | INPUT     |
+ P18    | Bin3                          |                      | INPUT     |
+ P19    | Ain4                          |                      | INPUT     |
+ P20    | Bin4                          |                      | INPUT     |
+ P21    | hb                            |                      | OUTPUT    |
+ P22    |                               | M1                   |           |
+ P23    |                               | GND                  |           |
+ P24    |                               | M0                   |           |
+ P25    |                               | VCC                  |           |
+ P26    |                               | M2_OPT               |           |
+ P27    | switch_data1<0>               |                      | INPUT     |
+ P28    |                               |                      | UNUSED    |
+ P29    | switch_data1<1>               |                      | INPUT     |
+ P30    |                               |                      | UNUSED    |
+ P31    | switch_data1<2>               |                      | INPUT     |
+ P32    | switch_data1<3>               |                      | INPUT     |
+ P33    | switch_data1<4>               |                      | INPUT     |
+ P34    | switch_data1<5>               |                      | INPUT     |
+ P35    | switch_data1<6>               |                      | INPUT     |
+ P36    |                               |                      | UNUSED    |
+ P37    |                               | VCC                  |           |
+ P38    |                               | GND                  |           |
+ P39    | switch_data1<7>               |                      | INPUT     |
+ P40    | switch_data2<0>               |                      | INPUT     |
+ P41    | switch_data2<1>               |                      | INPUT     |
+ P42    | switch_data2<2>               |                      | INPUT     |
+ P43    | switch_data2<3>               |                      | INPUT     |
+ P44    | switch_data2<4>               |                      | INPUT     |
+ P45    | switch_data2<5>               |                      | INPUT     |
+ P46    | switch_data2<6>               |                      | INPUT     |
+ P47    | switch_data2<7>               |                      | INPUT     |
+ P48    |                               |                      | UNUSED    |
+ P49    |                               | GND                  |           |
+ P50    |                               | DONE                 |           |
+ P51    |                               | VCC                  |           |
+ P52    |                               | /PROGRAM             |           |
+ P53    | switch_data3<0>               |                      | INPUT     |
+ P54    | switch_data3<1>               |                      | INPUT     |
+ P55    | switch_data3<2>               |                      | INPUT     |
+ P56    | switch_data3<3>               |                      | INPUT     |
+ P57    | switch_data3<4>               |                      | INPUT     |
+ P58    | switch_data3<5>               |                      | INPUT     |
+ P59    | switch_data3<6>               |                      | INPUT     |
+ P60    | switch_data3<7>               |                      | INPUT     |
+ P61    | switch_data4<0>               |                      | INPUT     |
+ P62    | switch_data4<1>               |                      | INPUT     |
+ P63    |                               | VCC                  |           |
+ P64    |                               | GND                  |           |
+ P65    | switch_data4<2>               |                      | INPUT     |
+ P66    | switch_data4<3>               |                      | INPUT     |
+ P67    | switch_data4<4>               |                      | INPUT     |
+ P68    | switch_data4<5>               |                      | INPUT     |
+ P69    | switch_data4<6>               |                      | INPUT     |
+ P70    | switch_data4<7>               |                      | INPUT     |
+ P71    |                               |                      | UNUSED    |
+ P72    |                               |                      | UNUSED    |
+ P73    | master_clock_out              |                      | OUTPUT    |
+ P74    |                               | CCLK                 |           |
+ P75    |                               | VCC                  |           |
+ P76    |                               | TDO                  |           |
+ P77    |                               | GND                  |           |
+ P78    |                               |                      | UNUSED    |
+ P79    |                               |                      | UNUSED    |
+ P80    |                               |                      | UNUSED    |
+ P81    |                               |                      | UNUSED    |
+ P82    |                               |                      | UNUSED    |
+ P83    |                               |                      | UNUSED    |
+ P84    |                               |                      | UNUSED    |
+ P85    |                               |                      | UNUSED    |
+ P86    | write                         |                      | INPUT     |
+ P87    | read                          |                      | INPUT     |
+ P88    |                               | GND                  |           |
+ P89    |                               | VCC                  |           |
+ P90    |                               |                      | UNUSED    |
+ P91    |                               |                      | UNUSED    |
+ P92    | solenoid_1                    |                      | OUTPUT    |
+ P93    | solenoid_2                    |                      | OUTPUT    |
+ P94    | i_odim2                       |                      | OUTPUT    |
+ P95    | i_odim4                       |                      | OUTPUT    |
+ P96    | i_odim3                       |                      | OUTPUT    |
+ P97    | i_odim1                       |                      | OUTPUT    |
+ P98    | logic_reset                   |                      | INPUT     |
+ P99    | ale                           |                      | INPUT     |
+ P100   |                               | VCC                  |           |
+--------|-------------------------------|----------------------|-----------|
+
+* Default value.
+** This default Pullup/Pulldown value can be overridden in Bitgen.
+*** The default IOB Delay is determined by how the IOB is used.
+
+
+#
+# To preserve the pinout above for future design iterations,
+# simply invoke PIN2UCF from the command line or issue this command in the GUI.
+# For Foundation ISE/Project Navigator - Run the process "Implement Design" -> "Place-and-Route" -> "Back-annotate Pin Locations"
+# For Design Manager - In the Design menu select "Lock Pins...
+# The location constraints above will be written into your specified UCF file. (The constraints
+# listed below are in PCF format and cannot be directly used in the UCF file).
+#
+COMP "Ain1" LOCATE = SITE "P13" ; 
+COMP "Ain2" LOCATE = SITE "P15" ; 
+COMP "Ain3" LOCATE = SITE "P17" ; 
+COMP "Ain4" LOCATE = SITE "P19" ; 
+COMP "Bin1" LOCATE = SITE "P14" ; 
+COMP "Bin2" LOCATE = SITE "P16" ; 
+COMP "Bin3" LOCATE = SITE "P18" ; 
+COMP "Bin4" LOCATE = SITE "P20" ; 
+COMP "add_data<0>" LOCATE = SITE "P10" ; 
+COMP "add_data<1>" LOCATE = SITE "P9" ; 
+COMP "add_data<2>" LOCATE = SITE "P8" ; 
+COMP "add_data<3>" LOCATE = SITE "P7" ; 
+COMP "add_data<4>" LOCATE = SITE "P6" ; 
+COMP "add_data<5>" LOCATE = SITE "P5" ; 
+COMP "add_data<6>" LOCATE = SITE "P4" ; 
+COMP "add_data<7>" LOCATE = SITE "P3" ; 
+COMP "ale" LOCATE = SITE "P99" ; 
+COMP "hb" LOCATE = SITE "P21" ; 
+COMP "i_odim1" LOCATE = SITE "P97" ; 
+COMP "i_odim2" LOCATE = SITE "P94" ; 
+COMP "i_odim3" LOCATE = SITE "P96" ; 
+COMP "i_odim4" LOCATE = SITE "P95" ; 
+COMP "logic_reset" LOCATE = SITE "P98" ; 
+COMP "master_clock" LOCATE = SITE "P2" ; 
+COMP "master_clock_out" LOCATE = SITE "P73" ; 
+COMP "read" LOCATE = SITE "P87" ; 
+COMP "solenoid_1" LOCATE = SITE "P92" ; 
+COMP "solenoid_2" LOCATE = SITE "P93" ; 
+COMP "switch_data1<0>" LOCATE = SITE "P27" ; 
+COMP "switch_data1<1>" LOCATE = SITE "P29" ; 
+COMP "switch_data1<2>" LOCATE = SITE "P31" ; 
+COMP "switch_data1<3>" LOCATE = SITE "P32" ; 
+COMP "switch_data1<4>" LOCATE = SITE "P33" ; 
+COMP "switch_data1<5>" LOCATE = SITE "P34" ; 
+COMP "switch_data1<6>" LOCATE = SITE "P35" ; 
+COMP "switch_data1<7>" LOCATE = SITE "P39" ; 
+COMP "switch_data2<0>" LOCATE = SITE "P40" ; 
+COMP "switch_data2<1>" LOCATE = SITE "P41" ; 
+COMP "switch_data2<2>" LOCATE = SITE "P42" ; 
+COMP "switch_data2<3>" LOCATE = SITE "P43" ; 
+COMP "switch_data2<4>" LOCATE = SITE "P44" ; 
+COMP "switch_data2<5>" LOCATE = SITE "P45" ; 
+COMP "switch_data2<6>" LOCATE = SITE "P46" ; 
+COMP "switch_data2<7>" LOCATE = SITE "P47" ; 
+COMP "switch_data3<0>" LOCATE = SITE "P53" ; 
+COMP "switch_data3<1>" LOCATE = SITE "P54" ; 
+COMP "switch_data3<2>" LOCATE = SITE "P55" ; 
+COMP "switch_data3<3>" LOCATE = SITE "P56" ; 
+COMP "switch_data3<4>" LOCATE = SITE "P57" ; 
+COMP "switch_data3<5>" LOCATE = SITE "P58" ; 
+COMP "switch_data3<6>" LOCATE = SITE "P59" ; 
+COMP "switch_data3<7>" LOCATE = SITE "P60" ; 
+COMP "switch_data4<0>" LOCATE = SITE "P61" ; 
+COMP "switch_data4<1>" LOCATE = SITE "P62" ; 
+COMP "switch_data4<2>" LOCATE = SITE "P65" ; 
+COMP "switch_data4<3>" LOCATE = SITE "P66" ; 
+COMP "switch_data4<4>" LOCATE = SITE "P67" ; 
+COMP "switch_data4<5>" LOCATE = SITE "P68" ; 
+COMP "switch_data4<6>" LOCATE = SITE "P69" ; 
+COMP "switch_data4<7>" LOCATE = SITE "P70" ; 
+COMP "write" LOCATE = SITE "P86" ; 
+#

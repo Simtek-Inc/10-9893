@@ -1,0 +1,1188 @@
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 1   
+
+
+C51 COMPILER V8.06, COMPILATION OF MODULE 75_5128
+OBJECT MODULE PLACED IN 75-5128.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE 75-5128.C BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          //;************************************************
+   2          //DESCRIPTION:
+   3          //SIMTEK PART # 10-8665-01
+   4          //FOR POE C-130
+   5          //75-5128 
+   6          //DAVID B.
+   7          //4/3/2019
+   8          //;************************************************
+   9          #include<aduc841.h>
+  10          #include<absacc.h>
+  11          #include "IO_expander_mcp23s17.h"
+  12          //#include<intrins.h>
+  13          //;************************************************
+  14          #define RESET_COMMAND 0xF0                              //
+  15          #define FIRMWARE_COMMAND 0xFE                   //
+  16          #define STATUS_COMMAND 0xF1                             //
+  17          #define INDICATORS_COMMAND 0xF3                 //
+  18          #define DIMMING_COMMAND 0xF4                    //
+  19          #define DISPLAY_COMMAND 0xF5                    //
+  20          //;************************************************
+  21          sbit fpga_reset = P3^5;                                 // u2 pin 23 IC_OUT_LCRST 
+  22          //;************************************************
+  23          sbit ADC_clk = P2^2;
+  24          sbit ADC_data = P2^3;
+  25          sbit ADC_cs = P2^4;
+  26          //;************************************************
+  27          bit     reset_bit = 0;                                          // reset flag
+  28          bit send_programs_bit = 0;                              // program response flag
+  29          bit send_status_bit = 0;                                // status response flag
+  30          bit     update_dimming_bit = 0;                         // dimming update flag
+  31          //;************************************************
+  32          unsigned char RS_micro_firmware[] =  {0x75,0x51,0x28,0x2D};
+  33          unsigned char RS_fpga_firmware[4];              // array of 4 sequential storage locations 0 - 3
+  34          unsigned char panel_dim_byte;
+  35          unsigned char display_dim_byte;
+  36          unsigned char display_data[18];                 // array of 18 sequential storage locations 0 - 17
+  37          //;************************************************
+  38          unsigned char bdata Abyte;                              // create a bit addressable byte
+  39          sbit Abyte0 = Abyte^0;                                          
+  40          sbit Abyte1 = Abyte^1;
+  41          sbit Abyte2 = Abyte^2;
+  42          sbit Abyte3 = Abyte^3;
+  43          sbit Abyte4 = Abyte^4;
+  44          sbit Abyte5 = Abyte^5;
+  45          sbit Abyte6 = Abyte^6;
+  46          sbit Abyte7 = Abyte^7;
+  47          //;************************************************
+  48          unsigned char bdata Bbyte;                              // create a bit addressable byte
+  49          sbit Bbyte0 = Bbyte^0;                                          
+  50          sbit Bbyte1 = Bbyte^1;
+  51          sbit Bbyte2 = Bbyte^2;
+  52          sbit Bbyte3 = Bbyte^3;
+  53          sbit Bbyte4 = Bbyte^4;
+  54          sbit Bbyte5 = Bbyte^5;
+  55          sbit Bbyte6 = Bbyte^6;
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 2   
+
+  56          sbit Bbyte7 = Bbyte^7;
+  57          //;************************************************
+  58          unsigned char Status_byte_1;            // rocker
+  59          unsigned char Status_byte_2;            // pot data
+  60          unsigned char Status_byte_3;            // toggle + encoder press
+  61          unsigned char Status_byte_4;            // rotary switch
+  62          unsigned char Status_byte_5;            // encoder data
+  63          //;************************************************
+  64          unsigned char *sw_ptr; // pointer to switch data porta and portb
+  65          //;************************************************
+  66          void setup_serial(void);
+  67          void reset_everything(void);
+  68          void transmit_data(void);
+  69          void receive_data(void);
+  70          void send_programs(void);
+  71          void update_dimming(void);
+  72          void clk_in_display_data(void);
+  73          void latch_display_data(void);
+  74          void send_status(void);
+  75          void clk_adc(void);
+  76          void adc_read(void);
+  77          void clk_in_6211_data(void);
+  78          void latch_6211_data(void);
+  79          void update_6211_data(void);
+  80          void clk_in_6212_data(void);
+  81          void latch_6212_data(void);
+  82          void update_6212_data(void);
+  83          
+  84          void check_input(void);
+  85          void initialize_mcp23s17(void);
+  86          //;************************************************
+  87          void main(void)
+  88          {       setup_serial();
+  89   1              //ewait = 0x00; 
+  90   1              fpga_reset = 1;
+  91   1              fpga_reset = 0;
+  92   1              send_programs_bit = 0;
+  93   1              reset_bit = 1;
+  94   1              reset_everything();
+  95   1              P1      = 0x00;                                                 // configure as inputs
+  96   1              initialize_mcp23s17();
+  97   1      //;************************************************
+  98   1              while(1)                                                
+  99   1              {
+ 100   2              reset_everything();
+ 101   2              send_programs();
+ 102   2              update_dimming();
+ 103   2              adc_read();
+ 104   2              update_6211_data();
+ 105   2              update_6212_data();
+ 106   2              sw_ptr = read_porta_portb();
+ 107   2          check_input();
+ 108   2              send_status();                                                          
+ 109   2              }
+ 110   1      }
+ 111          //;************************************************
+ 112          void setup_serial(void)
+ 113          {       
+ 114   1              SCON    = 0x40;                                         // MODE1 UART
+ 115   1              T3CON   = 0x87;                                         // 9600K BPS    
+ 116   1              T3FD    = 0x01;                                         // DEFAULT IS 9600K BAUD
+ 117   1              REN     = 1;                                            // RECEIVE ENABLED
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 3   
+
+ 118   1              ES              = 1;                                            // ENABLE SERIAL
+ 119   1              EA              = 1;                                            // ALL INTERRUPTS OK
+ 120   1              RI              = 0;                                            // CLR RECEIVE FLAG
+ 121   1              TI              = 0;                                            // CLR TRANSMIT FLAG
+ 122   1      }
+ 123          //;************************************************
+ 124          void reset_everything(void)
+ 125          { 
+ 126   1      unsigned char i;        
+ 127   1      if(reset_bit)                                                   // check to see if reset flag is set
+ 128   1              {                                                                       
+ 129   2              PBYTE[0X0010] = 0x00;                           // reset display dimming                         
+ 130   2              PBYTE[0X0011] = 0x00;                           // reset panel dimming
+ 131   2      
+ 132   2              RS_fpga_firmware[0] = PBYTE[2];
+ 133   2              RS_fpga_firmware[1] = PBYTE[3];
+ 134   2              RS_fpga_firmware[2] = PBYTE[4];
+ 135   2              RS_fpga_firmware[3] = PBYTE[5];
+ 136   2              Status_byte_1 = 0x00;
+ 137   2              Status_byte_2 = 0x00;
+ 138   2              Status_byte_3 = 0x00;
+ 139   2              Status_byte_4 = 0x00;
+ 140   2              Status_byte_5 = 0x00;
+ 141   2              for(i = 0; i < 18; i++)
+ 142   2                      {
+ 143   3                      display_data[i] = 0x00;                 // array of 18 sequential storage locations 0 - 17
+ 144   3                      reset_bit = 0;                                  // reset panel dimming
+ 145   3                      }
+ 146   2              }
+ 147   1      }
+ 148          //;************************************************
+ 149          void transmit_data(void)
+ 150          {
+ 151   1              while(!TI);             
+ 152   1              TI = 0;
+ 153   1      }
+ 154          //;************************************************
+ 155          void receive_data(void)
+ 156          {
+ 157   1              while(!RI);             
+ 158   1              RI = 0;
+ 159   1      }
+ 160          //;************************************************
+ 161          void send_programs(void)
+ 162          {
+ 163   1      unsigned char i;        
+ 164   1      if(send_programs_bit)                                   // check to see if send program flag is set
+ 165   1              {
+ 166   2                      SBUF = FIRMWARE_COMMAND;        
+ 167   2                      transmit_data();
+ 168   2      //;micro program***********************************                     
+ 169   2              for(i = 0; i < 4; i++)
+ 170   2                      {       
+ 171   3                      SBUF = RS_micro_firmware[i];    
+ 172   3                      transmit_data();                                    
+ 173   3                      }
+ 174   2      //;fpga program************************************                     
+ 175   2              for(i = 0; i < 4; i++)
+ 176   2                      {                       
+ 177   3                      SBUF = RS_fpga_firmware[i];
+ 178   3                      transmit_data();        
+ 179   3                      }
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 4   
+
+ 180   2      //;************************************************                             
+ 181   2              send_programs_bit = 0;                          // clear the flag
+ 182   2              }
+ 183   1      }
+ 184          //;************************************************
+ 185          void update_dimming(void)
+ 186          {       
+ 187   1      if(update_dimming_bit)                                  // check to see if update dimming flag is set
+ 188   1              {
+ 189   2              PBYTE[0X0010] = display_dim_byte;       
+ 190   2              PBYTE[0X0011] = panel_dim_byte;
+ 191   2              update_dimming_bit = 0;                         // clear the flag
+ 192   2              }
+ 193   1      }
+ 194          //;************************************************
+ 195          void send_status(void)
+ 196          {
+ 197   1      if(send_status_bit)
+ 198   1              {
+ 199   2              SBUF = STATUS_COMMAND;  
+ 200   2              transmit_data();
+ 201   2              
+ 202   2              SBUF = Status_byte_1;   
+ 203   2              transmit_data();
+ 204   2              
+ 205   2              SBUF = Status_byte_2;                           //pot data      
+ 206   2              transmit_data();
+ 207   2              
+ 208   2              SBUF = Status_byte_3;   
+ 209   2              transmit_data();
+ 210   2              
+ 211   2              SBUF = Status_byte_4;   
+ 212   2              transmit_data();
+ 213   2      
+ 214   2              Status_byte_5 = PBYTE[0X0060];
+ 215   2              SBUF = Status_byte_5;                           //encoder data  
+ 216   2              transmit_data();        
+ 217   2      
+ 218   2              send_status_bit = 0;
+ 219   2              }
+ 220   1      }
+ 221          //;************************************************
+ 222          void clk_adc(void)
+ 223          {
+ 224   1              ADC_clk = 1;
+ 225   1              ADC_clk = 0;
+ 226   1      }
+ 227          //;************************************************
+ 228          void adc_read(void)
+ 229          {       ADC_clk = 1;                    // adc clock high
+ 230   1          ADC_cs = 1;                         // adc cs high
+ 231   1          ADC_cs = 0;                         // adc chip select lo
+ 232   1      while(ADC_data == 0);           // wait for end of conversion
+ 233   1                      clk_adc();                      //
+ 234   1                      clk_adc();                      //
+ 235   1                      clk_adc();                      //
+ 236   1                      clk_adc();                      //channel id
+ 237   1      //channel id
+ 238   1              Abyte0 = ADC_data;              // bit 4 is channels data               
+ 239   1      //channel id                            
+ 240   1              if(!Abyte0)                             // channel 0
+ 241   1                      {
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 5   
+
+ 242   2                      Abyte = 0x00;
+ 243   2                      clk_adc();
+ 244   2                      Abyte7 = ADC_data;              
+ 245   2                      clk_adc();
+ 246   2                      Abyte6 = ADC_data;
+ 247   2                      clk_adc();
+ 248   2                      Abyte5 = ADC_data;              
+ 249   2                      clk_adc();
+ 250   2                      Abyte4 = ADC_data;
+ 251   2                      clk_adc();
+ 252   2                      Abyte3 = ADC_data;              
+ 253   2                      clk_adc(); 
+ 254   2                      Abyte2 = ADC_data;
+ 255   2                      clk_adc(); 
+ 256   2                      Abyte1 = ADC_data;
+ 257   2                      clk_adc(); 
+ 258   2                      Abyte0 = ADC_data;              
+ 259   2                      clk_adc();                      //d3            
+ 260   2                      clk_adc();                      //d2            
+ 261   2                      clk_adc();                      //d1
+ 262   2                      clk_adc();                      //d0
+ 263   2                      Status_byte_2 = ~Abyte;
+ 264   2                      }
+ 265   1      }
+ 266          //;************************************************
+ 267          void latch_6211_data(void)
+ 268          {       //when X"41" => Load_6211
+ 269   1              PBYTE[0X0041] = 1;
+ 270   1              PBYTE[0X0041] = 0;      
+ 271   1      }
+ 272          //;************************************************
+ 273          void clk_in_6211_data(void)
+ 274          {       //when X"40" => Clk_6211
+ 275   1              PBYTE[0X0040] = 1;
+ 276   1              PBYTE[0X0040] = 0;
+ 277   1      }
+ 278          //;************************************************
+ 279          void update_6211_data(void)
+ 280          {               //when X"42" => Din_6211
+ 281   1      //;************************************************
+ 282   1                      PBYTE[0X0042] = 0;                              // S48 nc
+ 283   1                      clk_in_6211_data();
+ 284   1      //;************************************************
+ 285   1                      PBYTE[0X0042] = 0;                                      // S47 nc
+ 286   1                      clk_in_6211_data();
+ 287   1      //;************************************************
+ 288   1                      PBYTE[0X0042] = 0;                              // S46 nc
+ 289   1                      clk_in_6211_data();
+ 290   1      //;************************************************
+ 291   1                      PBYTE[0X0042] = 0;                                      // S45 nc
+ 292   1                      clk_in_6211_data();
+ 293   1      //;************************************************
+ 294   1                      PBYTE[0X0042] = 0;                              // S44 nc
+ 295   1                      clk_in_6211_data();
+ 296   1      //;************************************************
+ 297   1                      PBYTE[0X0042] = 0;                              // S43 nc
+ 298   1                      clk_in_6211_data();
+ 299   1      //;************************************************
+ 300   1                      PBYTE[0X0042] = 0;                              // S42 nc
+ 301   1                      clk_in_6211_data();
+ 302   1      //;************************************************
+ 303   1                      PBYTE[0X0042] = 0;                              // S41 nc
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 6   
+
+ 304   1                      clk_in_6211_data();
+ 305   1      //;************************************************
+ 306   1                      Bbyte = display_data[17];
+ 307   1                      Abyte0 = Bbyte1;
+ 308   1                      PBYTE[0X0042] = Abyte0;                         // S40 ds5_b display_data[17]
+ 309   1                      clk_in_6211_data();
+ 310   1      //;************************************************
+ 311   1                      Bbyte = display_data[17];
+ 312   1                      Abyte0 = Bbyte0;                
+ 313   1                      PBYTE[0X0042] = Abyte0;                         // S39 ds5_a display_data[17]
+ 314   1                      clk_in_6211_data();
+ 315   1      //;************************************************
+ 316   1                      Bbyte = display_data[17];
+ 317   1                      Abyte0 = Bbyte6;                
+ 318   1                      PBYTE[0X0042] = Abyte0;                         // S38 ds5_g display_data[17]
+ 319   1                      clk_in_6211_data();
+ 320   1      //;************************************************
+ 321   1                      Bbyte = display_data[17];
+ 322   1                      Abyte0 = Bbyte2;                
+ 323   1                      PBYTE[0X0042] = Abyte0;                         // S37 ds5_c display_data[17]
+ 324   1                      clk_in_6211_data();
+ 325   1      //;************************************************
+ 326   1                      Bbyte = display_data[17];
+ 327   1                      Abyte0 = Bbyte4;                
+ 328   1                      PBYTE[0X0042] = Abyte0;                         // S36 ds5_e display_data[17]
+ 329   1                      clk_in_6211_data();
+ 330   1      //;************************************************
+ 331   1                      Bbyte = display_data[17];
+ 332   1                      Abyte0 = Bbyte3;                
+ 333   1                      PBYTE[0X0042] = Abyte0;                         // S35 ds5_d display_data[17]
+ 334   1                      clk_in_6211_data();
+ 335   1      //;************************************************
+ 336   1                      Bbyte = display_data[17];
+ 337   1                      Abyte0 = Bbyte5;                
+ 338   1                      PBYTE[0X0042] = Abyte0;                         // S34 ds5_f display_data[17]
+ 339   1                      clk_in_6211_data();
+ 340   1      //;************************************************             
+ 341   1                      PBYTE[0X0042] = 0;                              // S33 nc
+ 342   1                      clk_in_6211_data();
+ 343   1      //;************************************************             
+ 344   1                      PBYTE[0X0042] = 0;                              // S32 nc
+ 345   1                      clk_in_6211_data();
+ 346   1      //;************************************************
+ 347   1                      Bbyte = display_data[16];
+ 348   1                      Abyte0 = Bbyte5;                
+ 349   1                      PBYTE[0X0042] = Abyte0;                         // S31 ds4_f display_data[16]
+ 350   1                      clk_in_6211_data();
+ 351   1      //;************************************************
+ 352   1                      Bbyte = display_data[16];
+ 353   1                      Abyte0 = Bbyte3;                
+ 354   1                      PBYTE[0X0042] = Abyte0;                         // S30 ds4_d display_data[16]  
+ 355   1                      clk_in_6211_data();
+ 356   1      //;************************************************
+ 357   1                      Bbyte = display_data[16];
+ 358   1                      Abyte0 = Bbyte4;                
+ 359   1                      PBYTE[0X0042] = Abyte0;                         // S29 ds4_e display_data[16]
+ 360   1                      clk_in_6211_data();
+ 361   1      //;************************************************
+ 362   1                      Bbyte = display_data[16];
+ 363   1                      Abyte0 = Bbyte2;                
+ 364   1                      PBYTE[0X0042] = Abyte0;                         // S28 ds4_c display_data[16]
+ 365   1                      clk_in_6211_data();
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 7   
+
+ 366   1      //;************************************************
+ 367   1                      Bbyte = display_data[16];
+ 368   1                      Abyte0 = Bbyte6;                
+ 369   1                      PBYTE[0X0042] = Abyte0;                         // S27 ds4_g display_data[16]
+ 370   1                      clk_in_6211_data();
+ 371   1      //;************************************************
+ 372   1                      Bbyte = display_data[16];
+ 373   1                      Abyte0 = Bbyte0;                
+ 374   1                      PBYTE[0X0042] = Abyte0;                         // S26 ds4_a display_data[16]
+ 375   1                      clk_in_6211_data();
+ 376   1      //;************************************************
+ 377   1                      Bbyte = display_data[16];
+ 378   1                      Abyte0 = Bbyte1;                
+ 379   1                      PBYTE[0X0042] = Abyte0;                         // S25 ds4_b display_data[16]
+ 380   1                      clk_in_6211_data();
+ 381   1      //;************************************************
+ 382   1                      Bbyte = display_data[15];
+ 383   1                      Abyte0 = Bbyte1;                
+ 384   1                      PBYTE[0X0042] = Abyte0;                         // S24 ds3_b display_data[15]  
+ 385   1                      clk_in_6211_data();
+ 386   1      //;************************************************
+ 387   1                      Bbyte = display_data[15];
+ 388   1                      Abyte0 = Bbyte0;                
+ 389   1                      PBYTE[0X0042] = Abyte0;                         // S23 ds3_a display_data[15]
+ 390   1                      clk_in_6211_data();
+ 391   1      //;************************************************
+ 392   1                      Bbyte = display_data[15];
+ 393   1                      Abyte0 = Bbyte6;                
+ 394   1                      PBYTE[0X0042] = Abyte0;                                 // S22 ds3_g display_data[15] 
+ 395   1                      clk_in_6211_data();
+ 396   1      //;************************************************
+ 397   1                      Bbyte = display_data[15];
+ 398   1                      Abyte0 = Bbyte2;                
+ 399   1                      PBYTE[0X0042] = Abyte0;                         // S21 ds3_c display_data[15]
+ 400   1                      clk_in_6211_data();
+ 401   1      //;************************************************
+ 402   1                      Bbyte = display_data[15];
+ 403   1                      Abyte0 = Bbyte4;                
+ 404   1                      PBYTE[0X0042] = Abyte0;                         // S20 ds3_e display_data[15]
+ 405   1                      clk_in_6211_data();
+ 406   1      //;************************************************
+ 407   1                      Bbyte = display_data[15];
+ 408   1                      Abyte0 = Bbyte3;                
+ 409   1                      PBYTE[0X0042] = Abyte0;                         // S19 ds3_d display_data[15]
+ 410   1                      clk_in_6211_data();
+ 411   1      //;************************************************
+ 412   1                      Bbyte = display_data[15];
+ 413   1                      Abyte0 = Bbyte5;                
+ 414   1                      PBYTE[0X0042] = Abyte0;                         // S18 ds3_f display_data[15]
+ 415   1                      clk_in_6211_data();
+ 416   1      //;************************************************
+ 417   1                      PBYTE[0X0042] = 0;                              // S17 nc
+ 418   1                      clk_in_6211_data();
+ 419   1      //;************************************************
+ 420   1                      PBYTE[0X0042] = 0;                              // S16 nc
+ 421   1                      clk_in_6211_data();
+ 422   1      //;************************************************
+ 423   1                      Bbyte = display_data[14];
+ 424   1                      Abyte0 = Bbyte5;
+ 425   1                      PBYTE[0X0042] = Abyte0;                         // S15 ds2_f display_data[14] 
+ 426   1                      clk_in_6211_data();
+ 427   1      //;************************************************
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 8   
+
+ 428   1                      Bbyte = display_data[14];
+ 429   1                      Abyte0 = Bbyte3;                
+ 430   1                      PBYTE[0X0042] = Abyte0;                         // S14 ds2_d display_data[14]
+ 431   1                      clk_in_6211_data();
+ 432   1      //;************************************************
+ 433   1                      Bbyte = display_data[14];
+ 434   1                      Abyte0 = Bbyte4;                
+ 435   1                      PBYTE[0X0042] = Abyte0;                         // S13 ds2_e display_data[14]
+ 436   1                      clk_in_6211_data();
+ 437   1      //;************************************************
+ 438   1                      Bbyte = display_data[14];
+ 439   1                      Abyte0 = Bbyte2;                
+ 440   1                      PBYTE[0X0042] = Abyte0;                         // S12 ds2_c display_data[14]
+ 441   1                      clk_in_6211_data();
+ 442   1      //;************************************************
+ 443   1                      Bbyte = display_data[14];
+ 444   1                      Abyte0 = Bbyte6;                
+ 445   1                      PBYTE[0X0042] = Abyte0;                         // S11 ds2_g display_data[14]
+ 446   1                      clk_in_6211_data();
+ 447   1      //;************************************************
+ 448   1                      Bbyte = display_data[14];
+ 449   1                      Abyte0 = Bbyte0;                
+ 450   1                      PBYTE[0X0042] = Abyte0;                         // S10 ds2_a display_data[14]
+ 451   1                      clk_in_6211_data();
+ 452   1      //;************************************************
+ 453   1                      Bbyte = display_data[14];
+ 454   1                      Abyte0 = Bbyte1;                
+ 455   1                      PBYTE[0X0042] = Abyte0;                         // S9 ds2_b display_data[14]
+ 456   1                      clk_in_6211_data();
+ 457   1      //;************************************************
+ 458   1                      Bbyte = display_data[13];
+ 459   1                      Abyte0 = Bbyte1;                
+ 460   1                      PBYTE[0X0042] = Abyte0;                         // S8 ds1_b display_data[13]
+ 461   1                      clk_in_6211_data();
+ 462   1      //;************************************************
+ 463   1                      Bbyte = display_data[13];
+ 464   1                      Abyte0 = Bbyte0;                
+ 465   1                      PBYTE[0X0042] = Abyte0;                         // S7 ds1_a display_data[13]
+ 466   1                      clk_in_6211_data();
+ 467   1      //;************************************************
+ 468   1                      Bbyte = display_data[13];
+ 469   1                      Abyte0 = Bbyte6;                
+ 470   1                      PBYTE[0X0042] = Abyte0;                         // S6 ds1_g display_data[13]
+ 471   1                      clk_in_6211_data();
+ 472   1      //;************************************************
+ 473   1                      Bbyte = display_data[13];
+ 474   1                      Abyte0 = Bbyte2;                
+ 475   1                      PBYTE[0X0042] = Abyte0;                         // S5 ds1_c display_data[13]
+ 476   1                      clk_in_6211_data();
+ 477   1      //;************************************************
+ 478   1                      Bbyte = display_data[13];
+ 479   1                      Abyte0 = Bbyte4;                
+ 480   1                      PBYTE[0X0042] = Abyte0;                         // S4 ds1_e display_data[13]
+ 481   1                      clk_in_6211_data();
+ 482   1      //;************************************************
+ 483   1                      Bbyte = display_data[13];
+ 484   1                      Abyte0 = Bbyte3;                
+ 485   1                      PBYTE[0X0042] = Abyte0;                         // S3 ds1_d display_data[13]
+ 486   1                      clk_in_6211_data();
+ 487   1      //;************************************************
+ 488   1                      Bbyte = display_data[13];
+ 489   1                      Abyte0 = Bbyte5;                
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 9   
+
+ 490   1                      PBYTE[0X0042] = Abyte0;                         // S2 ds1_f display_data[13]
+ 491   1                      clk_in_6211_data();
+ 492   1      //;************************************************
+ 493   1                      PBYTE[0X0042] = 0;                                      // S1 nc
+ 494   1                      clk_in_6211_data();
+ 495   1      //;************************************************
+ 496   1                      latch_6211_data();
+ 497   1      //;************************************************
+ 498   1      }
+ 499          //;************************************************
+ 500          void latch_6212_data(void)
+ 501          {       //when X"44" => Load_6212 <= AddrData(0)
+ 502   1              PBYTE[0X0044] = 1;
+ 503   1              PBYTE[0X0044] = 0;      
+ 504   1      }
+ 505          //;************************************************
+ 506          void clk_in_6212_data(void)
+ 507          {       //when X"43" => Clk_6212
+ 508   1              PBYTE[0X0043] = 1;
+ 509   1              PBYTE[0X0043] = 0;
+ 510   1      }
+ 511          //;************************************************
+ 512          void update_6212_data(void)
+ 513          {               //when X"45" => Din_6212 <= AddrData(0);
+ 514   1      //;************************************************
+ 515   1                      Bbyte = display_data[12];
+ 516   1                      Abyte0 = Bbyte4;
+ 517   1                      PBYTE[0X0045] = Abyte0;                         // S112 DS13_e
+ 518   1                      clk_in_6212_data();
+ 519   1      //;************************************************
+ 520   1                      Bbyte = display_data[12];
+ 521   1                      Abyte0 = Bbyte3;
+ 522   1                      PBYTE[0X0045] = Abyte0;                         // S111 DS13_d
+ 523   1                      clk_in_6212_data();
+ 524   1      //;************************************************
+ 525   1                      Bbyte = display_data[12];
+ 526   1                      Abyte0 = Bbyte5;
+ 527   1                      PBYTE[0X0045] = Abyte0;                         // S110 DS13_f
+ 528   1                      clk_in_6212_data();
+ 529   1      //;************************************************
+ 530   1                      Bbyte = display_data[12];
+ 531   1                      Abyte0 = Bbyte1;
+ 532   1                      PBYTE[0X0045] = Abyte0;                         // S109 DS13_b
+ 533   1                      clk_in_6212_data();
+ 534   1      //;************************************************
+ 535   1                      Bbyte = display_data[12];
+ 536   1                      Abyte0 = Bbyte0;
+ 537   1                      PBYTE[0X0045] = Abyte0;                         // S108 DS13_a
+ 538   1                      clk_in_6212_data();
+ 539   1      //;************************************************
+ 540   1                      Bbyte = display_data[12];
+ 541   1                      Abyte0 = Bbyte6;
+ 542   1                      PBYTE[0X0045] = Abyte0;                         // S107 DS13_g
+ 543   1                      clk_in_6212_data();
+ 544   1      //;************************************************
+ 545   1                      Bbyte = display_data[12];
+ 546   1                      Abyte0 = Bbyte2;
+ 547   1                      PBYTE[0X0045] = Abyte0;                         // S106 DS13_c
+ 548   1                      clk_in_6212_data();
+ 549   1      //;************************************************
+ 550   1                      PBYTE[0X0045] = 0;                              // S105 nc
+ 551   1                      clk_in_6212_data();
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 10  
+
+ 552   1      //;************************************************
+ 553   1                      Bbyte = display_data[12];
+ 554   1                      Abyte0 = Bbyte7;
+ 555   1                      PBYTE[0X0045] = Abyte0;                         // S104 dp1
+ 556   1                      clk_in_6212_data();
+ 557   1      //;************************************************
+ 558   1                      PBYTE[0X0045] = 0;                              // S103 nc
+ 559   1                      clk_in_6212_data();
+ 560   1      //;************************************************
+ 561   1                      PBYTE[0X0045] = 0;                              // S102 nc
+ 562   1                      clk_in_6212_data();
+ 563   1      //;************************************************
+ 564   1                      PBYTE[0X0045] = 0;                              // S101 nc
+ 565   1                      clk_in_6212_data();
+ 566   1      //;************************************************
+ 567   1                      PBYTE[0X0045] = 0;                              // S100 nc
+ 568   1                      clk_in_6212_data();
+ 569   1      //;************************************************
+ 570   1                      PBYTE[0X0045] = 0;                              // S99 nc
+ 571   1                      clk_in_6212_data();
+ 572   1      //;************************************************
+ 573   1                      PBYTE[0X0045] = 0;                              // S98 nc
+ 574   1                      clk_in_6212_data();
+ 575   1      //;************************************************             
+ 576   1                      PBYTE[0X0045] = 0;                              // S97 nc
+ 577   1                      clk_in_6212_data();
+ 578   1      //;************************************************
+ 579   1                      Bbyte = display_data[11];
+ 580   1                      Abyte0 = Bbyte4;
+ 581   1                      PBYTE[0X0045] = Abyte0;                         // S96 DS12_e
+ 582   1                      clk_in_6212_data();
+ 583   1      //;************************************************
+ 584   1                      Bbyte = display_data[11];
+ 585   1                      Abyte0 = Bbyte3;
+ 586   1                      PBYTE[0X0045] = Abyte0;                         // S95 DS12_d
+ 587   1                      clk_in_6212_data();
+ 588   1      //;************************************************
+ 589   1                      Bbyte = display_data[11];
+ 590   1                      Abyte0 = Bbyte5;
+ 591   1                      PBYTE[0X0045] = Abyte0;                         // S94 DS12_f
+ 592   1                      clk_in_6212_data();
+ 593   1      //;************************************************
+ 594   1                      Bbyte = display_data[11];
+ 595   1                      Abyte0 = Bbyte1;
+ 596   1                      PBYTE[0X0045] = Abyte0;                         // S93 DS12_b
+ 597   1                      clk_in_6212_data();
+ 598   1      //;************************************************
+ 599   1                      Bbyte = display_data[11];
+ 600   1                      Abyte0 = Bbyte0;
+ 601   1                      PBYTE[0X0045] = Abyte0;                         // S92 DS12_a
+ 602   1                      clk_in_6212_data();
+ 603   1      //;************************************************
+ 604   1                      Bbyte = display_data[11];
+ 605   1                      Abyte0 = Bbyte6;
+ 606   1                      PBYTE[0X0045] = Abyte0;                         // S91 DS12_g
+ 607   1                      clk_in_6212_data();
+ 608   1      //;************************************************
+ 609   1                      Bbyte = display_data[11];
+ 610   1                      Abyte0 = Bbyte2;
+ 611   1                      PBYTE[0X0045] = Abyte0;                         // S90 DS12_c
+ 612   1                      clk_in_6212_data();
+ 613   1      //;************************************************
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 11  
+
+ 614   1                      PBYTE[0X0045] = 0;                              // S89 nc
+ 615   1                      clk_in_6212_data();
+ 616   1      //;************************************************
+ 617   1                      Bbyte = display_data[10];
+ 618   1                      Abyte0 = Bbyte2;
+ 619   1                      PBYTE[0X0045] = Abyte0;                         // S88 DS11_c
+ 620   1                      clk_in_6212_data();
+ 621   1      //;************************************************
+ 622   1                      Bbyte = display_data[10];
+ 623   1                      Abyte0 = Bbyte6;
+ 624   1                      PBYTE[0X0045] = Abyte0;                         // S87 DS11_g
+ 625   1                      clk_in_6212_data();
+ 626   1      //;************************************************
+ 627   1                      Bbyte = display_data[10];
+ 628   1                      Abyte0 = Bbyte0;
+ 629   1                      PBYTE[0X0045] = Abyte0;                         // S86 DS11_a
+ 630   1                      clk_in_6212_data();
+ 631   1      //;************************************************
+ 632   1                      Bbyte = display_data[10];
+ 633   1                      Abyte0 = Bbyte1;
+ 634   1                      PBYTE[0X0045] = Abyte0;                         // S85 DS11_b
+ 635   1                      clk_in_6212_data();
+ 636   1      //;************************************************
+ 637   1                      Bbyte = display_data[10];
+ 638   1                      Abyte0 = Bbyte5;
+ 639   1                      PBYTE[0X0045] = Abyte0;                         // S84 DS11_f
+ 640   1                      clk_in_6212_data();
+ 641   1      //;************************************************
+ 642   1                      Bbyte = display_data[10];
+ 643   1                      Abyte0 = Bbyte3;
+ 644   1                      PBYTE[0X0045] = Abyte0;                         // S83 DS11_d
+ 645   1                      clk_in_6212_data();
+ 646   1      //;************************************************
+ 647   1                      Bbyte = display_data[10];
+ 648   1                      Abyte0 = Bbyte4;
+ 649   1                      PBYTE[0X0045] = Abyte0;                         // S82 DS11_e
+ 650   1                      clk_in_6212_data();
+ 651   1      //;************************************************             
+ 652   1                      PBYTE[0X0045] = 0;                              // S81 nc
+ 653   1                      clk_in_6212_data();
+ 654   1      //;************************************************
+ 655   1                      Bbyte = display_data[9];
+ 656   1                      Abyte0 = Bbyte4;
+ 657   1                      PBYTE[0X0045] = Abyte0;                         // S80 DS10_e
+ 658   1                      clk_in_6212_data();
+ 659   1      //;************************************************
+ 660   1                      Bbyte = display_data[9];
+ 661   1                      Abyte0 = Bbyte3;
+ 662   1                      PBYTE[0X0045] = Abyte0;                         // S79 DS10_d
+ 663   1                      clk_in_6212_data();
+ 664   1      //;************************************************
+ 665   1                      Bbyte = display_data[9];
+ 666   1                      Abyte0 = Bbyte5;
+ 667   1                      PBYTE[0X0045] = Abyte0;                         // S78 DS10_f
+ 668   1                      clk_in_6212_data();
+ 669   1      //;************************************************
+ 670   1                      Bbyte = display_data[9];
+ 671   1                      Abyte0 = Bbyte1;
+ 672   1                      PBYTE[0X0045] = Abyte0;                         // S77 DS10_b
+ 673   1                      clk_in_6212_data();
+ 674   1      //;************************************************
+ 675   1                      Bbyte = display_data[9];
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 12  
+
+ 676   1                      Abyte0 = Bbyte0;
+ 677   1                      PBYTE[0X0045] = Abyte0;                         // S76 DS10_a
+ 678   1                      clk_in_6212_data();
+ 679   1      //;************************************************
+ 680   1                      Bbyte = display_data[9];
+ 681   1                      Abyte0 = Bbyte6;
+ 682   1                      PBYTE[0X0045] = Abyte0;                         // S75 DS10_g
+ 683   1                      clk_in_6212_data();
+ 684   1      //;************************************************
+ 685   1                      Bbyte = display_data[9];
+ 686   1                      Abyte0 = Bbyte2;
+ 687   1                      PBYTE[0X0045] = Abyte0;                         // S74 DS10_c
+ 688   1                      clk_in_6212_data();
+ 689   1      //;************************************************
+ 690   1                      PBYTE[0X0045] = 0;                              // S73 nc
+ 691   1                      clk_in_6212_data();
+ 692   1      //;************************************************
+ 693   1                      Bbyte = display_data[8];
+ 694   1                      Abyte0 = Bbyte2;
+ 695   1                      PBYTE[0X0045] = Abyte0;                         // S72 DS9_c
+ 696   1                      clk_in_6212_data();
+ 697   1      //;************************************************
+ 698   1                      Bbyte = display_data[8];
+ 699   1                      Abyte0 = Bbyte6;
+ 700   1                      PBYTE[0X0045] = Abyte0;                         // S71 DS9_g
+ 701   1                      clk_in_6212_data();
+ 702   1      //;************************************************
+ 703   1                      Bbyte = display_data[8];
+ 704   1                      Abyte0 = Bbyte0;
+ 705   1                      PBYTE[0X0045] = Abyte0;                         // S70 DS9_a
+ 706   1                      clk_in_6212_data();
+ 707   1      //;************************************************
+ 708   1                      Bbyte = display_data[8];
+ 709   1                      Abyte0 = Bbyte1;
+ 710   1                      PBYTE[0X0045] = Abyte0;                         // S69 DS9_b
+ 711   1                      clk_in_6212_data();
+ 712   1      //;************************************************
+ 713   1                      Bbyte = display_data[8];
+ 714   1                      Abyte0 = Bbyte5;
+ 715   1                      PBYTE[0X0045] = Abyte0;                         // S68 DS9_f
+ 716   1                      clk_in_6212_data();
+ 717   1      //;************************************************
+ 718   1                      Bbyte = display_data[8];
+ 719   1                      Abyte0 = Bbyte3;
+ 720   1                      PBYTE[0X0045] = Abyte0;                         // S67 DS9_d
+ 721   1                      clk_in_6212_data();
+ 722   1      //;************************************************
+ 723   1                      Bbyte = display_data[8];
+ 724   1                      Abyte0 = Bbyte4;
+ 725   1                      PBYTE[0X0045] = Abyte0;                         // S66 DS9_e
+ 726   1                      clk_in_6212_data();
+ 727   1      //;************************************************             
+ 728   1                      PBYTE[0X0045] = 0;                              // S65 nc
+ 729   1                      clk_in_6212_data();
+ 730   1      //;************************************************
+ 731   1                      Bbyte = display_data[7];
+ 732   1                      Abyte0 = Bbyte4;
+ 733   1                      PBYTE[0X0045] = Abyte0;                         // S64 DS8_e
+ 734   1                      clk_in_6212_data();
+ 735   1      //;************************************************
+ 736   1                      Bbyte = display_data[7];
+ 737   1                      Abyte0 = Bbyte3;
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 13  
+
+ 738   1                      PBYTE[0X0045] = Abyte0;                         // S63 DS8_d
+ 739   1                      clk_in_6212_data();
+ 740   1      //;************************************************
+ 741   1                      Bbyte = display_data[7];
+ 742   1                      Abyte0 = Bbyte5;
+ 743   1                      PBYTE[0X0045] = Abyte0;                         // S62 DS8_f
+ 744   1                      clk_in_6212_data();
+ 745   1      //;************************************************
+ 746   1                      Bbyte = display_data[7];
+ 747   1                      Abyte0 = Bbyte1;
+ 748   1                      PBYTE[0X0045] = Abyte0;                         // S61 DS8_b
+ 749   1                      clk_in_6212_data();
+ 750   1      //;************************************************
+ 751   1                      Bbyte = display_data[7];
+ 752   1                      Abyte0 = Bbyte0;
+ 753   1                      PBYTE[0X0045] = Abyte0;                         // S60 DS8_a
+ 754   1                      clk_in_6212_data();
+ 755   1      //;************************************************
+ 756   1                      Bbyte = display_data[7];
+ 757   1                      Abyte0 = Bbyte6;
+ 758   1                      PBYTE[0X0045] = Abyte0;                         // S59 DS8_g
+ 759   1                      clk_in_6212_data();
+ 760   1      //;************************************************
+ 761   1                      Bbyte = display_data[7];
+ 762   1                      Abyte0 = Bbyte2;
+ 763   1                      PBYTE[0X0045] = Abyte0;                         // S58 DS8_c
+ 764   1                      clk_in_6212_data();
+ 765   1      //;************************************************
+ 766   1                      PBYTE[0X0045] = 0;                              // S57 nc
+ 767   1                      clk_in_6212_data();
+ 768   1      //;************************************************
+ 769   1                      Bbyte = display_data[6];
+ 770   1                      Abyte0 = Bbyte2;
+ 771   1                      PBYTE[0X0045] = Abyte0;                         // S56 DS7_c
+ 772   1                      clk_in_6212_data();
+ 773   1      //;************************************************
+ 774   1                      Bbyte = display_data[6];
+ 775   1                      Abyte0 = Bbyte6;
+ 776   1                      PBYTE[0X0045] = Abyte0;                         // S55 DS7_g
+ 777   1                      clk_in_6212_data();
+ 778   1      //;************************************************
+ 779   1                      Bbyte = display_data[6];
+ 780   1                      Abyte0 = Bbyte0;
+ 781   1                      PBYTE[0X0045] = Abyte0;                         // S54 DS7_a
+ 782   1                      clk_in_6212_data();
+ 783   1      //;************************************************
+ 784   1                      Bbyte = display_data[6];
+ 785   1                      Abyte0 = Bbyte1;
+ 786   1                      PBYTE[0X0045] = Abyte0;                         // S53 DS7_b
+ 787   1                      clk_in_6212_data();
+ 788   1      //;************************************************
+ 789   1                      Bbyte = display_data[6];
+ 790   1                      Abyte0 = Bbyte5;
+ 791   1                      PBYTE[0X0045] = Abyte0;                         // S52 DS7_f
+ 792   1                      clk_in_6212_data();
+ 793   1      //;************************************************
+ 794   1                      Bbyte = display_data[6];
+ 795   1                      Abyte0 = Bbyte3;
+ 796   1                      PBYTE[0X0045] = Abyte0;                         // S51 DS7_d
+ 797   1                      clk_in_6212_data();
+ 798   1      //;************************************************
+ 799   1                      Bbyte = display_data[6];
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 14  
+
+ 800   1                      Abyte0 = Bbyte4;
+ 801   1                      PBYTE[0X0045] = Abyte0;                         // S50 DS7_e
+ 802   1                      clk_in_6212_data();
+ 803   1      //;************************************************             
+ 804   1                      PBYTE[0X0045] = 0;                              // S49 nc
+ 805   1                      clk_in_6212_data();
+ 806   1      //;************************************************
+ 807   1                      Bbyte = display_data[5];
+ 808   1                      Abyte0 = Bbyte4;
+ 809   1                      PBYTE[0X0045] = Abyte0;                         // S48 DS6_e
+ 810   1                      clk_in_6212_data();
+ 811   1      //;************************************************
+ 812   1                      Bbyte = display_data[5];
+ 813   1                      Abyte0 = Bbyte3;
+ 814   1                      PBYTE[0X0045] = Abyte0;                         // S47 DS6_d
+ 815   1                      clk_in_6212_data();
+ 816   1      //;************************************************
+ 817   1                      Bbyte = display_data[5];
+ 818   1                      Abyte0 = Bbyte5;
+ 819   1                      PBYTE[0X0045] = Abyte0;                         // S46 DS6_f
+ 820   1                      clk_in_6212_data();
+ 821   1      //;************************************************
+ 822   1                      Bbyte = display_data[5];
+ 823   1                      Abyte0 = Bbyte1;
+ 824   1                      PBYTE[0X0045] = Abyte0;                         // S45 DS6_b
+ 825   1                      clk_in_6212_data();
+ 826   1      //;************************************************
+ 827   1                      Bbyte = display_data[5];
+ 828   1                      Abyte0 = Bbyte0;
+ 829   1                      PBYTE[0X0045] = Abyte0;                         // S44 DS6_a
+ 830   1                      clk_in_6212_data();
+ 831   1      //;************************************************
+ 832   1                      Bbyte = display_data[5];
+ 833   1                      Abyte0 = Bbyte6;
+ 834   1                      PBYTE[0X0045] = Abyte0;                         // S43 DS6_g
+ 835   1                      clk_in_6212_data();
+ 836   1      //;************************************************
+ 837   1                      Bbyte = display_data[5];
+ 838   1                      Abyte0 = Bbyte2;
+ 839   1                      PBYTE[0X0045] = Abyte0;                         // S42 DS6_c
+ 840   1                      clk_in_6212_data();
+ 841   1      //;************************************************
+ 842   1                      PBYTE[0X0045] = 0;                              // S41 nc
+ 843   1                      clk_in_6212_data();
+ 844   1      //;************************************************
+ 845   1                      Bbyte = display_data[4];
+ 846   1                      Abyte0 = Bbyte2;
+ 847   1                      PBYTE[0X0045] = Abyte0;                         // S40 DS5_c
+ 848   1                      clk_in_6212_data();
+ 849   1      //;************************************************
+ 850   1                      Bbyte = display_data[4];
+ 851   1                      Abyte0 = Bbyte6;
+ 852   1                      PBYTE[0X0045] = Abyte0;                         // S39 DS5_g
+ 853   1                      clk_in_6212_data();
+ 854   1      //;************************************************
+ 855   1                      Bbyte = display_data[4];
+ 856   1                      Abyte0 = Bbyte0;
+ 857   1                      PBYTE[0X0045] = Abyte0;                         // S38 DS5_a
+ 858   1                      clk_in_6212_data();
+ 859   1      //;************************************************
+ 860   1                      Bbyte = display_data[4];
+ 861   1                      Abyte0 = Bbyte1;
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 15  
+
+ 862   1                      PBYTE[0X0045] = Abyte0;                         // S37 DS5_b
+ 863   1                      clk_in_6212_data();
+ 864   1      //;************************************************
+ 865   1                      Bbyte = display_data[4];
+ 866   1                      Abyte0 = Bbyte5;
+ 867   1                      PBYTE[0X0045] = Abyte0;                         // S36 DS5_f
+ 868   1                      clk_in_6212_data();
+ 869   1      //;************************************************
+ 870   1                      Bbyte = display_data[4];
+ 871   1                      Abyte0 = Bbyte3;
+ 872   1                      PBYTE[0X0045] = Abyte0;                         // S35 D5_d
+ 873   1                      clk_in_6212_data();
+ 874   1      //;************************************************
+ 875   1                      Bbyte = display_data[4];
+ 876   1                      Abyte0 = Bbyte4;
+ 877   1                      PBYTE[0X0045] = Abyte0;                         // S34 DS5_e
+ 878   1                      clk_in_6212_data();
+ 879   1      //;************************************************             
+ 880   1                      PBYTE[0X0045] = 0;                              // S33 nc
+ 881   1                      clk_in_6212_data();
+ 882   1      //;************************************************
+ 883   1                      Bbyte = display_data[3];
+ 884   1                      Abyte0 = Bbyte4;
+ 885   1                      PBYTE[0X0045] = Abyte0;                         // S32 DS4_e
+ 886   1                      clk_in_6212_data();
+ 887   1      //;************************************************
+ 888   1                      Bbyte = display_data[3];
+ 889   1                      Abyte0 = Bbyte3;
+ 890   1                      PBYTE[0X0045] = Abyte0;                         // S31 DS4_d
+ 891   1                      clk_in_6212_data();
+ 892   1      //;************************************************
+ 893   1                      Bbyte = display_data[3];
+ 894   1                      Abyte0 = Bbyte5;
+ 895   1                      PBYTE[0X0045] = Abyte0;                         // S30 DS4_f
+ 896   1                      clk_in_6212_data();
+ 897   1      //;************************************************
+ 898   1                      Bbyte = display_data[3];
+ 899   1                      Abyte0 = Bbyte1;
+ 900   1                      PBYTE[0X0045] = Abyte0;                         // S29 DS4_b
+ 901   1                      clk_in_6212_data();
+ 902   1      //;************************************************
+ 903   1                      Bbyte = display_data[3];
+ 904   1                      Abyte0 = Bbyte0;
+ 905   1                      PBYTE[0X0045] = Abyte0;                         // S28 DS4_a
+ 906   1                      clk_in_6212_data();
+ 907   1      //;************************************************
+ 908   1                      Bbyte = display_data[3];
+ 909   1                      Abyte0 = Bbyte6;
+ 910   1                      PBYTE[0X0045] = Abyte0;                         // S27 DS4_g
+ 911   1                      clk_in_6212_data();
+ 912   1      //;************************************************
+ 913   1                      Bbyte = display_data[3];
+ 914   1                      Abyte0 = Bbyte2;
+ 915   1                      PBYTE[0X0045] = Abyte0;                         // S26 DS4_c
+ 916   1                      clk_in_6212_data();
+ 917   1      //;************************************************
+ 918   1                      PBYTE[0X0045] = 0;                              // S25 nc
+ 919   1                      clk_in_6212_data();
+ 920   1      //;************************************************
+ 921   1                      Bbyte = display_data[2];
+ 922   1                      Abyte0 = Bbyte2;
+ 923   1                      PBYTE[0X0045] = Abyte0;                         // S24 DS3_c
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 16  
+
+ 924   1                      clk_in_6212_data();
+ 925   1      //;************************************************
+ 926   1                      Bbyte = display_data[2];
+ 927   1                      Abyte0 = Bbyte6;
+ 928   1                      PBYTE[0X0045] = Abyte0;                         // S23 DS3_g
+ 929   1                      clk_in_6212_data();
+ 930   1      //;************************************************
+ 931   1                      Bbyte = display_data[2];
+ 932   1                      Abyte0 = Bbyte0;
+ 933   1                      PBYTE[0X0045] = Abyte0;                         // S22 DS3_a
+ 934   1                      clk_in_6212_data();
+ 935   1      //;************************************************
+ 936   1                      Bbyte = display_data[2];
+ 937   1                      Abyte0 = Bbyte1;
+ 938   1                      PBYTE[0X0045] = Abyte0;                         // S21 DS3_b
+ 939   1                      clk_in_6212_data();
+ 940   1      //;************************************************
+ 941   1                      Bbyte = display_data[2];
+ 942   1                      Abyte0 = Bbyte5;
+ 943   1                      PBYTE[0X0045] = Abyte0;                         // S20 DS3_f
+ 944   1                      clk_in_6212_data();
+ 945   1      //;************************************************
+ 946   1                      Bbyte = display_data[2];
+ 947   1                      Abyte0 = Bbyte3;
+ 948   1                      PBYTE[0X0045] = Abyte0;                         // S19 DS3_d
+ 949   1                      clk_in_6212_data();
+ 950   1      //;************************************************
+ 951   1                      Bbyte = display_data[2];
+ 952   1                      Abyte0 = Bbyte4;
+ 953   1                      PBYTE[0X0045] = Abyte0;                         // S18 DS3_e
+ 954   1                      clk_in_6212_data();
+ 955   1      //;************************************************             
+ 956   1                      PBYTE[0X0045] = 0;                              // S17 nc
+ 957   1                      clk_in_6212_data();
+ 958   1      //;************************************************
+ 959   1                      Bbyte = display_data[1];
+ 960   1                      Abyte0 = Bbyte4;
+ 961   1                      PBYTE[0X0045] = Abyte0;                         // S16 DS2_e
+ 962   1                      clk_in_6212_data();
+ 963   1      //;************************************************
+ 964   1                      Bbyte = display_data[1];
+ 965   1                      Abyte0 = Bbyte3;
+ 966   1                      PBYTE[0X0045] = Abyte0;                         // S15 DS2_d
+ 967   1                      clk_in_6212_data();
+ 968   1      //;************************************************
+ 969   1                      Bbyte = display_data[1];
+ 970   1                      Abyte0 = Bbyte5;
+ 971   1                      PBYTE[0X0045] = Abyte0;                         // S14 DS2_f
+ 972   1                      clk_in_6212_data();
+ 973   1      //;************************************************
+ 974   1                      Bbyte = display_data[1];
+ 975   1                      Abyte0 = Bbyte1;
+ 976   1                      PBYTE[0X0045] = Abyte0;                         // S13 DS2_b
+ 977   1                      clk_in_6212_data();
+ 978   1      //;************************************************
+ 979   1                      Bbyte = display_data[1];
+ 980   1                      Abyte0 = Bbyte0;
+ 981   1                      PBYTE[0X0045] = Abyte0;                         // S12 DS2_a
+ 982   1                      clk_in_6212_data();
+ 983   1      //;************************************************
+ 984   1                      Bbyte = display_data[1];
+ 985   1                      Abyte0 = Bbyte6;
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 17  
+
+ 986   1                      PBYTE[0X0045] = Abyte0;                         // S11 DS2_g
+ 987   1                      clk_in_6212_data();
+ 988   1      //;************************************************
+ 989   1                      Bbyte = display_data[1];
+ 990   1                      Abyte0 = Bbyte2;
+ 991   1                      PBYTE[0X0045] = Abyte0;                         // S10 DS2_c
+ 992   1                      clk_in_6212_data();
+ 993   1      //;************************************************
+ 994   1                      PBYTE[0X0045] = 0;                              // S9 nc
+ 995   1                      clk_in_6212_data();
+ 996   1      //;************************************************
+ 997   1                      Bbyte = display_data[0];
+ 998   1                      Abyte0 = Bbyte2;
+ 999   1                      PBYTE[0X0045] = Abyte0;                         // S8 DS1_c
+1000   1                      clk_in_6212_data();
+1001   1      //;************************************************
+1002   1                      Bbyte = display_data[0];
+1003   1                      Abyte0 = Bbyte6;
+1004   1                      PBYTE[0X0045] = Abyte0;                         // S7 DS1_g
+1005   1                      clk_in_6212_data();
+1006   1      //;************************************************
+1007   1                      Bbyte = display_data[0];
+1008   1                      Abyte0 = Bbyte0;
+1009   1                      PBYTE[0X0045] = Abyte0;                         // S6 DS1_a
+1010   1                      clk_in_6212_data();
+1011   1      //;************************************************
+1012   1                      Bbyte = display_data[0];
+1013   1                      Abyte0 = Bbyte1;
+1014   1                      PBYTE[0X0045] = Abyte0;                         // S5 DS1_b
+1015   1                      clk_in_6212_data();
+1016   1      //;************************************************
+1017   1                      Bbyte = display_data[0];
+1018   1                      Abyte0 = Bbyte5;
+1019   1                      PBYTE[0X0045] = Abyte0;                         // S4 DS1_f
+1020   1                      clk_in_6212_data();
+1021   1      //;************************************************
+1022   1                      Bbyte = display_data[0];
+1023   1                      Abyte0 = Bbyte3;
+1024   1                      PBYTE[0X0045] = Abyte0;                         // S3 DS1_d
+1025   1                      clk_in_6212_data();
+1026   1      //;************************************************
+1027   1                      Bbyte = display_data[0];
+1028   1                      Abyte0 = Bbyte4;
+1029   1                      PBYTE[0X0045] = Abyte0;                         // S2 DS1_e
+1030   1                      clk_in_6212_data();
+1031   1      //;************************************************             
+1032   1                      PBYTE[0X0045] = 0;                              // S1 nc
+1033   1                      clk_in_6212_data();
+1034   1      //;************************************************
+1035   1                      latch_6212_data();
+1036   1      //;************************************************
+1037   1      }
+1038          //;************************************************
+1039          // check input data from port expander
+1040          void check_input(void)
+1041          {  
+1042   1      
+1043   1      char porta;
+1044   1      char portb;
+1045   1      //char tmp;
+1046   1              porta = *sw_ptr;
+1047   1              portb = *(++sw_ptr);
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 18  
+
+1048   1      
+1049   1              Status_byte_1 = portb;
+1050   1              Status_byte_1 = ~Status_byte_1;
+1051   1              Status_byte_1 = (Status_byte_1 & 0x03); // manual valve control 
+1052   1                                                                                              // 0x01 = open
+1053   1                                                                                              // 0x02 = closed
+1054   1              Abyte = 0x00;
+1055   1              Bbyte = 0x00;
+1056   1              
+1057   1              Bbyte = portb;                                                  // emer toggle + encoder pressed
+1058   1              Abyte0 = Bbyte7;                                                // 0x01 = emer depress norm             
+1059   1              Abyte1 = Bbyte6;                                                // 0x02 = emer depress dump
+1060   1          Bbyte = PBYTE[0X0061];
+1061   1              Abyte4 = Bbyte0;                                                // 0x10 = encoder pressed
+1062   1                                                                                              // 0x00 = encoder not pressed
+1063   1              Status_byte_3 = Abyte;
+1064   1              Status_byte_3 = ~Status_byte_3;
+1065   1              Status_byte_3 = (Status_byte_3 & 0x13);
+1066   1      
+1067   1              Status_byte_4 = porta;                                  // rotary switch
+1068   1              Status_byte_4 = ~Status_byte_4;                 // 0x01 = const alt
+1069   1              Status_byte_4 = (Status_byte_4 & 0x1F); // 0x02 = man
+1070   1                                                                                              // 0x04 = auto
+1071   1                                                                                              // 0x08 = no press
+1072   1                                                                                              // 0x10 = aux vent
+1073   1      //      Bbyte = portb;
+1074   1              //Bbyte = ~Bbyte;
+1075   1      //      Abyte1 = Bbyte7;
+1076   1      //      Abyte0 = Bbyte6;
+1077   1      //    Bbyte = PBYTE[0X0061];
+1078   1      //      Abyte4 = Bbyte0;
+1079   1      
+1080   1      //      Status_byte_3 = ~Abyte;
+1081   1      
+1082   1      }
+1083          //;************************************************
+1084          void SER_INT(void) interrupt 4
+1085          {
+1086   1      unsigned char hold_byte;
+1087   1      unsigned char i;
+1088   1      if(!TI)
+1089   1      TI = 0;
+1090   1      //;************************************************
+1091   1              if (RI)
+1092   1              {hold_byte = SBUF;                                              
+1093   2               RI = 0;
+1094   2      //;************************************************                                                                     
+1095   2                      switch(hold_byte)                                               // 
+1096   2                               {
+1097   3      //;************************************************                                                                                                             
+1098   3                              case RESET_COMMAND:                     // 0xF0
+1099   3                                      reset_bit = 1;
+1100   3                              break;
+1101   3      //;************************************************                                                                     
+1102   3                              case FIRMWARE_COMMAND:          // 0xFE 
+1103   3                                      send_programs_bit = 1;
+1104   3                              break;
+1105   3      //;************************************************
+1106   3                              case STATUS_COMMAND:            // 0xF1
+1107   3                                      send_status_bit = 1;
+1108   3                              break;
+1109   3      //;************************************************
+C51 COMPILER V8.06   75_5128                                                               04/29/2019 07:29:50 PAGE 19  
+
+1110   3                              case DIMMING_COMMAND:           // 0xF4          
+1111   3                                      receive_data();
+1112   3                                      panel_dim_byte = SBUF;
+1113   3                                      receive_data();
+1114   3                                      display_dim_byte = SBUF;
+1115   3                                      update_dimming_bit = 1;
+1116   3                              break;
+1117   3      //;************************************************
+1118   3                              case DISPLAY_COMMAND:           // 0xF5
+1119   3                                      for(i = 0; i < 18; i++)
+1120   3                                      {
+1121   4                                      receive_data();                                 
+1122   4                                              display_data[i] = SBUF;
+1123   4                                              }
+1124   3                              break;
+1125   3      //;************************************************                                                     
+1126   3                              }                                                       // end case
+1127   2              }                                                                       //end if RI
+1128   1      }
+1129          //;************************************************     
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1785    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     38    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      4    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,1160 @@
+Release 4.2i - Map E.35
+Xilinx Mapping Report File for Design 'top_level_74_2131'
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+
+Design Information
+------------------
+Command Line   : m1map -p xcs30xl-VQ100-4 -cm area -c 97 -oe normal
+top_level_74_2131.ngd 
+Target Device  : xs30xl
+Target Package : vq100
+Target Speed   : -4
+Mapper Version : spartanxl -- E.35
+
+Design Summary
+--------------
+   Number of errors:        0
+   Number of warnings:      7
+   Number of CLBs:            305 out of   576   52%
+      CLB Flip Flops:     253
+      CLB Latches:          0
+      4 input LUTs:       429
+      3 input LUTs:        99 (21 used as route-throughs)
+   Number of bonded IOBs:      61 out of    77   79%
+      IOB Flops:           24
+      IOB Latches:          0
+   Number of clock IOB pads:    1 out of     8   12%
+   Number of TBUFs:             8 out of  1248    1%
+   Number of BUFGLSs:           8 out of     8  100%
+Total equivalent gate count for design: 5857
+Additional JTAG gate count for IOBs:    2928
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group Summary
+Section 10 - Modular Design Summary
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:OldMap:910 - None of the external outputs in this design have a 'DRIVE'
+   strength of '24' specified.  The default DRIVE=12 value will be applied to
+   all outputs.
+WARNING:OldMap:78 - All of the external outputs in this design are using
+   slew-rate-limited output drivers.  The delay on speed critical outputs can be
+   dramatically reduced by designating them as fast outputs in the original
+   design.  Please see your vendor interface documentation for specific
+   information on how to do this within your design-entry tool.
+   Note: You should be careful not to designate too many outputs which switch
+   together as fast, because this can cause excessive ground bounce.  For more
+   information on this subject, please refer to the IOB switching characteristic
+   guidelines for the device you are using in the Programmable Logic Data Book.
+WARNING:OldMap:929 - Signal `Inst_autopilot_1_pwm/comparator<8>' on pin A1 of
+   CY4 symbol "Inst_autopilot_1_pwm/C7/C4/C2" (output
+   signal=Inst_autopilot_1_pwm/C7/C4/cout0_net) is not required by carry mode
+   INC-F-CI.  The signal is being removed. 
+WARNING:OldMap:929 - Signal `Inst_autopilot_2_pwm/comparator<8>' on pin A1 of
+   CY4 symbol "Inst_autopilot_2_pwm/C7/C4/C2" (output
+   signal=Inst_autopilot_2_pwm/C7/C4/cout0_net) is not required by carry mode
+   INC-F-CI.  The signal is being removed. 
+WARNING:OldMap:929 - Signal `Inst_copilot_id_pwm/comparator<8>' on pin A1 of CY4
+   symbol "Inst_copilot_id_pwm/C7/C4/C2" (output
+   signal=Inst_copilot_id_pwm/C7/C4/cout0_net) is not required by carry mode
+   INC-F-CI.  The signal is being removed. 
+WARNING:OldMap:929 - Signal `Inst_pilot_id_pwm/comparator<8>' on pin A1 of CY4
+   symbol "Inst_pilot_id_pwm/C7/C4/C2" (output
+   signal=Inst_pilot_id_pwm/C7/C4/cout0_net) is not required by carry mode
+   INC-F-CI.  The signal is being removed. 
+WARNING:OldMap:929 - Signal `Inst_talk_to_micro/master_count<22>' on pin A1 of
+   CY4 symbol "Inst_talk_to_micro/C2/C11/C2" (output
+   signal=Inst_talk_to_micro/C2/C11/cout0_net) is not required by carry mode
+   INC-F-CI.  The signal is being removed. 
+
+Section 3 - Informational
+-------------------------
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 411 block(s) removed
+ 181 block(s) optimized away
+ 411 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "Inst_address_latch/N8" is unused and has been removed.
+ Unused block "Inst_address_latch/C74" (GND) removed.
+The signal "Inst_address_latch/N9" is unused and has been removed.
+ Unused block "Inst_address_latch/C75" (GND) removed.
+The signal "Inst_address_latch/N10" is unused and has been removed.
+ Unused block "Inst_address_latch/C76" (GND) removed.
+The signal "Inst_address_latch/N11" is unused and has been removed.
+ Unused block "Inst_address_latch/C77" (GND) removed.
+The signal "Inst_address_latch/N12" is unused and has been removed.
+ Unused block "Inst_address_latch/C78" (GND) removed.
+The signal "Inst_address_latch/N13" is unused and has been removed.
+ Unused block "Inst_address_latch/C79" (GND) removed.
+The signal "Inst_address_latch/N14" is unused and has been removed.
+ Unused block "Inst_address_latch/C80" (GND) removed.
+The signal "Inst_address_latch/N15" is unused and has been removed.
+ Unused block "Inst_address_latch/C81" (GND) removed.
+The signal "Inst_address_latch/N16" is unused and has been removed.
+ Unused block "Inst_address_latch/C82" (GND) removed.
+The signal "Inst_address_latch/N17" is unused and has been removed.
+ Unused block "Inst_address_latch/C83" (GND) removed.
+The signal "Inst_address_latch/N18" is unused and has been removed.
+ Unused block "Inst_address_latch/C84" (GND) removed.
+The signal "Inst_address_latch/N19" is unused and has been removed.
+ Unused block "Inst_address_latch/C85" (GND) removed.
+The signal "Inst_address_latch/N20" is unused and has been removed.
+ Unused block "Inst_address_latch/C86" (GND) removed.
+The signal "Inst_address_latch/N21" is unused and has been removed.
+ Unused block "Inst_address_latch/C87" (GND) removed.
+The signal "Inst_address_latch/N22" is unused and has been removed.
+ Unused block "Inst_address_latch/C88" (GND) removed.
+The signal "Inst_address_latch/N23" is unused and has been removed.
+ Unused block "Inst_address_latch/C89" (GND) removed.
+The signal "Inst_ucounter_1/N221" is unused and has been removed.
+ Unused block "Inst_ucounter_1/C60" (GND) removed.
+The signal "Inst_ucounter_1/N222" is unused and has been removed.
+ Unused block "Inst_ucounter_1/C61" (GND) removed.
+The signal "Inst_ucounter_1/N223" is unused and has been removed.
+ Unused block "Inst_ucounter_1/C62" (GND) removed.
+The signal "Inst_ucounter_1/N224" is unused and has been removed.
+ Unused block "Inst_ucounter_1/C63" (GND) removed.
+The signal "Inst_ucounter_1/N225" is unused and has been removed.
+ Unused block "Inst_ucounter_1/C64" (GND) removed.
+The signal "Inst_ucounter_1/N226" is unused and has been removed.
+ Unused block "Inst_ucounter_1/C65" (GND) removed.
+The signal "Inst_ucounter_1/N227" is unused and has been removed.
+ Unused block "Inst_ucounter_1/C66" (GND) removed.
+The signal "Inst_ucounter_1/N228" is unused and has been removed.
+ Unused block "Inst_ucounter_1/C67" (GND) removed.
+The signal "Inst_ucounter_1/N229" is unused and has been removed.
+ Unused block "Inst_ucounter_1/C68" (GND) removed.
+The signal "Inst_ucounter_1/N230" is unused and has been removed.
+ Unused block "Inst_ucounter_1/C69" (GND) removed.
+The signal "Inst_ucounter_1/N231" is unused and has been removed.
+ Unused block "Inst_ucounter_1/C70" (GND) removed.
+The signal "Inst_state_machine_2/N45" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C86" (GND) removed.
+The signal "Inst_state_machine_2/N46" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C87" (GND) removed.
+The signal "Inst_state_machine_2/N47" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C88" (GND) removed.
+The signal "Inst_state_machine_2/N48" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C89" (GND) removed.
+The signal "Inst_state_machine_2/N49" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C90" (GND) removed.
+The signal "Inst_state_machine_2/N50" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C91" (GND) removed.
+The signal "Inst_state_machine_2/N51" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C92" (GND) removed.
+The signal "Inst_state_machine_2/N52" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C93" (GND) removed.
+The signal "Inst_state_machine_2/N53" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C94" (GND) removed.
+The signal "Inst_state_machine_2/N54" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C95" (GND) removed.
+The signal "Inst_state_machine_2/N55" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C96" (GND) removed.
+The signal "Inst_state_machine_2/N56" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C97" (GND) removed.
+The signal "Inst_state_machine_2/N57" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C98" (GND) removed.
+The signal "Inst_state_machine_2/N58" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C99" (GND) removed.
+The signal "Inst_state_machine_2/N59" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C100" (GND) removed.
+The signal "Inst_state_machine_2/N60" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C101" (GND) removed.
+The signal "Inst_state_machine_2/N61" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C102" (GND) removed.
+The signal "Inst_state_machine_2/N62" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C103" (GND) removed.
+The signal "Inst_state_machine_2/N63" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C104" (GND) removed.
+The signal "Inst_state_machine_2/N64" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C105" (GND) removed.
+The signal "Inst_state_machine_2/N65" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C106" (GND) removed.
+The signal "Inst_state_machine_2/N66" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C107" (GND) removed.
+The signal "Inst_state_machine_2/N67" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C108" (GND) removed.
+The signal "Inst_state_machine_2/N68" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C109" (GND) removed.
+The signal "Inst_state_machine_2/N69" is unused and has been removed.
+ Unused block "Inst_state_machine_2/C110" (GND) removed.
+The signal "Inst_state_machine_2/change_reg/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_2/change_reg/C6" (GND) removed.
+The signal "Inst_state_machine_2/dir_reg/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_2/dir_reg/C6" (GND) removed.
+The signal "Inst_state_machine_2/ns_reg<0>/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_2/ns_reg<0>/C6" (GND) removed.
+The signal "Inst_state_machine_2/ns_reg<1>/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_2/ns_reg<1>/C6" (GND) removed.
+The signal "Inst_state_machine_4/N45" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C86" (GND) removed.
+The signal "Inst_state_machine_4/N46" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C87" (GND) removed.
+The signal "Inst_state_machine_4/N47" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C88" (GND) removed.
+The signal "Inst_state_machine_4/N48" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C89" (GND) removed.
+The signal "Inst_state_machine_4/N49" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C90" (GND) removed.
+The signal "Inst_state_machine_4/N50" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C91" (GND) removed.
+The signal "Inst_state_machine_4/N51" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C92" (GND) removed.
+The signal "Inst_state_machine_4/N52" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C93" (GND) removed.
+The signal "Inst_state_machine_4/N53" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C94" (GND) removed.
+The signal "Inst_state_machine_4/N54" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C95" (GND) removed.
+The signal "Inst_state_machine_4/N55" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C96" (GND) removed.
+The signal "Inst_state_machine_4/N56" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C97" (GND) removed.
+The signal "Inst_state_machine_4/N57" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C98" (GND) removed.
+The signal "Inst_state_machine_4/N58" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C99" (GND) removed.
+The signal "Inst_state_machine_4/N59" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C100" (GND) removed.
+The signal "Inst_state_machine_4/N60" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C101" (GND) removed.
+The signal "Inst_state_machine_4/N61" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C102" (GND) removed.
+The signal "Inst_state_machine_4/N62" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C103" (GND) removed.
+The signal "Inst_state_machine_4/N63" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C104" (GND) removed.
+The signal "Inst_state_machine_4/N64" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C105" (GND) removed.
+The signal "Inst_state_machine_4/N65" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C106" (GND) removed.
+The signal "Inst_state_machine_4/N66" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C107" (GND) removed.
+The signal "Inst_state_machine_4/N67" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C108" (GND) removed.
+The signal "Inst_state_machine_4/N68" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C109" (GND) removed.
+The signal "Inst_state_machine_4/N69" is unused and has been removed.
+ Unused block "Inst_state_machine_4/C110" (GND) removed.
+The signal "Inst_state_machine_4/change_reg/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_4/change_reg/C6" (GND) removed.
+The signal "Inst_state_machine_4/dir_reg/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_4/dir_reg/C6" (GND) removed.
+The signal "Inst_state_machine_4/ns_reg<0>/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_4/ns_reg<0>/C6" (GND) removed.
+The signal "Inst_state_machine_4/ns_reg<1>/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_4/ns_reg<1>/C6" (GND) removed.
+The signal "Inst_autopilot_1_pwm/N104" is unused and has been removed.
+ Unused block "Inst_autopilot_1_pwm/C75" (GND) removed.
+The signal "Inst_autopilot_1_pwm/N105" is unused and has been removed.
+ Unused block "Inst_autopilot_1_pwm/C76" (GND) removed.
+The signal "Inst_autopilot_1_pwm/N106" is unused and has been removed.
+ Unused block "Inst_autopilot_1_pwm/C77" (GND) removed.
+The signal "Inst_autopilot_1_pwm/N107" is unused and has been removed.
+ Unused block "Inst_autopilot_1_pwm/C78" (GND) removed.
+The signal "Inst_autopilot_1_pwm/N108" is unused and has been removed.
+ Unused block "Inst_autopilot_1_pwm/C79" (GND) removed.
+The signal "Inst_autopilot_1_pwm/N109" is unused and has been removed.
+ Unused block "Inst_autopilot_1_pwm/C80" (GND) removed.
+The signal "Inst_autopilot_1_pwm/N110" is unused and has been removed.
+ Unused block "Inst_autopilot_1_pwm/C81" (GND) removed.
+The signal "Inst_autopilot_1_pwm/N111" is unused and has been removed.
+ Unused block "Inst_autopilot_1_pwm/C82" (GND) removed.
+The signal "Inst_autopilot_1_pwm/N112" is unused and has been removed.
+ Unused block "Inst_autopilot_1_pwm/C83" (GND) removed.
+The signal "Inst_autopilot_1_pwm/N113" is unused and has been removed.
+ Unused block "Inst_autopilot_1_pwm/C84" (GND) removed.
+The signal "Inst_autopilot_1_pwm/N114" is unused and has been removed.
+ Unused block "Inst_autopilot_1_pwm/C85" (GND) removed.
+The signal "Inst_autopilot_1_pwm/N115" is unused and has been removed.
+ Unused block "Inst_autopilot_1_pwm/C86" (GND) removed.
+The signal "Inst_pilot_id_pwm/N104" is unused and has been removed.
+ Unused block "Inst_pilot_id_pwm/C75" (GND) removed.
+The signal "Inst_pilot_id_pwm/N105" is unused and has been removed.
+ Unused block "Inst_pilot_id_pwm/C76" (GND) removed.
+The signal "Inst_pilot_id_pwm/N106" is unused and has been removed.
+ Unused block "Inst_pilot_id_pwm/C77" (GND) removed.
+The signal "Inst_pilot_id_pwm/N107" is unused and has been removed.
+ Unused block "Inst_pilot_id_pwm/C78" (GND) removed.
+The signal "Inst_pilot_id_pwm/N108" is unused and has been removed.
+ Unused block "Inst_pilot_id_pwm/C79" (GND) removed.
+The signal "Inst_pilot_id_pwm/N109" is unused and has been removed.
+ Unused block "Inst_pilot_id_pwm/C80" (GND) removed.
+The signal "Inst_pilot_id_pwm/N110" is unused and has been removed.
+ Unused block "Inst_pilot_id_pwm/C81" (GND) removed.
+The signal "Inst_pilot_id_pwm/N111" is unused and has been removed.
+ Unused block "Inst_pilot_id_pwm/C82" (GND) removed.
+The signal "Inst_pilot_id_pwm/N112" is unused and has been removed.
+ Unused block "Inst_pilot_id_pwm/C83" (GND) removed.
+The signal "Inst_pilot_id_pwm/N113" is unused and has been removed.
+ Unused block "Inst_pilot_id_pwm/C84" (GND) removed.
+The signal "Inst_pilot_id_pwm/N114" is unused and has been removed.
+ Unused block "Inst_pilot_id_pwm/C85" (GND) removed.
+The signal "Inst_pilot_id_pwm/N115" is unused and has been removed.
+ Unused block "Inst_pilot_id_pwm/C86" (GND) removed.
+The signal "Inst_clock_divide1/N125" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C117" (GND) removed.
+The signal "Inst_clock_divide1/N126" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C118" (GND) removed.
+The signal "Inst_clock_divide1/N127" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C119" (GND) removed.
+The signal "Inst_clock_divide1/N128" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C120" (GND) removed.
+The signal "Inst_clock_divide1/N129" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C121" (GND) removed.
+The signal "Inst_clock_divide1/N130" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C122" (GND) removed.
+The signal "Inst_clock_divide1/N131" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C123" (GND) removed.
+The signal "Inst_clock_divide1/N132" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C124" (GND) removed.
+The signal "Inst_clock_divide1/N133" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C125" (GND) removed.
+The signal "Inst_clock_divide1/N134" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C126" (GND) removed.
+The signal "Inst_clock_divide1/N135" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C127" (GND) removed.
+The signal "Inst_clock_divide1/N136" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C128" (GND) removed.
+The signal "Inst_clock_divide1/N137" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C129" (GND) removed.
+The signal "Inst_clock_divide1/N138" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C130" (GND) removed.
+The signal "Inst_clock_divide1/N139" is unused and has been removed.
+ Unused block "Inst_clock_divide1/C131" (GND) removed.
+The signal "Inst_talk_to_micro/N209" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C146" (GND) removed.
+The signal "Inst_talk_to_micro/N210" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C147" (GND) removed.
+The signal "Inst_talk_to_micro/N211" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C148" (GND) removed.
+The signal "Inst_talk_to_micro/N212" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C149" (GND) removed.
+The signal "Inst_talk_to_micro/N213" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C150" (GND) removed.
+The signal "Inst_talk_to_micro/N214" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C151" (GND) removed.
+The signal "Inst_talk_to_micro/N215" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C152" (GND) removed.
+The signal "Inst_talk_to_micro/N216" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C153" (GND) removed.
+The signal "Inst_talk_to_micro/N217" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C154" (GND) removed.
+The signal "Inst_talk_to_micro/N218" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C155" (GND) removed.
+The signal "Inst_talk_to_micro/N219" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C156" (GND) removed.
+The signal "Inst_talk_to_micro/N220" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C157" (GND) removed.
+The signal "Inst_talk_to_micro/N221" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C158" (GND) removed.
+The signal "Inst_talk_to_micro/N222" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C159" (GND) removed.
+The signal "Inst_talk_to_micro/N223" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C160" (GND) removed.
+The signal "Inst_talk_to_micro/N224" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C161" (GND) removed.
+The signal "Inst_talk_to_micro/N225" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C162" (GND) removed.
+The signal "Inst_talk_to_micro/N226" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C163" (GND) removed.
+The signal "Inst_talk_to_micro/N227" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C164" (GND) removed.
+The signal "Inst_talk_to_micro/N228" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C165" (GND) removed.
+The signal "Inst_talk_to_micro/N229" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C166" (GND) removed.
+The signal "Inst_talk_to_micro/N230" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C167" (GND) removed.
+The signal "Inst_talk_to_micro/N231" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C168" (GND) removed.
+The signal "Inst_talk_to_micro/N232" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C169" (GND) removed.
+The signal "Inst_talk_to_micro/N233" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C170" (GND) removed.
+The signal "Inst_talk_to_micro/N234" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C171" (GND) removed.
+The signal "Inst_talk_to_micro/N235" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C172" (GND) removed.
+The signal "Inst_talk_to_micro/N236" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C173" (GND) removed.
+The signal "Inst_talk_to_micro/N237" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C174" (GND) removed.
+The signal "Inst_talk_to_micro/N238" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C175" (GND) removed.
+The signal "Inst_talk_to_micro/N239" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C176" (GND) removed.
+The signal "Inst_talk_to_micro/N240" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C177" (GND) removed.
+The signal "Inst_talk_to_micro/N241" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C178" (GND) removed.
+The signal "Inst_talk_to_micro/N242" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C179" (GND) removed.
+The signal "Inst_talk_to_micro/N243" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C180" (GND) removed.
+The signal "Inst_talk_to_micro/N244" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C181" (GND) removed.
+The signal "Inst_talk_to_micro/N245" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C182" (GND) removed.
+The signal "Inst_talk_to_micro/N246" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C183" (GND) removed.
+The signal "Inst_talk_to_micro/N247" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C184" (GND) removed.
+The signal "Inst_talk_to_micro/N248" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C185" (GND) removed.
+The signal "Inst_talk_to_micro/N249" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C186" (GND) removed.
+The signal "Inst_talk_to_micro/N250" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C187" (GND) removed.
+The signal "Inst_talk_to_micro/N251" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C188" (GND) removed.
+The signal "Inst_talk_to_micro/N252" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C189" (GND) removed.
+The signal "Inst_talk_to_micro/N253" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C190" (GND) removed.
+The signal "Inst_talk_to_micro/N254" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C191" (GND) removed.
+The signal "Inst_talk_to_micro/N255" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C192" (GND) removed.
+The signal "Inst_talk_to_micro/N256" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C193" (GND) removed.
+The signal "Inst_talk_to_micro/N257" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C194" (GND) removed.
+The signal "Inst_talk_to_micro/N258" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C195" (GND) removed.
+The signal "Inst_talk_to_micro/N259" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C196" (GND) removed.
+The signal "Inst_talk_to_micro/N260" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C197" (GND) removed.
+The signal "Inst_talk_to_micro/N261" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C198" (GND) removed.
+The signal "Inst_talk_to_micro/N262" is unused and has been removed.
+ Unused block "Inst_talk_to_micro/C199" (GND) removed.
+The signal "Inst_get_data/N44" is unused and has been removed.
+ Unused block "Inst_get_data/C354" (GND) removed.
+The signal "Inst_get_data/N45" is unused and has been removed.
+ Unused block "Inst_get_data/C355" (GND) removed.
+The signal "Inst_get_data/N46" is unused and has been removed.
+ Unused block "Inst_get_data/C356" (GND) removed.
+The signal "Inst_get_data/N47" is unused and has been removed.
+ Unused block "Inst_get_data/C357" (GND) removed.
+The signal "Inst_get_data/N48" is unused and has been removed.
+ Unused block "Inst_get_data/C358" (GND) removed.
+The signal "Inst_get_data/N49" is unused and has been removed.
+ Unused block "Inst_get_data/C359" (GND) removed.
+The signal "Inst_get_data/N50" is unused and has been removed.
+ Unused block "Inst_get_data/C360" (GND) removed.
+The signal "Inst_get_data/N51" is unused and has been removed.
+ Unused block "Inst_get_data/C361" (GND) removed.
+The signal "Inst_get_data/N52" is unused and has been removed.
+ Unused block "Inst_get_data/C362" (GND) removed.
+The signal "Inst_get_data/N53" is unused and has been removed.
+ Unused block "Inst_get_data/C363" (GND) removed.
+The signal "Inst_get_data/N54" is unused and has been removed.
+ Unused block "Inst_get_data/C364" (GND) removed.
+The signal "Inst_get_data/N55" is unused and has been removed.
+ Unused block "Inst_get_data/C365" (GND) removed.
+The signal "Inst_get_data/N56" is unused and has been removed.
+ Unused block "Inst_get_data/C366" (GND) removed.
+The signal "Inst_get_data/N57" is unused and has been removed.
+ Unused block "Inst_get_data/C367" (GND) removed.
+The signal "Inst_get_data/N58" is unused and has been removed.
+ Unused block "Inst_get_data/C368" (GND) removed.
+The signal "Inst_get_data/N59" is unused and has been removed.
+ Unused block "Inst_get_data/C369" (GND) removed.
+The signal "Inst_get_data/N60" is unused and has been removed.
+ Unused block "Inst_get_data/C370" (GND) removed.
+The signal "Inst_get_data/N61" is unused and has been removed.
+ Unused block "Inst_get_data/C371" (GND) removed.
+The signal "Inst_get_data/N62" is unused and has been removed.
+ Unused block "Inst_get_data/C372" (GND) removed.
+The signal "Inst_get_data/N63" is unused and has been removed.
+ Unused block "Inst_get_data/C373" (GND) removed.
+The signal "Inst_get_data/N64" is unused and has been removed.
+ Unused block "Inst_get_data/C374" (GND) removed.
+The signal "Inst_get_data/N65" is unused and has been removed.
+ Unused block "Inst_get_data/C375" (GND) removed.
+The signal "Inst_get_data/N66" is unused and has been removed.
+ Unused block "Inst_get_data/C376" (GND) removed.
+The signal "Inst_get_data/N67" is unused and has been removed.
+ Unused block "Inst_get_data/C377" (GND) removed.
+The signal "Inst_get_data/N68" is unused and has been removed.
+ Unused block "Inst_get_data/C378" (GND) removed.
+The signal "Inst_get_data/N69" is unused and has been removed.
+ Unused block "Inst_get_data/C379" (GND) removed.
+The signal "Inst_get_data/N70" is unused and has been removed.
+ Unused block "Inst_get_data/C380" (GND) removed.
+The signal "Inst_get_data/N71" is unused and has been removed.
+ Unused block "Inst_get_data/C381" (GND) removed.
+The signal "Inst_get_data/N72" is unused and has been removed.
+ Unused block "Inst_get_data/C382" (GND) removed.
+The signal "Inst_get_data/N73" is unused and has been removed.
+ Unused block "Inst_get_data/C383" (GND) removed.
+The signal "Inst_get_data/N74" is unused and has been removed.
+ Unused block "Inst_get_data/C384" (GND) removed.
+The signal "Inst_get_data/N75" is unused and has been removed.
+ Unused block "Inst_get_data/C385" (GND) removed.
+The signal "Inst_get_data/N76" is unused and has been removed.
+ Unused block "Inst_get_data/C386" (GND) removed.
+The signal "Inst_get_data/N77" is unused and has been removed.
+ Unused block "Inst_get_data/C387" (GND) removed.
+The signal "Inst_get_data/N78" is unused and has been removed.
+ Unused block "Inst_get_data/C388" (GND) removed.
+The signal "Inst_get_data/N79" is unused and has been removed.
+ Unused block "Inst_get_data/C389" (GND) removed.
+The signal "Inst_get_data/N80" is unused and has been removed.
+ Unused block "Inst_get_data/C390" (GND) removed.
+The signal "Inst_get_data/N81" is unused and has been removed.
+ Unused block "Inst_get_data/C391" (GND) removed.
+The signal "Inst_get_data/N82" is unused and has been removed.
+ Unused block "Inst_get_data/C392" (GND) removed.
+The signal "Inst_get_data/N83" is unused and has been removed.
+ Unused block "Inst_get_data/C393" (GND) removed.
+The signal "Inst_get_data/N84" is unused and has been removed.
+ Unused block "Inst_get_data/C394" (GND) removed.
+The signal "Inst_get_data/N85" is unused and has been removed.
+ Unused block "Inst_get_data/C395" (GND) removed.
+The signal "Inst_get_data/N86" is unused and has been removed.
+ Unused block "Inst_get_data/C396" (GND) removed.
+The signal "Inst_get_data/N87" is unused and has been removed.
+ Unused block "Inst_get_data/C397" (GND) removed.
+The signal "Inst_get_data/N88" is unused and has been removed.
+ Unused block "Inst_get_data/C398" (GND) removed.
+The signal "Inst_get_data/N89" is unused and has been removed.
+ Unused block "Inst_get_data/C399" (GND) removed.
+The signal "Inst_get_data/N90" is unused and has been removed.
+ Unused block "Inst_get_data/C400" (GND) removed.
+The signal "Inst_get_data/N91" is unused and has been removed.
+ Unused block "Inst_get_data/C401" (GND) removed.
+The signal "Inst_get_data/N92" is unused and has been removed.
+ Unused block "Inst_get_data/C402" (GND) removed.
+The signal "Inst_get_data/N93" is unused and has been removed.
+ Unused block "Inst_get_data/C403" (GND) removed.
+The signal "Inst_get_data/N94" is unused and has been removed.
+ Unused block "Inst_get_data/C404" (GND) removed.
+The signal "Inst_get_data/N95" is unused and has been removed.
+ Unused block "Inst_get_data/C405" (GND) removed.
+The signal "Inst_get_data/N96" is unused and has been removed.
+ Unused block "Inst_get_data/C406" (GND) removed.
+The signal "Inst_get_data/N97" is unused and has been removed.
+ Unused block "Inst_get_data/C407" (GND) removed.
+The signal "Inst_get_data/N98" is unused and has been removed.
+ Unused block "Inst_get_data/C408" (GND) removed.
+The signal "Inst_get_data/N99" is unused and has been removed.
+ Unused block "Inst_get_data/C409" (GND) removed.
+The signal "Inst_get_data/N100" is unused and has been removed.
+ Unused block "Inst_get_data/C410" (GND) removed.
+The signal "Inst_get_data/N101" is unused and has been removed.
+ Unused block "Inst_get_data/C411" (GND) removed.
+The signal "Inst_get_data/N102" is unused and has been removed.
+ Unused block "Inst_get_data/C412" (GND) removed.
+The signal "Inst_get_data/N103" is unused and has been removed.
+ Unused block "Inst_get_data/C413" (GND) removed.
+The signal "Inst_get_data/N104" is unused and has been removed.
+ Unused block "Inst_get_data/C414" (GND) removed.
+The signal "Inst_get_data/N105" is unused and has been removed.
+ Unused block "Inst_get_data/C415" (GND) removed.
+The signal "Inst_get_data/N106" is unused and has been removed.
+ Unused block "Inst_get_data/C416" (GND) removed.
+The signal "Inst_get_data/N107" is unused and has been removed.
+ Unused block "Inst_get_data/C417" (GND) removed.
+The signal "Inst_get_data/N108" is unused and has been removed.
+ Unused block "Inst_get_data/C418" (GND) removed.
+The signal "Inst_get_data/N109" is unused and has been removed.
+ Unused block "Inst_get_data/C419" (GND) removed.
+The signal "Inst_get_data/N110" is unused and has been removed.
+ Unused block "Inst_get_data/C420" (GND) removed.
+The signal "Inst_get_data/N111" is unused and has been removed.
+ Unused block "Inst_get_data/C421" (GND) removed.
+The signal "Inst_get_data/N112" is unused and has been removed.
+ Unused block "Inst_get_data/C422" (GND) removed.
+The signal "Inst_get_data/N113" is unused and has been removed.
+ Unused block "Inst_get_data/C423" (GND) removed.
+The signal "Inst_get_data/N114" is unused and has been removed.
+ Unused block "Inst_get_data/C424" (GND) removed.
+The signal "Inst_get_data/N115" is unused and has been removed.
+ Unused block "Inst_get_data/C425" (GND) removed.
+The signal "Inst_get_data/N116" is unused and has been removed.
+ Unused block "Inst_get_data/C426" (GND) removed.
+The signal "Inst_state_machine_1/N45" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C86" (GND) removed.
+The signal "Inst_state_machine_1/N46" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C87" (GND) removed.
+The signal "Inst_state_machine_1/N47" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C88" (GND) removed.
+The signal "Inst_state_machine_1/N48" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C89" (GND) removed.
+The signal "Inst_state_machine_1/N49" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C90" (GND) removed.
+The signal "Inst_state_machine_1/N50" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C91" (GND) removed.
+The signal "Inst_state_machine_1/N51" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C92" (GND) removed.
+The signal "Inst_state_machine_1/N52" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C93" (GND) removed.
+The signal "Inst_state_machine_1/N53" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C94" (GND) removed.
+The signal "Inst_state_machine_1/N54" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C95" (GND) removed.
+The signal "Inst_state_machine_1/N55" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C96" (GND) removed.
+The signal "Inst_state_machine_1/N56" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C97" (GND) removed.
+The signal "Inst_state_machine_1/N57" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C98" (GND) removed.
+The signal "Inst_state_machine_1/N58" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C99" (GND) removed.
+The signal "Inst_state_machine_1/N59" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C100" (GND) removed.
+The signal "Inst_state_machine_1/N60" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C101" (GND) removed.
+The signal "Inst_state_machine_1/N61" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C102" (GND) removed.
+The signal "Inst_state_machine_1/N62" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C103" (GND) removed.
+The signal "Inst_state_machine_1/N63" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C104" (GND) removed.
+The signal "Inst_state_machine_1/N64" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C105" (GND) removed.
+The signal "Inst_state_machine_1/N65" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C106" (GND) removed.
+The signal "Inst_state_machine_1/N66" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C107" (GND) removed.
+The signal "Inst_state_machine_1/N67" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C108" (GND) removed.
+The signal "Inst_state_machine_1/N68" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C109" (GND) removed.
+The signal "Inst_state_machine_1/N69" is unused and has been removed.
+ Unused block "Inst_state_machine_1/C110" (GND) removed.
+The signal "Inst_state_machine_1/change_reg/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_1/change_reg/C6" (GND) removed.
+The signal "Inst_state_machine_1/dir_reg/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_1/dir_reg/C6" (GND) removed.
+The signal "Inst_state_machine_1/ns_reg<0>/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_1/ns_reg<0>/C6" (GND) removed.
+The signal "Inst_state_machine_1/ns_reg<1>/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_1/ns_reg<1>/C6" (GND) removed.
+The signal "Inst_state_machine_3/N44" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C85" (GND) removed.
+The signal "Inst_state_machine_3/N45" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C86" (GND) removed.
+The signal "Inst_state_machine_3/N46" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C87" (GND) removed.
+The signal "Inst_state_machine_3/N47" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C88" (GND) removed.
+The signal "Inst_state_machine_3/N48" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C89" (GND) removed.
+The signal "Inst_state_machine_3/N49" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C90" (GND) removed.
+The signal "Inst_state_machine_3/N50" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C91" (GND) removed.
+The signal "Inst_state_machine_3/N51" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C92" (GND) removed.
+The signal "Inst_state_machine_3/N52" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C93" (GND) removed.
+The signal "Inst_state_machine_3/N53" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C94" (GND) removed.
+The signal "Inst_state_machine_3/N54" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C95" (GND) removed.
+The signal "Inst_state_machine_3/N55" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C96" (GND) removed.
+The signal "Inst_state_machine_3/N56" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C97" (GND) removed.
+The signal "Inst_state_machine_3/N57" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C98" (GND) removed.
+The signal "Inst_state_machine_3/N58" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C99" (GND) removed.
+The signal "Inst_state_machine_3/N59" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C100" (GND) removed.
+The signal "Inst_state_machine_3/N60" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C101" (GND) removed.
+The signal "Inst_state_machine_3/N61" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C102" (GND) removed.
+The signal "Inst_state_machine_3/N62" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C103" (GND) removed.
+The signal "Inst_state_machine_3/N63" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C104" (GND) removed.
+The signal "Inst_state_machine_3/N64" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C105" (GND) removed.
+The signal "Inst_state_machine_3/N65" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C106" (GND) removed.
+The signal "Inst_state_machine_3/N66" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C107" (GND) removed.
+The signal "Inst_state_machine_3/N67" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C108" (GND) removed.
+The signal "Inst_state_machine_3/N68" is unused and has been removed.
+ Unused block "Inst_state_machine_3/C109" (GND) removed.
+The signal "Inst_state_machine_3/change_reg/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_3/change_reg/C6" (GND) removed.
+The signal "Inst_state_machine_3/dir_reg/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_3/dir_reg/C6" (GND) removed.
+The signal "Inst_state_machine_3/ns_reg<0>/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_3/ns_reg<0>/C6" (GND) removed.
+The signal "Inst_state_machine_3/ns_reg<1>/N4" is unused and has been removed.
+ Unused block "Inst_state_machine_3/ns_reg<1>/C6" (GND) removed.
+The signal "Inst_ucounter_3/N221" is unused and has been removed.
+ Unused block "Inst_ucounter_3/C60" (GND) removed.
+The signal "Inst_ucounter_3/N222" is unused and has been removed.
+ Unused block "Inst_ucounter_3/C61" (GND) removed.
+The signal "Inst_ucounter_3/N223" is unused and has been removed.
+ Unused block "Inst_ucounter_3/C62" (GND) removed.
+The signal "Inst_ucounter_3/N224" is unused and has been removed.
+ Unused block "Inst_ucounter_3/C63" (GND) removed.
+The signal "Inst_ucounter_3/N225" is unused and has been removed.
+ Unused block "Inst_ucounter_3/C64" (GND) removed.
+The signal "Inst_ucounter_3/N226" is unused and has been removed.
+ Unused block "Inst_ucounter_3/C65" (GND) removed.
+The signal "Inst_ucounter_3/N227" is unused and has been removed.
+ Unused block "Inst_ucounter_3/C66" (GND) removed.
+The signal "Inst_ucounter_3/N228" is unused and has been removed.
+ Unused block "Inst_ucounter_3/C67" (GND) removed.
+The signal "Inst_ucounter_3/N229" is unused and has been removed.
+ Unused block "Inst_ucounter_3/C68" (GND) removed.
+The signal "Inst_ucounter_3/N230" is unused and has been removed.
+ Unused block "Inst_ucounter_3/C69" (GND) removed.
+The signal "Inst_ucounter_3/N231" is unused and has been removed.
+ Unused block "Inst_ucounter_3/C70" (GND) removed.
+The signal "Inst_clock_divide4/N125" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C117" (GND) removed.
+The signal "Inst_clock_divide4/N126" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C118" (GND) removed.
+The signal "Inst_clock_divide4/N127" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C119" (GND) removed.
+The signal "Inst_clock_divide4/N128" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C120" (GND) removed.
+The signal "Inst_clock_divide4/N129" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C121" (GND) removed.
+The signal "Inst_clock_divide4/N130" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C122" (GND) removed.
+The signal "Inst_clock_divide4/N131" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C123" (GND) removed.
+The signal "Inst_clock_divide4/N132" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C124" (GND) removed.
+The signal "Inst_clock_divide4/N133" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C125" (GND) removed.
+The signal "Inst_clock_divide4/N134" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C126" (GND) removed.
+The signal "Inst_clock_divide4/N135" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C127" (GND) removed.
+The signal "Inst_clock_divide4/N136" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C128" (GND) removed.
+The signal "Inst_clock_divide4/N137" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C129" (GND) removed.
+The signal "Inst_clock_divide4/N138" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C130" (GND) removed.
+The signal "Inst_clock_divide4/N139" is unused and has been removed.
+ Unused block "Inst_clock_divide4/C131" (GND) removed.
+The signal "Inst_ucounter_4/N221" is unused and has been removed.
+ Unused block "Inst_ucounter_4/C60" (GND) removed.
+The signal "Inst_ucounter_4/N222" is unused and has been removed.
+ Unused block "Inst_ucounter_4/C61" (GND) removed.
+The signal "Inst_ucounter_4/N223" is unused and has been removed.
+ Unused block "Inst_ucounter_4/C62" (GND) removed.
+The signal "Inst_ucounter_4/N224" is unused and has been removed.
+ Unused block "Inst_ucounter_4/C63" (GND) removed.
+The signal "Inst_ucounter_4/N225" is unused and has been removed.
+ Unused block "Inst_ucounter_4/C64" (GND) removed.
+The signal "Inst_ucounter_4/N226" is unused and has been removed.
+ Unused block "Inst_ucounter_4/C65" (GND) removed.
+The signal "Inst_ucounter_4/N227" is unused and has been removed.
+ Unused block "Inst_ucounter_4/C66" (GND) removed.
+The signal "Inst_ucounter_4/N228" is unused and has been removed.
+ Unused block "Inst_ucounter_4/C67" (GND) removed.
+The signal "Inst_ucounter_4/N229" is unused and has been removed.
+ Unused block "Inst_ucounter_4/C68" (GND) removed.
+The signal "Inst_ucounter_4/N230" is unused and has been removed.
+ Unused block "Inst_ucounter_4/C69" (GND) removed.
+The signal "Inst_ucounter_4/N231" is unused and has been removed.
+ Unused block "Inst_ucounter_4/C70" (GND) removed.
+The signal "Inst_autopilot_2_pwm/N104" is unused and has been removed.
+ Unused block "Inst_autopilot_2_pwm/C75" (GND) removed.
+The signal "Inst_autopilot_2_pwm/N105" is unused and has been removed.
+ Unused block "Inst_autopilot_2_pwm/C76" (GND) removed.
+The signal "Inst_autopilot_2_pwm/N106" is unused and has been removed.
+ Unused block "Inst_autopilot_2_pwm/C77" (GND) removed.
+The signal "Inst_autopilot_2_pwm/N107" is unused and has been removed.
+ Unused block "Inst_autopilot_2_pwm/C78" (GND) removed.
+The signal "Inst_autopilot_2_pwm/N108" is unused and has been removed.
+ Unused block "Inst_autopilot_2_pwm/C79" (GND) removed.
+The signal "Inst_autopilot_2_pwm/N109" is unused and has been removed.
+ Unused block "Inst_autopilot_2_pwm/C80" (GND) removed.
+The signal "Inst_autopilot_2_pwm/N110" is unused and has been removed.
+ Unused block "Inst_autopilot_2_pwm/C81" (GND) removed.
+The signal "Inst_autopilot_2_pwm/N111" is unused and has been removed.
+ Unused block "Inst_autopilot_2_pwm/C82" (GND) removed.
+The signal "Inst_autopilot_2_pwm/N112" is unused and has been removed.
+ Unused block "Inst_autopilot_2_pwm/C83" (GND) removed.
+The signal "Inst_autopilot_2_pwm/N113" is unused and has been removed.
+ Unused block "Inst_autopilot_2_pwm/C84" (GND) removed.
+The signal "Inst_autopilot_2_pwm/N114" is unused and has been removed.
+ Unused block "Inst_autopilot_2_pwm/C85" (GND) removed.
+The signal "Inst_autopilot_2_pwm/N115" is unused and has been removed.
+ Unused block "Inst_autopilot_2_pwm/C86" (GND) removed.
+The signal "Inst_clock_divide3/N125" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C117" (GND) removed.
+The signal "Inst_clock_divide3/N126" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C118" (GND) removed.
+The signal "Inst_clock_divide3/N127" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C119" (GND) removed.
+The signal "Inst_clock_divide3/N128" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C120" (GND) removed.
+The signal "Inst_clock_divide3/N129" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C121" (GND) removed.
+The signal "Inst_clock_divide3/N130" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C122" (GND) removed.
+The signal "Inst_clock_divide3/N131" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C123" (GND) removed.
+The signal "Inst_clock_divide3/N132" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C124" (GND) removed.
+The signal "Inst_clock_divide3/N133" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C125" (GND) removed.
+The signal "Inst_clock_divide3/N134" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C126" (GND) removed.
+The signal "Inst_clock_divide3/N135" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C127" (GND) removed.
+The signal "Inst_clock_divide3/N136" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C128" (GND) removed.
+The signal "Inst_clock_divide3/N137" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C129" (GND) removed.
+The signal "Inst_clock_divide3/N138" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C130" (GND) removed.
+The signal "Inst_clock_divide3/N139" is unused and has been removed.
+ Unused block "Inst_clock_divide3/C131" (GND) removed.
+The signal "Inst_copilot_id_pwm/N104" is unused and has been removed.
+ Unused block "Inst_copilot_id_pwm/C75" (GND) removed.
+The signal "Inst_copilot_id_pwm/N105" is unused and has been removed.
+ Unused block "Inst_copilot_id_pwm/C76" (GND) removed.
+The signal "Inst_copilot_id_pwm/N106" is unused and has been removed.
+ Unused block "Inst_copilot_id_pwm/C77" (GND) removed.
+The signal "Inst_copilot_id_pwm/N107" is unused and has been removed.
+ Unused block "Inst_copilot_id_pwm/C78" (GND) removed.
+The signal "Inst_copilot_id_pwm/N108" is unused and has been removed.
+ Unused block "Inst_copilot_id_pwm/C79" (GND) removed.
+The signal "Inst_copilot_id_pwm/N109" is unused and has been removed.
+ Unused block "Inst_copilot_id_pwm/C80" (GND) removed.
+The signal "Inst_copilot_id_pwm/N110" is unused and has been removed.
+ Unused block "Inst_copilot_id_pwm/C81" (GND) removed.
+The signal "Inst_copilot_id_pwm/N111" is unused and has been removed.
+ Unused block "Inst_copilot_id_pwm/C82" (GND) removed.
+The signal "Inst_copilot_id_pwm/N112" is unused and has been removed.
+ Unused block "Inst_copilot_id_pwm/C83" (GND) removed.
+The signal "Inst_copilot_id_pwm/N113" is unused and has been removed.
+ Unused block "Inst_copilot_id_pwm/C84" (GND) removed.
+The signal "Inst_copilot_id_pwm/N114" is unused and has been removed.
+ Unused block "Inst_copilot_id_pwm/C85" (GND) removed.
+The signal "Inst_copilot_id_pwm/N115" is unused and has been removed.
+ Unused block "Inst_copilot_id_pwm/C86" (GND) removed.
+The signal "Inst_ucounter_2/N221" is unused and has been removed.
+ Unused block "Inst_ucounter_2/C60" (GND) removed.
+The signal "Inst_ucounter_2/N222" is unused and has been removed.
+ Unused block "Inst_ucounter_2/C61" (GND) removed.
+The signal "Inst_ucounter_2/N223" is unused and has been removed.
+ Unused block "Inst_ucounter_2/C62" (GND) removed.
+The signal "Inst_ucounter_2/N224" is unused and has been removed.
+ Unused block "Inst_ucounter_2/C63" (GND) removed.
+The signal "Inst_ucounter_2/N225" is unused and has been removed.
+ Unused block "Inst_ucounter_2/C64" (GND) removed.
+The signal "Inst_ucounter_2/N226" is unused and has been removed.
+ Unused block "Inst_ucounter_2/C65" (GND) removed.
+The signal "Inst_ucounter_2/N227" is unused and has been removed.
+ Unused block "Inst_ucounter_2/C66" (GND) removed.
+The signal "Inst_ucounter_2/N228" is unused and has been removed.
+ Unused block "Inst_ucounter_2/C67" (GND) removed.
+The signal "Inst_ucounter_2/N229" is unused and has been removed.
+ Unused block "Inst_ucounter_2/C68" (GND) removed.
+The signal "Inst_ucounter_2/N230" is unused and has been removed.
+ Unused block "Inst_ucounter_2/C69" (GND) removed.
+The signal "Inst_ucounter_2/N231" is unused and has been removed.
+ Unused block "Inst_ucounter_2/C70" (GND) removed.
+The signal "Inst_clock_divide2/N125" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C117" (GND) removed.
+The signal "Inst_clock_divide2/N126" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C118" (GND) removed.
+The signal "Inst_clock_divide2/N127" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C119" (GND) removed.
+The signal "Inst_clock_divide2/N128" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C120" (GND) removed.
+The signal "Inst_clock_divide2/N129" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C121" (GND) removed.
+The signal "Inst_clock_divide2/N130" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C122" (GND) removed.
+The signal "Inst_clock_divide2/N131" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C123" (GND) removed.
+The signal "Inst_clock_divide2/N132" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C124" (GND) removed.
+The signal "Inst_clock_divide2/N133" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C125" (GND) removed.
+The signal "Inst_clock_divide2/N134" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C126" (GND) removed.
+The signal "Inst_clock_divide2/N135" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C127" (GND) removed.
+The signal "Inst_clock_divide2/N136" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C128" (GND) removed.
+The signal "Inst_clock_divide2/N137" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C129" (GND) removed.
+The signal "Inst_clock_divide2/N138" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C130" (GND) removed.
+The signal "Inst_clock_divide2/N139" is unused and has been removed.
+ Unused block "Inst_clock_divide2/C131" (GND) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+vcc 		Inst_address_latch/address_tri_enable_reg<0>/$1I37
+vcc 		Inst_address_latch/address_tri_enable_reg<1>/$1I37
+vcc 		Inst_address_latch/address_tri_enable_reg<2>/$1I37
+vcc 		Inst_address_latch/address_tri_enable_reg<3>/$1I37
+vcc 		Inst_address_latch/address_tri_enable_reg<4>/$1I37
+vcc 		Inst_address_latch/address_tri_enable_reg<5>/$1I37
+vcc 		Inst_address_latch/address_tri_enable_reg<6>/$1I37
+vcc 		Inst_address_latch/address_tri_enable_reg<7>/$1I37
+GND 		Inst_address_latch/C73
+vcc 		Inst_autopilot_1_pwm/comparator_reg<0>/$1I37
+vcc 		Inst_autopilot_1_pwm/comparator_reg<1>/$1I37
+vcc 		Inst_autopilot_1_pwm/comparator_reg<2>/$1I37
+vcc 		Inst_autopilot_1_pwm/comparator_reg<3>/$1I37
+vcc 		Inst_autopilot_1_pwm/comparator_reg<4>/$1I37
+vcc 		Inst_autopilot_1_pwm/comparator_reg<5>/$1I37
+vcc 		Inst_autopilot_1_pwm/comparator_reg<6>/$1I37
+vcc 		Inst_autopilot_1_pwm/comparator_reg<7>/$1I37
+vcc 		Inst_autopilot_1_pwm/comparator_reg<8>/$1I37
+vcc 		Inst_autopilot_1_pwm/dim_tri_enable_reg/$1I37
+vcc 		Inst_autopilot_2_pwm/comparator_reg<0>/$1I37
+vcc 		Inst_autopilot_2_pwm/comparator_reg<1>/$1I37
+vcc 		Inst_autopilot_2_pwm/comparator_reg<2>/$1I37
+vcc 		Inst_autopilot_2_pwm/comparator_reg<3>/$1I37
+vcc 		Inst_autopilot_2_pwm/comparator_reg<4>/$1I37
+vcc 		Inst_autopilot_2_pwm/comparator_reg<5>/$1I37
+vcc 		Inst_autopilot_2_pwm/comparator_reg<6>/$1I37
+vcc 		Inst_autopilot_2_pwm/comparator_reg<7>/$1I37
+vcc 		Inst_autopilot_2_pwm/comparator_reg<8>/$1I37
+vcc 		Inst_autopilot_2_pwm/dim_tri_enable_reg/$1I37
+vcc 		Inst_clock_divide1/pwm_clock_reg/$1I37
+vcc 		Inst_clock_divide1/pwm_count_reg<0>/$1I37
+vcc 		Inst_clock_divide1/pwm_count_reg<10>/$1I37
+vcc 		Inst_clock_divide1/pwm_count_reg<11>/$1I37
+vcc 		Inst_clock_divide1/pwm_count_reg<1>/$1I37
+vcc 		Inst_clock_divide1/pwm_count_reg<2>/$1I37
+vcc 		Inst_clock_divide1/pwm_count_reg<3>/$1I37
+vcc 		Inst_clock_divide1/pwm_count_reg<4>/$1I37
+vcc 		Inst_clock_divide1/pwm_count_reg<5>/$1I37
+vcc 		Inst_clock_divide1/pwm_count_reg<6>/$1I37
+vcc 		Inst_clock_divide1/pwm_count_reg<7>/$1I37
+vcc 		Inst_clock_divide1/pwm_count_reg<8>/$1I37
+vcc 		Inst_clock_divide1/pwm_count_reg<9>/$1I37
+vcc 		Inst_clock_divide2/pwm_clock_reg/$1I37
+vcc 		Inst_clock_divide2/pwm_count_reg<0>/$1I37
+vcc 		Inst_clock_divide2/pwm_count_reg<10>/$1I37
+vcc 		Inst_clock_divide2/pwm_count_reg<11>/$1I37
+vcc 		Inst_clock_divide2/pwm_count_reg<1>/$1I37
+vcc 		Inst_clock_divide2/pwm_count_reg<2>/$1I37
+vcc 		Inst_clock_divide2/pwm_count_reg<3>/$1I37
+vcc 		Inst_clock_divide2/pwm_count_reg<4>/$1I37
+vcc 		Inst_clock_divide2/pwm_count_reg<5>/$1I37
+vcc 		Inst_clock_divide2/pwm_count_reg<6>/$1I37
+vcc 		Inst_clock_divide2/pwm_count_reg<7>/$1I37
+vcc 		Inst_clock_divide2/pwm_count_reg<8>/$1I37
+vcc 		Inst_clock_divide2/pwm_count_reg<9>/$1I37
+vcc 		Inst_clock_divide3/pwm_clock_reg/$1I37
+vcc 		Inst_clock_divide3/pwm_count_reg<0>/$1I37
+vcc 		Inst_clock_divide3/pwm_count_reg<10>/$1I37
+vcc 		Inst_clock_divide3/pwm_count_reg<11>/$1I37
+vcc 		Inst_clock_divide3/pwm_count_reg<1>/$1I37
+vcc 		Inst_clock_divide3/pwm_count_reg<2>/$1I37
+vcc 		Inst_clock_divide3/pwm_count_reg<3>/$1I37
+vcc 		Inst_clock_divide3/pwm_count_reg<4>/$1I37
+vcc 		Inst_clock_divide3/pwm_count_reg<5>/$1I37
+vcc 		Inst_clock_divide3/pwm_count_reg<6>/$1I37
+vcc 		Inst_clock_divide3/pwm_count_reg<7>/$1I37
+vcc 		Inst_clock_divide3/pwm_count_reg<8>/$1I37
+vcc 		Inst_clock_divide3/pwm_count_reg<9>/$1I37
+vcc 		Inst_clock_divide4/pwm_clock_reg/$1I37
+vcc 		Inst_clock_divide4/pwm_count_reg<0>/$1I37
+vcc 		Inst_clock_divide4/pwm_count_reg<10>/$1I37
+vcc 		Inst_clock_divide4/pwm_count_reg<11>/$1I37
+vcc 		Inst_clock_divide4/pwm_count_reg<1>/$1I37
+vcc 		Inst_clock_divide4/pwm_count_reg<2>/$1I37
+vcc 		Inst_clock_divide4/pwm_count_reg<3>/$1I37
+vcc 		Inst_clock_divide4/pwm_count_reg<4>/$1I37
+vcc 		Inst_clock_divide4/pwm_count_reg<5>/$1I37
+vcc 		Inst_clock_divide4/pwm_count_reg<6>/$1I37
+vcc 		Inst_clock_divide4/pwm_count_reg<7>/$1I37
+vcc 		Inst_clock_divide4/pwm_count_reg<8>/$1I37
+vcc 		Inst_clock_divide4/pwm_count_reg<9>/$1I37
+vcc 		Inst_copilot_id_pwm/comparator_reg<0>/$1I37
+vcc 		Inst_copilot_id_pwm/comparator_reg<1>/$1I37
+vcc 		Inst_copilot_id_pwm/comparator_reg<2>/$1I37
+vcc 		Inst_copilot_id_pwm/comparator_reg<3>/$1I37
+vcc 		Inst_copilot_id_pwm/comparator_reg<4>/$1I37
+vcc 		Inst_copilot_id_pwm/comparator_reg<5>/$1I37
+vcc 		Inst_copilot_id_pwm/comparator_reg<6>/$1I37
+vcc 		Inst_copilot_id_pwm/comparator_reg<7>/$1I37
+vcc 		Inst_copilot_id_pwm/comparator_reg<8>/$1I37
+vcc 		Inst_copilot_id_pwm/dim_tri_enable_reg/$1I37
+GND 		Inst_filter_1/C75
+vcc 		Inst_filter_1/qaint_reg/$1I37
+vcc 		Inst_filter_1/qav_reg<1>/$1I37
+vcc 		Inst_filter_1/qav_reg<2>/$1I37
+vcc 		Inst_filter_1/qav_reg<3>/$1I37
+vcc 		Inst_filter_1/qbint_reg/$1I37
+vcc 		Inst_filter_1/qbv_reg<1>/$1I37
+vcc 		Inst_filter_1/qbv_reg<2>/$1I37
+vcc 		Inst_filter_1/qbv_reg<3>/$1I37
+GND 		Inst_filter_2/C75
+vcc 		Inst_filter_2/qaint_reg/$1I37
+vcc 		Inst_filter_2/qav_reg<1>/$1I37
+vcc 		Inst_filter_2/qav_reg<2>/$1I37
+vcc 		Inst_filter_2/qav_reg<3>/$1I37
+vcc 		Inst_filter_2/qbint_reg/$1I37
+vcc 		Inst_filter_2/qbv_reg<1>/$1I37
+vcc 		Inst_filter_2/qbv_reg<2>/$1I37
+vcc 		Inst_filter_2/qbv_reg<3>/$1I37
+GND 		Inst_filter_3/C75
+vcc 		Inst_filter_3/qaint_reg/$1I37
+vcc 		Inst_filter_3/qav_reg<1>/$1I37
+vcc 		Inst_filter_3/qav_reg<2>/$1I37
+vcc 		Inst_filter_3/qav_reg<3>/$1I37
+vcc 		Inst_filter_3/qbint_reg/$1I37
+vcc 		Inst_filter_3/qbv_reg<1>/$1I37
+vcc 		Inst_filter_3/qbv_reg<2>/$1I37
+vcc 		Inst_filter_3/qbv_reg<3>/$1I37
+GND 		Inst_filter_4/C75
+vcc 		Inst_filter_4/qaint_reg/$1I37
+vcc 		Inst_filter_4/qav_reg<1>/$1I37
+vcc 		Inst_filter_4/qav_reg<2>/$1I37
+vcc 		Inst_filter_4/qav_reg<3>/$1I37
+vcc 		Inst_filter_4/qbint_reg/$1I37
+vcc 		Inst_filter_4/qbv_reg<1>/$1I37
+vcc 		Inst_filter_4/qbv_reg<2>/$1I37
+vcc 		Inst_filter_4/qbv_reg<3>/$1I37
+GND 		Inst_get_data/C353
+vcc 		Inst_get_data/data_tri_enable_reg<0>/$1I37
+vcc 		Inst_get_data/data_tri_enable_reg<1>/$1I37
+vcc 		Inst_get_data/data_tri_enable_reg<2>/$1I37
+vcc 		Inst_get_data/data_tri_enable_reg<3>/$1I37
+vcc 		Inst_get_data/data_tri_enable_reg<4>/$1I37
+vcc 		Inst_get_data/data_tri_enable_reg<5>/$1I37
+vcc 		Inst_pilot_id_pwm/comparator_reg<0>/$1I37
+vcc 		Inst_pilot_id_pwm/comparator_reg<1>/$1I37
+vcc 		Inst_pilot_id_pwm/comparator_reg<2>/$1I37
+vcc 		Inst_pilot_id_pwm/comparator_reg<3>/$1I37
+vcc 		Inst_pilot_id_pwm/comparator_reg<4>/$1I37
+vcc 		Inst_pilot_id_pwm/comparator_reg<5>/$1I37
+vcc 		Inst_pilot_id_pwm/comparator_reg<6>/$1I37
+vcc 		Inst_pilot_id_pwm/comparator_reg<7>/$1I37
+vcc 		Inst_pilot_id_pwm/comparator_reg<8>/$1I37
+vcc 		Inst_pilot_id_pwm/dim_tri_enable_reg/$1I37
+VCC 		Inst_state_machine_1/C84
+GND 		Inst_state_machine_1/C85
+VCC 		Inst_state_machine_2/C84
+GND 		Inst_state_machine_2/C85
+VCC 		Inst_state_machine_3/C83
+GND 		Inst_state_machine_3/C84
+VCC 		Inst_state_machine_4/C84
+GND 		Inst_state_machine_4/C85
+GND 		Inst_talk_to_micro/C145
+vcc 		Inst_talk_to_micro/master_count_reg<0>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<10>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<11>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<12>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<13>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<14>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<15>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<16>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<17>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<18>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<19>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<1>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<20>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<21>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<22>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<2>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<3>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<4>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<5>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<6>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<7>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<8>/$1I37
+vcc 		Inst_talk_to_micro/master_count_reg<9>/$1I37
+GND 		C176
+GND 		Inst_autopilot_1_pwm/C74
+GND 		Inst_autopilot_2_pwm/C74
+GND 		Inst_copilot_id_pwm/C74
+GND 		Inst_pilot_id_pwm/C74
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - Added Logic
+-----------------------
+
+Section 7 - Expanded Logic
+--------------------------
+To enable this section, set the detailed map report option and rerun map.
+
+Section 8 - Signal Cross-Reference
+----------------------------------
+To enable this section, set the detailed map report option and rerun map.
+
+Section 9 - Symbol Cross-Reference
+----------------------------------
+To enable this section, set the detailed map report option and rerun map.
+
+Section 10 - IOB Properties
+---------------------------
+"add_data<0>" (IOB) : SLEW=SLOW PULLUP INFF OUTFF
+"add_data<1>" (IOB) : SLEW=SLOW PULLUP INFF OUTFF
+"add_data<2>" (IOB) : SLEW=SLOW PULLUP INFF OUTFF
+"add_data<3>" (IOB) : SLEW=SLOW PULLUP INFF OUTFF
+"add_data<4>" (IOB) : SLEW=SLOW PULLUP INFF OUTFF
+"add_data<5>" (IOB) : SLEW=SLOW PULLUP INFF OUTFF
+"add_data<6>" (IOB) : SLEW=SLOW PULLUP OUTFF
+"add_data<7>" (IOB) : SLEW=SLOW PULLUP OUTFF
+"Ain1" (IOB) : INFF
+"Ain2" (IOB) : INFF
+"Ain3" (IOB) : INFF
+"Ain4" (IOB) : INFF
+"Bin1" (IOB) : INFF
+"Bin2" (IOB) : INFF
+"Bin3" (IOB) : INFF
+"Bin4" (IOB) : INFF
+"hb" (IOB) : SLEW=SLOW
+"i_odim1" (IOB) : SLEW=SLOW
+"i_odim2" (IOB) : SLEW=SLOW
+"i_odim3" (IOB) : SLEW=SLOW
+"i_odim4" (IOB) : SLEW=SLOW
+"logic_reset" (IOB) : PULLUP
+"master_clock_out" (IOB) : SLEW=SLOW
+"read" (IOB) : PULLUP
+"solenoid_1" (IOB) : SLEW=SLOW OUTFF
+"solenoid_2" (IOB) : SLEW=SLOW OUTFF
+"write" (IOB) : PULLUP
+
+Section 11 - RPMs
+-----------------
+
+Section 12 - Guide Report
+-------------------------
+Guide not run on this design.

@@ -1,0 +1,33 @@
+
+Inferred memory devices in process 'pwm_counting'
+	in routine clock_divide
+         line 19 in file
+         'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/clock_divide.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    pwm_count_reg    | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+pwm_count_reg (width 12)
+------------------------
+    Async-reset: logic_reset
+
+
+
+Inferred memory devices in process 'pwm_generate'
+	in routine clock_divide
+         line 34 in file
+         'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/clock_divide.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    pwm_clock_reg    | Flip-flop |   1   |  -  | -  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+pwm_clock_reg
+-------------
+    Async-reset: logic_reset
+
+
+Writing to hnl file 'g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\__express_prj\top_level_74_2131/workdirs/WORK/clock_divide.hnl'

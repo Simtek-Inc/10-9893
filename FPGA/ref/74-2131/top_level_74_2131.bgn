@@ -1,0 +1,76 @@
+Release 4.2i - Bitgen E.35
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+
+Loading design for application Bitgen from file top_level_74_2131.ncd.
+   "top_level_74_2131" is an NCD, version 2.37, device xcs30xl, package vq100,
+speed -4
+Loading device for application Bitgen from file 's30xl.nph' in environment
+C:/Xilinx.
+Opened constraints file top_level_74_2131.pcf.
+
+Fri Oct 10 11:52:55 2008
+
+bitgen -g M0Pin:Pullnone -g M1Pin:Pullup -g PowerDown:Pullup -g ExpressMode:Disable -g 5V_Tolerant_IO:On -g BSCAN_Config:Enable -g BSCAN_Status:Disable -w -g StartupClk:Cclk -g Cclk_Nosync -g SyncToDone:No -g DoneActive:C1 -g OutputsActive:C2 -g GSRInactive:C3 -g ReadCapture:Disable -g ReadAbort:Disable -g ReadClk:Cclk -g CRC:Enable -g LC_Alignment:Length -g ConfigRate:Slow -g DonePin:PullUp -g TdoPin:PullNone top_level_74_2131.ncd 
+
+Summary of Bitgen Options:
++----------------------+----------------------+
+| Option Name          | Current Setting      |
++----------------------+----------------------+
+| Cclk_Nosync          |                      |
++----------------------+----------------------+
+| Cclk_Sync            | (Not Specified)*     |
++----------------------+----------------------+
+| Uclk_Nosync          | (Not Specified)*     |
++----------------------+----------------------+
+| Uclk_Sync            | (Not Specified)*     |
++----------------------+----------------------+
+| CRC                  | Enable**             |
++----------------------+----------------------+
+| ConfigRate           | Slow**               |
++----------------------+----------------------+
+| DonePin              | Pullup**             |
++----------------------+----------------------+
+| TdoPin               | Pullnone**           |
++----------------------+----------------------+
+| M0Pin                | Pullnone**           |
++----------------------+----------------------+
+| M1Pin                | Pullup**             |
++----------------------+----------------------+
+| PowerDown            | Pullup**             |
++----------------------+----------------------+
+| ReadCapture          | Disable**            |
++----------------------+----------------------+
+| ReadAbort            | Disable**            |
++----------------------+----------------------+
+| ReadClk              | Cclk**               |
++----------------------+----------------------+
+| StartupClk           | Cclk**               |
++----------------------+----------------------+
+| SyncToDone           | No**                 |
++----------------------+----------------------+
+| DoneActive           | C1**                 |
++----------------------+----------------------+
+| OutputsActive        | C2**                 |
++----------------------+----------------------+
+| GSRInactive          | C3**                 |
++----------------------+----------------------+
+| LC_Alignment         | Length**             |
++----------------------+----------------------+
+| ExpressMode          | Disable**            |
++----------------------+----------------------+
+| 5V_Tolerant_IO       | On**                 |
++----------------------+----------------------+
+| BSCAN_Config         | Enable**             |
++----------------------+----------------------+
+| BSCAN_Status         | Disable**            |
++----------------------+----------------------+
+| Binary               | No*                  |
++----------------------+----------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Creating bit map...
+Saving bit stream in "top_level_74_2131.bit".
+Bitstream generation is complete.

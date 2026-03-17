@@ -1,0 +1,3 @@
+@E: CD565 :"W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129\hdl\RamMem.vhd":98:24:98:25|Duplicate case label detected 
+@E: Parse errors encountered - exiting
+

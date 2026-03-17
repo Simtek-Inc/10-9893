@@ -1,0 +1,563 @@
+; .\CIRCUIT.SRC generated from: src\main\CIRCUIT.C
+; COMPILER INVOKED BY:
+;        C:\Keil\C51\BIN\C51.EXE src\main\CIRCUIT.C LARGE OMF2 ROM(D16M) OPTIMIZE(9,SPEED) BROWSE INTVECTOR(0X6020) INCDIR(.\src\main;.\src\cpu;.\src\ethernet;.\src\adapter;.\src\si2c;.\src\eeprom;.\src\ping;..\src\fpga;.\src\swdma;.\src\mstimer;.\src\debug;.\src\uart;.\src\dhcp;.\src\tcpip;.\src\gs2e;.\src\pppoe;.\src\fpga;.\src\menu) DEFINE(RuntimeCodeAt24KH) VARBANKING DEBUG CODE LISTINCLUDE SYMBOLS NOPRINT SRC(.\CIRCUIT.SRC)
+
+$MOD_CONT
+$NOMOD51
+
+NAME	CIRCUIT
+
+TB08	BIT	098H.3
+TB18	BIT	0C0H.3
+P0	DATA	080H
+SM00	BIT	098H.7
+P1	DATA	090H
+SM10	BIT	0C0H.7
+SM01	BIT	098H.6
+P2	DATA	0A0H
+SM11	BIT	0C0H.6
+SM02	BIT	098H.5
+P3	DATA	0B0H
+AC	BIT	0D0H.6
+SM12	BIT	0C0H.5
+T0	BIT	0B0H.4
+SPIDR	DATA	0CFH
+T1	BIT	0B0H.5
+EA	BIT	0A8H.7
+OWCIR	DATA	0D6H
+CH	DATA	0C5H
+DPH0	DATA	083H
+IE	DATA	0A8H
+DPH1	DATA	085H
+CL	DATA	0C4H
+P0_0	BIT	080H.0
+P1_0	BIT	090H.0
+P0_1	BIT	080H.1
+CCAPH0	DATA	0B9H
+DPL0	DATA	082H
+P2_0	BIT	0A0H.0
+P1_1	BIT	090H.1
+P0_2	BIT	080H.2
+CCAPH1	DATA	0BAH
+DPL1	DATA	084H
+P3_0	BIT	0B0H.0
+P2_1	BIT	0A0H.1
+P1_2	BIT	090H.2
+P0_3	BIT	080H.3
+UR2_DLH	DATA	0E2H
+CCAPH2	DATA	0BBH
+XMRHR	DATA	0A7H
+P3_1	BIT	0B0H.1
+P2_2	BIT	0A0H.2
+P1_3	BIT	090H.3
+P0_4	BIT	080H.4
+CCAPH3	DATA	0BCH
+P3_2	BIT	0B0H.2
+P2_3	BIT	0A0H.3
+P1_4	BIT	090H.4
+P0_5	BIT	080H.5
+TA	DATA	0EBH
+CCAPH4	DATA	0BDH
+CCAPL0	DATA	0B1H
+fpgadatain	BIT	0A0H.3
+EXF2	BIT	0C8H.6
+RD	BIT	0B0H.7
+P3_3	BIT	0B0H.3
+P2_4	BIT	0A0H.4
+REN0	BIT	098H.4
+P1_5	BIT	090H.5
+P0_6	BIT	080H.6
+UR2_FCR	DATA	0E3H
+CCAPM0	DATA	0D1H
+T2IF	DATA	0C9H
+CCAPL1	DATA	0B2H
+REN1	BIT	0C0H.4
+P3_4	BIT	0B0H.4
+P2_5	BIT	0A0H.5
+P1_6	BIT	090H.6
+P0_7	BIT	080H.7
+UR2_DLL	DATA	0E1H
+CCAPM1	DATA	0D2H
+CCAPL2	DATA	0B3H
+XMRLR	DATA	0A6H
+fpgadataout	BIT	0A0H.1
+P3_5	BIT	0B0H.5
+P2_6	BIT	0A0H.6
+P1_7	BIT	090H.7
+CCAPM2	DATA	0D3H
+CCAPL3	DATA	0B4H
+XMWHR	DATA	0A5H
+P3_6	BIT	0B0H.6
+P2_7	BIT	0A0H.7
+CCAPM3	DATA	0D4H
+IP	DATA	0B8H
+CCAPL4	DATA	0B5H
+P3_7	BIT	0B0H.7
+CCAPM4	DATA	0D5H
+DBAR	DATA	09AH
+UR2_IER	DATA	0E2H
+CY	BIT	0D0H.7
+INT0	BIT	0B0H.2
+UR2_LCR	DATA	0E4H
+XMWLR	DATA	0A4H
+INT1	BIT	0B0H.3
+UR2_MCR	DATA	0E5H
+DPX0	DATA	093H
+I2CCIR	DATA	096H
+DPX1	DATA	095H
+UR2_IIR	DATA	0E3H
+UR2_RBR	DATA	0E1H
+ACON	DATA	09DH
+DCIR	DATA	09BH
+SP	DATA	081H
+CCON	DATA	0C3H
+CMOD	DATA	0C2H
+OV	BIT	0D0H.2
+ScopePin	BIT	080H.5
+WR	BIT	0B0H.6
+UR2_THR	DATA	0E1H
+EWDI	BIT	0E8H.5
+WDIF	BIT	0D8H.3
+RLDH	DATA	0CBH
+EPCR	DATA	0BEH
+LDHR	DATA	0AAH
+LogicRst	BIT	0A0H.5
+UR2_LSR	DATA	0E6H
+EPDR	DATA	0BFH
+MCIR	DATA	0B6H
+RCLK	BIT	0C8H.5
+UR2_MSR	DATA	0E7H
+HrtBeat	BIT	080H.7
+TCLK	BIT	0C8H.4
+RLDL	DATA	0CAH
+LDLR	DATA	0A9H
+PCON	DATA	087H
+CANCIR	DATA	0DEH
+TCIR	DATA	0AEH
+fpgaserialclock	BIT	0A0H.0
+PWDI	BIT	0F8H.5
+LSCR	DATA	0A2H
+TMOD	DATA	089H
+TCON	DATA	088H
+OWDR	DATA	0D7H
+IE0	BIT	088H.1
+IE1	BIT	088H.3
+MXAX	DATA	0EAH
+LMSR	DATA	0A1H
+MD0	DATA	0F9H
+B	DATA	0F0H
+MD1	DATA	0FAH
+LSAIER	DATA	0A1H
+MD2	DATA	0FBH
+WTRF	BIT	0D8H.2
+MD3	DATA	0FCH
+PISSR1	DATA	09EH
+MD4	DATA	0FDH
+LSSR	DATA	0A3H
+PISSR2	DATA	09FH
+MD5	DATA	0FEH
+ACC	DATA	0E0H
+fpgaserialload	BIT	0A0H.2
+ES0	BIT	0A8H.4
+CT2	BIT	0C8H.1
+ES1	BIT	0A8H.6
+ET0	BIT	0A8H.1
+ET1	BIT	0A8H.3
+TF0	BIT	088H.5
+ET2	BIT	0A8H.5
+RI0	BIT	098H.0
+TF1	BIT	088H.7
+TF2	BIT	0C8H.7
+RI1	BIT	0C0H.0
+SPICIR	DATA	0CEH
+TH0	DATA	08CH
+EX0	BIT	0A8H.0
+TI0	BIT	098H.1
+IT0	BIT	088H.0
+TH1	DATA	08DH
+TI1	BIT	0C0H.1
+EX1	BIT	0A8H.2
+IT1	BIT	088H.2
+TH2	DATA	0CDH
+P	BIT	0D0H.0
+A_0	BIT	0E0H.0
+TL0	DATA	08AH
+A_1	BIT	0E0H.1
+CSREPR	DATA	08FH
+TL1	DATA	08BH
+A_2	BIT	0E0H.2
+TL2	DATA	0CCH
+A_3	BIT	0E0H.3
+PS0	BIT	0B8H.4
+EIE	DATA	0E8H
+WTST	DATA	092H
+A_4	BIT	0E0H.4
+PS1	BIT	0B8H.6
+PT0	BIT	0B8H.1
+EIF	DATA	091H
+A_5	BIT	0E0H.5
+Load5841	BIT	0B0H.2
+RS0	BIT	0D0H.3
+PT1	BIT	0B8H.3
+I2CDR	DATA	097H
+A_6	BIT	0E0H.6
+RS1	BIT	0D0H.4
+PT2	BIT	0B8H.5
+TR0	BIT	088H.4
+A_7	BIT	0E0H.7
+TR1	BIT	088H.6
+TR2	BIT	0C8H.2
+PX0	BIT	0B8H.0
+fpgaserialale	BIT	0A0H.4
+PX1	BIT	0B8H.2
+DDR	DATA	09CH
+DPH	DATA	083H
+EIP	DATA	0F8H
+DPL	DATA	082H
+LCR	DATA	0A2H
+SBUF0	DATA	099H
+SBUF1	DATA	0C1H
+EINT2	BIT	0E8H.0
+EXEN2	BIT	0C8H.3
+MDR	DATA	0B7H
+EINT3	BIT	0E8H.1
+CPRL2	BIT	0C8H.0
+SCON0	DATA	098H
+EINT4	BIT	0E8H.2
+SCON1	DATA	0C0H
+SDSTSR	DATA	094H
+EINT5	BIT	0E8H.3
+STATUS	DATA	0E9H
+EINT6	BIT	0E8H.4
+T2CON	DATA	0C8H
+DPS	DATA	086H
+CANDR	DATA	0DFH
+TDR	DATA	0AFH
+LDAHR	DATA	0A5H
+DPX	DATA	093H
+DMAHR	DATA	0ADH
+Clk5841	BIT	0B0H.0
+PINT2	BIT	0F8H.0
+RXD	BIT	0B0H.0
+Din5841	BIT	0B0H.1
+PINT3	BIT	0F8H.1
+CKCON	DATA	08EH
+PINT4	BIT	0F8H.2
+EWT	BIT	0D8H.1
+TXD	BIT	0B0H.1
+LDALR	DATA	0A4H
+PINT5	BIT	0F8H.3
+DMALR	DATA	0ABH
+LSR	DATA	0A3H
+PINT6	BIT	0F8H.4
+DMAMR	DATA	0ACH
+ARCON	DATA	0FFH
+F0	BIT	0D0H.5
+F1	BIT	0D0H.1
+LDCSR	DATA	0A6H
+PSW	DATA	0D0H
+RB08	BIT	098H.2
+WDCON	DATA	0D8H
+RWT	BIT	0D8H.0
+RB18	BIT	0C0H.2
+?PR?x001uSDelay?CIRCUIT                  SEGMENT ECODE INSEG 
+?PR?x100nSDelay?CIRCUIT                  SEGMENT ECODE INSEG 
+?PR?ext1_5thHardwareDelay?CIRCUIT        SEGMENT ECODE INSEG 
+?PR?_nibbleswap?CIRCUIT                  SEGMENT ECODE INSEG 
+?PR?extHardwareDelay?CIRCUIT             SEGMENT ECODE INSEG 
+	PUBLIC	extHardwareDelay
+	PUBLIC	_nibbleswap
+	PUBLIC	ext1_5thHardwareDelay
+	PUBLIC	x100nSDelay
+	PUBLIC	x001uSDelay
+
+	ISEG  AT  035H
+   AssyVarPass1:   DS   1
+; //========================================================================================//
+; //========================================================================================//
+; //========================================================================================//
+; //     Copyright (c) 2016     Simtek, Incorporated      All rights reserved.              //
+; //                                                                                        //
+; //     This is unpublished proprietary source code of Simtek, Inc                         //
+; //                                                                                        //
+; //     The copyright notice above does not evidence any actual or intended                //
+; //     publication of such source code.                                                   //
+; //========================================================================================//
+; //========================================================================================//
+; //========================================================================================//
+; // 75-0640  for 10-8139-01                                                                //
+; //========================================================================================//
+; // Author      : C. Mason                                                                 //
+; // Date        : April  8, 2016                                                           //
+; // Revision    : -                                                                        //
+; // Notes       : Shipped with instrument.                                                 //
+; //========================================================================================//
+; //                                                                                        //
+; //========================================================================================//
+; //          include file declarations                                                     //
+; //========================================================================================//
+; #include "reg80390.h"
+; #include "types.h"
+; #include "intrins.h"
+; #include "CIRCUIT.H"
+; #include "printd.h"
+; 
+; sbit A_0                = 0xE0;
+; sbit A_1                = 0xE1;
+; sbit A_2                = 0xE2;
+; sbit A_3                = 0xE3;
+; sbit A_4                = 0xE4;
+; sbit A_5                = 0xE5;
+; sbit A_6                = 0xE6;
+; sbit A_7                = 0xE7;
+; 
+; //U16_T MAX144ReadADC(void);
+; void x100nSDelay(void);
+; void x001uSDelay(void);
+; void ext1_5thHardwareDelay(void);
+; void extHardwareDelay(void);
+; byte nibbleswap(byte dat);
+; 
+; // ---------------------------------------------------------------------------------------
+; // Function Name : x001uSDelay(void)
+; // Purpose       : create a 1uS delay
+; // Params        : void
+; // Returns       : void
+; // Note          : 
+; // ---------------------------------------------------------------------------------------
+; //
+; void x001uSDelay(void)
+
+	RSEG  ?PR?x001uSDelay?CIRCUIT
+x001uSDelay:
+	USING	0
+			; SOURCE LINE # 54
+; {
+			; SOURCE LINE # 55
+;       x100nSDelay();                                                                      // 100nS 100nS
+			; SOURCE LINE # 56
+;       x100nSDelay();                                                                      // 100nS 200nS
+			; SOURCE LINE # 57
+;       x100nSDelay();                                                                      // 100nS 300nS
+			; SOURCE LINE # 58
+;       x100nSDelay();                                                                      // 100nS 400nS
+			; SOURCE LINE # 59
+	LCALL	L?0006
+;       x100nSDelay();                                                                      // 100nS 500nS
+			; SOURCE LINE # 60
+	LCALL	x100nSDelay
+;       x100nSDelay();                                                                      // 100nS 600nS
+			; SOURCE LINE # 61
+;       x100nSDelay();                                                                      // 100nS 700nS
+			; SOURCE LINE # 62
+;       x100nSDelay();                                                                      // 100nS 800nS
+			; SOURCE LINE # 63
+;       x100nSDelay();                                                                      // 100nS 900nS
+			; SOURCE LINE # 64
+	LCALL	L?0006
+;       _nop_();                                                                            //  20nS 920nS
+			; SOURCE LINE # 65
+	NOP  	
+; }
+			; SOURCE LINE # 66
+	RET  	
+L?0006:
+	LCALL	x100nSDelay
+	LCALL	x100nSDelay
+	LCALL	x100nSDelay
+	LCALL	x100nSDelay
+	RET  	
+; END OF x001uSDelay
+
+; 
+; // ---------------------------------------------------------------------------------------
+; // Function Name : x100nSDelay(void)
+; // Purpose       : create a 100nS delay
+; // Params        : void
+; // Returns       : void
+; // Note          : the call and return both take 40nS each
+; // ---------------------------------------------------------------------------------------
+; //
+; void x100nSDelay(void)
+
+	RSEG  ?PR?x100nSDelay?CIRCUIT
+x100nSDelay:
+	USING	0
+			; SOURCE LINE # 76
+; {
+			; SOURCE LINE # 77
+;       _nop_();                                                                            // 20nS 020nS
+			; SOURCE LINE # 78
+	NOP  	
+; }
+			; SOURCE LINE # 79
+	RET  	
+; END OF x100nSDelay
+
+; 
+; // ---------------------------------------------------------------------------------------
+; // Function Name : ext1_5thHardwareDelay(void)
+; // Purpose       : create a delay
+; // Params        : void
+; // Returns       : void
+; // Note          : 
+; // ---------------------------------------------------------------------------------------
+; //
+; void ext1_5thHardwareDelay(void)                                                          // give the hardware some time to react
+
+	RSEG  ?PR?ext1_5thHardwareDelay?CIRCUIT
+L?0007:
+	USING	0
+	LCALL	ext1_5thHardwareDelay
+	LCALL	ext1_5thHardwareDelay
+ext1_5thHardwareDelay:
+	USING	0
+			; SOURCE LINE # 89
+; {
+			; SOURCE LINE # 90
+;       _nop_();                                                                            // 20nS 020nS
+			; SOURCE LINE # 91
+	NOP  	
+;       _nop_();                                                                            // 20nS 040nS
+			; SOURCE LINE # 92
+	NOP  	
+;       _nop_();                                                                            // 20nS 060nS
+			; SOURCE LINE # 93
+	NOP  	
+;       _nop_();                                                                            // 20nS 080nS
+			; SOURCE LINE # 94
+	NOP  	
+;       _nop_();                                                                            // 20nS 100nS
+			; SOURCE LINE # 95
+	NOP  	
+;       _nop_();                                                                            // 20nS 120nS
+			; SOURCE LINE # 96
+	NOP  	
+;       _nop_();                                                                            // 20nS 140nS
+			; SOURCE LINE # 97
+	NOP  	
+;       _nop_();                                                                            // 20nS 160nS
+			; SOURCE LINE # 98
+	NOP  	
+;       _nop_();                                                                            // 20nS 180nS
+			; SOURCE LINE # 99
+	NOP  	
+;       _nop_();                                                                            // 20nS 200nS
+			; SOURCE LINE # 100
+	NOP  	
+;       _nop_();                                                                            // 20nS 220nS
+			; SOURCE LINE # 101
+	NOP  	
+;       _nop_();                                                                            // 20nS 240nS
+			; SOURCE LINE # 102
+	NOP  	
+;       _nop_();                                                                            // 20nS 260nS
+			; SOURCE LINE # 103
+	NOP  	
+;       _nop_();                                                                            // 20nS 280nS
+			; SOURCE LINE # 104
+	NOP  	
+;       _nop_();                                                                            // 20nS 300nS
+			; SOURCE LINE # 105
+	NOP  	
+;       _nop_();                                                                            // 20nS 320nS
+			; SOURCE LINE # 106
+	NOP  	
+;       _nop_();                                                                            // 20nS 340nS
+			; SOURCE LINE # 107
+	NOP  	
+;       _nop_();                                                                            // 20nS 360nS
+			; SOURCE LINE # 108
+	NOP  	
+;       _nop_();                                                                            // 20nS 380nS
+			; SOURCE LINE # 109
+	NOP  	
+;       _nop_();                                                                            // 20nS 400nS
+			; SOURCE LINE # 110
+	NOP  	
+; }
+			; SOURCE LINE # 111
+	RET  	
+; END OF ext1_5thHardwareDelay
+
+; 
+; // ---------------------------------------------------------------------------------------
+; // Function Name : nibbleswap      
+; // Purpose       : swap the high and low nibbles of the given byte
+; // Params        : byte to swapped
+; // Returns       : swapped byte     
+; // Note          : 
+; // ---------------------------------------------------------------------------------------
+; byte nibbleswap(byte dat)
+
+	RSEG  ?PR?_nibbleswap?CIRCUIT
+_nibbleswap:
+	USING	0
+			; SOURCE LINE # 120
+;---- Variable 'dat?340' assigned to Register 'R7' ----
+; {
+			; SOURCE LINE # 121
+;       AssyVarPass1 = dat;
+			; SOURCE LINE # 122
+	MOV  	R0,#LOW (AssyVarPass1)
+	MOV  	A,R7
+	MOV  	@R0,A
+; #pragma asm
+;       push  Acc
+	  push  Acc
+;       mov   Acc,tmpvar1
+	  mov   Acc,0x35
+;       swap  a
+	  swap  a
+;       mov   tmpvar1,Acc
+	  mov   0x35,Acc
+;       pop   Acc
+	  pop   Acc
+; #pragma endasm
+;       return AssyVarPass1;
+			; SOURCE LINE # 130
+; }
+			; SOURCE LINE # 131
+?C0004:
+	RET  	
+; END OF _nibbleswap
+
+; 
+; // ---------------------------------------------------------------------------------------
+; // Function Name : extHardwareDelay(void)
+; // Purpose       : create a delay
+; // Params        : void
+; // Returns       : void
+; // Note          : 
+; // ---------------------------------------------------------------------------------------
+; void extHardwareDelay(void)                                                               // give the hardware some time to react
+
+	RSEG  ?PR?extHardwareDelay?CIRCUIT
+extHardwareDelay:
+	USING	0
+			; SOURCE LINE # 140
+; {
+			; SOURCE LINE # 141
+;       ext1_5thHardwareDelay();                                                            // 01
+			; SOURCE LINE # 142
+;       ext1_5thHardwareDelay();                                                            // 02
+			; SOURCE LINE # 143
+;       ext1_5thHardwareDelay();                                                            // 03
+			; SOURCE LINE # 144
+	LCALL	L?0007
+;       ext1_5thHardwareDelay();                                                            // 04
+			; SOURCE LINE # 145
+	LCALL	ext1_5thHardwareDelay
+;       ext1_5thHardwareDelay();                                                            // 05
+			; SOURCE LINE # 146
+;       ext1_5thHardwareDelay();                                                            // 06
+			; SOURCE LINE # 147
+;       ext1_5thHardwareDelay();                                                            // 07
+			; SOURCE LINE # 148
+	LCALL	L?0007
+;       ext1_5thHardwareDelay();                                                            // 08
+			; SOURCE LINE # 149
+	LJMP 	ext1_5thHardwareDelay
+; END OF extHardwareDelay
+
+	END

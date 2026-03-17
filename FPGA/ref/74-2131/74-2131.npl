@@ -1,0 +1,27 @@
+JDF E
+// Created by ISE ver 1.0
+PROJECT 74-2131
+DESIGN 74-2131 Normal
+DEVKIT xcs30xl-4vq100
+DEVFAM spartanxl
+FLOW FPGA Express VHDL
+MODULE backlight_pwm.vhd
+MODSTYLE backlight_pwm Normal
+MODULE clock_divide.vhd
+MODSTYLE clock_divide Normal
+MODULE talk_to_micro.vhd
+MODSTYLE talk_to_micro Normal
+MODULE top_level_74_2131.vhd
+MODSTYLE top_level_74_2131 Normal
+MODULE filter.vhd
+MODSTYLE filter Normal
+MODULE get_data.vhd
+MODSTYLE get_data Normal
+MODULE state_machine.vhd
+MODSTYLE state_machine Normal
+MODULE ucounter.vhd
+MODSTYLE ucounter Normal
+MODULE address_latch.vhd
+MODSTYLE address_latch Normal
+[STRATEGY-LIST]
+Normal=True, 1221054813

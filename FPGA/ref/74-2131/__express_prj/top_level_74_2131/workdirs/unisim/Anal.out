@@ -1,0 +1,2 @@
+C:/Xilinx/vhdl/src/unisims/unisim_vcomp.vhd:
+Warning: Initial values for signals are not supported for synthesis. They are ignored  on line 167  (VHDL-2022)

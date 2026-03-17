@@ -1,0 +1,30 @@
+Creating TCL Process
+Cleaning Up Project
+deleting file(s): _par.log __projnav.log _map.log
+deleting file(s): top_level_74_2131.nc1
+deleting file(s): top_level_74_2131_map.ncd top_level_74_2131.ncd
+deleting file(s): top_level_74_2131.ngd
+deleting file(s): top_level_74_2131.ngm
+deleting file(s): _editucf.rsp _ngdTOnc1_exewrap.rsp _nc1TOncd_exewrap.rsp _par.rsp _editucf_exewrap.rsp __top_level_74_2131_2epf_exewrap.rsp __filesAllClean_exewrap.rsp _prepar.rsp __ngdbuild.rsp bitgen.rsp __ednTOngd_exewrap.rsp _map.rsp
+deleting file(s): __express_prj
+deleting file(s): top_level_74_2131.edf
+deleting file(s): top_level_74_2131._prj
+deleting file(s): top_level_74_2131.5cli
+deleting file(s): top_level_74_2131.epf
+deleting file(s): top_level_74_2131.epfx
+deleting file(s): top_level_74_2131.impl
+deleting file(s): top_level_74_2131.bld
+deleting file(s): top_level_74_2131.mrp
+deleting file(s): top_level_74_2131.par
+deleting file(s): top_level_74_2131.pad
+deleting file(s): top_level_74_2131.dly
+deleting file(s): top_level_74_2131.ut bitgen.ut
+deleting file(s): top_level_74_2131.bit
+deleting file(s): top_level_74_2131.bgn
+deleting file(s): top_level_74_2131.drc
+deleting file(s): par.opt
+deleting file(s): top_level_74_2131.xpi
+deleting file(s): top_level_74_2131.pcf
+deleting file(s): top_level_74_2131_ngdbuild.nav
+deleting directory: _ngo
+Finished cleaning up project

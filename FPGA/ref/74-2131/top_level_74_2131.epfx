@@ -1,0 +1,19 @@
+<PROJECT> g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\__express_prj\top_level_74_2131
+<LIBRARY>
+unisim C:\Xilinx\vhdl\src\unisims\unisim_vcomp.vhd
+<LIBRARY>
+<V_LIBRARY>
+
+<FILES> g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\address_latch.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\backlight_pwm.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\clock_divide.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\filter.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\get_data.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\state_machine.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\talk_to_micro.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\ucounter.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\top_level_74_2131.vhd
+<SYNTAX> g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\address_latch.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\backlight_pwm.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\clock_divide.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\filter.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\get_data.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\state_machine.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\talk_to_micro.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\ucounter.vhd g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\top_level_74_2131.vhd
+<TOP> "top_level_74_2131"
+<TARGET> "SpartanXL" "S30XLVQ100" "-4" 50
+<IMPLEMENT> "top_level_74_2131"
+QUIK
+HIER
+X_NO
+OHOT
+O_NO
+V_NO
+HDLC
+<TOUCH_FILE> top_level_74_2131.impl

@@ -1,0 +1,58 @@
+# Thu Mar 21 07:42:11 2019
+
+Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 2172R, Built Oct 30 2017 10:54:39
+Copyright (C) 1994-2017 Synopsys, Inc. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09M-SP1-5
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 100MB)
+
+@A: MF827 |No constraint file specified.
+@L: W:\W218000\W218234\INSTRUMENTS\8668\Electrical\Engineering\Source_Code\FPGA\i75_5057\synthesis\tl755057_scck.rpt 
+Printing clock  summary report in "W:\W218000\W218234\INSTRUMENTS\8668\Electrical\Engineering\Source_Code\FPGA\i75_5057\synthesis\tl755057_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+@W: BN124 :"w:\w218000\w218234\instruments\8668\electrical\engineering\source_code\fpga\i75_5057\hdl\tl755057.vhd":131:0:131:18|Disconnecting duplicate driver pin:UcClk inst:Inst_ClockDivider_1 of work.ClockDivider(behavioral) on net UcClk (in view: work.tl755057(behavioral)). Duplication of drivers is frequently used in ASIC designs to increase drive strength. This form of duplication is not permitted in FPGA designs. 
+@W: BN124 :"w:\w218000\w218234\instruments\8668\electrical\engineering\source_code\fpga\i75_5057\hdl\tl755057.vhd":131:0:131:18|Disconnecting duplicate driver pin:PwmClk inst:Inst_ClockDivider_1 of work.ClockDivider(behavioral) on net iPwmClk (in view: work.tl755057(behavioral)). Duplication of drivers is frequently used in ASIC designs to increase drive strength. This form of duplication is not permitted in FPGA designs. 
+@N: BN115 :"w:\w218000\w218234\instruments\8668\electrical\engineering\source_code\fpga\i75_5057\hdl\tl755057.vhd":131:0:131:18|Removing instance Inst_ClockDivider_1 (in view: work.tl755057(behavioral)) of type view:work.ClockDivider(behavioral) because it does not drive other instances.
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+
+
+Clock Summary
+*****************
+
+Start                                   Requested     Requested     Clock        Clock                   Clock
+Clock                                   Frequency     Period        Type         Group                   Load 
+--------------------------------------------------------------------------------------------------------------
+ClockDivider|iPwmClk_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_1     18   
+tl755057|MClk                           100.0 MHz     10.000        inferred     Inferred_clkgroup_0     89   
+==============================================================================================================
+
+@W: MT530 :"w:\w218000\w218234\instruments\8668\electrical\engineering\source_code\fpga\i75_5057\hdl\rammem.vhd":86:8:86:15|Found inferred clock tl755057|MClk which controls 89 sequential elements including Inst_RamMem.AddrData_1[7]. This clock has no specified timing constraint which may adversely impact design performance. 
+@W: MT530 :"w:\w218000\w218234\instruments\8668\electrical\engineering\source_code\fpga\i75_5057\hdl\pwm.vhd":31:2:31:3|Found inferred clock ClockDivider|iPwmClk_inferred_clock which controls 18 sequential elements including Inst_Pwm_1.PwmCount[8:0]. This clock has no specified timing constraint which may adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file W:\W218000\W218234\INSTRUMENTS\8668\Electrical\Engineering\Source_Code\FPGA\i75_5057\synthesis\tl755057.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 108MB peak: 110MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 24MB peak: 110MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Mar 21 07:42:12 2019
+
+###########################################################]

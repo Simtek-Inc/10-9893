@@ -1,0 +1,46 @@
+FlashPro
+Version: 11.9.2.1
+Release: v11.9 SP2
+
+Software Version: 11.9.2.1
+programmer 'S2001L81KX' : FlashPro5
+Warning: The programmer with id '73223' in the project file cannot be detected and connected.
+Opened
+'W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129_SP2\desig\
+ner\impl1\tl755129_fp\tl755129.pro'
+PDB file
+'W:\W218000\W218234\INSTRUMENTS\8665\Electrical\Engineering\Source_Code\FPGA\i75_5129_SP2\desig\
+ner\impl1\tl755129.pdb' has been loaded successfully.
+DESIGN : tl755129;  CHECKSUM : 86D5;  PDB_VERSION : 1.9
+programmer 'S2001L81KX' : Scan Chain...
+programmer 'S2001L81KX' : Scan Chain PASSED.
+programmer 'S2001L81KX' : Executing action PROGRAM
+programmer 'S2001L81KX' : EXPORT FSN[48] = 0171e2249c81
+programmer 'S2001L81KX' : Erase ...
+programmer 'S2001L81KX' : Completed erase
+programmer 'S2001L81KX' : EXPORT CHECKSUM[16] = 86d5
+programmer 'S2001L81KX' : Programming FPGA Array
+programmer 'S2001L81KX' : Verifying FPGA Array
+programmer 'S2001L81KX' :         Verifying FPGA Array -- pass
+programmer 'S2001L81KX' : Finished: Mon Jun 10 15:38:42 2019 (Elapsed time 00:00:27)
+programmer 'S2001L81KX' : Executing action PROGRAM PASSED.
+
+                        o - o - o - o - o - o
+
+programmer 'S2001L81KX' : Scan Chain...
+programmer 'S2001L81KX' : Scan Chain PASSED.
+programmer 'S2001L81KX' : Executing action PROGRAM
+programmer 'S2001L81KX' : EXPORT FSN[48] = 0171e224dc79
+programmer 'S2001L81KX' : Erase ...
+programmer 'S2001L81KX' : Completed erase
+programmer 'S2001L81KX' : EXPORT CHECKSUM[16] = 86d5
+programmer 'S2001L81KX' : Programming FPGA Array
+programmer 'S2001L81KX' : Verifying FPGA Array
+programmer 'S2001L81KX' :         Verifying FPGA Array -- pass
+programmer 'S2001L81KX' : Finished: Tue Jun 11 14:26:39 2019 (Elapsed time 00:00:26)
+programmer 'S2001L81KX' : Executing action PROGRAM PASSED.
+
+                        o - o - o - o - o - o
+
+Warning: Project 'tl755129' has been modified. Do you want to save it? [NO]
+Project closed.

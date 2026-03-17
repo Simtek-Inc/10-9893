@@ -1,0 +1,61 @@
+
+Inferred memory devices in process 'a_debounce'
+	in routine filter line 25 in
+         file 'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/filter.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       qav_reg       | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+qav_reg (width 4)
+-----------------
+    set/reset/toggle: none
+
+
+
+Inferred memory devices in process 'b_debounce'
+	in routine filter line 36 in
+         file 'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/filter.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       qbv_reg       | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+qbv_reg (width 4)
+-----------------
+    set/reset/toggle: none
+
+
+
+Inferred memory devices in process 'a_jk_flipflop'
+	in routine filter line 61
+         in file 'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/filter.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      qaint_reg      | Flip-flop |   1   |  -  | -  | N  | N  | N  | N  | Y  |
+===============================================================================
+
+qaint_reg
+---------
+    Sync-toggle: n_63
+
+
+
+Inferred memory devices in process 'b_jk_flipflop'
+	in routine filter line 78
+         in file 'G:/instruments/6xxx/6800-6899/6856/fpga/74-2131/filter.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      qbint_reg      | Flip-flop |   1   |  -  | -  | N  | N  | N  | N  | Y  |
+===============================================================================
+
+qbint_reg
+---------
+    Sync-toggle: n_98
+
+
+Writing to hnl file 'g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\__express_prj/top_level_74_2131/workdirs/WORK/filter.hnl'

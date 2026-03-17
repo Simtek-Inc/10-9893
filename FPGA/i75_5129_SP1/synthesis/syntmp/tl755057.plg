@@ -1,0 +1,19 @@
+@P:  Worst Slack : -1.012
+@P:  ClockDivider|iPwmClk_inferred_clock - Estimated Frequency : 142.1 MHz
+@P:  ClockDivider|iPwmClk_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  ClockDivider|iPwmClk_inferred_clock - Estimated Period : 7.039
+@P:  ClockDivider|iPwmClk_inferred_clock - Requested Period : 10.000
+@P:  ClockDivider|iPwmClk_inferred_clock - Slack : 2.961
+@P:  tl755057|MClk - Estimated Frequency : 90.8 MHz
+@P:  tl755057|MClk - Requested Frequency : 100.0 MHz
+@P:  tl755057|MClk - Estimated Period : 11.012
+@P:  tl755057|MClk - Requested Period : 10.000
+@P:  tl755057|MClk - Slack : -1.012
+@P:  Total Area : 347.0
+@P:  Total Area : 8.0
+@P:  Total Area : 30.0
+@P:  Total Area : 63.0
+@P:  Total Area : 63.0
+@P:  Total Area : 175.0
+@P:  Total Area : 347.0
+@P:  CPU Time : 0h:00m:01s

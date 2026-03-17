@@ -1,0 +1,15 @@
+# Created 2008/10/10 11:53:06
+BeginProm
+  Type   Serial
+  Format MCS-86
+  FillValue FF
+  Info MaxAddress 0x000079A9
+  Device Auto XC17256D
+  BeginChain
+    StartAddress    0x00000000
+    Direction       UP
+    Info EndAddress 0x000079A9
+    Info Size       0x000079AA
+    File "G:\Instruments\6xxx\6800-6899\6856\Fpga\74-2131\top_level_74_2131.bit"
+  EndChain
+EndProm

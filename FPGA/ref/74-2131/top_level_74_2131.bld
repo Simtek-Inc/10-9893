@@ -1,0 +1,45 @@
+Release 4.2i - ngdbuild E.35
+Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -dd g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/_ngo
+-nt timestamp -p xcs30xl-VQ100-4 top_level_74_2131.edf top_level_74_2131.ngd 
+
+Launcher: Executing edif2ngd "top_level_74_2131.edf"
+"g:\instruments\6xxx\6800-6899\6856\fpga\74-2131\_ngo\top_level_74_2131.ngo"
+INFO:NgdBuild - Release 4.2i - edif2ngd E.35
+INFO:NgdBuild - Copyright (c) 1995-2001 Xilinx, Inc.  All rights reserved.
+Writing the design to
+"g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/_ngo/top_level_74_2131.ngo"...
+Reading NGO file
+"g:/instruments/6xxx/6800-6899/6856/fpga/74-2131/_ngo/top_level_74_2131.ngo" ...
+Reading component libraries for design expansion...
+
+Annotating constraints to design from file "top_level_74_2131.ucf" ...
+Attached a PULLUP primitive to pad net read 
+Attached a PULLUP primitive to pad net add_data<0> 
+Attached a PULLUP primitive to pad net add_data<1> 
+Attached a PULLUP primitive to pad net add_data<2> 
+Attached a PULLUP primitive to pad net add_data<3> 
+Attached a PULLUP primitive to pad net add_data<4> 
+Attached a PULLUP primitive to pad net add_data<5> 
+Attached a PULLUP primitive to pad net add_data<6> 
+Attached a PULLUP primitive to pad net add_data<7> 
+Attached a PULLUP primitive to pad net write 
+Attached a PULLUP primitive to pad net logic_reset 
+
+Checking timing specifications ...
+Checking expanded design ...
+WARNING:NgdBuild:477 - clock net 'Inst_state_machine_2/N44_BUFGed' has non-clock
+   connections
+WARNING:NgdBuild:477 - clock net 'Inst_state_machine_4/N44_BUFGed' has non-clock
+   connections
+WARNING:NgdBuild:477 - clock net 'Inst_state_machine_1/N44_BUFGed' has non-clock
+   connections
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   3
+
+Writing NGD file "top_level_74_2131.ngd" ...
+
+Writing NGDBUILD log file "top_level_74_2131.bld"...
