@@ -9,7 +9,7 @@ uses
   IdUDPClient, ShellAPI, jpeg;
 
 const
-  InstNum            = '9893';
+  InstNum            = '8665';
   InstRevLevel       = '-';
   lblAddressWWW      = 'www.simtekinc.com';
   lblTestSoftwareCap = ': 10-' + InstNum;
