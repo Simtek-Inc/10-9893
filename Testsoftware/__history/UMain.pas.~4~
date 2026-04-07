@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ExtCtrls, ComCtrls, Menus, IniFiles, Math,
-  DXClass, DIB, ExtDlgs, IdBaseComponent, IdComponent, IdUDPBase,
+  DXClass, DXDraws, DIB, ExtDlgs, IdBaseComponent, IdComponent, IdUDPBase,
   IdUDPClient, ShellAPI, jpeg;
 
 const
